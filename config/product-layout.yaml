@@ -93,8 +93,3 @@ featuredFeatures:
         description: This service will be used to enquire the customer demographic details such as Name / Address / Phone Number / Email ID/ Date of Birth of the given customer.  
         type: "get"        
         path: "/v1/customers/nameAddress"
-      - relatedAPI: 
-        title: Update Customer Demographic Information
-        description: This service will be used to update the customer demographic details such as Name / Address / Phone Number / Email ID/ Date of Birth of the given customer.  
-        type: "patch"        
-        path: "/v1/customers/nameAddress"
