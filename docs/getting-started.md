@@ -173,9 +173,6 @@ A transaction processed via the GFM has less risk associated with it, because TN
 </center>
 
 
->
->
-> Note: TN offers automated emails for clients to send to users to keep them informed of the progress of the ACH transaction.
-
-
- 
+<!-- theme: info -->
+> #### Note
+> TN offers automated emails for clients to send to users to keep them informed of the progress of the ACH transaction.
