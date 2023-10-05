@@ -1,13 +1,5 @@
 ---
-tags:
-  [
-    Account Verification,
-    New User,
-    Returning User,
-    Digital Payments,
-    Account Ownership,
-    Data Validation Check,
-  ]
+tags: [ACH,New User,Returning User,Digital Payments,Account Ownership,Data Validation Check]
 ---
 
 # Getting Started
