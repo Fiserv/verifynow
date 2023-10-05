@@ -28,9 +28,13 @@
 # the delivery of this work
 ################################################################################
 header:
-  productName: TransferNow
-  productionDescription: Enhance your digital payment and transfer offerings, drive revenue and strengthen relationships by offering the flexibility to transfer funds to and from accounts at different Financial Institution (FI) with TransferNow. The Fiserv ePayments TransferNow product enables a FI to offer secure inter-institution funds transfer services. With TransferNow, customers can transfer money between accounts and debit cards.
-  # whoIsItFor: REPLACEME
-  image: 
-    link: "/assets/images/Fiserv_Logo.jpg"
-    altText: REPLACEME™
+  productionDescription: With developer-friendly, flexible communication standards, unified APIs, and pre-certified integrations the Commerce Hub reduces development time and accelerates speed to market. A single entry point and intelligent orchestration layer creates a unified payments, reporting, and boarding experience through your existing infrastructure. With less ongoing maintenance and fewer operational costs, you can focus on creating new ways for consumers to discover and interact with your brand.
+  getStarted: /docs/getting-started.md
+benefits:
+  - title: NOW Network
+    description: NOW is an acronym for “Network for Our World,” and Fiserv recently introduced the NOW Gateway RTP Network, which can receive credit transfers from RTP.
+  - title: Unmatched Presence
+    description: Enable customers to move money to and from checking, savings and money market accounts at nearly every U.S.-based financial institution.
+  - title: Optimized Operations
+    description: Handle all aspects of ACH Processing with ease, including expectations, resubmissions, and inquiries; features five daily ACH submissions and the latest ACH deadline in the industry.
+
