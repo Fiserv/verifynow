@@ -35,7 +35,7 @@
       link: docs/getting-started/developer-studio.md
 - sections:
   - title: Account to Account Transfers
-    link: docs/Getting-Started/Getting-Started-InPerson.md
+    link: docs/acc-to-acc-transfer/Account-Verify/acc-verify-home.md
     sections:
     - title: Adding an Account
       link: docs/acc-to-acc-transfer/adding-Acc.md
