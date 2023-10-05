@@ -39,7 +39,7 @@
     sections:
     - title: Adding an Account
       link: docs/acc-to-acc-transfer/adding-Acc.md
-   - title: Deleting Accounts
-     link: docs/acc-to-acc-transfer/delete-Acc.md
-   - title: Manage Accounts
-     link: docs/Manage-Account/manage-Acc.md
+    - title: Deleting Accounts
+      link: docs/acc-to-acc-transfer/delete-Acc.md
+    - title: Manage Accounts
+      link: docs/Manage-Account/manage-Acc.md
