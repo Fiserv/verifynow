@@ -30,9 +30,9 @@
 - sections:
   - title: Getting Started
     link: docs/getting-started.md
-  sections:
-    - title: Developer Studio
-      link: docs/getting-started/developer-studio.md
+    sections:
+      - title: Developer Studio
+        link: docs/getting-started/developer-studio.md
 - sections:
     - title: Responsive Web Design
       link:  docs/resp-webdesign.md     
