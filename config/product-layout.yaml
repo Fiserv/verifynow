@@ -28,18 +28,18 @@
 # the delivery of this work
 ################################################################################
 header:
-  productName: REPLACEME
-  productionDescription: REPLACEME
-  whoIsItFor: REPLACEME
+  productName: TransferNow
+  productionDescription: Enhance your digital payment and transfer offerings, drive revenue and strengthen relationships by offering the flexibility to transfer funds to and from accounts at different Financial Institution (FI) with TransferNow. The Fiserv ePayments TransferNow product enables a FI to offer secure inter-institution funds transfer services. With TransferNow, customers can transfer money between accounts and debit cards.
+  # whoIsItFor: REPLACEME
   image: 
     link: "/assets/images/Fiserv_Logo.jpg"
     altText: REPLACEME™
 getStarted: /docs/getting-started.md
 featuredFeatures:
-  - title: REPLACE ME
-    description:  REPLACE ME
+  - title: Multiple Transfer Speeds
+    description:  Give customers multiple transfer speed options from Standard ACH, and Next Day, to Next Day Good Funds or Instant. Link Transfer ServicesFund Transfer.
     tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
-    bullets: ["REPLACEME", "REPLACEME" ]  
+    bullets: ["REPLACEME", "REPLACEME" ]
     relatedDocs:
       - relatedDoc: 
         title: REPLACEME
@@ -53,44 +53,166 @@ featuredFeatures:
         title: Card Management
         description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
         link: ./docs/Card-Management.md
-    relatedAPIs:
-      - relatedAPI: 
-        title: Block-Unblock Account
-        description: This service is used to update the Account Block Code.
-        type: "patch"        
-        path: "/v1/accounts/blockUnblock"
-      - relatedAPI: 
-        title: Block-Unblock Card
-        description: This service is used to update the block codes and the reason codes for the block codes for cards and accounts
-        type: "patch"        
-        path: "/v1/cards/blockUnblock"
-      - relatedAPI: 
-        title: Spend Limit Updates
-        description: This service is used to update the spending limits to control the card usage.  These limits are set at individual card level.
-        type: "patch"        
-        path: "/v1/cardS/spendLimits"
-      - relatedAPI: 
-        title: Fetch Clear PAN from Token
-        description: This service is used to fetch the clear pan for the requested First Vision's Token PAN.
-        type: "get"        
-        path: "/v1/cards/clearPan"
-      - relatedAPI: 
-        title: CVV2 Validation
-        description: The Card Secure Code Validation service is used to validate the CVV2  and optionally the expiry date of a given card. 
-        type: "post"        
-        path: "/v1/cards/secureCode"
-      - relatedAPI: 
-        title: Lost Stolen Card Transfer
-        description: This Lost or Stolen service is used to block the lost card and request for the replacement card. 
-        type: "put"        
-        path: "/v1/cards/transfer"
-      - relatedAPI: 
-        title: Activate Card
-        description: This service is used to activate the card after successful verification of the cardholder.  
-        type: "put"        
-        path: "/v1/cards/activate"
-      - relatedAPI: 
-        title: Inquire Customer Demographic Information
-        description: This service will be used to enquire the customer demographic details such as Name / Address / Phone Number / Email ID/ Date of Birth of the given customer.  
-        type: "get"        
-        path: "/v1/customers/nameAddress"
+  - title: Real Time Speed using Instant Transfer
+    description:  NOW® Network from Fiserv lets your accountholders transfer money between two instant-enabled accounts at different financial institutions in real-time or by the next day. This removes the credit risk related to ACH-based, next-day services. Link Instant Transfers (Via the NOW Network).
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md
+  - title: NOW Network 
+    description:  NOW is an acronym for “Network for Our World,” and Fiserv recently introduced the NOW Gateway RTP Network, which can receive credit transfers from RTP.
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md   
+  - title: Multiple Account Verification Methods
+    description:  Fiserv offers several advanced alternatives to help you protect against online banking fraud. With Multifactor Authentication from Fiserv, you can enhance online security and maintain compliance with banking regulations without devoting significant resources. LinkAccount Verification.
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md 
+  - title: Responsive Web Design
+    description: Having an interactive, innovative website is key to meeting customer expectations and keeping them interested in your brand. With Web Design Services, Fiserv offers flexible, responsive design for financial institutions delivering outstanding results for desktop, tablet and mobile users, ensuring a consistent brand experience across all devices. Benefits of our services include more mobile traffic, lower maintenance needs, faster webpages and an overall improved online experience. Link Responsive Web Design.
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md    
+  - title: Unmatched Presence
+    description:  Enable customers to move money to and from checking, savings and money market accounts at nearly every U.S.-based financial institution.
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md 
+  - title: Optimized Operations 
+    description:  Handle all aspects of ACH Processing with ease, including expectations, resubmissions, and inquiries; features five daily ACH submissions and the latest ACH deadline in the industry.
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md 
+  - title: Industry-Leading Security  
+    description:  Leverage Fiserv best -of-breed, powerful risk management tools.
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md
+  - title: Industry-Leading Security  
+    description:  Leverage Fiserv best -of-breed, powerful risk management tools.
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md
+  - title: Optional Features   
+    description:  Link Call Center.
+    tags: ["REPLACEME", "REPLACEME", "REPLACEME"]
+    bullets: ["REPLACEME", "REPLACEME" ]
+    relatedDocs:
+      - relatedDoc: 
+        title: REPLACEME
+        description: REPLACEME
+        link: ./docs/Account-Management.md
+      - relatedDoc: 
+        title: Customer Management
+        description: Allows management of a cardholder's demographic information like Name, Address, phone numbers.  
+        link: ./docs/Customer-Management.md
+      - relatedDoc: 
+        title: Card Management
+        description: Allows management of payment instrument that is used to perform financial transaction.  Example physical Card, Virtual Card, Wallet Token. 
+        link: ./docs/Card-Management.md                                               
+benefits:
+  - title: NOW Network
+    description: >
+      NOW is an acronym for “Network for Our World,” and Fiserv recently introduced the NOW Gateway: RTP Network, which can receive credit transfers from RTP.
+  - title: Unmatched Presence
+    description: >
+      Enable customers to move money to and from checking, savings and money market accounts at nearly every U.S.-based financial institution.
+  - title: Optimized Operations
+    description: >
+      Handle all aspects of ACH Processing with ease, including expectations, resubmissions, and inquiries; features five daily ACH submissions and the latest ACH deadline in the industry.
