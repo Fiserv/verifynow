@@ -29,61 +29,17 @@
 ################################################################################
 - sections:
   - title: Getting Started
-    link: docs/getting-started.md
-    sections:
-      - title: Developer Studio
-        link: docs/getting-started/developer-studio.md
-- sections:
-    - title: Responsive Web Design
-      link:  docs/resp-webdesign.md     
+    link: docs/getting.md
+    sections: 
+    - title: Developer Studio
+      link: docs/getting-started/developer-studio.md
 - sections:
   - title: Account to Account Transfers
+    link: docs/Getting-Started/Getting-Started-InPerson.md
     sections:
     - title: Adding an Account
       link: docs/acc-to-acc-transfer/adding-Acc.md
-    - title: Deleting Accounts
-      link: docs/acc-to-acc-transfer/delete-Acc.md
-    - title: Manage Accounts
-      link: docs/Manage-Account/manage-Acc.md
-      - sections:
-        - title: Account Restrictions 
-          link: docs/Manage-Account/acc-restrictions.md
-        - title: Account Summary Information 
-          link: docs/Manage-Account/acc-summary.md
-        - title: Add/Delete Limitations
-          link: docs/Manage-Account/add-del-limitations.md
-    - title: Account Verification
-      link: docs/Account-Verify/acc-verify-home.md
-      - sections:
-        - title: Instant Verification 
-          link: docs/Account-Verify/Instant-Verify.md
-        - title: Real Time Verification 
-          link: docs/Account-Verify/real-time.md
-        - title: Trial Deposit Verification
-          link: docs/Account-Verify/trial-verify.md 
-        - title: Real Time Verification & Addition
-          link: docs/Account-Verify/real-time-addition.md   
-- sections:
-  - title: Transfer via Debit Cards
-    sections:
-    - title: Adding Debit Cards
-      link: docs/transfer-debit-card/adding-Acc.md
-    - title: Debit Cards Verification
-      link: docs/transfer-debit-card/debit-cardVerify.md
-    - title: Deleting Debit Cards
-      link: docs/transfer-debit-card/delete-debitCard.md
-    - title: Editing Debit Cards
-      link: docs/transfer-debit-card/edit-debitCard.md             
-- sections:
-  - title: Fund Transfers
-    sections:
-    - title: One-Time Transfer
-      link: docs/fund-transfer/oneTime-transfer.md
-    - title: Recurring Transfers
-      link: docs/fund-transfer/recurring-Transfers.md
-    - title: Pending Transfers
-      link: docs/fund-transfer/pending-Transfer.md
-    - title: Fund Transfer Frequencies & Durations
-      link: docs/fund-transfer/FT-freq.md
-    - title: Transfer Cut-off Times
-      link: docs/fund-transfer/transfer-cutOff.md
+   - title: Deleting Accounts
+     link: docs/acc-to-acc-transfer/delete-Acc.md
+   - title: Manage Accounts
+     link: docs/Manage-Account/manage-Acc.md
