@@ -1,5 +1,5 @@
 ---
-tags: [ACH,New User,Returning User,Digital Payments,Account Ownership,Data Validation Check]
+tags: [Getting Started, Sandbox, Developer Portal, Enroll, API Key]
 ---
 
 # Getting Started
