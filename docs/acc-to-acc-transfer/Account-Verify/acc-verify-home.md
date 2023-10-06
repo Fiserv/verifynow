@@ -2,10 +2,11 @@
 
 TransferNow verifies a user’s ownership of an external account using four types of account verification:   
 
-*	Instant
-*	Real-time
-*	Trial-deposit 
-*	Real Time Verification and Addition
+-	Instant
+-	Real-time
+-	Trial-deposit 
+-	Real Time Verification and Addition
+
  &nbsp;
 
 <!-- theme: info -->
