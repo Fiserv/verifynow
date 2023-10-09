@@ -2,6 +2,7 @@
 
 Using trial-deposit verification, TransferNow verifies account ownership by verifying the user's accessibility to the external account.
 
+
 Step-by-step instructions to verify and activate account using Trial Deposit:
 
 TN makes two small trial deposits and one trial debit (the debit is equal to the sum of the two deposits) to the external account and instructs the user to look for the two deposit amounts and enter the amounts on the application site.
@@ -16,9 +17,17 @@ TN makes two small trial deposits and one trial debit (the debit is equal to the
 
 - If the amounts reported by the user match the TransferNow deposits, then the user’s account ownership is verified.
 
-Note: For brokerage accounts, two deposits and one debit (as applicable for some brokerages) will be sent for trial deposit verification.
+ &nbsp;
 
-Note: The account cannot be verified if the trial deposit fails.
+<!-- theme: info -->
+
+> :memo: **Note:** For brokerage accounts, two deposits and one debit (as applicable for some brokerages) will be sent for trial deposit verification.
+
+<!-- theme: info -->
+
+> :memo: **Note:** The account cannot be verified if the trial deposit fails.
+
+ &nbsp;
 
 Following actions will take place when a trial deposit is failed:
 
