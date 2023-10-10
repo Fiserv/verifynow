@@ -28,7 +28,7 @@
 # the delivery of this work
 ################################################################################
 header:
-  productionDescription: With developer-friendly, flexible communication standards, unified APIs, and pre-certified integrations the Commerce Hub reduces development time and accelerates speed to market. A single entry point and intelligent orchestration layer creates a unified payments, reporting, and boarding experience through your existing infrastructure. With less ongoing maintenance and fewer operational costs, you can focus on creating new ways for consumers to discover and interact with your brand.
+  productionDescription: Enhance your digital payment and transfer offerings, drive revenue and strengthen relationships by offering the flexibility to transfer funds to and from accounts at different Financial Institution (FI) with TransferNow. The Fiserv ePayments TransferNow product enables a FI to offer secure inter-institution funds transfer services. With TransferNow, customers can transfer money between accounts and debit cards.
   getStarted: /docs/getting-started.md
 benefits:
   - title: NOW Network
@@ -44,11 +44,7 @@ featuredFeatures:
     featured: true
     relatedDocs:
      - link: docs/fund-transfer/FT-freq.md
-       title: 
-    relatedAPIs:
-      - type: post
-        path: /reference/1.0.0/sample.yaml
-        title: 
+       title:
   - title: Real Time Speed using Instant Transfer
     groupName: Account Verification
     description: NOW® Network from Fiserv lets your accountholders transfer money between two instant-enabled accounts at different financial institutions in real-time or by the next day. This removes the credit risk related to ACH-based, next-day services. Link Instant Transfers (Via the NOW Network).
@@ -56,10 +52,6 @@ featuredFeatures:
     relatedDocs:
      - link: docs/acc-to-acc-transfer/Account-Verify/Instant-Verify.md
        title: Instant Verification
-    relatedAPIs:
-      - type: post
-        path: /reference/1.0.0/sample.yaml
-        title: 
   - title: Multiple Account Verification
     groupName: Manage Account
     description: "Leverage Commerce Hub's Apple Tap to Pay SDK to accept in-store payments on mobile devices."
@@ -67,10 +59,6 @@ featuredFeatures:
     relatedDocs:
      - link: docs/acc-to-acc-transfer/Manage-Account/acc-verify-home.md
        title: Account Verification
-    relatedAPIs:
-      - type: post
-        path: /reference/1.0.0/sample.yaml
-        title: 
   - title: Responsive Web Design 
     groupName: Responsive Web Design
     description: Having an interactive, innovative website is key to meeting customer expectations and keeping them interested in your brand. With Web Design Services, Fiserv offers flexible, responsive design for financial institutions delivering outstanding results for desktop, tablet and mobile users, ensuring a consistent brand experience across all devices. Benefits of our services include more mobile traffic, lower maintenance needs, faster webpages and an overall improved online experience.
@@ -78,10 +66,6 @@ featuredFeatures:
     relatedDocs:
      - link: docs/resp-webdesign.md
        title: Responsive Web Design
-    relatedAPIs:
-      - type: post
-        path: /reference/1.0.0/sample.yaml
-        title:
   - title: Industry-Leading Security
     groupName: Industry-Leading Security
     description: Leverage Fiserv best -of-breed, powerful risk management tools.
@@ -89,7 +73,3 @@ featuredFeatures:
     relatedDocs:
      - link: /docs/getting-started.md
        title: Industry-Leading Security
-    relatedAPIs:
-      - type: post
-        path: /payments/v1/charges
-        title:
