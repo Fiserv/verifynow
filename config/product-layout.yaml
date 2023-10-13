@@ -31,12 +31,12 @@ header:
   productionDescription: Enhance your digital payment and transfer offerings, drive revenue and strengthen relationships by offering the flexibility to transfer funds to and from accounts at different Financial Institution (FI) with TransferNow. The Fiserv ePayments TransferNow product enables a FI to offer secure inter-institution funds transfer services. With TransferNow, customers can transfer money between accounts and debit cards.
   getStarted: /docs/getting-started.md
 benefits:
-  - title: NOW Network
-    description: NOW is an acronym for “Network for Our World,” and Fiserv recently introduced the NOW Gateway RTP Network, which can receive credit transfers from RTP.
-  - title: Unmatched Presence
-    description: Enable customers to move money to and from checking, savings and money market accounts at nearly every U.S.-based financial institution.
-  - title: Optimized Operations
-    description: Handle all aspects of ACH Processing with ease, including expectations, resubmissions, and inquiries; features five daily ACH submissions and the latest ACH deadline in the industry.
+  - title: Payment Account Verification
+    description: Getting users quickly authenticated is easy when Fiserv helps verify the account provided is owned by the same person trying to initiate the ACH Transfer.
+  - title: Real-time Access
+    description: VerifyNow includes Early Warning Services® to enable instant verification. This increases verification success and happens completely behind the scenes.
+  - title: Credit Decisions and Verification
+    description: Data from third-party partnerships and from our extensive footprint in bank, merchant and card processing improves accuracy and helps reduce fraud.
 featuredFeatures:
   - title: Multiple Transfer Speeds 
     groupName: 
