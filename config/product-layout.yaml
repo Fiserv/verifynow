@@ -28,7 +28,7 @@
 # the delivery of this work
 ################################################################################
 header:
-  productionDescription: Enhance your digital payment and transfer offerings, drive revenue and strengthen relationships by offering the flexibility to transfer funds to and from accounts at different Financial Institution (FI) with TransferNow. The Fiserv ePayments TransferNow product enables a FI to offer secure inter-institution funds transfer services. With TransferNow, customers can transfer money between accounts and debit cards.
+  productionDescription: The VerifyNow™ product acts as a platform for account and identity verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help financial institutions reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.
   getStarted: /docs/getting-started.md
 benefits:
   - title: Payment Account Verification
