@@ -33,23 +33,8 @@
     sections: 
     - title: Developer Studio
 - sections:
-  - title: Account to Account Transfers
+  - title: Initial Token
     sections:
-    - title: Adding an Account
-      link: docs/acc-to-acc-transfer/adding-Acc.md
-    - title: Deleting Accounts
-      link: docs/acc-to-acc-transfer/delete-Acc.md
-    - title: Manage Accounts
-      link: docs/acc-to-acc-transfer/manage-Acc.md
-    - title: Account Verification
-      link: docs/acc-to-acc-transfer/Account-Verify/acc-verify-home.md
-      sections:
-      - title: Instant Verification
-        link: docs/acc-to-acc-transfer/Account-Verify/Instant-Verify.md
-      - title: Real Time Verification
-        link: docs/acc-to-acc-transfer/Account-Verify/real-time.md
-      - title: Trial Deposit Verification
-        link: docs/acc-to-acc-transfer/Account-Verify/trial-verify.md
-      - title: Real Time Verification & Addition
-      - title: SSO Token
-        link: docs/acc-to-acc-transfer/Account-Verify/sso-token.md
+    - title: SSO Token
+      link: docs/sso-token.md
+    
