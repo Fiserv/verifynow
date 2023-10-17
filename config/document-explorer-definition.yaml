@@ -51,3 +51,5 @@
       - title: Trial Deposit Verification
         link: docs/acc-to-acc-transfer/Account-Verify/trial-verify.md
       - title: Real Time Verification & Addition
+      - title: SSO Token
+        link: docs/acc-to-acc-transfer/Account-Verify/sso-token.md
