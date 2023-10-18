@@ -36,5 +36,5 @@
   - title: Initial Token
     sections:
     - title: SSO Token
-      link: docs/sso-token.md
+      link: docs/getting-started/sso-token.md
     
