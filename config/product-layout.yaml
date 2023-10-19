@@ -62,14 +62,14 @@ featuredFeatures:
   - title: EWS / ALLData Aggregation System 
     groupName: Responsive Web Design
     description: Fiserv provides access to Early Warning Services(EWS), a third-party solution. EWS houses data contributed by various financial institutions and uses this data to authenticate account ownership. AllData Aggregation via REST API provides multiple ways for you to access consumer-permissioned data by providing actionable insight that can be used to develop solutions for retail, wealth management, consumer lending  and financial services.
-    featured: false
+    featured: true
     relatedDocs:
      - link: null
        title: Responsive Web Design
   - title: Privacy Built-In
     groupName: Industry-Leading Security
     description: Customer data is never shared or sold to third parties. When a user ID is deleted, all data associated with that ID is also deleted; only data must be stored for regulatory compliance is retained.
-    featured: false
+    featured: true
     relatedDocs:
      - link: null
        title: Industry-Leading Security
