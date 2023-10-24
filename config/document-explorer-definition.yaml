@@ -36,7 +36,4 @@
   - title: Initial Token
     sections:
     - title: SSO Token
-      link: docs/getting-started/sso-token.md
-    - title: UI
-      link: docs/uitesting.md
-   
+      link: docs/getting-started/sso-token.md   
