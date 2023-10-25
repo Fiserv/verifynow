@@ -32,8 +32,10 @@
     link: docs/getting-started.md
     sections: 
     - title: Developer Studio
+      link: docs/getting-started/developer-studio.md
 - sections:
   - title: Initial Token
     sections:
     - title: SSO Token
-      link: docs/getting-started/sso-token.md   
+      link: docs/getting-started/sso-token.md
+    - title: test   
