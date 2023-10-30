@@ -62,7 +62,7 @@ paths:
   /v1/apis:
     post:
       tags:
-        - Instant Verification
+        - Specs
       x-group-name: verify now service
       x-proxy-name: Instant Verification
       summary: Returns OpenAPI Spec.
