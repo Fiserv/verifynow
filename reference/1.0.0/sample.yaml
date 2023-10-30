@@ -30,342 +30,767 @@
 
 openapi: 3.0.2
 info:
-  title: Dev Portal Tenant APIs.
-  description: To onboard properly into the Fiserv Developer Studio as a tenant each
-    product must support these APIs so that we can retrieve product specific API specifications
-    and documentation.
-  version: 1.0.0
+  title: Account Verification
+  description:  Account ownership verification is performed using three verification methods, which can be used individually or combined together in a workflow. 
+  version: 11.0.0_SIG
 servers:
-  - url: https://tenants.fiserv.com/
+  - url: https://tenants.fiserv.com/11.0.0_SIG
+    description: Verify Now Service Details
 paths:
   /v1/products:
-    get:
-      tags:
-        - Tenant
-      x-group-name: Tenant
-      x-proxy-name: products
-      summary: Returns tenant provider API.
-      operationId: TenantProviderID
-      responses:
-        200:
-          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-  /v1/apis:
     post:
       tags:
-        - Specs
-      x-group-name: Specs
-      x-proxy-name: apis
-      summary: Returns OpenAPI Spec.
-      operationId: APISpecProviderId
+      - Instant Verification
+      summary: Instant Verification
+      description: "This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database. "
+      operationId: instantVerification
+      parameters:
+      - name: EFXHeader
+        in: header
+        description: EFX Header is a common and required component for all API calls, it contains client-related parameters. Please note that the header parameters should be sent as a JSON object under the EFXHeader parameter. To view the list of header parameters, <a href="../docs?path=docs/api-ref-EFX-header.md" title="Click to open"> click here.</a>
+        required: true
+        schema:
+          $ref: '#/components/schemas/EFXHeader'
       requestBody:
-        description: Filter Request
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SpecsFilterRequest'
-        required: false
+              $ref: '#/components/schemas/instantVerificationRequest'
       responses:
-        200:
-          description: ""
-          content: {}
-      x-codegen-request-body-name: Body
-  /v1/docs:
-    get:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/instantVerificationResponse'
+        default:
+          description: To view the complete list of response codes, <a href="../docs/?path=docs/response-codes.md" title="Click to open">click here.</a>
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/instantVerificationResponse'
+      x-group-name: Account Verification
+      x-proxy-name: ' Instant Verification'
+  /accountsVerification/instant:
+    post:
       tags:
-        - Documents
-      x-group-name: Documents
-      x-proxy-name: docs
-      summary: Returns Docs in markdown format.
-      operationId: DocsAPIId
+      - Real-time verification
+      summary: Real-time verification
+      description: "This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time."
+      operationId: real-time verification
       parameters:
-        - in: query
-          name: path
-          schema:
-            type: string
-          required: true
-          description: Markdown document path
+      - name: EFXHeader
+        in: header
+        description: EFX Header is a common and required component for all API calls, it contains client-related parameters. Please note that the header parameters should be sent as a JSON object under the EFXHeader parameter. To view the list of header parameters, <a href="../docs?path=docs/api-ref-EFX-header.md" title="Click to open"> click here.</a>
+        required: true
+        schema:
+          $ref: '#/components/schemas/EFXHeader'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/real-timeverifcationRequest'
       responses:
-        200:
-          description: ""
-          content: {}
-      x-codegen-request-body-name: Body
-  /v1/layouts:
-    get:
-      tags:
-        - Layout
-      x-group-name: Layout
-      x-proxy-name: layouts
-      summary: Returns the product page layout.
-      operationId: LayoutAPIId
-      responses:
-        200:
-          description: This text will appear as description of your response body. Hello World!
+        "200":
+          description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-  /live:
-    get:
-      tags:
-        - HealthCheck
-      x-group-name: HealthCheck
-      x-proxy-name: live
-      summary: Health check probes.
-      operationId: healthCheckId
-      x-links: 
-        link1: 
-          description: Developer Studio
-          flag: external
-          url:  'https://dev-developerstudio.fiserv.com/'
-        link2: 
-          description: Setup tenant
-          flag: internal
-          url:  '../docs?path=docs/getting-started/setup-tenant/setup-tenant.md'
-        link3: 
-          description: Fiserv Portal
-          flag: external
-          url:  'https://fiserv.com'
-      responses:
-        200:
-          description: Health check.
+                $ref: '#/components/schemas/real-timeverifcationResponse'
+        default:
+          description: To view the complete list of response codes, <a href="../docs/?path=docs/response-codes.md" title="Click to open">click here.</a>
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LiveProbeResponse'
-  
+                $ref: '#/components/schemas/real-timeverifcationResponse'
+      x-group-name: Account Verification
+      x-proxy-name: ' Real-time Verification'
+    post:
+      tags:
+      - Trial deposit verification
+      summary: Trial deposit verification
+      description: "Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits)."
+      operationId: trialdepositverification
+      parameters:
+      - name: EFXHeader
+        in: header
+        description: EFX Header is a common and required component for all API calls, it contains client-related parameters. Please note that the header parameters should be sent as a JSON object under the EFXHeader parameter. To view the list of header parameters, <a href="../docs?path=docs/api-ref-EFX-header.md" title="Click to open"> click here.</a>
+        required: true
+        schema:
+          $ref: '#/components/schemas/EFXHeader'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/trialdepositverificationRequest'
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/trialdepositverificationResponse'
+        default:
+          description: To view the complete list of response codes, <a href="../docs/?path=docs/response-codes.md" title="Click to open">click here.</a>
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/trialdepositverificationResponse'
+      x-group-name: Account Verification
+      x-proxy-name: ' Trial deposit verification'
+    post:
+      tags:
+      - Real-time Verification and Addition
+      summary: Real-time Verification and Addition
+      description: " In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request."
+      operationId: real-timeverificationandaddition 
+      parameters:
+      - name: EFXHeader
+        in: header
+        description: EFX Header is a common and required component for all API calls, it contains client-related parameters. Please note that the header parameters should be sent as a JSON object under the EFXHeader parameter. To view the list of header parameters, <a href="../docs?path=docs/api-ref-EFX-header.md" title="Click to open"> click here.</a>
+        required: true
+        schema:
+          $ref: '#/components/schemas/EFXHeader'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/real-timeverificationandadditionRequest'
+      responses:
+        "200":
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/real-timeverificationandadditionResponse'
+        default:
+          description: To view the complete list of response codes, <a href="../docs/?path=docs/response-codes.md" title="Click to open">click here.</a>
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/real-timeverificationandadditionResponse'
+      x-group-name: Account Verification
+      x-proxy-name: ' Real-time Verification and Addition'
 components:
   schemas:
-    LiveProbeResponse:
+    instantVerificationRequest:
+      required:
+      - AccountInfo
+      properties:
+        AccountInfo:
+          $ref: '#/components/schemas/instantverification_AccountInfo'
+    instantVerificationResponse:
+      required:
+      - VerifiacationStatusRec
+      properties:
+        Status:
+          $ref: '#/components/schemas/StatusType'
+        VerificationStatusRec:
+          $ref: '#/components/schemas/instantVerificationResponse_VerifiacationStatusRec'
+    real-timeverifcationRequest:
+      required:
+      - AccountInfo
+      properties:
+        AccountInfo:
+          $ref: '#/components/schemas/real-timeverifcationResponse_VerificationStatusRec_AccountInfo'
+    real-timeverifcationResponse:
+      required:
+      - VerificationStatusRec
+      properties:
+        Status:
+          $ref: '#/components/schemas/StatusType'
+        VerificationStatusRec:
+          $ref: '#/components/schemas/real-timeverifcation_VerificationStatusRec'
+    trialdepositverificationRequest:
+      required:
+      - AccountInfo
+      properties:
+        AccountInfo:
+          $ref: '#/components/schemas/trialdepositverificationRequest_AccountInfo'
+    trialdepositverificationResponse:
+      required:
+      - VerificationStatusRec
+      properties:
+        Status:
+          $ref: '#/components/schemas/StatusType'
+        VerificationStatusRec:
+            $ref: '#/components/schemas/trialdepositverificationResponse_VerificationStatusRec'
+    real-timeverificationandadditionRequest:
+      required:
+      - AccountInfo
+      properties:
+        AccountInfo:
+          $ref: '#/components/schemas/real-timeverificationandadditionResponse_VerificationStatusRec'
+    real-timeverificationandadditionResponse:
+      required:
+      - VerificationStatusRec
+      properties:
+        Status:
+          $ref: '#/components/schemas/StatusType'
+        VerificationStatusRec:
+          $ref: '#/components/schemas/real-timeverificationandaddition_VerificationStatusRec'
+    EFXHeader:
+      required:
+      - OrganizationId
+      type: string
+      properties:
+        OrganizationId:
+          maxLength: 36
+          type: string
+          description: Organization Identifier is a unique identifier that represents the financial institution or holding company.  This identifier does not necessarily match the organization identifier or bank identifier in the backend system. To ensure uniqueness across all institutions in all parts of the world, use the Dun & Bradstreet number.
+        TrnId:
+          maxLength: 36
+          type: string
+          description: Transaction UUID (Universal Unique Identifier) of the current message.
+        VendorId:
+          maxLength: 255
+          type: string
+          description: Unique vendor identification number provided by Fiserv to identify the vendor.
+        Context:
+          $ref: '#/components/schemas/Context'
+      example: '{ "TrnId": "622182", "OrganizationId": "PRMOrg10", "VendorId": "112233", "Context":{ "Channel": "WEB" } }'
+    Context:
       type: object
       properties:
-        message:
+        ClientAppName:
+          maxLength: 40
           type: string
-          description: Message
-    PageLayoutResponse:
-      type: array
-      items:
-        type: object
-        properties:
-          hero:
-            type: array
-            items:
-              type: object
-              properties:
-                descrption:
-                  type: string
-                  description: Descrption
-                image:
-                  type: string
-                  description: Image
-            description: Hero
-          journey Cards:
-            type: array
-            items:
-              type: object
-              properties:
-                journeyCard:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      contextualNavigationCards:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            contextualNavigationCard:
-                              type: array
-                              items:
-                                type: object
-                                properties:
-                                  description:
-                                    type: string
-                                    description: Description
-                                  link:
-                                    type: array
-                                    items:
-                                      type: object
-                                      properties:
-                                        type:
-                                          type: string
-                                          description: Type
-                                        uri:
-                                          type: string
-                                          description: URI
-                                    description: Link
-                                  title:
-                                    type: string
-                                    description: Title
-                              description: ContextualNavigationCard
-                        description: ContextualNavigationCards
-                      description:
-                        type: string
-                        description: Description
-                      link:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            type:
-                              type: string
-                              description: Type
-                            uri:
-                              type: string
-                              description: URI
-                        description: Link
-                      title:
-                        type: string
-                        description: Title
-                  description: JourneyCard
-            description: JourneyCards
-    SpecsFilterRequest:
-      type: object
-      properties:
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Subcategories
-          description: Categories
-    TenantProviderResponse:
-      type: object
-      properties:
-        brand:
+          description: Name of the client application that is used to send the service request, such as Architect, Commercial Center and others.
+        Channel:
+          maxLength: 80
           type: string
-          description: Brand
-        brandDescription:
+          description: Name of the channel used by the client application. * 'Online' * 'Phone'  * 'Branch' * 'EFT'
+        TrnIdent:
+          maxLength: 36
           type: string
-          description: BrandDescription
-        brandLogoURL:
+          description: Unique identification value of transaction defined by the client.  Also known as Trace Number or Sequence in some systems. When used by a Network defined transaction,  the value of this identifier is typically set to narrow character of 12.
+        ClientDateTime:
+          pattern: '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\.[0-9]{3})?((-|\+)[0-9]{2}:[0-9]{2})?)?)?'
           type: string
-          description: BrandLogoURL
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                    value:
-                      type: string
-                      description: Value
-                description: Subcategories
-              value:
-                type: string
-                description: Value
-          description: Categories
-        name:
+          description: Client date and time as reported by the client application that is making the service request.
+        ClientTerminalSeqNum:
+          maxLength: 36
+          description: 'Client terminal sequence number. type: string'
+        OriginatorType:
+          type: integer
+          description: "The type of organization that the originator represents. This is usually a coded value representing the industry that the organization operates in. It contains the SIC code. For ISO 8583 (DE18) the element is restricted to narrow character of maximum length of 4.  Originator Type codes that apply to financialinstitutions are:\n  6010 - Financial institution—bank, savings and loan (S and L), or credit union  \n  6011 - Financial institution—ATM \n  6012 - Financial institution—merchandise sale \n  6999 - Financial institution—home banking"
+          format: int64
+        TerminalIdent:
+          maxLength: 36
           type: string
-          description: Name
-        product:
+          description: Unique code identifying a terminal at the card acceptor location (such as terminal code or terminal number of ATM). See For ISO 8583 (DE41) the element is restricted to a narrow character with maximum length of 8.
+        TerminalAddr1:
+          maxLength: 64
+          type: string
+          description: Terminal address line 1.
+        TerminalAddr2:
+          maxLength: 64
+          type: string
+          description: Terminal address line 2.
+        TerminalAddr3:
+          maxLength: 64
+          type: string
+          description: Terminal address line 3.
+        TerminalAddr4:
+          maxLength: 64
+          type: string
+          description: Terminal address line 4.
+        TerminalCity:
+          maxLength: 32
+          type: string
+          description: Terminal city name.
+        TerminalCounty:
+          maxLength: 32
+          type: string
+          description: Terminal county name.
+        TerminalStateProv:
+          maxLength: 32
+          type: string
+          description: State province value as per ISO 3166-2:US codes where the terminal is located.
+        TerminalPostalCode:
+          maxLength: 11
+          type: string
+          description: 'Postal Code where the terminal is located. '
+        TerminalCountryCodeSource:
+          maxLength: 80
+          type: string
+          description: |-
+            Standard country code format where the terminal is located. Valid values are:
+              * 'ISO3166-Numeric'
+              * 'ISO3166-Alpha-3'
+        TerminalCountryCodeValue:
+          maxLength: 20
+          type: string
+          description: Country code value as per the ISO source code set in the TerminalCountryCodeSource field.
+        PhoneType:
+          maxLength: 80
+          type: string
+          description: 'Type of a phone. Valid values are: * ''EvePhone'' * ''DayPhone'' * ''EveFax'' * ''DayFax'' * ''Home'' * ''Work'' * ''Mobile'' * ''Fax'' * ''Pager'' * ''Modem'' * ''Other'''
+        PhoneNum:
+          type: string
+          description: Phone number.
+        PhoneExchange:
+          maxLength: 80
+          type: string
+          description: Phone exchange.
+        TerminalOwnerName:
+          maxLength: 40
+          type: string
+          description: Name of the owner or operator of the terminal.  For ISO 8583 (DE43) the element is restricted to C-15.
+        SystTraceAuditNum:
+          maxLength: 36
+          type: string
+          description: Number assigned by the transaction originator to assist in identifying a transaction uniquely. The trace number remains unchanged for all messages throughout the life of a transaction. This number is not a terminal receipt number. The originating processor increments the trace number by one for each transaction sent to the switch. For ISO 8583 (DE11) the element is restricted to NC-6
+        NetworkIdent:
+          maxLength: 80
+          type: string
+          description: Identifies the interchange network for the transaction. The transaction is applied to the specified network settlement counts and balances. For ISO 8583 (DE62) the element is restricted to NC-6
+        NetworkRefIdent:
+          maxLength: 36
+          type: string
+          description: Document reference supplied by the system retaining the original source document and used to assist in locating that document. The acquirer of a transaction assigns this number. The issuer processor must retain it in the event that a chargeback is submitted for the transaction. For ISO 8583 (DE37) the element is restricted to C-12
+        AcquirerIdent:
+          maxLength: 36
+          type: string
+          description: Identifier of the acquirer who processes the financial transaction. It is a mandatory element in all authorization and financial messages and does not change throughout the life of a transaction. EPOC considers the acquirer as the terminal owner for reporting purposes. For ISO 8583 (DE32) the element is restricted to C-12
+        AcquirerCountryCodeSource:
+          maxLength: 80
+          type: string
+          description: |-
+            Standard country code format where the acquirer is located. Valid values are:
+              * 'ISO3166-Numeric'
+              * 'ISO3166-Alpha-3'
+        AcquirerCountryCodeValue:
+          maxLength: 20
+          type: string
+          description: Country code value of Acquirer as per the ISO source code set in the AcquirerCountryCodeSource field.
+        MerchNum:
+          maxLength: 23
+          type: string
+          description: Unique identification number of a merchant.  For ISO 8583 (DE42) the element is restricted to C-15
+        SettlementDate:
+          type: string
+          description: Transaction settlement date. Used by ISO 8583 (DE63).
+          format: date
+        SettlementIdent:
+          maxLength: 36
+          type: string
+          description: Identification of the settlement account in which the transaction will be settled.
+        BusinessApplIdent:
+          maxLength: 80
+          type: string
+          description: |-
+            Identification of the Account Verification. Valid values are:
+              * 'IV' - Instant-Verification
+              * 'TDV' - Trail-Deposit-Verification
+              * 'RTV' - Real-Time-Verification
+              * 'RTVA' - Real-Time-Verification-And-Addition
+        BranchIdent:
+          maxLength: 22
+          type: string
+          description: Branch identification number.
+        TellerIdent:
+          maxLength: 80
+          type: string
+          description: Teller identification number.
+        TillIdent:
+          maxLength: 80
+          type: string
+          description: Till identification number.
+        AMPMCode:
+          type: string
+          description: 'Transaction posting code. '
+          enum:
+          - AM
+          - PM
+        ReentryType:
+          type: string
+          description: Type of re-entry.
+          enum:
+          - Manual
+          - Auto
+        AdditionalSettings:
           type: object
-          properties:
-            apiSpecification:
-              type: string
-              description: APISpecification 
-            description:
-              type: string
-              description: Description
-            documentation:
-              type: string
-              description: Documentation
-            featured:
-              type: boolean
-              description: Featured
-            layout:
-              type: string
-              description: Layout
-            logoURL:
-              type: string
-              description: LogoURL
-          description: Product
-        solution:
+          additionalProperties: true
+          description: Contains additional information required to successfully process the transaction. Required By Cleartouch
+    StatusType:
+      title: StatusType
+      required:
+      - Severity
+      - StatusCode
+      - StatusDesc
+      - SvcProviderName
+      type: object
+      properties:
+        Id:
           type: string
-          description: Solution
-        title:
+          description: Status identification number.
+        StatusCode:
+          maxLength: 20
           type: string
-          description: Title
-  responses:
-    apiSpecResponseWrapper:
-      description: OpenAPI Spec for the APIs. 
-      content: {}
-    docsResponseWrapper:
-      description: Markdown files.
-      content: {}
-    liveResponse:
-      description: Health check.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/LiveProbeResponse'
-        text/yaml:
-          schema:
-            $ref: '#/components/schemas/LiveProbeResponse'
-        text/plain:
-          schema:
-            $ref: '#/components/schemas/LiveProbeResponse'
-    productPage:
-      description: This text will appear as description of your response body. 
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
-        text/yaml:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
-        text/plain:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
-    tenant:
-      description: This text will appear as description of your response body. 
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/TenantProviderResponse'
-        text/yaml:
-          schema:
-            $ref: '#/components/schemas/TenantProviderResponse'
-        text/plain:
-          schema:
-            $ref: '#/components/schemas/TenantProviderResponse'
-  securitySchemes:
-    basic:
-      type: http
-      scheme: basic
+          description: EFX Standard Status code that indicates the result of API response. Refer to the <a href="../docs?path=docs/response-codes.md">Response Codes</a> section to view the list of all possible status codes.
+        StatusDesc:
+          maxLength: 255
+          type: string
+          description: Brief information about the EFX status code. Refer to the <a href="../docs?path=docs/response-codes.md">Response Codes</a> section for more information.
+        Severity:
+          $ref: '#/components/schemas/SeverityType'
+        SvcProviderName:
+          maxLength: 1024
+          type: string
+          description: |-
+            Name of a service provider. Possible values are:
+              -  Instant Verication
+              -  Trial Deposit Verification
+              -  Real Time Verification
+              -  Real Time Verification And Addition
+        ServerStatusCode:
+          maxLength: 20
+          type: string
+          description: Server status code of the service provider's application.
+        ServerStatusDesc:
+          maxLength: 255
+          type: string
+          description: Description of the server status code of the service provider's application.
+        OvrdExceptionInd:
+          type: boolean
+          description: Flag to indicate whether the exception can be overridden by resubmitting the request message.
+        SubjectRole:
+          type: string
+          description: Authorization level required to override, such as Teller and Supervisor.
+        SubjectElement:
+          type: array
+          description: Information about the elements that caused the status.
+          items:
+            $ref: '#/components/schemas/SubjectElementType'
+        ContentHTML:
+          type: string
+          description: Response status in HTML format. This parameter returns only in some cases.
+        AdditionalStatus:
+          type: array
+          description: Details of the additional status of the response message. This aggregate can appear once for each additional status that the server is expected to provide.
+          items:
+            $ref: '#/components/schemas/AdditionalStatusType'
+      description: Details of the API response messages.
+    SeverityType:
+      title: SeverityType
+      type: string
+      description: Severity type of the EFX status code. Refer to the <a href="../docs?path=docs/response-codes.md">Response Codes</a> section for more information.
+      enum:
+      - Error
+      - Warning
+      - Info
+    SubjectElementType:
+      title: SubjectElementType
+      type: object
+      properties:
+        Path:
+          type: string
+          description: Path of the element (in XPath absolute notation format) where the error occurred.  If the error occurred at the top-level element, then name of the element is returned in the response.
+        ServerPath:
+          maxLength: 256
+          type: string
+          description: Server Path is the Service Provider’s identification of the field in their schema, such as an XPath, field ID, or field name that is associated with the ServerStatusCode. If this element is set, it must be returned in the ServerPath element of the OvrdExceptionData aggregate if the exception is being overridden.
+        Value:
+          maxLength: 256
+          type: string
+          description: Human readable information of the EFX data value of the element to be overridden. This value should not be provided for the fields that cannot be represented as a string, for example, binary data.
+      description: Information about the subject element
+    AdditionalStatusType:
+      title: AdditionalStatusType
+      type: object
+      properties:
+        StatusCode:
+          maxLength: 20
+          type: string
+          description: EFX Standard Status code that indicates the result of API response. Refer to the <a href="../docs?path=docs/response-codes.md">Response Codes</a> section to view the list of all possible status codes.
+        StatusDesc:
+          maxLength: 255
+          type: string
+          description: Brief information about the EFX status code. Refer to the <a href="../docs?path=docs/response-codes.md">Response Codes</a> for more information.
+        Severity:
+          $ref: '#/components/schemas/SeverityType'
+        SvcProviderName:
+          maxLength: 1024
+          type: string
+          description: |-
+            Name of a service provider. Possible values are:
+              -  Instant Verication
+              -  Trial Deposit Verification
+              -  Real Time Verification
+              -  Real Time Verification And Addition
+        ServerStatusCode:
+          maxLength: 20
+          type: string
+          description: 'Server status code of the service provider''s application.  '
+        ServerStatusDesc:
+          maxLength: 255
+          type: string
+          description: Description of the server status code of the service provider's application.
+        OvrdExceptionInd:
+          type: boolean
+          description: Flag that indicates whether the exception can be overridden by resubmitting the request message.
+        SubjectElement:
+          type: array
+          description: Information about the elements that caused the status.
+          items:
+            $ref: '#/components/schemas/SubjectElementType'
+    instantverification_AccountInfo_AcctKeys:
+      required:
+      - AcctId
+      type: object
+      properties:
+        AcctId:
+          maxLength: 36
+          type: string
+          description: |+
+            Unique identification number of an account record.
+
+
+
+
+
+        AcctType:
+          type: string
+          description: |-
+            Type of an account.
+
+            For more information about account types, refer to the Account Types section in <a href="../docs?path=docs/api-glossary.md"  title="Click to open"> Glossary</a>.
+          enum:
+          - CDA
+      description: Unique information to identify the account record.
+    instantverification_AccountInfo_CurAmt_CurCode:
+      required:
+      - CurCodeValue
+      type: object
+      properties:
+        CurCodeType:
+          type: string
+          description: "Standard ISO currency code format. \n\n\n\nValid values are:\n\n- ISO4217-Alpha\n\n- ISO4217-Numeric\n\n\n\nRefer to the <a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\" title=\"Click to open in a new tab\">ISO 4217 codes </a> to view the list of all currency codes.\n\n\n\n"
+        CurCodeValue:
+          type: string
+          description: "Currency code value as per the ISO currency code format set in the CurCodeType field.\n\nFor example, currency code for the US Dollar in alpha and numeric formats are:\n\n- USD (in ISO4217-Alpha format) \n\n- 840 (in ISO4217-Numeric format)\n\n\n\nPlease note that presently only USD currency code is supported.\n\n"
+      description: Details of currency code.
+    instantverification_AccountInfo_CurAmt:
+      type: object
+      properties:
+        Amt:
+          type: number
+          description: |-
+            Amount in decimal format.
+
+            **Note:** *Conditionally Required field*
+
+
+
+            Applicable only if adding or subtracting the funds.
+        CurCode:
+          $ref: '#/components/schemas/instantverification_AccountInfo_CurAmt_CurCode'
+      description: To Verify immediately enable Instant Verification.
+    instantverification_AccountInfo_FundingAcct:
+      required:
+      - AcctId
+      type: object
+      properties:
+        AcctId:
+          maxLength: 36
+          type: string
+          description: |+
+            Unique identification number of an account record.
+
+
+
+
+
+        AcctType:
+          type: string
+          description: |-
+            Type of an account.
+
+            For more information about account types, refer to the Account Types section in <a href="../docs?path=docs/api-glossary.md"  title="Click to open"> Glossary</a>.
+          enum:
+          - DDA
+          - SDA
+        FIIdentType:
+          type: string
+          description: |-
+            Identification type of a financial institution.
+
+            **Note:** Applicable for external transfers only.
+          enum:
+          - RoutingNum
+        FIIdent:
+          maxLength: 34
+          type: string
+          description: |-
+            Unique identification number of a financial institution.
+
+            **Note:** Applicable for external transfers only.
+        AcctHolderName:
+          maxLength: 80
+          type: string
+          description: |-
+            Name of the account holder.
+
+            **Note:** Refers to the name that identifies the owner of the external account to or from which the system transfers funds. If you leave this field blank, the system defaults the name of the Verification account owner in this field.
+
+
+
+            Applicable for external transfers only.
+        NoticeOption:
+          type: string
+          description: "Option to generate the transfer notice when the funds are transferred to or from the external account. \n\n**Note:** Applicable for external transfers only."
+      description: Details of the internal or external account. This field is used when the funding method is transfer.
+    instantverification_AccountInfo:
+      type: object
+      properties:
+        AcctKeys:
+          $ref: '#/components/schemas/instantverification_AccountInfo_AcctKeys'
+        ProductIdent:
+          maxLength: 42
+          type: string
+          description: "Unique identifier of a Verification product. \n\n"
+        Rate:
+          type: number
+          description: |-
+            Interest rate when the account is Verified.
+
+            **Note:** Rate to be used for the account at Verification period. If the field is not provided, then Signature defaults the rate for the new product type at reinvestment.
+        EffDt:
+          pattern: '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\.[0-9]{3})?((-|\+)[0-9]{2}:[0-9]{2})?)?)?'
+          type: string
+          description: "Effective date and time when the account is Verified. \n\nFormat: yyyy-MM-ddTHH:mm:ss.SSS\n\nExample: 2021-01-31T23:59:59.999\n\n**Note:** Refers to the date on which the system executes the corresponding reinvestment instruction. This date may be a backdated action. When backdating the reinvestment instruction, the date must be within the maturity grace period for the account."
+        RequestedMethod:
+          type: string
+          description: Type of requested method. It identifies the customers' method of requesting the Verification instructions.
+          enum:
+          - InPerson
+          - Mail
+          - Phone
+        RequestedDt:
+          pattern: '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\.[0-9]{3})?((-|\+)[0-9]{2}:[0-9]{2})?)?)?'
+          type: string
+          description: "Date on whichVerification instruction for an account is placed. \n\nFormat: yyyy-MM-dd\n\nExample: 2021-01-31\n\n\n\n**Note:** Signature applies the default date, if this field is not provided."
+        CalculateRateInd:
+          type: boolean
+          description: "Flag to indicate to calculate the Verification rate for the account. \n\n**Note:** The value \"true\" is only for backdating the reinvestment instruction."
+        WaiveInterestInd:
+          type: boolean
+          description: "Flag to indicate to waive-off the current interest accrued for the account. \n\n**Note:** The value \"true\" is only for backdating the reinvestment instruction."
+        CorrespondingPoolRate:
+          type: number
+          description: "Corresponding pool rate amount in decimal format. \n\n**Note:** Refers to the rate that overrides the reinvest product type’s default values for corresponding pool if the new product’s Match/fluctuating flag is R.\n\nIf the new product’s Match/fluctuating flag is not R (that is CorrespondingPoolCode different from Renewal), then the corresponding pool rate must be equal to zero."
+        StmtDesc:
+          maxLength: 80
+          type: string
+          description: "Description of the Verification statement. \n\n**Note:** Signature applies the default description, if this field is not provided."
+        SubtractOrAddFunds:
+          type: string
+          description: |-
+            Type of reinvestment funds.
+
+            **Note:** To add or subtract funds at Verification, the Deposits allowed or Withdrawals allowed fields within the time product type definition must equal to R (allow reinvest deposit during grace/allow reinvest withdrawal during grace).
+          enum:
+          - Add
+          - Subtract
+        CurAmt:
+          $ref: '#/components/schemas/instantverificationRequest_VerificationInfo_CurAmt'
+        FundingMethod:
+          type: string
+          description: |-
+            Method of funding used for depositing or withdrawing funds.
+
+
+
+            **Note:** The funding method "Check" can only be used when subtracting funds (SubtractOrAddFunds=Subtract).
+          enum:
+          - Check
+          - TransferToAcct
+        FundingAcct:
+          $ref: '#/components/schemas/instantverificationRequest_VerificationInfo_FundingAcct'
+        PartyId:
+          maxLength: 150
+          type: string
+          description: "Unique identification number of a party record.\n\n**Note:** Applicable only for check. \n\nRefers to the Payee's PartyId use for the distribution check when the FundingMethod field has value as \"Check\"."
+        ChkSpecialInstructions:
+          type: string
+          description: "User-defined instructions that indicate the distribution check requires special instructions for mailing. This is applicable when the FundingMethod field has the value as \"Check\".\n\n**Note:** Applicable only for check. "
+      description: Information about the business properties from the verification record.
+    instantVerificationResponse_VerifiacationStatusRec_VerificationStatus:
+      required:
+      - AccountInfoStatusCode
+      type: object
+      properties:
+        AccountInfoStatusCode:
+          type: string
+          description: Code to indicate the account verification status.
+          enum:
+          - Valid
+        EffDt:
+          pattern: '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\.[0-9]{3})?((-|\+)[0-9]{2}:[0-9]{2})?)?)?'
+          type: string
+          description: "Effective date and time when the account verification status is changed. \n\n\n\nFormat: yyyy-MM-ddTHH:mm:ss.sss\n\nExample: 2021-01-31T23:59:59.999"
+      description: 'Details of the account verification status. '
+    instantVerificationRequest_VerifiacationStatusRec:
+      required:
+      - VerificationKeys
+      - VerificationStatus
+      type: object
+      properties:
+        VerificationKeys:
+          $ref: '#/components/schemas/instantVerificationResponse_VerificationStatusRec_VerificationKeys'
+        VerificationStatus:
+          $ref: '#/components/schemas/instantVerificationResponse_VerificationStatusRec_VerificationStatus'
+      description: Details of the Verification status record.
+    real-timeverifcationResponse_VerificationStatusRec_VerificationStatus:
+      required:
+      - VerificationStatusCode
+      type: object
+      properties:
+        VerificationStatusCode:
+          type: string
+          description: Code to indicate the account Verification status.
+          enum:
+          - Deleted
+        EffDt:
+          pattern: '[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}(:[0-9]{2}(\.[0-9]{3})?((-|\+)[0-9]{2}:[0-9]{2})?)?)?'
+          type: string
+          description: "Effective date and time when the account Verification status is changed. \n\n\n\nFormat: yyyy-MM-ddTHH:mm:ss.sss\n\nExample: 2021-01-31T23:59:59.999"
+      description: 'Details of the account Verification status. '
+    real-timeverifcationRequest_VerificationStatusRec:
+      required:
+      - VerificationStatus
+      type: object
+      properties:
+        VerificationStatus:
+          $ref: '#/components/schemas/real-timeverifcationResponse_VerificationStatusRec_VerificationStatus'
+      description: Details of the Verification status record.
+    trialdepositverificationResponse_VerificationStatusRec_VerificationKeys:
+      required:
+      - AcctKeys
+      type: object
+      properties:
+        AcctKeys:
+          $ref: '#/components/schemas/trialdepositverificationResponse_VerificationStatusRec_VerificationKeys_AcctKeys'
+      description: Unique information to identify the Verification record.
+    trialdepositverificationRequest_VerificationStatusRec_VerificationSel:
+      type: object
+      properties:
+        VerificationKeys:
+          $ref: '#/components/schemas/trialdepositverificationRequest_VerificationStatusRec_VerificationSel_VerificationKeys'
+      description: Details of the selection criteria for Verification.
+    real-timeverificationandadditionResponse_VerificationStatusRec_VerificationKeys:
+      required:
+      - AcctKeys
+      type: object
+      properties:
+        AcctKeys:
+          $ref: '#/components/schemas/real-timeverificationandadditionResponse_VerificationStatusRec_VerificationKeys_AcctKeys'
+      description: Unique information to identify the Verification record.
+    real-timeverificationandadditionRequest_VerificationStatusRec_VerificationSel:
+      type: object
+      properties:
+        VerificationKeys:
+          $ref: '#/components/schemas/real-timeverificationandadditionRequest_VerificationStatusRec_VerificationSel_VerificationKeys'
+      description: Details of the selection criteria for Verification.
+    
