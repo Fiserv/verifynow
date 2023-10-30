@@ -63,31 +63,21 @@ paths:
     post:
       tags:
         - Specs
-      x-group-name: verify now service
-      x-proxy-name: Instant Verification
+      x-group-name: Specs
+      x-proxy-name: apis
       summary: Returns OpenAPI Spec.
-      description: Instant account ownership verification using the Early Warning Services (EWS) Account Ownership database. 
-      operationId: Instant Account Verification
-      parameters:
-      - name: EFXHeader
-        in: header
-        description: To view the complete list of response codes, <a href="../docs/?path=docs/response-codes.md" title="Click to open">click here.</a>
-        required: true
-        schema:
-          $ref: '#/components/schema/EFXHeader'
+      operationId: APISpecProviderId
       requestBody:
         description: Filter Request
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/InstantVerificationRequest'
+              $ref: '#/components/schemas/SpecsFilterRequest'
+        required: false
       responses:
-        "201":
-          description: Created
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InstantVerificationResponse'
+        200:
+          description: ""
+          content: {}
       x-codegen-request-body-name: Body
   /v1/docs:
     get:
