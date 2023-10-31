@@ -39,14 +39,16 @@
       link : docs/css-integration.md
   - title: VerifyNow Webservice API
     link: docs/verifynow-webserviceapi.md
-  - title: Account Verification Methods
-    link: docs/account-verification-methods.md
-  - title: Account Verification Flows
-    link: docs/account-verification-flows.md
-  - title: Automated Account Addition
-    link: docs/automated-account-additions.md
-  - title: Real-Time Verification Addition(RTVA)
-    link: docs/realtime-verification-additions.md
+  - title: Account Verification
+    sections: 
+    - title: Account Verification Methods
+      link: docs/accountverification/account-verification-methods.md
+    - title: Account Verification Flows
+      link: docs/accountverification/account-verification-flows.md
+    - title: Automated Account Addition
+      link: docs/accountverification/automated-account-additions.md
+    - title: Real-Time Verification Addition(RTVA)
+      link: docs/accountverification/realtime-verification-additions.md
   - title: Quick Summary On Account Verfication
     link: docs/quicksummary-onacctverification.md
   - title: Exit Points
