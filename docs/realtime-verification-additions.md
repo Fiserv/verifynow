@@ -14,7 +14,7 @@ Regardless of which verification method is used, the first few steps will be the
 
 <center>
 
-![Image](https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/image.png)
+![Image](../assets/images/image.png)
 
 </center>
 
@@ -22,7 +22,7 @@ Regardless of which verification method is used, the first few steps will be the
 
 <center>
 
-![Image](https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/image-1.png)
+![Image](../assets/images/image-1.png)
 
 </center>
 
@@ -38,7 +38,7 @@ Regardless of which verification method is used, the first few steps will be the
 
 <center>
 
-![Images](https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/image-2.png)
+![Images](../assets/images/image-2.png)
 
 </center>
 
