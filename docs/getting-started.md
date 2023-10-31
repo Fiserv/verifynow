@@ -13,7 +13,7 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 >
 > The current user journey enables developers to register for a trial plan that provides access to a range of Standard Bank Platform APIs on Verify Now. 
 
-Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs using the <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Third-party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentation.
+Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs using the <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Third-party API Testing Tools</a> of your choice.   However, registration is not required to learn about our APIs and reference documentation.
 <!--
 
 [![Video Thumbnail]][Video]  
@@ -38,6 +38,7 @@ Perform the following steps to create an account on Fiserv Developer Studio:
 2.	Populate the required fields and click **Next**
 3.	Follow the instructions on the screen to set up your account
 4.	Sign in to your Fiserv Developer Studio account once it is activated
+
 
 ### Creating a Verify Now Workspace
 
