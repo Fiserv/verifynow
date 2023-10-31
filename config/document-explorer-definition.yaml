@@ -30,15 +30,15 @@
 - sections:
   - title: Getting Started
     link: docs/getting-started.md
-    sections: 
   - title: VerifyNow Functions
     link: docs/verifynow-functions.md
   - title: VerifyNow Integration Guide
     link: docs/verifynow-integration-guide.md
+    section:
+    - title: CSS Integration
+      link : docs/css-integration.md
   - title: VerifyNow Webservice API
     link: docs/verifynow-webserviceapi.md
-  - title: CSS Integration
-    link: docs/css-integration.md
   - title: Account Verification
     sections: 
     - title: Account Verification Methods
