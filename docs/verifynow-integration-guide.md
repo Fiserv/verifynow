@@ -1,4 +1,7 @@
-# VerifyNow Widget Integration
+
+# VerifyNow Integration Guide
+
+## VerifyNow Widget Integration
 
 The VerifyNow widget works like the VerifyNow APIs, but it reduces the complexity and therefore requires lesser resources involved in implementation. 
 
@@ -11,10 +14,10 @@ VerifyNow integration requires clients to perform three steps as outlined below 
 3.	Invoke the Fiserv VerifyNow web service’s Outcome operation to receive the verification decision after the widget gives control back to the client.
 
 
-## How to Integrate VerifyNow Widget?
+### How to Integrate VerifyNow Widget?
 
 ## Verify
-The client application invokes the VerifyNow web service’s Verify operation with the expected elements for profile and account information. The client application receives a token and the status of the request from the VerifyNow system. The token will not be passed to the client application if there is any failure in processing the data received, such as failure in data validation and/or business-related validation. For more information, refer to the VerifyNow REST Web Services API Specification.
+The client application invokes the VerifyNow web service’s Verify operation with the expected elements for profile and account information. The client application receives a token and the status of the request from the VerifyNow system. The token will not be passed to the client application if there is any failure in processing the data received, such as failure in data validation and/or business-related validation. For more information, refer to the [VerifyNow Webservice API](?path=docs/verifynow-webserviceapi.md) Specification.
 
 ## Widget Integration
 The client is required to comply with the following integration points to use the Fiserv widget in their application’s user interface.
@@ -29,13 +32,13 @@ The client’s application user interface to support the widget is required to i
 
 The Fiserv Client Manager will provide the value of FI_HOME_ID to the client at the time of onboarding.
 
-## HIDDEN VARIABLES
+### HIDDEN VARIABLES
 
 The client’s application user interface is expected to have the following hidden variables with the appropriate values for the expected functional flow. Samples are included after the variable descriptions.
 <div class="card-body">
 <ul>
 <li>pidString – Used for authentication and to refer to which user-specific account needs to be considered for verification. The value for this should be the token received from the Verify operation.</li>
-<li>verifyOption – Used to hold the value that identifies whether the verification call is new or for <b>re-verification</b> (user and account combination) for the account. Possible values for this variable could be “‘REVERIFY”’ or any other string. If the value is “REVERIFY”, the VerifyNow system will consider this to be a re-verification; otherwise, it will be considered a new verification call.</li>
+<li>verifyOption – Used to hold the value that identifies whether the verification call is new or for re-verification (user and account combination) for the account. Possible values for this variable could be “‘REVERIFY”’ or any other string. If the value is “REVERIFY”, the VerifyNow system will consider this to be a re-verification; otherwise, it will be considered a new verification call.</li>
 <li>klURL – Used keep the customer’s session alive in the client application.</li>
 <li>cssURL – Used to pass the client-hosted cssURL. This is required only when the client hosts the CSS.</li>
 </ul>
@@ -55,15 +58,15 @@ The client’s application user interface is expected to have the following hidd
 
 ```
 
-## WIDGET PLACEMENT
+## Widget Placement
 
-The client’s application is required to provide the expected space in their user interface to place the VerifyNow widget. This needs to happen through use of the <div> tag with the predefined ID (vn_space) associated with it. A sample could appear as:
+The client’s application is required to provide the expected space in their user interface to place the VerifyNow widget. This needs to happen through use of the `<div>` tag with the predefined ID (<b>vn_space</b>) associated with it. A sample could appear as:
 
 ```
 <div id="vn_space" style="align:center; margin:5px; width:100%" align="center"> </div>
 ```
 
-## CONTROL HANDOVER TO CLIENT APPLICATION
+## Control Handover to Client Application
 
 Application control will be transferred back to the client’s application from the VerifyNow system through a JavaScript API call hosted by the client application. Clients can incorporate their business flow inside of it. 
 ```
@@ -75,8 +78,11 @@ alert("UI Control is handed over to Client");
 ```
 ## Outcome
 
-The client’s application receives the outcome of the verification through the Outcome operation with the token associated for the specific verification. The Outcome operation provides the detail, including verification types and their respective statuses along with the combined decision. Refer to the <i><b>VerifyNow REST Web Services API </b></i>Specification for more information.
+The client’s application receives the outcome of the verification through the Outcome operation with the token associated for the specific verification. The Outcome operation provides the detail, including verification types and their respective statuses along with the combined decision. Refer to the  [VerifyNow Webservice API](?path=docs/verifynow-webserviceapi.md) Specification for more information.
 
+## See Also
+
+[CSS Integration](?path=docs/css-integration.md)
 
 
 
