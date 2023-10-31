@@ -63,12 +63,12 @@ paths:
     post:
       tags:
         - Specs
-      x-group-name: Specs
-      x-proxy-name: apis
+      x-group-name: Verify Now Service
+      x-proxy-name: Instant Verification
       summary: Returns OpenAPI Spec.
       operationId: APISpecProviderId
       requestBody:
-        description: Filter Request
+        description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
         content:
           application/json:
             schema:

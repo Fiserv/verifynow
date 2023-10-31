@@ -55,6 +55,8 @@
     link: docs/account-verification-status.md
   - title: Risk Controls
     link: docs/risk-controls.md
+  - title: Verify Now User Workflow
+    link: docs/verifynow-userworkflow.md
 - sections:
   - title: Initial Token
     sections:
