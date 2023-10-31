@@ -63,8 +63,8 @@ paths:
     post:
       tags:
         - Specs
-      x-group-name: Specs
-      x-proxy-name: apis
+      x-group-name: in Verify Now Service
+      x-proxy-name: Instant Verification
       summary: Returns OpenAPI Spec.
       operationId: APISpecProviderId
       requestBody:
