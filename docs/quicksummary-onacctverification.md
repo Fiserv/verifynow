@@ -1,4 +1,11 @@
 
 # Quick Summary on Account Verification
 
-<img src="../assets/images/QuickSummaryonAccountVerification.png">
+<center>
+
+ ![image](../assets/images/QuickSummaryonAccountVerification.png)
+
+ &nbsp;
+
+</center>
+

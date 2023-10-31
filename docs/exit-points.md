@@ -3,4 +3,10 @@
 
 Control is passed to the client system at the following points: 
 
-<img src="../assets/images/ExitPoints.png">
+<center>
+
+ ![image](../assets/images/ExitPoints.png)
+
+ &nbsp;
+
+</center>
