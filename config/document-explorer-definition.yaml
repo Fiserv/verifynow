@@ -33,6 +33,32 @@
     sections: 
     - title: Developer Studio
       link: docs/getting-started/developer-studio.md
+  - title: VerifyNow Functions
+    link: docs/verifynow-functions.md
+  - title: VerifyNow Integration Guide
+    link: docs/verifynow-integration-guide.md
+  - title: VerifyNow Webservice API
+    link: docs/verifynow-webserviceapi.md
+  - title: CSS Integration
+    link: docs/css-integration.md
+  - title: accountverification
+    sections: 
+    - title: Account Verification Methods
+      link: docs/accountverification/account-verification-methods.md
+    - title: Account Verification Flows
+      link: docs/accountverification/account-verification-flows.md
+    - title: Automated Account Addition
+      link: docs/accountverification/automated-account-additions.md
+    - title: Real-Time Verification Addition(RTVA)
+      link: docs/accountverification/realtime-verification-additions.md
+  - title: Quick Summary On Account Verfication
+    link: docs/quicksummary-onacctverification.md
+  - title: Exit Points
+    link: docs/exit-points.md
+  - title: Account Verification Status
+    link: docs/account-verification-status.md
+  - title: Risk Controls
+    link: docs/risk-controls.md
 - sections:
   - title: Initial Token
     sections:
