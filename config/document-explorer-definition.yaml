@@ -41,7 +41,7 @@
     link: docs/verifynow-webserviceapi.md
   - title: CSS Integration
     link: docs/css-integration.md
-  - title: accountverification
+  - title: Account Verification
     sections: 
     - title: Account Verification Methods
       link: docs/accountverification/account-verification-methods.md
@@ -59,6 +59,8 @@
     link: docs/account-verification-status.md
   - title: Risk Controls
     link: docs/risk-controls.md
+  - title: Verify Now User Workflow
+    link: docs/verifynow-userworkflow.md
 - sections:
   - title: Initial Token
     sections:
