@@ -12,12 +12,19 @@ Regardless of which verification method is used, the first few steps will be the
 
 1.	Click the appropriate icon, or type in the search box.
 
-![Alt text](image.png)
+<center>
 
+![Image](https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/image.png)
+
+</center>
 
 2.	Here, the user will have the option of adding from their online banking website or adding an account manually.
 
-![Alt text](image-1.png)
+<center>
+
+![Image](https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/image-1.png)
+
+</center>
 
 <div class="card-body">
 <ul>
@@ -29,7 +36,11 @@ Regardless of which verification method is used, the first few steps will be the
 
 3.	Once the user successfully authenticates with the financial institution, they will need to choose which account(s) to add.
 
-![Alt text](image-2.png)
+<center>
+
+![Images](https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/image-2.png)
+
+</center>
 
 4.	Clicking the Add button will complete the verification flow.
 
