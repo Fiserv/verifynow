@@ -141,7 +141,7 @@ From the Body tab, select the **x-www-form-urlencoded** radio button and enter t
 <br>
 <br>
 
-<a href="#tab-know_our_standard_api_structure" >Next - Know Our Standard API Structure</a> 
+<a href="?path=docs/getting-started/know-our-standard-api-structure.md#know-our-standard-api-structure" >Next - Know Our Standard API Structure</a> 
 
 
 
@@ -297,8 +297,8 @@ The following example shows the sample response payload for **Instant Verificati
 To view the API documentation of **Instant Verification** API in API Explorer, [click here]<!--(../api/?type=post&path=/partyservice/parties/parties/secured/list).-->
 
 
-
-[Next - Make Your First API Call](#tab-make_your_first_api_call)
+<a href="?path=docs/getting-started/make-your-first-api-call.md#make-your-first-api-call" >Next - Make Your First API Call</a>
+<!-- [Next - Make Your First API Call](#tab-make_your_first_api_call) -->
 
 
 
