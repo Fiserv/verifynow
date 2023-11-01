@@ -59,10 +59,3 @@
     link: docs/risk-controls.md
   - title: Verify Now User Workflow
     link: docs/verifynow-userworkflow.md
-- sections:
-  - title: Initial Token
-    sections:
-    - title: SSO Token
-      link: docs/getting-started/sso-token.md
-    - title: test
-      link: docs/getting-started/uitest.md
