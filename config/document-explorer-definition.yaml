@@ -47,7 +47,7 @@
       link: docs/accountverification/account-verification-flows.md
     - title: Automated Account Addition
       link: docs/accountverification/automated-account-additions.md
-    - title: Real-Time Verification Addition(RTVA)
+    - title: Real-Time Verification and Addition(RTVA)
       link: docs/accountverification/realtime-verification-additions.md
   - title: Quick Summary On Account Verfication
     link: docs/quicksummary-onacctverification.md
