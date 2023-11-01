@@ -32,7 +32,7 @@ The client’s application user interface to support the widget is required to i
 
 The Fiserv Client Manager will provide the value of FI_HOME_ID to the client at the time of onboarding.
 
-### HIDDEN VARIABLES
+### Hidden Variables
 
 The client’s application user interface is expected to have the following hidden variables with the appropriate values for the expected functional flow. Samples are included after the variable descriptions.
 <div class="card-body">

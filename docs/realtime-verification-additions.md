@@ -1,6 +1,7 @@
 ## Real-Time Verification and Addition (RTVA)
 
-When a user tries to add an account for the FI via RTVA, they provide credentials for logging into the external FI. The user is put through Multi-Factor Authentication (MFA). Then account-related information is successfully scraped, and the name is passed through risk rules for matching logic to determine whether the accounts should be displayed to the user or not. If the information fails the check, the user is sent to add the account manually (see Adding Account Manually).
+When a user tries to add an account for the FI via RTVA, they provide credentials for logging into the external FI. The user is put through Multi-Factor Authentication (MFA). Then account-related information is successfully scraped, and the name is passed through risk rules for matching logic to determine whether the accounts should be displayed to the user or not. If the information fails the check, the user is sent to add the account manually (see [Add Account Manually](?path=docs/add-account-manually)).
+
 The name that comes in SSO will be compared against the name scraped by Aggregation. Risk rules for name matching determine if the account information should be displayed to the user.
 
 ### General Account Verification Flow
@@ -8,7 +9,7 @@ Regardless of which verification method is used, the first few steps will be the
 
 <!-- theme: info -->
 
->**Note:** All forms of verification will not necessarily be available for all FIs. Users will have access to some or all verification methods, as applicable.
+>**Note** <br/><br/>All forms of verification will not necessarily be available for all FIs. Users will have access to some or all verification methods, as applicable.
 
 1.	Click the appropriate icon, or type in the search box.
 
@@ -28,8 +29,8 @@ Regardless of which verification method is used, the first few steps will be the
 
 <div class="card-body">
 <ul>
-<li>To use Real-Time Verification and Addition, the user will enter the User ID and Password for their bank account and click the Submit button. Go to Real-Time Verification and Addition.</li>
-<li>To add an account manually, the user will click the Add Account Manually button. Go to Adding Account Manually.</li>
+<li>To use Real-Time Verification and Addition, the user will enter the User ID and Password for their bank account and click the Submit button. The user will be redirected to Step 3.</li>
+<li>To add an account manually, the user will click the Add Account Manually button. The user will be redirected to Step 4.</li>
 </ul>
 </div>
 
@@ -48,8 +49,14 @@ a.	Selecting “Add your account manually” will take the user to the add accou
 
 b.	Selecting “Select another financial institution” will take the user back to the VerifyNow landing page.
 
+## See Also
+[Add Account Manually](?path=docs/add-account-manually.md)<br/>
+[Verify Accounts Using VerifyNow](?path=docs/verify-accounts-using-verifynow/)
 
 <style>
+    .card-body {
+        margin-left:2em;
+    }
     .card-body ul {
         list-style: none;
         padding-left: 20px;

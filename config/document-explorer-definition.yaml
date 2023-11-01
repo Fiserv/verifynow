@@ -1,3 +1,4 @@
+---
 ################################################################################
 # Copyrights © 2021-2022 Fiserv, Inc. or its affiliates. 
 # Fiserv is a trademark of Fiserv, Inc., 
@@ -28,34 +29,49 @@
 # the delivery of this work
 ################################################################################
 - sections:
-  - title: Getting Started
-    link: docs/getting-started.md
-  - title: VerifyNow Functions
-    link: docs/verifynow-functions.md
-  - title: VerifyNow Integration Guide
-    link: docs/verifynow-integration-guide.md
-    section:
-    - title: CSS Integration
-      link : docs/css-integration.md
-  - title: VerifyNow Webservice API
-    link: docs/verifynow-webserviceapi.md
-  - title: Account Verification
-    sections: 
+    - title: Getting Started
+      link: docs/getting-started.md
+    - title: VerifyNow Functions
+      link: docs/verifynow-functions.md
+    - title: VerifyNow Integration Guide
+      link: docs/verifynow-integration-guide.md
+      section:
+        - title: CSS Integration
+          link: docs/css-integration.md
+    - title: VerifyNow Webservice API
+      link: docs/verifynow-webserviceapi.md
     - title: Account Verification Methods
-      link: docs/accountverification/account-verification-methods.md
+      link: docs/account-verification-methods.md
+      section:
+        - title: Quick Summary On Account Verfication
+          link: docs/quicksummary-onacctverification.md
     - title: Account Verification Flows
-      link: docs/accountverification/account-verification-flows.md
-    - title: Automated Account Addition
-      link: docs/accountverification/automated-account-additions.md
-    - title: Real-Time Verification Addition(RTVA)
-      link: docs/accountverification/realtime-verification-additions.md
-  - title: Quick Summary On Account Verfication
-    link: docs/quicksummary-onacctverification.md
-  - title: Exit Points
-    link: docs/exit-points.md
-  - title: Account Verification Status
-    link: docs/account-verification-status.md
-  - title: Risk Controls
-    link: docs/risk-controls.md
-  - title: Verify Now User Workflow
-    link: docs/verifynow-userworkflow.md
+      link: docs/account-verification-flows.md
+      section:
+        - title: Automated Account Addition
+          link: docs/automated-account-additions.md
+        - title: Add Account Manually
+          link: docs/add-account-manually.md
+    - title: Real-Time Verification and Addition(RTVA)
+      link: docs/realtime-verification-additions.md
+    - title: Verify Accounts Using VerifyNow
+      section:
+        - title: Instant Verification
+          link: docs/verify-accounts-using-verifynow/instant-verification.md
+        - title: Real-Time Verification
+          link: docs/verify-accounts-using-verifynow/real-time-verification.md
+        - title: Trial Deposit Verification
+          link: docs/verify-accounts-using-verifynow/trial-deposit-verification.md
+    - title: Exit Points
+      link: docs/exit-points.md
+    - title: Account Verification Status
+      link: docs/account-verification-status.md
+    - title: Risk Controls
+      link: docs/risk-controls.md
+    - title: Verify Now User Workflow
+      section:
+        - title: New User
+          link: docs/verify-now-user-workflow/new-user.md
+        - title: Returning User
+          link: docs/verify-now-user-workflow/returning-user.md  
+    

@@ -1,1 +1,0 @@
-[Open Stuff](http://localhost:7080/VnAutoJobs/callTNClient)
