@@ -65,7 +65,7 @@ paths:
         - Specs
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
-      summary: : This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
+      summary: This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
       operationId: APISpecProviderId
       requestBody:
         description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
