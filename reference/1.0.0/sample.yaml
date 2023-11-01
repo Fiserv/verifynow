@@ -65,7 +65,7 @@ paths:
         - Specs
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
-      summary: Returns OpenAPI Spec.
+      summary: This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
       operationId: APISpecProviderId
       requestBody:
         description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
@@ -104,8 +104,8 @@ paths:
       tags:
         - Layout
       x-group-name: Verify Now Service
-      x-proxy-name: Trial deposit verification
-      summary: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
+      x-proxy-name: Real-time Verification and Addition
+      summary: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
       operationId: LayoutAPIId
       responses:
         200:
@@ -125,8 +125,8 @@ paths:
       tags:
         - HealthCheck
       x-group-name: Verify Now Service
-      x-proxy-name: Real-time Verification and Addition
-      summary: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
+      x-proxy-name: Trial deposit verification
+      summary: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
       operationId: healthCheckId
       x-links: 
         link1: 

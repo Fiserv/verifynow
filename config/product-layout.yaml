@@ -50,10 +50,11 @@ featuredFeatures:
     description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account. This process offers a safe and secure way to verify account ownership.
     featured: true
     relatedDocs:
-    - link: docs/getting-started.md
-      title: Before You Start
-    - link: docs/make-your-first-api-call.md
-      title: Make Your First API call
+     - link: "docs/getting-started.md"
+       title: Getting Started
+    relatedAPIs: 
+     - link: "docs/getting-started.md"
+       title: Instant Verification
   - title: Seamless Integration or Standalone Solution
     groupName: Manage Account
     description: VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions. VerfiyNow is integrated with your enterprise application by way of an API. The host system triggers the VerifyNow service whenever account verification is needed in the workflow. VerifyNow also offers offline solutions to fit your specific needs.
