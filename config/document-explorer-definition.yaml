@@ -36,8 +36,8 @@
     - title: VerifyNow Integration Guide
       link: docs/verifynow-integration-guide.md
       sections:
-        - title: CSS Integration
-          link: docs/css-integration.md
+      - title: CSS Integration
+        link: docs/css-integration.md 
     - title: VerifyNow Webservice API
       link: docs/verifynow-webserviceapi.md
     - title: Account Verification Methods
