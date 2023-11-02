@@ -5,20 +5,20 @@ Clients can set reuse limits to mitigate the risk associated with reusing accoun
 
 A. Clients can configure the following reuse limits: 
 
- 1. Number of distinct users that can use the same account. 
+1. Number of distinct users that can use the same account. 
 
     a. The default is 2. 
 
     b. In the case of a joint account, each account holder counts as one user.
     
     c. The count changes when a user is added and when a user is removed in the following situations:
-    <div class="card-body">
-    <ul>
-    <li>All of a user’s profiles show the same account as deleted </li>
-    <li>A user unsubscribes
-    </li>
-    </ul>
-    </div>
+        <div class="card-body">
+        <ul>
+        <li>All of a user’s profiles show the same account as deleted </li>
+        <li>A user unsubscribes</li>
+        </ul>
+        </div>
+
 2. Number of profiles to which a user can add the same account.
 
     a. The default is 2.
@@ -26,14 +26,15 @@ A. Clients can configure the following reuse limits:
     b. In the case of a joint account, each account holder counts as one user. 
 
     c. The count changes when an account is added to a profile and removed in the following situations: 
-    <div class="card-body">
-    <ul>
-    <li>An account is deleted from a profile </li>
-    <li>A profile is unsubscribed
-    </li>
-    </ul>
-    </div>
+        <div class="card-body">
+        <ul>
+        <li>An account is deleted from a profile </li>
+        <li>A profile is unsubscribed
+        </li>
+        </ul>
+        </div>
 3. Number of times the same account can be added to and deleted from a profile.
+
     a. The default is 3. 
 
     b. The number of trial deposit attempts carries the same limit. 
@@ -41,6 +42,7 @@ A. Clients can configure the following reuse limits:
     c. Clients can change trial deposit limits at the user level for a particular account.
 
 4. Number of accounts that can be active for a profile.
+
     a. No default value 
 
     b. The count changes when an account is added to a profile and removed in the following situations:
