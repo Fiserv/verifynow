@@ -45,7 +45,7 @@ Step-by-Step Instruction for Trial Deposit Verification
 
 </center>
 
-5.	If the user selects the Trial Deposit verification method (“Verify with bank deposits”), VerifyNow initiates Trial Deposit verification. (If the user selects the Real-time verification option (“Verify your bank account instantly”), VerifyNow initiates Real-time verification. Please see [Real-Time Verification](?path=docs/verify-accounts-using-verifynow/real-time-verification.md) for more information.)
+5.	If the user selects the Trial Deposit verification method (“Verify with bank deposits”), VerifyNow initiates Trial Deposit verification. (If the user selects the Real-time verification option (“Verify your bank account instantly”), VerifyNow initiates Real-time verification. Please see [Real-Time Verification](?path=docs/verify-accounts-using-verifynow/real-time-verification.md) for more information.
 
 6.	VerifyNow initiates Trial Deposit verification.
 7.	VerifyNow presents the user with instructions on how to verify the account using Trial Deposit verification.
