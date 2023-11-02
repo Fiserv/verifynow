@@ -141,7 +141,7 @@ From the Body tab, select the **x-www-form-urlencoded** radio button and enter t
 <br>
 <br>
 
-<a href="?path=docs/getting-started/know-our-standard-api-structure.md#know-our-standard-api-structure" >Next - Know Our Standard API Structure</a> 
+<a href="#tab-know_our_standard_api_structure" >Next - Know Our Standard API Structure</a>
 
 
 
@@ -198,32 +198,28 @@ To generate an access token, refer to the [Generating Access Token](?path=docs/g
 ### Request Header
   
   
-Header parameters are common for all API requests of Verify Now APIs. Header parameters are sent as a JSON under EFXHeader header parameter.
+Header parameters are common for all API requests of Verify Now APIs. Header parameters are sent as  header parameter.
 
-For more information on EFXHeader and to view the list of all header parameters,<!--<a href="?path=docs/api-ref-EFX-header.md" title="Click to view the list of EFX header parameters"> click here</a>.-->
+For more information on Header and to view the list of all header parameters<!--,<a href="?path=docs/api-ref-EFX-header.md" title="Click to view the list of EFX header parameters"> click here</a>.-->
 
 **Sample Header Example**
 ```
-"EFXHeader": [
+"Header": [
 							{
 								"key": "AdminUserName",
-								"value": "string",
-								"type": "text"
+								"value": "string"								
 							},
 							{
 								"key": "AdminPassword",
-								"value": "string",
-								"type": "text"
+								"value": "string"	
 							},
 							{
 								"key": "HomeId",
-								"value": "string",
-								"type": "text"
+								"value": "string"								
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/xml",
-								"type": "text"
+								"value": "application/xml"
 							}
 						]
 
@@ -297,8 +293,8 @@ The following example shows the sample response payload for **Instant Verificati
 To view the API documentation of **Instant Verification** API in API Explorer, [click here]<!--(../api/?type=post&path=/partyservice/parties/parties/secured/list).-->
 
 
-<a href="?path=docs/getting-started/make-your-first-api-call.md#make-your-first-api-call" >Next - Make Your First API Call</a>
-<!-- [Next - Make Your First API Call](#tab-make_your_first_api_call) -->
+
+ [Next - Make Your First API Call](#tab-make_your_first_api_call) 
 
 
 
