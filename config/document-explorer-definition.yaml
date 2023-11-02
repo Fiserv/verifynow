@@ -35,19 +35,19 @@
       link: docs/verifynow-functions.md
     - title: VerifyNow Integration Guide
       link: docs/verifynow-integration-guide.md
-      section:
+      sections:
         - title: CSS Integration
           link: docs/css-integration.md
     - title: VerifyNow Webservice API
       link: docs/verifynow-webserviceapi.md
     - title: Account Verification Methods
       link: docs/account-verification-methods.md
-      section:
+      sections:
         - title: Quick Summary On Account Verfication
           link: docs/quicksummary-onacctverification.md
     - title: Account Verification Flows
       link: docs/account-verification-flows.md
-      section:
+      sections:
         - title: Automated Account Addition
           link: docs/automated-account-additions.md
         - title: Add Account Manually
@@ -55,7 +55,7 @@
     - title: Real-Time Verification and Addition (RTVA)
       link: docs/realtime-verification-additions.md
     - title: Verify Accounts Using VerifyNow
-      section:
+      sections:
         - title: Instant Verification
           link: docs/verify-accounts-using-verifynow/instant-verification.md
         - title: Real-Time Verification
@@ -69,7 +69,7 @@
     - title: Risk Controls
       link: docs/risk-controls.md
     - title: Verify Now User Workflow
-      section:
+      sections:
         - title: New User
           link: docs/verify-now-user-workflow/new-user.md
         - title: Returning User
