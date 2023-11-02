@@ -40,7 +40,7 @@ benefits:
 featuredFeatures:
   - title: Identity Verification 
     groupName: 
-    description: Identity verification is critical to any fraud mitigation strategy. This facilitates enhanced real-time verification of funding account ownership by using a combination of multiple data sources and Fiserv proprietary verification methods.
+    description: Identity   verification is critical to any fraud mitigation strategy. This facilitates enhanced real-time verification of funding account ownership by using a combination of multiple data sources and Fiserv proprietary verification methods.
     featured: false
     relatedDocs:
      - link: null

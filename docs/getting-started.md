@@ -11,7 +11,7 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 
 > #### Note for Developers 
 >
-> The current user journey enables developers to register for a trial plan that provides access to a range of Standard Bank Platform APIs on Verify Now. 
+> The current user journey enables developers to access to a range of  APIs on Verify Now. 
 
 Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs using the <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Third-party API Testing Tools</a> of your choice.   However, registration is not required to learn about our APIs and reference documentation.
 <!--
@@ -63,7 +63,7 @@ Perform the following steps to create a workspace on Fiserv Developer Studio:
     <!-- theme: info -->
     > #### Note
     >
-    > Currently, only one workspace can be created for Verify Now. Also, the Trial Plan is available only for a shared Premier Sandbox Environment. <br> To know our core products [click here]<!--(?path=docs/products.md "Products").-->
+    > Currently, only one workspace can be created for Verify Now.<br> To know our core products [click here]<!--(?path=docs/products.md "Products").-->
     
     ![image](https://user-images.githubusercontent.com/81968767/220959037-4fb7f53e-4655-4086-a0a2-8994ee505cb0.png)
 
@@ -337,7 +337,7 @@ After successful registration, you will be able to create a workspace. You can o
 * API secret
 * Host URL
   
-These credentials are important to send in API requests. **API key** and **API secret** values are used to generate access token, whereas **Org ID** value is required to be passed as header parameter under the [EFXHeader]<!--(?path=docs/api-ref-EFX-header.md)--> parameter.
+These credentials are important to send in API requests. **API key** and **API secret** values are used to generate access token, whereas **Org ID** value is required to be passed as header parameter under the Header<!--EFXHeader](?path=docs/api-ref-EFX-header.md)--> parameter.
 
 
 **Generating an Access Token**
@@ -438,7 +438,7 @@ To  test an API using Postman application:
 
     ![image](https://user-images.githubusercontent.com/81968767/220967588-52eec24d-4b13-4d26-ba28-a9ad90943e26.png)
     
-6.	Add EFXHeader as new parameters under the **Headers** section and insert the <EFXHeader> value in JSON format 
+6.	Add Header as new parameters under the **Headers** section and insert the <Header> value. <!--in JSON format--> 
 7.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **XML** 
   
     <kbd><img src="../assets/images/verifynow_bodytab.png" width="70%" /></kbd><br>
