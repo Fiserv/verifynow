@@ -51,7 +51,7 @@ b.	Selecting “Select another financial institution” will take the user back 
 
 ## See Also
 [Add Account Manually](?path=docs/add-account-manually.md)<br/>
-[Verify Accounts Using VerifyNow](?path=docs/verify-accounts-using-verifynow/)
+[Verify Accounts Using VerifyNow](?path=docs/verify-accounts-using-verifynow/instant-verification.md)
 
 <style>
     .card-body {
