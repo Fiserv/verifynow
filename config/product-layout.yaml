@@ -48,13 +48,43 @@ featuredFeatures:
   - title: Account Owner Verification
     groupName: Account Verification
     description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account. This process offers a safe and secure way to verify account ownership.
-    featured: true
+    tags: ["tag1", "tag2"]
     relatedDocs:
-     - link: "docs/getting-started.md"
-       title: Getting Started
-    relatedAPIs: 
-     - link: "docs/getting-started.md"
-       title: Instant Verification
+      - relatedDoc: null
+        title: Before You Start
+        description: Know the steps to create an account on Fiserv Developer Studio and
+          understand the structure of VerifyNow APIs.
+        link: docs/getting-started/before-you-start.md
+      - relatedDoc: null
+        title: Know Our Standard API Structure
+        description: Know the standard HTTP and client-specific status and error codes
+          returned for every API request that is sent to the VerifyNow server.
+        link: docs/getting-started/know-our-standard-api-structure.md
+      - relatedDoc: null
+        title: Make Your First API Call
+        description: Understand the process of testing an API using built-in  API
+          Explorer of Fiserv and third-party API testing tools.
+        link: docs/getting-started/make-your-first-api-call.md
+    relatedAPIs:
+      - relatedAPI: null
+        title: Add Party
+        description: Creates a new Party or customer record. Party refers to a person or
+          organization, who has a relationship with the financial institution.
+        type: post
+        path: /partyservice/parties/parties
+      - relatedAPI: null
+        title: Get Party
+        description: Retrieves the information related to a Party or customer using the
+          unique identifier of a Party (PartyId).
+        type: post
+        path: /partyservice/parties/parties/secured
+      - relatedAPI: null
+        title: Update Party
+        description: Modifies the existing information of a Party, such as personal
+          details, relationship details, secret data, default language and
+          tax-related details.
+        type: put
+        path: /partyservice/parties/parties
   - title: Seamless Integration or Standalone Solution
     groupName: Manage Account
     description: VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions. VerfiyNow is integrated with your enterprise application by way of an API. The host system triggers the VerifyNow service whenever account verification is needed in the workflow. VerifyNow also offers offline solutions to fit your specific needs.
