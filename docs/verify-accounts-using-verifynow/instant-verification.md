@@ -8,6 +8,8 @@ VerifyNow performs instant account verification using the Customer Information/M
 >**Note**<br/><br/>
  The instant account verification service only verifies DDA accounts. Savings, money market, and brokerage accounts are ineligible for account verification via this service.
 
+ &nbsp;
+ 
 >**Note**<br/><br/> The instant account verification service only verifies accounts with RTNs listed in the MICR Table.
 
 Instant verification is performed using the provided customer information and account details and the Early Warning Services (EWS) AOA database. EWS houses data contributed by various financial institutions that it uses to authenticate account ownership claims. EWS data is limited by the number of financial institutions that contribute to the product. EWS requires that clients contribute to the product to be allowed to use it.
