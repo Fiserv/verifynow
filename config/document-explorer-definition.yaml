@@ -52,8 +52,6 @@
           link: docs/automated-account-additions.md
         - title: Add Account Manually
           link: docs/add-account-manually.md
-    - title: Real-Time Verification and Addition (RTVA)
-      link: docs/realtime-verification-additions.md
     - title: Verify Accounts Using VerifyNow
       section:
         - title: Instant Verification
