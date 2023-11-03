@@ -28,12 +28,12 @@
 # the delivery of this work
 ################################################################################
 header:
-  productionDescription: The VerifyNow™ product acts as a platform for account and identity verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help financial institutions reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.
+  productionDescription: The VerifyNow™ product acts as a platform for account verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help financial institutions reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.
   getStarted: /docs/getting-started.md
 benefits:
   - title: Payment Account Verification
     description: Getting users quickly authenticated is easy when Fiserv helps verify the account provided is owned by the same person trying to initiate the ACH Transfer.
-  - title: Real-time Access
+  - title: Real-Time Access
     description: VerifyNow includes Early Warning Services® to enable instant verification. This increases verification success and happens completely behind the scenes.
   - title: Credit Decisions and Verification
     description: Data from third-party partnerships and from our extensive footprint in bank, merchant and card processing improves accuracy and helps reduce fraud.
@@ -45,7 +45,7 @@ featuredFeatures:
     relatedDocs:
      - link: null
        title:
-  - title: Account Owner Verification
+  - title: Account Ownership Verification
     groupName: Account Verification
     description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account. This process offers a safe and secure way to verify account ownership.
     featured: true
