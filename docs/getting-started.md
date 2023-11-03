@@ -9,7 +9,7 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 
 <!-- theme: info -->
 
-> #### Note for Developers 
+> #### Note 
 >
 > The current user journey enables developers to access to a range of  APIs on Verify Now. 
 
