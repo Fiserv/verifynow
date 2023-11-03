@@ -11,7 +11,7 @@ The following flow is applicable when:
 
 <li>Account and Routing Number are NOT passed in the API invoking the widget</li>
 
-<li>RTVA is not FALSE in the API. Please see the <a href="../docs/verifynow-integration-guide.md">VerifyNow Integration Guide</a> for more details.</li>
+<li>RTVA is not FALSE in the API. Please see the <a href="../docs/?path=docs/verifynow-integration-guide.md">VerifyNow Integration Guide</a> for more details.</li>
 </ul>
 </div>
 
