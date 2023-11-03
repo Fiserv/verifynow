@@ -42,9 +42,32 @@ paths:
     get:
       tags:
         - Tenant
-      x-group-name: Tenant
-      x-proxy-name: products
+      x-group-name: Verification Status
+      x-proxy-name: Outcome
       summary: Returns tenant provider API.
+      description: Summarize ande provides information about the number of times verification is attempted.
+      operationId: TenantProviderID
+      responses:
+        200:
+          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+            text/yaml:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+  /v1/ping:
+    get:
+      tags:
+        - Tenant
+      x-group-name: Security Service
+      x-proxy-name: Ping
+      summary: Returns tenant provider API.
+      description: Secure verification on Users bank account.
       operationId: TenantProviderID
       responses:
         200:
@@ -66,6 +89,7 @@ paths:
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
       summary: This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
+      description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
       operationId: APISpecProviderId
       requestBody:
         description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
@@ -85,7 +109,8 @@ paths:
         - Documents
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification
-      summary: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time. 
+      summary: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
+      description: Compare the applicants name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
       operationId: DocsAPIId
       parameters:
         - in: query
@@ -99,27 +124,6 @@ paths:
           description: ""
           content: {}
       x-codegen-request-body-name: Body
-  /v1/layouts:
-    post:
-      tags:
-        - Layout
-      x-group-name: Verify Now Service
-      x-proxy-name: Real-time Verification and Addition
-      summary: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
-      operationId: LayoutAPIId
-      responses:
-        200:
-          description: This text will appear as description of your response body. Hello World!
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
   /live:
     post:
       tags:
@@ -127,6 +131,7 @@ paths:
       x-group-name: Verify Now Service
       x-proxy-name: Trial deposit verification
       summary: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
+      description: Verifies customer's access to an external bank account.
       operationId: healthCheckId
       x-links: 
         link1: 
@@ -148,7 +153,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LiveProbeResponse'
-  
+  /v1/layouts:
+    post:
+      tags:
+        - Layout
+      x-group-name: Verify Now Service
+      x-proxy-name: Real-Time Verification and Addition
+      summary: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
+      description: Add an account and verifies using Multi-Factor Authentication(MFA).
+      operationId: LayoutAPIId
+      responses:
+        200:
+          description: This text will appear as description of your response body. Hello World!
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageLayoutResponse'
+            text/yaml:
+              schema:
+                $ref: '#/components/schemas/PageLayoutResponse'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PageLayoutResponse'
+
 components:
   schemas:
     LiveProbeResponse:
