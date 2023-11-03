@@ -9,7 +9,7 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 
 <!-- theme: info -->
 
-> #### Note 
+> #### Note
 >
 > The current user journey enables developers to access to a range of  APIs on Verify Now. 
 
@@ -204,7 +204,7 @@ For more information on Header and to view the list of all header parameters<!--
 
 **Sample Header Example**
 ```
-"Header": [
+"requestHeaders": [
 							{
 								"key": "AdminUserName",
 								"value": "string"								
@@ -365,45 +365,7 @@ Postman is a client that lets you test RESTful APIs. If you are familiar with Po
 >
 > Keep the API documentation accessible to refer to the default request-payload for the request message. You may also download the Postman collection and refer to sample API requests from the **Resources**<!--**[Resources](?path=/docs/resources/resources.md)**--> section.
 
-<!--
-#### Resources
 
-* **API Specifications**
-
-  [![downoad-icon-BH]][BH]  
-
-* **Postman Collection**
-
-  [![downoad-icon-PRM]][PRM]      [![downoad-icon-SIG]][SIG]     [![downoad-icon-FN]][FN]   
-
-
-[downoad-icon-PRM]: https://github.com/Fiserv/banking-hub/assets/81968767/934da291-c743-41cb-9325-16cf2c8d7bda
-[PRM]: https://github.com/Fiserv/banking-hub/files/12247349/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip
-
-
-[downoad-icon-SIG]: https://github.com/Fiserv/banking-hub/assets/81968767/b4c09878-6e73-4e9e-9171-74bcd3e4f8b6
-[SIG]: https://github.com/Fiserv/banking-hub/files/11710490/Banking.Hub.-.Signature.-.Trial.Plan.Postman.Collection.zip
-
-
-[downoad-icon-BH]: https://github.com/Fiserv/banking-hub/assets/81968767/4c31d642-7574-413e-b02e-32f7ad1ae504
-[BH]: https://github.com/Fiserv/banking-hub/files/11222397/esf-service-swagger-release-11.0.0.2023.1.zip
-
-[downoad-icon-FN]: https://github.com/Fiserv/banking-hub/assets/81968767/76dd0525-220e-4c1e-90c8-b612eed002db
-[FN]: https://github.com/Fiserv/banking-hub/files/12358606/Banking.Hub.-.Finxact.-.Trial.Plan.Postman.Collection.zip
-
--->
-
-<!--
-FN: https://github.com/Fiserv/banking-hub/assets/81968767/28cc543b-7bd6-4f57-b282-725b15d289f3
-SIG: https://github.com/Fiserv/banking-hub/assets/81968767/b4c09878-6e73-4e9e-9171-74bcd3e4f8b6
-PRM: https://github.com/Fiserv/banking-hub/assets/81968767/934da291-c743-41cb-9325-16cf2c8d7bda
-
-Postman PRM old: https://github.com/Fiserv/banking-hub/files/11728540/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip
-
-* [Download Banking Hub API Specifications](https://github.com/Fiserv/banking-hub/files/11222397/esf-service-swagger-release-11.0.0.2023.1.zip)
-* [Download Postman Collection - Premier Core](https://github.com/Fiserv/banking-hub/files/11449420/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip "Click to Download")
-
--->
 
 #### Prerequisite to run Postman collection
 
