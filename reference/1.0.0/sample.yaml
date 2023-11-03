@@ -98,8 +98,8 @@ paths:
             $ref: '#/components/schemas/AdminUserName'
             type: string
           required: true
-          description: 99993001xmladmin
-        - in: header
+          description: provide Adminusername as value
+        - in: path
           name: HomeId
           description: 99993001
           schema:
@@ -192,6 +192,19 @@ paths:
 
 components:
   schemas:
+    Header:
+      required:
+      - HomeId
+      type: string
+      properties:
+        HomeId:
+          maxLength: 10
+          type: string
+          description: Add HomeId
+        AdminUserName:
+          maxLength: 12
+          type: string
+          description: Add Admin User Name
     LiveProbeResponse:
       type: object
       properties:
