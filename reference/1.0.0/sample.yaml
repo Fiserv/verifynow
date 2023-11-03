@@ -110,7 +110,7 @@ paths:
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification
       summary: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
-      description: Compare the applicants name and account numbers from the external financial institution 
+      description: Compare the applicants name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
       operationId: DocsAPIId
       parameters:
         - in: query
