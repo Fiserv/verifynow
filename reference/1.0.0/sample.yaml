@@ -289,7 +289,6 @@ components:
               requestId:
                 type: string
                 description: Unique ID to be passed in by the calling application.
-                $ref: '#/components/schemas/SpecsFilterRequest_requestId'
               profile:
                 type: array
                 items:
