@@ -99,12 +99,6 @@ paths:
             type: string
           required: true
           description: provide Adminusername as value
-        - in: path
-          name: HomeId
-          description: 99993001
-          schema:
-            $ref: '#/components/schemas/HomeId'
-            type: integer
       requestBody:
         description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
         content:
