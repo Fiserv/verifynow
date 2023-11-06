@@ -187,8 +187,6 @@ paths:
 components:
   schemas:
     AdminUserName:
-      required:
-      - HomeId
       type: string
       properties:
         HomeId:
@@ -282,7 +280,7 @@ components:
       type: object
       properties:
         VerifyNowRequest:
-          type: string
+          type: object
           items:
             type: object
             properties:
