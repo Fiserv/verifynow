@@ -310,6 +310,15 @@ components:
                 description: User Profile Details.
           description: VerifyNow Request for a user
           $ref: '#/components/schemas/SpecsFilterRequest_VerifyNowRequest'
+    SpecsFilterRequest_VerifyNowRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          description: Unique ID to be passed in by the calling application.
+        Profile: 
+          type: string
+          description: Unique ID to be passed in by the calling application.
     TenantProviderResponse:
       type: object
       properties:
@@ -427,13 +436,4 @@ components:
   securitySchemes:
     basic:
       type: http
-      scheme: basic
-  SpecsFilterRequest_VerifyNowRequest:
-      type: object
-      properties:
-        requestId:
-          type: string
-          description: Unique ID to be passed in by the calling application.
-        Profile: 
-          type: string
-          description: Unique ID to be passed in by the calling application.           
+      scheme: basic           
