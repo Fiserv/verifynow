@@ -291,7 +291,7 @@ components:
     SpecsFilterResponse:
       properties:
         VerifyNowResponse:
-          $ref: '#/components/schemas/SpecsFilterRequest_VerifyNowResponse'
+          $ref: '#/components/schemas/SpecsFilterResponse_VerifyNowResponse'
     SpecsFilterRequest_VerifyNowRequest:
       type: object
       properties:
@@ -299,6 +299,11 @@ components:
           type: string
           description: Unique ID to be passed in by the calling application.
         Profile: 
+          type: string
+          description: Unique ID to be passed in by the calling application.
+    SpecsFilterResponse_VerifyNowResponse:
+      Properties:
+        requestId:
           type: string
           description: Unique ID to be passed in by the calling application.
     TenantProviderResponse:
@@ -369,11 +374,6 @@ components:
           type: string
           description: Title
   responses:
-    SpecsFilterRequest_VerifyNowResponse:
-      Properties:
-        requestId:
-          type: string
-          description: Unique ID to be passed in by the calling application.
     docsResponseWrapper:
       description: Markdown files.
       content: {}
