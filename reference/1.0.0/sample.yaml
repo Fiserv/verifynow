@@ -288,9 +288,9 @@ components:
                 type: string
                 description: Unique ID to be passed in by the calling application.
               profile:
-                type: array
+                type: string
                 items:
-                  type: object
+                  type: string
                   properties:
                     email:
                       type: string
@@ -309,6 +309,7 @@ components:
                       description: Unique identification number that is assigned to user by client.
                 description: User Profile Details.
           description: VerifyNow Request for a user
+          $ref: '#/components/schemas/SpecsFilterRequest_VerifyNowRequest'
     TenantProviderResponse:
       type: object
       properties:
@@ -378,6 +379,10 @@ components:
           description: Title
   responses:
     apiSpecResponseWrapper:
+      Properties:
+        requestId:
+          type: string
+          description: Unique ID to be passed in by the calling application.    
       description: OpenAPI Spec for the APIs. 
       content: {}
     docsResponseWrapper:
@@ -423,3 +428,12 @@ components:
     basic:
       type: http
       scheme: basic
+  SpecsFilterRequest_VerifyNowRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          description: Unique ID to be passed in by the calling application.
+        Profile: 
+          type: string
+          description: Unique ID to be passed in by the calling application.           
