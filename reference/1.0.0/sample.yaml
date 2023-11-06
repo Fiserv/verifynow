@@ -282,26 +282,35 @@ components:
       type: object
       properties:
         VerifyNowRequest:
-          type: array
+          type: string
           items:
             type: object
             properties:
               requestId:
                 type: string
-                description: Add requestId
+                description: Unique ID to be passed in by the calling application.
               profile:
                 type: array
                 items:
                   type: object
                   properties:
-                    firstname:
+                    email:
                       type: string
-                      description: Add FirstName
-					          Lastname:
+                      description: User’s email address. This is for primary email. Required for TD verification to provide.
+                    firstName:
                       type: string
-                      description: Add LastName
-                description: Add Profile Details
-          description: VerifyNowRequest details
+                      description: User’s first name. Required for all types of account verification.
+                    lastName:
+                      type: string
+                      description: User’s last name. Required for all types of account verification.
+                    middleName:
+                      type: string
+                      description: User’s middle name
+                    userId:
+                      type: string
+                      description: Unique identification number that is assigned to user by client.
+                description: User Profile Details.
+          description: VerifyNow Request for a user
     TenantProviderResponse:
       type: object
       properties:
