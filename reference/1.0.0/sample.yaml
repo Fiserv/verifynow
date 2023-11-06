@@ -38,50 +38,6 @@ info:
 servers:
   - url: https://tenants.fiserv.com/
 paths:
-  /v1/products:
-    get:
-      tags:
-        - Tenant
-      x-group-name: Verification Status
-      x-proxy-name: Outcome
-      summary: Returns tenant provider API.
-      description: Summarize ande provides information about the number of times verification is attempted.
-      operationId: TenantProviderID
-      responses:
-        200:
-          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-  /v1/ping:
-    get:
-      tags:
-        - Tenant
-      x-group-name: Security Service
-      x-proxy-name: Ping
-      summary: Returns tenant provider API.
-      description: Secure verification on Users bank account.
-      operationId: TenantProviderID
-      responses:
-        200:
-          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
   /v1/apis:
     post:
       tags:
@@ -191,9 +147,75 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/PageLayoutResponse'
-
+  /v1/products:
+    post:
+      tags:
+        - Tenant
+      x-group-name: Verification Status
+      x-proxy-name: Outcome
+      summary: Returns tenant provider API.
+      description: Summarize ande provides information about the number of times verification is attempted.
+      operationId: TenantProviderID
+      responses:
+        200:
+          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+            text/yaml:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+  /v1/ping:
+    post:
+      tags:
+        - Tenant
+      x-group-name: Health Check
+      x-proxy-name: Ping
+      summary: Returns tenant provider API.
+      description: Secure verification on Users bank account.
+      operationId: TenantProviderID
+      responses:
+        200:
+          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+            text/yaml:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'  
 components:
   schemas:
+    SpecsFilterRequest:
+      properties:
+        VerifyNowRequest:
+          $ref: '#/components/schemas/SpecsFilterRequest_VerifyNowRequest'
+    SpecsFilterResponse:
+      properties:
+        VerifyNowResponse:
+          $ref: '#/components/schemas/SpecsFilterResponse_VerifyNowResponse'
+    SpecsFilterRequest_VerifyNowRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          description: Unique ID to be passed in by the calling application.
+        Profile: 
+          type: string
+          description: Unique ID to be passed in by the calling application.
+    SpecsFilterResponse_VerifyNowResponse:
+      type: object
+      Properties:
+        requestId:
+          type: string
+          description: Unique ID to be passed in by the calling application.
     AdminUserName:
       type: string
       properties:
@@ -283,29 +305,7 @@ components:
                         type: string
                         description: Title
                   description: JourneyCard
-            description: JourneyCards
-    SpecsFilterRequest:
-      properties:
-        VerifyNowRequest:
-          $ref: '#/components/schemas/SpecsFilterRequest_VerifyNowRequest'
-    SpecsFilterResponse:
-      properties:
-        VerifyNowResponse:
-          $ref: '#/components/schemas/SpecsFilterResponse_VerifyNowResponse'
-    SpecsFilterRequest_VerifyNowRequest:
-      type: object
-      properties:
-        requestId:
-          type: string
-          description: Unique ID to be passed in by the calling application.
-        Profile: 
-          type: string
-          description: Unique ID to be passed in by the calling application.
-    SpecsFilterResponse_VerifyNowResponse:
-      Properties:
-        requestId:
-          type: string
-          description: Unique ID to be passed in by the calling application.
+            description: JourneyCards   
     TenantProviderResponse:
       type: object
       properties:
