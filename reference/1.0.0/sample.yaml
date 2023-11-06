@@ -301,11 +301,6 @@ components:
         Profile: 
           type: string
           description: Unique ID to be passed in by the calling application.
-    SpecsFilterRequest_VerifyNowResponse:
-      Properties:
-        requestId:
-          type: string
-          description: Unique ID to be passed in by the calling application.
     TenantProviderResponse:
       type: object
       properties:
@@ -374,13 +369,11 @@ components:
           type: string
           description: Title
   responses:
-    apiSpecResponseWrapper:
+    SpecsFilterRequest_VerifyNowResponse:
       Properties:
         requestId:
           type: string
-          description: Unique ID to be passed in by the calling application.    
-      description: OpenAPI Spec for the APIs. 
-      content: {}
+          description: Unique ID to be passed in by the calling application.
     docsResponseWrapper:
       description: Markdown files.
       content: {}
