@@ -105,11 +105,19 @@ paths:
           application/xml:
             schema:
               $ref: '#/components/schemas/SpecsFilterRequest'
-        required: false
       responses:
-        200:
-          description: ""
-          content: <>
+        "200":
+          description: Created
+          content:
+            application/xml:
+              schema:
+              $ref: '#/components/schemas/SpecsFilterResponse'
+        default:
+          description: default decription will display
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/SpecsFilterResponse'
       x-codegen-request-body-name: Body
   /v1/docs:
     post:
@@ -277,39 +285,13 @@ components:
                   description: JourneyCard
             description: JourneyCards
     SpecsFilterRequest:
-      type: object
       properties:
         VerifyNowRequest:
-          type: object
-          items:
-            type: object
-            properties:
-              requestId:
-                type: string
-                description: Unique ID to be passed in by the calling application.
-              profile:
-                type: string
-                items:
-                  type: string
-                  properties:
-                    email:
-                      type: string
-                      description: User’s email address. This is for primary email. Required for TD verification to provide.
-                    firstName:
-                      type: string
-                      description: User’s first name. Required for all types of account verification.
-                    lastName:
-                      type: string
-                      description: User’s last name. Required for all types of account verification.
-                    middleName:
-                      type: string
-                      description: User’s middle name
-                    userId:
-                      type: string
-                      description: Unique identification number that is assigned to user by client.
-                description: User Profile Details.
-          description: VerifyNow Request for a user
           $ref: '#/components/schemas/SpecsFilterRequest_VerifyNowRequest'
+    SpecsFilterResponse:
+      properties:
+        VerifyNowResponse:
+          $ref: '#/components/schemas/SpecsFilterRequest_VerifyNowResponse'
     SpecsFilterRequest_VerifyNowRequest:
       type: object
       properties:
@@ -317,6 +299,11 @@ components:
           type: string
           description: Unique ID to be passed in by the calling application.
         Profile: 
+          type: string
+          description: Unique ID to be passed in by the calling application.
+    SpecsFilterRequest_VerifyNowResponse:
+      Properties:
+        requestId:
           type: string
           description: Unique ID to be passed in by the calling application.
     TenantProviderResponse:
