@@ -197,10 +197,6 @@ components:
       properties:
         VerifyNowRequest:
           $ref: '#/components/schemas/SpecsFilterRequest_VerifyNowRequest'
-    SpecsFilterResponse:
-      properties:
-        VerifyNowResponse:
-          $ref: '#/components/schemas/SpecsFilterResponse_VerifyNowResponse'
     SpecsFilterRequest_VerifyNowRequest:
       type: object
       properties:
@@ -210,12 +206,17 @@ components:
         Profile: 
           type: string
           description: "Unique ID to be passed in by the calling application."
+    SpecsFilterResponse:
+      properties:
+        VerifyNowResponse:
+          $ref: '#/components/schemas/SpecsFilterResponse_VerifyNowResponse'
     SpecsFilterResponse_VerifyNowResponse:
       type: object
       Properties:
         requestId:
           type: string
           description: "Unique ID to be passed in by the calling application."
+      description: Unique ID to be passed in by the calling application.
     AdminUserName:
       type: string
       properties:
