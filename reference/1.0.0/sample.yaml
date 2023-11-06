@@ -206,29 +206,29 @@ components:
       properties:
         requestId:
           type: string
-          description: Unique ID to be passed in by the calling application.
+          description: "Unique ID to be passed in by the calling application."
         Profile: 
           type: string
-          description: Unique ID to be passed in by the calling application.
+          description: "Unique ID to be passed in by the calling application."
     SpecsFilterResponse_VerifyNowResponse:
       type: object
       Properties:
         requestId:
           type: string
-          description: Unique ID to be passed in by the calling application.
+          description: "Unique ID to be passed in by the calling application."
     AdminUserName:
       type: string
       properties:
         HomeId:
           maxLength: 10
           type: string
-          description: Add HomeId
+          description: "Add HomeId"
     LiveProbeResponse:
       type: object
       properties:
         message:
           type: string
-          description: Message
+          description: "Message"
     PageLayoutResponse:
       type: array
       items:
