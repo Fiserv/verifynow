@@ -288,26 +288,18 @@ components:
     SpecsFilterRequest:
       type: object
       properties:
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Subcategories
-          description: Categories
+        properties:
+          requestId:
+            type: string
+            description: Unique ID to be passed in by the calling application. 
+          firstName:
+            type: string
+            description: User’s first name. Required for all types of account verification.
+          lastName:
+            type: string
+            description: User’s last name. Required for all types of account verification.
     AdminUserName:
-      type: object
+      type: string
       properties:
         categories:
           type: array
@@ -330,24 +322,16 @@ components:
     SpecsFilterResponse:
       type: object
       properties:
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Subcategories
-          description: Categories
+        requestId:
+          type: string
+          description: The client request ID echoed in the response. 
+        token:
+          type: string
+          description: Unique token generated for each request for verification.
+        profileId:
+          type: string
+          description: Unique ID assigned to the profile created in the system. 
+        enable:
     TenantProviderResponse:
       type: object
       properties:
