@@ -109,6 +109,31 @@ paths:
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
+  /v1/docs:
+    post:
+      tags:
+      - Documents
+      
+      summary: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
+      description: Compare the applicants name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
+      operationId: DocsAPIId
+      parameters:
+      - in: query
+        name: path
+        schema:
+          type: string
+        required: true
+        description: Markdown document path
+      responses:
+        "200":
+          description: ""
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpecsFilterRequest'
+      x-codegen-request-body-name: Body
+      x-group-name: Verify Now Service
+      x-proxy-name: Real-Time Verification
 components:
   schemas:
     LiveProbeResponse:
