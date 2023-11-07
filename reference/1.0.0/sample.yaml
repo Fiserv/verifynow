@@ -382,21 +382,6 @@ components:
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
                       type: string
-                      items:
-                        type: object
-                        properties:
-                          addressLine1:
-                            type: string
-                            description: User’s address street 1. Recommended for instant verification.
-                          city:
-                            type: string
-                            description: User’s city. Recommended for instant verification.
-                          state:
-                            type: string
-                            description: User’s state. Recommended for instant verification.
-                          zipCode:
-                            type: string
-                            description: User’s ZIP Code. Recommended for instant verification.
                       description: User’s address street 1. Recommended for instant verification.
                     phoneNumber:
                       type: string
@@ -409,10 +394,6 @@ components:
                   properties:
                     realTimeVerification:
                       type: string
-                      items:
-                        properties:
-                          enable:
-                            type: boolean
                       description: realTimeVerification
                     instantVerification:
                       type: string
@@ -423,7 +404,7 @@ components:
                     realTimeVerificationAndAddition:
                       type: string
                       description: realTimeVerificationAndAddition
-                description: accountOwnershipVerification Details
+                description: Add ProfileDetails
           description: VerifyNowRequest Details
     RealTimeVerificationResponse:
       type: object
@@ -438,34 +419,13 @@ components:
                 description: The client request ID echoed in the response.
               Token:
                 type: array
-                description: Token Details
-              profileInfo:
-                type: array
                 items:
                   type: object
                   properties:
-                    profileId:
+                    name:
                       type: string
-                      description: Unique ID assigned to the profile created in the system.
-                    profileStatus:
-                      type: string
-                      description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.
-                description: profileInfo Details
-              status:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    statusCode:
-                      type: string
-                      description: Alphanumeric code for representing a Success or Failure condition.
-                    statusDesc:
-                      type: string
-                      description: Textual description for the status code.
-                    statusType:
-                      type: string
-                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
-                description: Status of the VerifynowResponse
+                      description: Name
+                description: Subcategories
           description: VerifyNowResponse Details 
     TenantProviderResponse:
       type: object
