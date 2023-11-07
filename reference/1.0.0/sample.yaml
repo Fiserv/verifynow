@@ -306,6 +306,27 @@ components:
                       description: Name
                 description: Subcategories
           description: Categories
+    AdminUserName:
+      type: object
+      properties:
+        categories:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: Subcategories
+          description: Categories
     TenantProviderResponse:
       type: object
       properties:
