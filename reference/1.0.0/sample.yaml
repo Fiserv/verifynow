@@ -358,8 +358,53 @@ components:
                   properties:
                     Firstname:
                       type: string
-                      description: FirstName
+                      description: User’s first name. Required for all types of account verification.
+                    Lastname:
+                      type: string
+                      description: User’s last name. Required for all types of account verification.
+                    middleName:
+                      type: string
+                      description: User’s middle name.
+                    email:
+                      type: string
+                      description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
+                    userId:
+                      type: string
+                      description: Unique identification number that is assigned to user by client.
                 description: Profile Details
+              profileDetails:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ssn:
+                      type: string
+                      description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
+                    Address:
+                      type: string
+                      description: User’s address street 1. Recommended for instant verification.
+                    phoneNumber:
+                      type: string
+                      description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
+                description: Add ProfileDetails
+              accountOwnershipVerification:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    realTimeVerification:
+                      type: string
+                      description: realTimeVerification
+                    instantVerification:
+                      type: string
+                      description: Instant verification.
+                    trialDepositVerification:
+                      type: string
+                      description: trialDepositVerification
+                    realTimeVerificationAndAddition:
+                      type: string
+                      description: realTimeVerificationAndAddition
+                description: Add ProfileDetails
           description: VerifyNowRequest Details
     RealTimeVerificationResponse:
       type: object
