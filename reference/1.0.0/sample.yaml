@@ -129,8 +129,8 @@ paths:
           description: ""
           content: 
             application/json:
-            schema:
-              $ref: '#/components/schemas/SpecsFilterRequest'
+              schema:
+                $ref: '#/components/schemas/SpecsFilterRequest'
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification
