@@ -288,16 +288,15 @@ components:
     SpecsFilterRequest:
       type: object
       properties:
-        properties:
-          requestId:
-            type: string
-            description: Unique ID to be passed in by the calling application. 
-          firstName:
-            type: string
-            description: User’s first name. Required for all types of account verification.
-          lastName:
-            type: string
-            description: User’s last name. Required for all types of account verification.
+        requestId:
+          type: string
+          description: Unique ID to be passed in by the calling application. 
+        firstName:
+          type: string
+          description: User’s first name. Required for all types of account verification.
+        lastName:
+          type: string
+          description: User’s last name. Required for all types of account verification.
     AdminUserName:
       type: string
       properties:
