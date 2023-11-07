@@ -105,7 +105,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/CardAddRsType'
+                $ref: ''
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
