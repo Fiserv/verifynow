@@ -93,25 +93,9 @@ paths:
       description: This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
       operationId: APISpecProviderId
       parameters:
-        - in: header
-          name: AdminUserName
-          schema:
-            $ref: '#/components/schemas/AdminUserName'
-            type: string
-          required: true
-          description: provide Adminusername as value
-          name: AdminPassword
-          schema:
-            $ref: '#/components/schemas/AdminPassword'
-            type: string
-          required: true
-          description: provide AdminPassword as value
-          name: HomeId
-          schema:
-            $ref: '#/components/schemas/HomeId'
-            type: string
-          required: true
-          description: provide HomeId as value
+      - {$ref: '#/components/parameters/AdminUserName'}
+      - {$ref: '#/components/parameters/AdminPassword'}
+      - {$ref: '#/components/parameters/HomeId'}
       requestBody:
         description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
         content:
@@ -312,17 +296,30 @@ components:
         enable: 
           type: boolean
     AdminUserName:
+      name: Api-Key
       type: string
-      properties:
-        description: Categories
+      in: header
+      schema: {
+        type: string,
+        default: "Api-Key"
+      }
+      required: true
     AdminPassword:
       type: string
-      properties:
-        description: Categories
+      in: header
+      schema: {
+        type: string,
+        default: "Api-Key"
+      }
+      required: true
     HomeId:
       type: string
-      properties:
-        description: Categories
+      in: header
+      schema: {
+        type: string,
+        default: "Api-Key"
+      }
+      required: true
     SpecsFilterResponse:
       type: object
       properties:
