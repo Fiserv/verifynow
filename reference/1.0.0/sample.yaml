@@ -331,7 +331,7 @@ components:
         profileId:
           type: string
           description: Unique ID assigned to the profile created in the system. 
-        enable:
+        enable: true
     TenantProviderResponse:
       type: object
       properties:
