@@ -295,31 +295,32 @@ components:
           description: User’s last name. Required for all types of account verification.
         enable: 
           type: boolean
-    AdminUserName:
-      name: Api-Key
-      type: string
-      in: header
-      schema: {
-        type: string,
-        default: "Api-Key"
-      }
-      required: true
-    AdminPassword:
-      type: string
-      in: header
-      schema: {
-        type: string,
-        default: "Api-Key"
-      }
-      required: true
-    HomeId:
-      type: string
-      in: header
-      schema: {
-        type: string,
-        default: "Api-Key"
-      }
-      required: true
+    parameters:
+      AdminUserName:
+        name: Api-Key
+        type: string
+        in: header
+        schema: {
+          type: string,
+          default: "Api-Key"
+        }
+        required: true
+      AdminPassword:
+        type: string
+        in: header
+        schema: {
+          type: string,
+          default: "Api-Key"
+        }
+        required: true
+      HomeId:
+        type: string
+        in: header
+        schema: {
+          type: string,
+          default: "Api-Key"
+        }
+        required: true
     SpecsFilterResponse:
       type: object
       properties:
