@@ -85,6 +85,30 @@ paths:
                 $ref: '#/components/schemas/TenantProviderResponse'
       x-group-name: Security Service
       x-proxy-name: Ping
+  /v1/apis:
+    post:
+      tags:
+      - Specs
+      summary: This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
+      description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
+      operationId: APISpecProviderId
+      requestBody:
+        description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SpecsFilterRequest'
+        required: false
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+      x-codegen-request-body-name: Body
+      x-group-name: Verify Now Service
+      x-proxy-name: Instant Verification
 components:
   schemas:
     LiveProbeResponse:
