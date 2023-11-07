@@ -39,8 +39,8 @@ servers:
 - url: https://tenants.fiserv.com/
   description: ""
 paths:
-  /v1/docs:
-    get:
+  /v1/products:
+    post:
       tags:
       - Tenant
       
@@ -99,7 +99,7 @@ paths:
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
-  /v1/products:
+  /v1/docs:
     post:
       tags:
       - Documents
@@ -107,7 +107,7 @@ paths:
       description: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time. 
       operationId: DocsAPIId
       parameters:
-      - in: Header
+      - in: header
         name: AdminUserName
         schema:
           $ref: '#/components/schemas/AdminUserName'
@@ -122,7 +122,7 @@ paths:
               $ref: '#/components/schemas/RealTimeVerificationRequest'
       responses:
         "200":
-          description: ""
+          description: "Created"
           content: 
             application/xml:
               schema:
@@ -347,7 +347,7 @@ components:
     RealTimeVerificationRequest:
       type: object
       properties:
-        VerifyNowRequest:
+        VerifyNowRequest: 
           type: array
           items:
             type: object
