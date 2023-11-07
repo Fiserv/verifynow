@@ -40,10 +40,9 @@ servers:
   description: ""
 paths:
   /v1/products:
-    get:
+    post:
       tags:
       - Tenant
-      
       summary: Returns tenant provider API.
       description: Summarize ande provides information about the number of times verification is attempted.
       operationId: TenantProviderID
@@ -62,29 +61,6 @@ paths:
                 $ref: '#/components/schemas/TenantProviderResponse'
       x-group-name: Verification Status
       x-proxy-name: Outcome
-  /v1/ping:
-    get:
-      tags:
-      - Tenant
-      
-      summary: Returns tenant provider API.
-      description: Secure verification on Users bank account.
-      operationId: TenantProviderID
-      responses:
-        "200":
-          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-      x-group-name: Security Service
-      x-proxy-name: Ping
   /v1/apis:
     post:
       tags:
@@ -126,24 +102,36 @@ paths:
     post:
       tags:
       - Documents
-      
-      summary: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
-      description: Compare the applicants name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
+      summary: Real-Time Verification
+      description: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time. 
       operationId: DocsAPIId
       parameters:
-      - in: query
-        name: path
+      - in: header
+        name: AdminUserName
         schema:
+          $ref: '#/components/schemas/AdminUserName'
           type: string
         required: true
-        description: Markdown document path
+        description: provide Adminusername as value
+      requestBody:
+        description: Real-Time Verification
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/RealTimeVerificationRequest'
       responses:
         "200":
-          description: ""
+          description: "Created"
           content: 
-            application/json:
+            application/xml:
               schema:
-                $ref: '#/components/schemas/SpecsFilterRequest'
+                $ref: '#/components/schemas/RealTimeVerificationResponse'
+        default:
+          description: default decription will display
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/RealTimeVerificationResponse'
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification
@@ -174,14 +162,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LiveProbeResponse'
-      
       x-group-name: Verify Now Service
       x-proxy-name: Trial deposit verification
   /v1/layouts:
     post:
       tags:
       - Layout
-      
       summary: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
       description: Add an account and verifies using Multi-Factor Authentication(MFA).
       operationId: LayoutAPIId
@@ -200,6 +186,28 @@ paths:
                 $ref: '#/components/schemas/PageLayoutResponse'
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification and Addition
+  /v1/ping:
+    post:
+      tags:
+      - Tenant 
+      summary: Returns tenant provider API.
+      description: Secure verification on Users bank account.
+      operationId: TenantProviderID
+      responses:
+        "200":
+          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+            text/yaml:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/TenantProviderResponse'
+      x-group-name: Security Service
+      x-proxy-name: Ping
 components:
   schemas:
     LiveProbeResponse:
@@ -302,8 +310,8 @@ components:
     AdminUserName:
       type: string
       properties:
-        categories:
-          type: array
+        HomeId:
+          type: string
           items:
             type: object
             properties:
@@ -331,7 +339,49 @@ components:
           description: Unique token generated for each request for verification.
         profileId:
           type: string
-          description: Unique ID assigned to the profile created in the system. 
+          description: Unique ID assigned to the profile created in the system.
+    RealTimeVerificationRequest:
+      type: object
+      properties:
+        VerifyNowRequest: 
+          type: array
+          items:
+            type: object
+            properties:
+              requestId:
+                type: string
+                description: Unique ID to be passed in by the calling application.
+              Profile:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    Firstname:
+                      type: string
+                      description: FirstName
+                description: Profile Details
+          description: VerifyNowRequest Details
+    RealTimeVerificationResponse:
+      type: object
+      properties:
+        VerifyNowResponse:
+          type: array
+          items:
+            type: object
+            properties:
+              requestId:
+                type: string
+                description: The client request ID echoed in the response.
+              Token:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: Subcategories
+          description: VerifyNowResponse Details 
     TenantProviderResponse:
       type: object
       properties:
