@@ -197,6 +197,32 @@ paths:
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification and Addition
 components:
+  parameters:
+    AdminUserName:
+      name: Api-Key
+      type: string
+      in: header
+      schema: {
+        type: string,
+        default: "Api-Key"
+      }
+      required: true
+    AdminPassword:
+      type: string
+      in: header
+      schema: {
+        type: string,
+        default: "Api-Key"
+      }
+      required: true
+    HomeId:
+      type: string
+      in: header
+      schema: {
+        type: string,
+        default: "Api-Key"
+      }
+      required: true
   schemas:
     LiveProbeResponse:
       type: object
@@ -204,83 +230,7 @@ components:
         message:
           type: string
           description: Message
-    PageLayoutResponse:
-      type: array
-      items:
-        type: object
-        properties:
-          hero:
-            type: array
-            items:
-              type: object
-              properties:
-                descrption:
-                  type: string
-                  description: Descrption
-                image:
-                  type: string
-                  description: Image
-            description: Hero
-          journey Cards:
-            type: array
-            items:
-              type: object
-              properties:
-                journeyCard:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      contextualNavigationCards:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            contextualNavigationCard:
-                              type: array
-                              items:
-                                type: object
-                                properties:
-                                  description:
-                                    type: string
-                                    description: Description
-                                  link:
-                                    type: array
-                                    items:
-                                      type: object
-                                      properties:
-                                        type:
-                                          type: string
-                                          description: Type
-                                        uri:
-                                          type: string
-                                          description: URI
-                                    description: Link
-                                  title:
-                                    type: string
-                                    description: Title
-                              description: ContextualNavigationCard
-                        description: ContextualNavigationCards
-                      description:
-                        type: string
-                        description: Description
-                      link:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            type:
-                              type: string
-                              description: Type
-                            uri:
-                              type: string
-                              description: URI
-                        description: Link
-                      title:
-                        type: string
-                        description: Title
-                  description: JourneyCard
-            description: JourneyCards
+    
     SpecsFilterRequest:
       type: object
       properties:
@@ -295,32 +245,7 @@ components:
           description: User’s last name. Required for all types of account verification.
         enable: 
           type: boolean
-    parameters:
-      AdminUserName:
-        name: Api-Key
-        type: string
-        in: header
-        schema: {
-          type: string,
-          default: "Api-Key"
-        }
-        required: true
-      AdminPassword:
-        type: string
-        in: header
-        schema: {
-          type: string,
-          default: "Api-Key"
-        }
-        required: true
-      HomeId:
-        type: string
-        in: header
-        schema: {
-          type: string,
-          default: "Api-Key"
-        }
-        required: true
+  
     SpecsFilterResponse:
       type: object
       properties:
