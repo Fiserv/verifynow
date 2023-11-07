@@ -112,7 +112,7 @@ paths:
           content:
             application/xml:
               schema:
-              $ref: '#/components/schemas/SpecsFilterResponse'
+                $ref: '#/components/schemas/SpecsFilterResponse'
         default:
           description: default decription will display
           content:
