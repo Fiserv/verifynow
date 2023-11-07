@@ -179,7 +179,7 @@ components:
       name: Api-Key
       type: string
       in: header
-      schema: {
+      schemas: {
         type: string,
         default: "Api-Key"
       }
@@ -187,7 +187,7 @@ components:
     AdminPassword:
       type: string
       in: header
-      schema: {
+      schemas: {
         type: string,
         default: "Api-Key"
       }
@@ -195,7 +195,7 @@ components:
     HomeId:
       type: string
       in: header
-      schema: {
+      schemas: {
         type: string,
         default: "Api-Key"
       }
