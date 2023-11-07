@@ -164,6 +164,29 @@ paths:
       
       x-group-name: Verify Now Service
       x-proxy-name: Trial deposit verification
+  /v1/layouts:
+    post:
+      tags:
+      - Layout
+      
+      summary: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
+      description: Add an account and verifies using Multi-Factor Authentication(MFA).
+      operationId: LayoutAPIId
+      responses:
+        "200":
+          description: This text will appear as description of your response body. Hello World!
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PageLayoutResponse'
+            text/yaml:
+              schema:
+                $ref: '#/components/schemas/PageLayoutResponse'
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/PageLayoutResponse'
+      x-group-name: Verify Now Service
+      x-proxy-name: Real-Time Verification and Addition
 components:
   schemas:
     LiveProbeResponse:
