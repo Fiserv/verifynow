@@ -100,6 +100,18 @@ paths:
             type: string
           required: true
           description: provide Adminusername as value
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+          required: true
+          description: provide AdminPassword as value
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+          required: true
+          description: provide HomeId as value
       requestBody:
         description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
         content:
@@ -302,24 +314,15 @@ components:
     AdminUserName:
       type: string
       properties:
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Subcategories
-          description: Categories
+        description: Categories
+    AdminPassword:
+      type: string
+      properties:
+        description: Categories
+    HomeId:
+      type: string
+      properties:
+        description: Categories
     SpecsFilterResponse:
       type: object
       properties:
