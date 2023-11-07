@@ -134,6 +134,36 @@ paths:
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification
+  /live:
+    post:
+      tags:
+      - HealthCheck
+      summary: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
+      description: Verifies customer's access to an external bank account.
+      operationId: healthCheckId
+      x-links: 
+        link1: 
+          description: Developer Studio
+          flag: external
+          url:  'https://dev-developerstudio.fiserv.com/'
+        link2: 
+          description: Setup tenant
+          flag: internal
+          url:  '../docs?path=docs/getting-started/setup-tenant/setup-tenant.md'
+        link3: 
+          description: Fiserv Portal
+          flag: external
+          url:  'https://fiserv.com'
+      responses:
+        "200":
+          description: Health check.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LiveProbeResponse'
+      
+      x-group-name: Verify Now Service
+      x-proxy-name: Trial deposit verification
 components:
   schemas:
     LiveProbeResponse:
