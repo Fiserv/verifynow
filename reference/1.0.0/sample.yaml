@@ -321,18 +321,7 @@ components:
         text/plain:
           schema:
             $ref: '#/components/schemas/LiveProbeResponse'
-    productPage:
-      description: This text will appear as description of your response body. 
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
-        text/yaml:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
-        text/plain:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
+    
     tenant:
       description: This text will appear as description of your response body. 
       content:
