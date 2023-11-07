@@ -297,6 +297,8 @@ components:
         lastName:
           type: string
           description: User’s last name. Required for all types of account verification.
+        enable: 
+          type: boolean
     AdminUserName:
       type: string
       properties:
@@ -330,7 +332,6 @@ components:
         profileId:
           type: string
           description: Unique ID assigned to the profile created in the system. 
-        enable: true
     TenantProviderResponse:
       type: object
       properties:
