@@ -348,7 +348,6 @@ components:
                       description: Name
                 description: Subcategories
           description: Categories
-
     TenantProviderResponse:
       type: object
       properties:
