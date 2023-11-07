@@ -20,12 +20,12 @@ Before you start integration, it is important to register on the Fiserv Develope
 
 -->
 
-[![Video Thumbnail]][Video1]  
+<!--[![Video Thumbnail]][Video1]  
 
 [Video]: https://user-images.githubusercontent.com/81968767/231950346-2b13475d-f395-4b11-8a55-2d0c93f45813.mp4
 [Video Thumbnail]: https://user-images.githubusercontent.com/81968767/232030323-bbde320a-2bf5-4e21-97c0-8fe1a8895913.png
 
-[Video1]: https://github.com/Fiserv/banking-hub/assets/81706748/a776e7c8-bea8-410e-9529-43ca3968327d
+[Video1]: https://github.com/Fiserv/banking-hub/assets/81706748/a776e7c8-bea8-410e-9529-43ca3968327d-->
 
 
 ## Register on Fiserv Developer Studio
@@ -184,7 +184,7 @@ Refer the following example to construct a request URL for [**Instant Verificati
 ![image](https://user-images.githubusercontent.com/81968767/224235588-d0eb8fd0-6408-475e-99ba-a0a7b06c95b2.png)
 
 
-If host URL of the product is https://cert.api.fiservapps.com/banking/efx/v1/, then request URL will be:
+If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
 
 ![image](../assets/images/verifynow_hostandrequest_url.png)
 
@@ -204,7 +204,7 @@ For more information on Header and to view the list of all header parameters<!--
 
 **Sample Header Example**
 ```
-"Header": [
+"requestHeaders": [
 							{
 								"key": "AdminUserName",
 								"value": "string"								
@@ -276,7 +276,7 @@ The following example shows the sample response payload for **Instant Verificati
 
 ```
 <VerifyNowResponse>
-    <requestId>verifynowIn100</requestId>
+    <requestId>string</requestId>
     <token>string</token>
     <profileInfo>
         <profileId>string</profileId>
@@ -420,7 +420,7 @@ The attached Postman collection use variables to store and reuse few values such
       > 
       > You can obtain the _API key_, _API secret_ and _Org Id_ values from the Credentials tab of My workspaces. 
 
-    <kbd>![Postman-collection-steps](https://user-images.githubusercontent.com/81968767/225672853-7c17109c-3969-4ab7-9fa5-282b335e9b72.png) </kbd>
+    <kbd>![Postman-collection-steps](../assets/images/verifynow_postman.png) </kbd>
 
 
 To  test an API using Postman application: 
