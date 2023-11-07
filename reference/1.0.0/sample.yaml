@@ -102,7 +102,7 @@ paths:
       responses:
         "200":
           description: ""
-          content: {}
+          content:
       x-codegen-request-body-name: Body
   /v1/docs:
     post:
@@ -114,12 +114,12 @@ paths:
       description: Compare the applicants name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
       operationId: DocsAPIId
       parameters:
-        - in: query
-          name: path
-          schema:
-            type: string
-          required: true
-          description: Markdown document path
+      - in: query
+        name: path
+        schema:
+          type: string
+        required: true
+        description: Markdown document path
       responses:
         "200":
           description: ""
