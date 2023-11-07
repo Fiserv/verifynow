@@ -176,10 +176,9 @@ paths:
 components:
   parameters:
     AdminUserName:
-      name: Api-Key
       type: string
       in: header
-      schemas: {
+      schema: {
         type: string,
         default: "Api-Key"
       }
@@ -187,7 +186,7 @@ components:
     AdminPassword:
       type: string
       in: header
-      schemas: {
+      schema: {
         type: string,
         default: "Api-Key"
       }
@@ -195,7 +194,7 @@ components:
     HomeId:
       type: string
       in: header
-      schemas: {
+      schema: {
         type: string,
         default: "Api-Key"
       }
