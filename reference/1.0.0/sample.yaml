@@ -89,7 +89,7 @@ paths:
                 $ref: '#/components/schemas/OutcomeResponse'
       x-group-name: Verification Status
       x-proxy-name: Outcome
-  /v1/apis:
+  /cashedgerws/verifynow/verify/v1:
     post:
       tags:
       - Specs
