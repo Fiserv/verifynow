@@ -410,22 +410,7 @@ components:
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
                       type: string
-                      items:
-                        type: object
-                        properties:
-                          addressLine1:
-                            type: string
-                            description: User’s address street 1. Recommended for instant verification.
-                          city:
-                            type: string
-                            description: User’s city. Recommended for instant verification.
-                          state:
-                            type: string
-                            description: User’s state. Recommended for instant verification.
-                          zipCode:
-                            type: string
-                            description: User’s ZIP Code. Recommended for instant verification. 
-                      description: User’s address. Recommended for instant verification.
+                      description: User’s address street 1. Recommended for instant verification.
                     phoneNumber:
                       type: string
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
@@ -435,29 +420,8 @@ components:
                 items:
                   type: object
                   properties:
-                    accountDetails:
-                      type: string
-                      items:
-                        type: object
-                        properties:
-                          creditAccountNumber:
-                            type: string
-                            description: Account Number. 
-                          accountType:
-                            type: string
-                            description: Account type based on Group. For Group Cash are Checking, Savings, MMA Checking, MMA Savings. For Group Investment are Brokerages. Required for all types of account verification.
-                          routingNumber:
-                            type: string
-                            description: User’s state. Recommended for instant verification. 
-                      description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
                     realTimeVerification:
                       type: string
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
                       description: realTimeVerification
                     instantVerification:
                       type: string
@@ -483,7 +447,13 @@ components:
                 description: The client request ID echoed in the response.
               Token:
                 type: array
-                description: Unique token generated for each request for verification.
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: Token Details
               profileInfo:
                 type: array
                 items:
@@ -491,10 +461,10 @@ components:
                   properties:
                     profileId:
                       type: string
-                      description: Unique ID assigned to the profile created in the system.
+                      description: Name
                     profileStatus:
                       type: string
-                      description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.
+                      description: Name
                 description: profileInfo Details
               status:
                 type: array
@@ -503,13 +473,13 @@ components:
                   properties:
                     statusCode:
                       type: string
-                      description: Alphanumeric code for representing a Success or Failure condition.
+                      description: Name
                     statusDesc:
                       type: string
-                      description: Textual description for the status code.
+                      description: Name
                     statusType:
                       type: string
-                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+                      description: Name
                 description: status Details
           description: VerifyNowResponse Details 
     TenantProviderResponse:
