@@ -404,7 +404,7 @@ components:
                     realTimeVerificationAndAddition:
                       type: string
                       description: realTimeVerificationAndAddition
-                description: Add ProfileDetails
+                description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
     RealTimeVerificationResponse:
       type: object
@@ -425,7 +425,34 @@ components:
                     name:
                       type: string
                       description: Name
-                description: Subcategories
+                description: Token Details
+              profileInfo:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    profileId:
+                      type: string
+                      description: Name
+                    profileStatus:
+                      type: string
+                      description: Name
+                description: profileInfo Details
+              status:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    statusCode:
+                      type: string
+                      description: Name
+                    statusDesc:
+                      type: string
+                      description: Name
+                    statusType:
+                      type: string
+                      description: Name
+                description: status Details
           description: VerifyNowResponse Details 
     TenantProviderResponse:
       type: object
