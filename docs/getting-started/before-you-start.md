@@ -22,7 +22,7 @@ Before you start integration, it is important to register on the Fiserv Develope
 
 
 ## Register on Fiserv Developer Studio
-This section describes the process to create an account and workspace on Fiserv Developer Studio to obtain credentials for sandbox testing.
+This section describes the process to create an account and workspace on Fiserv Developer Studio to obtain credentials for sandbox  testing.
 
 ### Creating an Account
 
