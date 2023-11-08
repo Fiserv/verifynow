@@ -22,6 +22,7 @@ For security reasons, all API methods are set to POST or PUT, irrespective of th
 
 Request URL is formed by appending Host URL and API path. 
 
+
 <!-- theme: info -->
 > **Request URL = Host URL + API path**
 
@@ -32,7 +33,7 @@ Refer the following example to construct a request URL for [**Instant Verificati
 ![image](https://user-images.githubusercontent.com/81968767/224235588-d0eb8fd0-6408-475e-99ba-a0a7b06c95b2.png)
 
 
-If host URL of the product is https://cert.api.fiservapps.com/banking/efx/v1/, then request URL will be:
+If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
 
 ![image](../assets/images/verifynow_hostandrequest_url.png)
 
@@ -46,32 +47,28 @@ To generate an access token, refer to the [Generating Access Token](?path=docs/g
 ### Request Header
   
   
-Header parameters are common for all API requests of Verify Now APIs. Header parameters are sent as a JSON under EFXHeader header parameter.
+Header parameters are common for all API requests of Verify Now APIs. Header parameters are sent as  header parameter.
 
-For more information on EFXHeader and to view the list of all header parameters,<!--<a href="?path=docs/api-ref-EFX-header.md" title="Click to view the list of EFX header parameters"> click here</a>.-->
+For more information on Header and to view the list of all header parameters<!--,<a href="?path=docs/api-ref-EFX-header.md" title="Click to view the list of EFX header parameters"> click here</a>.-->
 
 **Sample Header Example**
 ```
-"EFXHeader": [
+"requestHeaders": [
 							{
 								"key": "AdminUserName",
-								"value": "string",
-								"type": "text"
+								"value": "string"								
 							},
 							{
 								"key": "AdminPassword",
-								"value": "string",
-								"type": "text"
+								"value": "string"	
 							},
 							{
 								"key": "HomeId",
-								"value": "string",
-								"type": "text"
+								"value": "string"								
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/xml",
-								"type": "text"
+								"value": "application/xml"
 							}
 						]
 
@@ -128,7 +125,7 @@ The following example shows the sample response payload for **Instant Verificati
 
 ```
 <VerifyNowResponse>
-    <requestId>verifynowIn100</requestId>
+    <requestId>string</requestId>
     <token>string</token>
     <profileInfo>
         <profileId>string</profileId>
@@ -143,7 +140,3 @@ The following example shows the sample response payload for **Instant Verificati
 ```
 
 To view the API documentation of **Instant Verification** API in API Explorer, [click here]<!--(../api/?type=post&path=/partyservice/parties/parties/secured/list).-->
-
-
-
-[Next - Make Your First API Call](#tab-make_your_first_api_call)
