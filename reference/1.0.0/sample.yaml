@@ -76,6 +76,20 @@ paths:
             type: string
           required: true
           description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+          required: true
+          description: provide HomeId as value
       requestBody:
         description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
         content:
@@ -113,13 +127,7 @@ paths:
           type: string
         required: true
         description: provide Adminusername as value
-      - in: header
-        name: AdminPassword
-        schema:
-          $ref: '#/components/schemas/AdminPassword'
-          type: string
-        required: true
-        description: provide AdminPassword as value
+      
       requestBody:
         description: Real-Time Verification
         content:
@@ -312,12 +320,39 @@ components:
         lastName:
           type: string
           description: User’s last name. Required for all types of account verification.
+        middleName:
+          type: string
+          description: User’s middle name 
+        userId:
+          type: string
+          description: Unique identification number that is assigned to user by client.
+        email: 
+          type: string
+          description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders. 
+        ssn:
+          type: string
+          description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services. 
+        addressLine1:
+          type: string
+          description: User’s address street 1. Recommended for instant verification. 
+        city:
+          type: string
+          description: User’s city. Recommended for instant verification. 
+        state:
+          type: string
+          description: User’s state. Recommended for instant verification.
+        zipCode:
+          type: string
+          description: User’s ZIP Code. Recommended for instant verification. 
+        phoneNumber:
+          type: string
+          description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.  
         enable: 
           type: boolean
     AdminUserName:
       type: string
       properties:
-        HomeId:
+        AdminUserName:
           type: string
           items:
             type: object
@@ -336,6 +371,27 @@ components:
                 description: Subcategories
           description: Categories
     AdminPassword:
+      type: string
+      properties:
+        AdminPassword:
+          type: string
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: Subcategories
+          description: Categories
+    HomeId:
       type: string
       properties:
         HomeId:
@@ -368,6 +424,18 @@ components:
         profileId:
           type: string
           description: Unique ID assigned to the profile created in the system.
+        profileStatus:
+          type: string
+          description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked. 
+        statusCode:
+          type: string
+          description: Alphanumeric code for representing a Success or Failure condition.
+        statusDesc:
+          type: string
+          description: Textual description for the status code.
+        statusType:
+          type: string
+          description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response. 
     RealTimeVerificationRequest:
       type: object
       properties:
