@@ -1,22 +1,24 @@
 # Before You Start
-<!-- theme: info -->
-> #### Note for Developers 
->
-> The current user journey enables developers to register for a trial plan that provides access to a range of Standard Bank Platform APIs on Verify Now. 
 
-Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs using the <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Third-party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentation.
+<!-- theme: info -->
+
+> #### Note 
+>
+> The current user journey enables developers to access to a range of  APIs on Verify Now. 
+
+Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs using the <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Third-party API Testing Tools</a> of your choice.   However, registration is not required to learn about our APIs and reference documentation.
 <!--
 
 [![Video Thumbnail]][Video]  
 
 -->
 
-[![Video Thumbnail]][Video1]  
+<!--[![Video Thumbnail]][Video1]  
 
 [Video]: https://user-images.githubusercontent.com/81968767/231950346-2b13475d-f395-4b11-8a55-2d0c93f45813.mp4
 [Video Thumbnail]: https://user-images.githubusercontent.com/81968767/232030323-bbde320a-2bf5-4e21-97c0-8fe1a8895913.png
 
-[Video1]: https://github.com/Fiserv/banking-hub/assets/81706748/a776e7c8-bea8-410e-9529-43ca3968327d
+[Video1]: https://github.com/Fiserv/banking-hub/assets/81706748/a776e7c8-bea8-410e-9529-43ca3968327d-->
 
 
 ## Register on Fiserv Developer Studio
@@ -30,6 +32,7 @@ Perform the following steps to create an account on Fiserv Developer Studio:
 3.	Follow the instructions on the screen to set up your account
 4.	Sign in to your Fiserv Developer Studio account once it is activated
 
+
 ### Creating a Verify Now Workspace
 
 Workspaces are dedicated spaces for developers to obtain API key, API secret and product related details.
@@ -38,6 +41,8 @@ Perform the following steps to create a workspace on Fiserv Developer Studio:
 
 1.	Sign in to your Fiserv Developer Studio account
 2.	From the top-right corner of the screen, click **Workspaces**. My Workspace page displays
+
+
     <!-- theme: info -->
     > #### Note
     >
@@ -47,10 +52,11 @@ Perform the following steps to create a workspace on Fiserv Developer Studio:
 4.	Enter workspace name and description
 5.	From the **Product** drop-down list, select **Verify Now** and click **Create**. A new workspace is created and three tabs of your workspace, namely Summary, Credentials and Settings are visible
 
+
     <!-- theme: info -->
     > #### Note
     >
-    > Currently, only one workspace can be created for Verify Now. Also, the Trial Plan is available only for a shared Premier Sandbox Environment. <br> To know our core products [click here]<!--(?path=docs/products.md "Products").-->
+    > Currently, only one workspace can be created for Verify Now.<br> To know our core products [click here]<!--(?path=docs/products.md "Products").-->
     
     ![image](https://user-images.githubusercontent.com/81968767/220959037-4fb7f53e-4655-4086-a0a2-8994ee505cb0.png)
 
@@ -66,7 +72,7 @@ Every workspace has following three sections:
     * API secret: _Alphanumeric value of the API secret. API secret is used as password while generating the access token_
     * Host URL: _Host URL path to send API requests_
       
-      ![image](https://github.com/Fiserv/verifynow/assets/verifyNow_ViewAPIKey.png)
+      ![image](../assets/images/verifyNow_ViewAPIKey.png)
 
 * **Settings**: Used to modify or delete the workspace
 
@@ -127,5 +133,3 @@ From the Body tab, select the **x-www-form-urlencoded** radio button and enter t
 
 <br>
 <br>
-
-<a href="#tab-know_our_standard_api_structure" >Next - Know Our Standard API Structure</a> 
