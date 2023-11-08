@@ -113,6 +113,12 @@ paths:
           type: string
         required: true
         description: provide Adminusername as value
+        name: AdminPassword
+        schema:
+          $ref: '#/components/schemas/AdminPassword'
+          type: string
+        required: true
+        description: provide AdminPassword as value
       requestBody:
         description: Real-Time Verification
         content:
@@ -308,6 +314,27 @@ components:
         enable: 
           type: boolean
     AdminUserName:
+      type: string
+      properties:
+        HomeId:
+          type: string
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: Subcategories
+          description: Categories
+    AdminPassword:
       type: string
       properties:
         HomeId:
