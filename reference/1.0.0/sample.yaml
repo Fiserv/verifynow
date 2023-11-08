@@ -113,6 +113,7 @@ paths:
           type: string
         required: true
         description: provide Adminusername as value
+      - in: header
         name: AdminPassword
         schema:
           $ref: '#/components/schemas/AdminPassword'
