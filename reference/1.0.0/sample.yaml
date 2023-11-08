@@ -46,19 +46,47 @@ paths:
       summary: Returns tenant provider API.
       description: Summarize ande provides information about the number of times verification is attempted.
       operationId: TenantProviderID
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+          required: true
+          description: provide HomeId as value
+      requestBody:
+        description: Outcome
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/OutcomeRequest'
       responses:
         "200":
-          description: Tenant provider response. <a href="https://fiserv.com" rel="noopener noreferrer" target="_blank">external link</a> <a href="../docs?path=docs/getting-started/setup-tenant/setup-tenant.md">Setup Tenant</a>
+          description: "Created"
+          content: 
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/OutcomeResponse'
+        default:
+          description: default decription will display
           content:
-            application/json:
+            application/xml:
               schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/TenantProviderResponse'
+                $ref: '#/components/schemas/OutcomeResponse'
       x-group-name: Verification Status
       x-proxy-name: Outcome
   /v1/apis:
@@ -120,14 +148,27 @@ paths:
       description: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time. 
       operationId: DocsAPIId
       parameters:
-      - in: header
-        name: AdminUserName
-        schema:
-          $ref: '#/components/schemas/AdminUserName'
-          type: string
-        required: true
-        description: provide Adminusername as value
-      
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+          required: true
+          description: provide HomeId as value
       requestBody:
         description: Real-Time Verification
         content:
@@ -157,26 +198,47 @@ paths:
       summary: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
       description: Verifies customer's access to an external bank account.
       operationId: healthCheckId
-      x-links: 
-        link1: 
-          description: Developer Studio
-          flag: external
-          url:  'https://dev-developerstudio.fiserv.com/'
-        link2: 
-          description: Setup tenant
-          flag: internal
-          url:  '../docs?path=docs/getting-started/setup-tenant/setup-tenant.md'
-        link3: 
-          description: Fiserv Portal
-          flag: external
-          url:  'https://fiserv.com'
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+          required: true
+          description: provide HomeId as value
+      requestBody:
+        description: trialDepositVerification
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/trialDepositVerificationRequest'
       responses:
         "200":
-          description: Health check.
-          content:
-            application/json:
+          description: "Created"
+          content: 
+            application/xml:
               schema:
-                $ref: '#/components/schemas/LiveProbeResponse'
+                $ref: '#/components/schemas/trialDepositVerificationResponse'
+        default:
+          description: default decription will display
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/trialDepositVerificationResponse'
       x-group-name: Verify Now Service
       x-proxy-name: Trial deposit verification
   /v1/layouts:
@@ -186,19 +248,27 @@ paths:
       summary: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
       description: Add an account and verifies using Multi-Factor Authentication(MFA).
       operationId: LayoutAPIId
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+          required: true
+          description: provide Adminusername as value
+      requestBody:
+        description: Real-Time Verification and Addition
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/RealTimeVerificationAndAdditionRequest'
       responses:
         "200":
-          description: This text will appear as description of your response body. Hello World!
+          description: "created"
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
+                $ref: '#/components/schemas/RealTimeVerificationAndAdditionResponse'
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification and Addition
   /v1/ping:
@@ -515,6 +585,243 @@ components:
                 description: The client request ID echoed in the response.
               Token:
                 type: array
+                description: Unique token generated for each request for verification.
+              profileInfo:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    profileId:
+                      type: string
+                      description: Unique ID assigned to the profile created in the system.
+                    profileStatus:
+                      type: string
+                      description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.
+                description: profileInfo Details
+              status:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    statusCode:
+                      type: string
+                      description: Alphanumeric code for representing a Success or Failure condition.
+                    statusDesc:
+                      type: string
+                      description: Textual description for the status code.
+                    statusType:
+                      type: string
+                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+                description: status Details
+          description: VerifyNowResponse Details
+    trialDepositVerificationRequest:
+      type: object
+      properties:
+        VerifyNowRequest: 
+          type: array
+          items:
+            type: object
+            properties:
+              requestId:
+                type: string
+                description: Unique ID to be passed in by the calling application.
+              Profile:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    Firstname:
+                      type: string
+                      description: User’s first name. Required for all types of account verification.
+                    Lastname:
+                      type: string
+                      description: User’s last name. Required for all types of account verification.
+                    middleName:
+                      type: string
+                      description: User’s middle name.
+                    email:
+                      type: string
+                      description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
+                    userId:
+                      type: string
+                      description: Unique identification number that is assigned to user by client.
+                description: Profile Details
+              profileDetails:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ssn:
+                      type: string
+                      description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
+                    Address:
+                      type: string
+                      description: User’s address street 1. Recommended for instant verification.
+                    phoneNumber:
+                      type: string
+                      description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
+                description: Add ProfileDetails
+              accountOwnershipVerification:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    realTimeVerification:
+                      type: string
+                      description: realTimeVerification
+                    instantVerification:
+                      type: string
+                      description: Instant verification.
+                    trialDepositVerification:
+                      type: string
+                      description: trialDepositVerification
+                    realTimeVerificationAndAddition:
+                      type: string
+                      description: realTimeVerificationAndAddition
+                description: Add accountOwnershipVerification Details
+          description: VerifyNowRequest Details
+    trialDepositVerificationResponse:
+      type: object
+      properties:
+        VerifyNowResponse:
+          type: array
+          items:
+            type: object
+            properties:
+              requestId:
+                type: string
+                description: The client request ID echoed in the response.
+              Token:
+                type: array
+                description: Unique token generated for each request for verification.
+              profileInfo:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    profileId:
+                      type: string
+                      description: Unique ID assigned to the profile created in the system.
+                    profileStatus:
+                      type: string
+                      description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.
+                description: profileInfo Details
+              status:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    statusCode:
+                      type: string
+                      description: Alphanumeric code for representing a Success or Failure condition.
+                    statusDesc:
+                      type: string
+                      description: Textual description for the status code.
+                    statusType:
+                      type: string
+                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+                description: status Details
+          description: VerifyNowResponse Details
+    OutcomeRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          description: Unique ID to be passed in by the calling application. 
+        Token:
+          type: string
+          description: Unique token generated for each request for verification.
+    OutcomeResponse:
+      type: object
+      properties:
+        requestId:
+          type: string
+          description: The client request ID echoed in the response. 
+        accountGroup:
+          type: string
+          description: Account group can have a value such as Cash, Investment, Credit, Card, etc.
+        accountId:
+          type: string
+          description: Unique ID assigned to the account created in the Fiserv VerifyNow system.
+    RealTimeVerificationAndAdditionRequest:
+      type: object
+      properties:
+        VerifyNowRequest: 
+          type: array
+          items:
+            type: object
+            properties:
+              requestId:
+                type: string
+                description: Unique ID to be passed in by the calling application.
+              Profile:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    Firstname:
+                      type: string
+                      description: User’s first name. Required for all types of account verification.
+                    Lastname:
+                      type: string
+                      description: User’s last name. Required for all types of account verification.
+                    middleName:
+                      type: string
+                      description: User’s middle name.
+                    email:
+                      type: string
+                      description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
+                    userId:
+                      type: string
+                      description: Unique identification number that is assigned to user by client.
+                description: Profile Details
+              profileDetails:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ssn:
+                      type: string
+                      description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
+                    Address:
+                      type: string
+                      description: User’s address street 1. Recommended for instant verification.
+                    phoneNumber:
+                      type: string
+                      description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
+                description: Add ProfileDetails
+              accountOwnershipVerification:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    realTimeVerification:
+                      type: string
+                      description: realTimeVerification
+                    instantVerification:
+                      type: string
+                      description: Instant verification.
+                    trialDepositVerification:
+                      type: string
+                      description: trialDepositVerification
+                    realTimeVerificationAndAddition:
+                      type: string
+                      description: realTimeVerificationAndAddition
+                description: Add accountOwnershipVerification Details
+          description: VerifyNowRequest Details
+    RealTimeVerificationAndAdditionResponse:
+      type: object
+      properties:
+        VerifyNowResponse:
+          type: array
+          items:
+            type: object
+            properties:
+              requestId:
+                type: string
+                description: The client request ID echoed in the response.
+              Token:
+                type: array
                 items:
                   type: object
                   properties:
@@ -549,7 +856,7 @@ components:
                       type: string
                       description: Name
                 description: status Details
-          description: VerifyNowResponse Details 
+          description: VerifyNowResponse Details
     TenantProviderResponse:
       type: object
       properties:
