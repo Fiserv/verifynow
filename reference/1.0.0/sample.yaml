@@ -119,7 +119,7 @@ paths:
           required: true
           description: provide HomeId as value
       requestBody:
-        description: Instant Account Ownership Verification using the Early Warning Services(EWS) Account Ownership database.
+        description: Instant Verification 
         content:
           application/xml:
             schema:
@@ -140,7 +140,7 @@ paths:
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
-  /cashedgerws/verifynow/verify/v1:
+  /v1/docs:
     post:
       tags:
       - Documents
@@ -195,8 +195,8 @@ paths:
     post:
       tags:
       - HealthCheck
-      summary: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
-      description: Verifies customer's access to an external bank account.
+      summary: Trial deposit verification
+      description: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
       operationId: healthCheckId
       parameters:
         - in: header
@@ -245,8 +245,8 @@ paths:
     post:
       tags:
       - Layout
-      summary: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
-      description: Add an account and verifies using Multi-Factor Authentication(MFA).
+      summary: Real-Time Verification and Addition
+      description: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
       operationId: LayoutAPIId
       parameters:
         - in: header
@@ -741,13 +741,7 @@ components:
                 description: The client request ID echoed in the response.
               Token:
                 type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Token Details
+                description: Unique token generated for each request for verification.
               profileInfo:
                 type: array
                 items:
