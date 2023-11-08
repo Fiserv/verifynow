@@ -584,7 +584,7 @@ components:
                 type: string
                 description: The client request ID echoed in the response.
               Token:
-                type: array
+                type: string
                 description: Unique token generated for each request for verification.
               profileInfo:
                 type: array
@@ -693,7 +693,13 @@ components:
                 description: The client request ID echoed in the response.
               Token:
                 type: array
-                description: Unique token generated for each request for verification.
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: Token Details
               profileInfo:
                 type: array
                 items:
@@ -701,10 +707,10 @@ components:
                   properties:
                     profileId:
                       type: string
-                      description: Unique ID assigned to the profile created in the system.
+                      description: Name
                     profileStatus:
                       type: string
-                      description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.
+                      description: Name
                 description: profileInfo Details
               status:
                 type: array
@@ -713,13 +719,13 @@ components:
                   properties:
                     statusCode:
                       type: string
-                      description: Alphanumeric code for representing a Success or Failure condition.
+                      description: Name
                     statusDesc:
                       type: string
-                      description: Textual description for the status code.
+                      description: Name
                     statusType:
                       type: string
-                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+                      description: Name
                 description: status Details
           description: VerifyNowResponse Details
     OutcomeRequest:
