@@ -740,7 +740,7 @@ components:
                 type: string
                 description: The client request ID echoed in the response.
               Token:
-                type: array
+                type: string
                 description: Unique token generated for each request for verification.
               profileInfo:
                 type: array
@@ -889,23 +889,20 @@ components:
                       type: string
                       description: User’s Social Security number. Recommended for Real Time Verification And Addition and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
-                      type: string
+                      type: array
                       items:
                         type: object
                         properties:
-                          addressLine1:
+                          statusCode:
                             type: string
-                            description: User’s address street 1. Recommended for Real Time Verification And Addition.
-                          city:
+                            description: Name
+                          statusDesc:
                             type: string
-                            description: User’s city. Recommended for Real Time Verification And Addition.
-                          state:
+                            description: Name
+                          statusType:
                             type: string
-                            description: User’s state. Recommended for Real Time Verification And Addition.
-                          zipCode:
-                            type: string
-                            description: User’s ZIP Code. Recommended for Real Time Verification And Addition.
-                      description: User’s address . Recommended for Real Time Verification And Addition.
+                            description: Name
+                        description: status Details
                     phoneNumber:
                       type: string
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
@@ -941,13 +938,7 @@ components:
                 type: string
                 description: The client request ID echoed in the response.
               Token:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
+                type: string
                 description: Unique token generated for each request for verification.
               profileInfo:
                 type: array
