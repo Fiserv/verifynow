@@ -36,7 +36,7 @@ info:
     and documentation.
   version: 1.0.0
 servers:
-- url: https://tenants.fiserv.com/
+- url: https://qa-ft.onefiserv.net
   description: ""
 paths:
   /cashedgerws/verifynow/outcome/v1:
@@ -431,40 +431,51 @@ components:
       properties:
         requestId:
           type: string
-          example: 'test'
+          example: 'VerifyNow'
           description: Unique ID to be passed in by the calling application. 
         firstName:
           type: string
+          example: 'KARAOne'
           description: User’s first name. Required for all types of account verification.
         lastName:
           type: string
+          example: 'demoone'
           description: User’s last name. Required for all types of account verification.
         middleName:
           type: string
+          example: ' '
           description: User’s middle name 
         userId:
           type: string
+          example: 'demoone'
           description: Unique identification number that is assigned to user by client.
         email: 
           type: string
+          example: 'samstestone@mail.com'
           description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders. 
         ssn:
           type: string
+          example: '987612300'
           description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services. 
         addressLine1:
           type: string
+          example: '9384 POODLE LN'
           description: User’s address street 1. Recommended for instant verification. 
         city:
           type: string
+          example: 'KAILAU'
           description: User’s city. Recommended for instant verification. 
         state:
           type: string
+          example: 'HI'
           description: User’s state. Recommended for instant verification.
         zipCode:
           type: string
+          example: '96734'
           description: User’s ZIP Code. Recommended for instant verification. 
         phoneNumber:
           type: string
+          example: '8087531231'
           description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.  
         enable: 
           type: boolean
