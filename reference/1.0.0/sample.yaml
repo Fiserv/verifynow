@@ -103,6 +103,7 @@ paths:
             $ref: '#/components/schemas/AdminUserName'
             type: string
           required: true
+          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
@@ -110,6 +111,7 @@ paths:
             $ref: '#/components/schemas/AdminPassword'
             type: string
           required: true
+          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
@@ -117,6 +119,7 @@ paths:
             $ref: '#/components/schemas/HomeId'
             type: string
           required: true
+          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: Instant Verification 
