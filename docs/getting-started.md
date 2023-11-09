@@ -181,7 +181,7 @@ Request URL is formed by appending Host URL and API path.
 To get Host URL, go to API key section of your Workspace. The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
 Refer the following example to construct a request URL for [**Instant Verification**]<!--(../api/?type=post&path=/acctservice/acctmgmt/accounts)--> API:
 
-![image](https://user-images.githubusercontent.com/81968767/224235588-d0eb8fd0-6408-475e-99ba-a0a7b06c95b2.png)
+![image](../assets/images/Verifynow_InstantAPI.png)
 
 
 If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
@@ -452,9 +452,33 @@ To  test an API using Postman application:
 9.	Click **Send**. API response is generated in the Response section
 
   
-<kbd>
+<!--kbd>
   <img src="https://user-images.githubusercontent.com/81968767/145146913-16d54888-1e48-46b7-99f5-64827a78e21f.gif" />
-</kbd>
+</kbd>-->
+
+#### STEP 1:
+
+Enter Host Url.
+
+![image](../assets/images/Verifynow_Url.png)
+
+#### STEP 2:
+
+Enter Header values 
+
+![image](../assets/images/verifynow_HeaderDetails.png)
+
+#### STEP 3:
+
+Request Payload
+
+![image](../assets/images/Verifynow_Request.png)
+
+#### STEP 4:
+
+Response Payload
+
+![image](../assets/images/Verifynow_Repsonse.png)
   
   
 

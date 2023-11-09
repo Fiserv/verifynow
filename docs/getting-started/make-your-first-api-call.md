@@ -6,6 +6,7 @@ This section describes the process to send an API request to the server and rece
 
 You can test our APIs in the Sandbox environment using third-party API testing tools, such as Postman, Apigee, JMeter and others.
 
+
 <!-- theme: info -->
 > #### Tip
 >
@@ -32,7 +33,7 @@ After successful registration, you will be able to create a workspace. You can o
 * API secret
 * Host URL
   
-These credentials are important to send in API requests. **API key** and **API secret** values are used to generate access token, whereas **Org ID** value is required to be passed as header parameter under the [EFXHeader]<!--(?path=docs/api-ref-EFX-header.md)--> parameter.
+These credentials are important to send in API requests. **API key** and **API secret** values are used to generate access token, whereas **Org ID** value is required to be passed as header parameter under the Header<!--EFXHeader](?path=docs/api-ref-EFX-header.md)--> parameter.
 
 
 **Generating an Access Token**
@@ -115,7 +116,7 @@ The attached Postman collection use variables to store and reuse few values such
       > 
       > You can obtain the _API key_, _API secret_ and _Org Id_ values from the Credentials tab of My workspaces. 
 
-    <kbd>![Postman-collection-steps](https://user-images.githubusercontent.com/81968767/225672853-7c17109c-3969-4ab7-9fa5-282b335e9b72.png) </kbd>
+    <kbd>![Postman-collection-steps](../../assets/images/verifynow_postman.png) </kbd>
 
 
 To  test an API using Postman application: 
@@ -133,10 +134,10 @@ To  test an API using Postman application:
 
     ![image](https://user-images.githubusercontent.com/81968767/220967588-52eec24d-4b13-4d26-ba28-a9ad90943e26.png)
     
-6.	Add EFXHeader as new parameters under the **Headers** section and insert the <EFXHeader> value in JSON format 
+6.	Add Header as new parameters under the **Headers** section and insert the <Header> value. <!--in JSON format--> 
 7.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **XML** 
   
-    <kbd><img src="../assets/images/verifynow_bodytab.png" width="70%" /></kbd><br>
+    <kbd><img src="../../assets/images/verifynow_bodytab.png" width="70%" /></kbd><br>
     
     <!-- theme: info -->
     > #### Note
@@ -147,10 +148,30 @@ To  test an API using Postman application:
 9.	Click **Send**. API response is generated in the Response section
 
   
-<kbd>
+<!--<kbd>
   <img src="https://user-images.githubusercontent.com/81968767/145146913-16d54888-1e48-46b7-99f5-64827a78e21f.gif" />
-</kbd>
-  
-  
+</kbd>-->
 
-<!-- type: tab-end -->
+#### STEP 1:
+
+Enter Host Url.
+
+![image](../../assets/images/Verifynow_Url.png)
+
+#### STEP 2:
+
+Enter Header values 
+
+![image](../../assets/images/verifynow_HeaderDetails.png)
+
+#### STEP 3:
+
+Request Payload
+
+![image](../../assets/images/Verifynow_Request.png)
+
+#### STEP 4:
+
+Response Payload
+
+![image](../../assets/images/Verifynow_Repsonse.png)

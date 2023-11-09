@@ -30,12 +30,12 @@ Request URL is formed by appending Host URL and API path.
 To get Host URL, go to API key section of your Workspace. The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
 Refer the following example to construct a request URL for [**Instant Verification**]<!--(../api/?type=post&path=/acctservice/acctmgmt/accounts)--> API:
 
-![image](https://user-images.githubusercontent.com/81968767/224235588-d0eb8fd0-6408-475e-99ba-a0a7b06c95b2.png)
+![image](../../assets/images/verify-instantly.png)
 
 
 If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
 
-![image](../assets/images/verifynow_hostandrequest_url.png)
+![image](../../assets/images/verifynow_hostandrequest_url.png)
 
 
 ### Access Token
