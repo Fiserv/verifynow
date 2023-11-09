@@ -72,7 +72,7 @@ Every workspace has following three sections:
     * API secret: _Alphanumeric value of the API secret. API secret is used as password while generating the access token_
     * Host URL: _Host URL path to send API requests_
       
-      ![image](../assets/images/verifyNow_ViewAPIKey.png)
+      ![image](../../assets/images/verifyNow_ViewAPIKey.png)
 
 * **Settings**: Used to modify or delete the workspace
 

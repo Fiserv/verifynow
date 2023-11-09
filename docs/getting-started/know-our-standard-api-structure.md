@@ -35,7 +35,7 @@ Refer the following example to construct a request URL for [**Instant Verificati
 
 If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
 
-![image](../assets/images/verifynow_hostandrequest_url.png)
+![image](../../assets/images/verifynow_hostandrequest_url.png)
 
 
 ### Access Token
