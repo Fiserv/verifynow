@@ -446,39 +446,30 @@ components:
           description: User’s last name. Required for all types of account verification.
         middleName:
           type: string
-          value: " "
           description: User’s middle name 
         userId:
           type: string
-          value: "demoone"
           description: Unique identification number that is assigned to user by client.
         email: 
           type: string
-          value: "samstestone@mail.com"
           description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders. 
         ssn:
           type: string
-          value: "987612300"
           description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services. 
         addressLine1:
           type: string
-          value: "9384 POODLE LN"
           description: User’s address street 1. Recommended for instant verification. 
         city:
           type: string
-          value: "KAILAU"
           description: User’s city. Recommended for instant verification. 
         state:
           type: string
-          value: "HI"
           description: User’s state. Recommended for instant verification.
         zipCode:
           type: string
-          value: "96734"
           description: User’s ZIP Code. Recommended for instant verification. 
         phoneNumber:
           type: string
-          value: "8087531231"
           description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.  
         enable: 
           type: boolean
