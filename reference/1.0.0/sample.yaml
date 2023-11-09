@@ -140,7 +140,6 @@ paths:
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
-  /v1/docs:
     post:
       tags:
       - RTV
