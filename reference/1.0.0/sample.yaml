@@ -42,7 +42,7 @@ paths:
   /cashedgerws/verifynow/outcome/v1:
     post:
       tags:
-      - Outcome
+      - OutCome
       summary: Returns tenant provider API.
       description: Summarize ande provides information about the number of times verification is attempted.
       operationId: TenantProviderID
@@ -140,6 +140,7 @@ paths:
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
+  /v1/docs:
     post:
       tags:
       - RTV
@@ -320,7 +321,7 @@ paths:
           required: true
           description: provide HomeId as value
       requestBody:
-        description: Ping
+        description: trialDepositVerification
         content:
           application/xml:
             schema:
@@ -338,7 +339,7 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/PingResponse'
-      x-group-name: Health Check
+      x-group-name: Security Service
       x-proxy-name: Ping
 components:
   schemas:
@@ -430,7 +431,7 @@ components:
       properties:
         requestId:
           type: string
-          value: 'test'
+          example: 'test'
           description: Unique ID to be passed in by the calling application. 
         firstName:
           type: string
@@ -595,23 +596,8 @@ components:
                       type: string
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          addressLine1:
-                            type: string
-                            description: User’s address street 1. Recommended for Trial Deposit Verification.
-                          city:
-                            type: string
-                            description: User’s city. Recommended for Trial Deposit Verification.
-                          state:
-                            type: string
-                            description: User’s state. Recommended for Trial Deposit Verification.
-                          zipCode:
-                            type: string
-                            description: User’s ZIP Code. Recommended for Trial Deposit Verification.
-                        description: User Address Details
+                      type: string
+                      description: User’s address street 1. Recommended for instant verification.
                     phoneNumber:
                       type: string
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
@@ -621,56 +607,17 @@ components:
                 items:
                   type: object
                   properties:
-                    accountDetails:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          creditAccountNumber:
-                            type: boolean
-                            description: Account Number.
-                          accountType:
-                            type: string
-                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
-                          routingNumber:
-                            type: boolean
-                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
-                      description: User accountDetails 
                     realTimeVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: realTimeVerification
                     instantVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
-                      description: instantVerification
+                      type: string
+                      description: Instant verification.
                     trialDepositVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: trialDepositVerification
                     realTimeVerificationAndAddition:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
@@ -757,23 +704,8 @@ components:
                       type: string
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          addressLine1:
-                            type: string
-                            description: User’s address street 1. Recommended for Trial Deposit Verification.
-                          city:
-                            type: string
-                            description: User’s city. Recommended for Trial Deposit Verification.
-                          state:
-                            type: string
-                            description: User’s state. Recommended for Trial Deposit Verification.
-                          zipCode:
-                            type: string
-                            description: User’s ZIP Code. Recommended for Trial Deposit Verification.
-                        description: User Address Details
+                      type: string
+                      description: User’s address street 1. Recommended for instant verification.
                     phoneNumber:
                       type: string
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
@@ -783,56 +715,17 @@ components:
                 items:
                   type: object
                   properties:
-                    accountDetails:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          creditAccountNumber:
-                            type: boolean
-                            description: Account Number.
-                          accountType:
-                            type: string
-                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
-                          routingNumber:
-                            type: boolean
-                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
-                      description: User accountDetails 
-                    instantVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
-                      description: instantVerification
                     realTimeVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: realTimeVerification
+                    instantVerification:
+                      type: string
+                      description: Instant verification.
                     trialDepositVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: trialDepositVerification
                     realTimeVerificationAndAddition:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
@@ -1001,19 +894,16 @@ components:
                       items:
                         type: object
                         properties:
-                          addressLine1:
+                          statusCode:
                             type: string
-                            description: User’s address street 1. Recommended for Real Time Verification And Addition.
-                          city:
+                            description: Name
+                          statusDesc:
                             type: string
-                            description: User’s city. Recommended for Real Time Verification And Addition.
-                          state:
+                            description: Name
+                          statusType:
                             type: string
-                            description: User’s state. Recommended for Real Time Verification And Addition.
-                          zipCode:
-                            type: string
-                            description: User’s ZIP Code. Recommended for Real Time Verification And Addition.
-                        description: User Address Details
+                            description: Name
+                        description: status Details
                     phoneNumber:
                       type: string
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
@@ -1023,41 +913,17 @@ components:
                 items:
                   type: object
                   properties:
-                    instantVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
-                      description: instantVerification
                     realTimeVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: realTimeVerification
+                    instantVerification:
+                      type: string
+                      description: Instant verification.
                     trialDepositVerification:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: trialDepositVerification
                     realTimeVerificationAndAddition:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          enable:
-                            type: boolean
-                            description: invoke the verification method.
+                      type: string
                       description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
