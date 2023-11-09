@@ -1019,7 +1019,6 @@ components:
                         properties:
                           enable:
                             type: boolean
-                            value: false
                             description: invoke the verification method.
                       description: realTimeVerification
                     realTimeVerificationAndAddition:
