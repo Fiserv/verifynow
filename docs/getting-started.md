@@ -452,9 +452,33 @@ To  test an API using Postman application:
 9.	Click **Send**. API response is generated in the Response section
 
   
-<kbd>
+<!--kbd>
   <img src="https://user-images.githubusercontent.com/81968767/145146913-16d54888-1e48-46b7-99f5-64827a78e21f.gif" />
-</kbd>
+</kbd>-->
+
+#### STEP 1:
+
+Enter Host Url.
+
+![image](../assets/images/Verifynow_Url.png)
+
+#### STEP 2:
+
+Enter Header values 
+
+![image](../assets/images/verifynow_HeaderDetails.png)
+
+#### STEP 3:
+
+Request Payload
+
+![image](../assets/images/Verifynow_Request.png)
+
+#### STEP 4:
+
+Response Payload
+
+![image](../assets/images/Verifynow_Repsonse.png)
   
   
 
