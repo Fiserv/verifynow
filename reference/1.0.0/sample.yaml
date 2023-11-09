@@ -621,6 +621,21 @@ components:
                 items:
                   type: object
                   properties:
+                    accountDetails:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          creditAccountNumber:
+                            type: boolean
+                            description: Account Number.
+                          accountType:
+                            type: string
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
+                          routingNumber:
+                            type: boolean
+                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
+                      description: User accountDetails 
                     realTimeVerification:
                       type: array
                       items:
@@ -638,7 +653,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: instantVerification
                     trialDepositVerification:
                       type: array
                       items:
@@ -647,7 +662,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: trialDepositVerification
                     realTimeVerificationAndAddition:
                       type: array
                       items:
@@ -656,7 +671,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
     RealTimeVerificationResponse:
@@ -768,6 +783,21 @@ components:
                 items:
                   type: object
                   properties:
+                    accountDetails:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          creditAccountNumber:
+                            type: boolean
+                            description: Account Number.
+                          accountType:
+                            type: string
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
+                          routingNumber:
+                            type: boolean
+                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
+                      description: User accountDetails 
                     instantVerification:
                       type: array
                       items:
@@ -776,7 +806,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: instantVerification
                     realTimeVerification:
                       type: array
                       items:
@@ -794,7 +824,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: trialDepositVerification
                     realTimeVerificationAndAddition:
                       type: array
                       items:
@@ -803,7 +833,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
     trialDepositVerificationResponse:
@@ -1001,7 +1031,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: instantVerification
                     realTimeVerification:
                       type: array
                       items:
@@ -1019,7 +1049,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: trialDepositVerification
                     realTimeVerificationAndAddition:
                       type: array
                       items:
@@ -1028,7 +1058,7 @@ components:
                           enable:
                             type: boolean
                             description: invoke the verification method.
-                      description: realTimeVerification
+                      description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
     RealTimeVerificationAndAdditionResponse:
