@@ -703,8 +703,23 @@ components:
                       type: string
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
-                      type: string
-                      description: User’s address street 1. Recommended for instant verification.
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          addressLine1:
+                            type: string
+                            description: User’s address street 1. Recommended for Trial Deposit Verification.
+                          city:
+                            type: string
+                            description: User’s city. Recommended for Trial Deposit Verification.
+                          state:
+                            type: string
+                            description: User’s state. Recommended for Trial Deposit Verification.
+                          zipCode:
+                            type: string
+                            description: User’s ZIP Code. Recommended for Trial Deposit Verification.
+                        description: User Address Details
                     phoneNumber:
                       type: string
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
@@ -893,16 +908,19 @@ components:
                       items:
                         type: object
                         properties:
-                          statusCode:
+                          addressLine1:
                             type: string
-                            description: Name
-                          statusDesc:
+                            description: User’s address street 1. Recommended for Real Time Verification And Addition.
+                          city:
                             type: string
-                            description: Name
-                          statusType:
+                            description: User’s city. Recommended for Real Time Verification And Addition.
+                          state:
                             type: string
-                            description: Name
-                        description: status Details
+                            description: User’s state. Recommended for Real Time Verification And Addition.
+                          zipCode:
+                            type: string
+                            description: User’s ZIP Code. Recommended for Real Time Verification And Addition.
+                        description: User Address Details
                     phoneNumber:
                       type: string
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
@@ -918,6 +936,15 @@ components:
                     instantVerification:
                       type: string
                       description: Instant verification.
+                    realTimeVerification:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          enable:
+                            type: boolean
+                            description: invoke the verification method.
+                      description: realTimeVerification
                     trialDepositVerification:
                       type: string
                       description: trialDepositVerification
