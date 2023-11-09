@@ -1083,3 +1083,19 @@ components:
     basic:
       type: http
       scheme: basic
+examples:
+  SpecsFilterRequest:
+    value:
+      requestId: 1234
+      firstName: test
+      lastName: test1
+      middleName: sample
+      userId: 12345
+      email: test@fiserv.com
+      ssn: er45678
+      addressLine1: address
+      city: chennai
+      state: tamilnadu
+      zipCode: 600001
+      phoneNumber: 12345678
+      enable: true
