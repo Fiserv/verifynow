@@ -430,6 +430,7 @@ components:
       properties:
         requestId:
           type: string
+          value: 'test'
           description: Unique ID to be passed in by the calling application. 
         firstName:
           type: string
