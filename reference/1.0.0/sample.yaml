@@ -104,7 +104,7 @@ paths:
             type: string
           required: true
           description: provide Adminusername as value
-          value: "99993001xmladmin"
+          example: '99993001xmladmin'
         - in: header
           name: AdminPassword
           schema:
@@ -112,7 +112,7 @@ paths:
             type: string
           required: true
           description: provide AdminPassword as value
-          value: "cashedge1"
+          example: 'cashedge1'
         - in: header
           name: HomeId
           schema:
@@ -120,7 +120,7 @@ paths:
             type: string
           required: true
           description: provide HomeId as value
-          value: "99993001"
+          example: '99993001'
       requestBody:
         description: Instant Verification 
         content:
@@ -434,15 +434,15 @@ components:
       properties:
         requestId:
           type: string
-          value: "VerifyNow"
+          example: 'VerifyNow'
           description: Unique ID to be passed in by the calling application. 
         firstName:
           type: string
-          value: "KARAOne"
+          example: 'KARAOne'
           description: User’s first name. Required for all types of account verification.
         lastName:
           type: string
-          value: "demoone"
+          example: 'demoone'
           description: User’s last name. Required for all types of account verification.
         middleName:
           type: string
