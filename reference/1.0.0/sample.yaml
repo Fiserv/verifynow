@@ -812,7 +812,8 @@ components:
                       items:
                         type: object
                         properties:
-                          enable: false
+                          enable:
+                            type: boolean
                             description: invoke the verification method.
                       description: realTimeVerification
                     trialDepositVerification:
