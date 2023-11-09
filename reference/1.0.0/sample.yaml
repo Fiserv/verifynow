@@ -39,10 +39,10 @@ servers:
 - url: https://tenants.fiserv.com/
   description: ""
 paths:
-  /v1/products:
+  /cashedgerws/verifynow/outcome/v1:
     post:
       tags:
-      - Tenant
+      - Outcome
       summary: Returns tenant provider API.
       description: Summarize ande provides information about the number of times verification is attempted.
       operationId: TenantProviderID
@@ -92,7 +92,7 @@ paths:
   /cashedgerws/verifynow/verify/v1:
     post:
       tags:
-      - Specs
+      - Instant
       summary: Instant Verification
       description: This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
       operationId: APISpecProviderId
@@ -143,7 +143,7 @@ paths:
   /v1/docs:
     post:
       tags:
-      - Documents
+      - RTV
       summary: Real-Time Verification
       description: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time. 
       operationId: DocsAPIId
@@ -194,7 +194,7 @@ paths:
   /live:
     post:
       tags:
-      - HealthCheck
+      - Trial Deposit
       summary: Trial deposit verification
       description: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
       operationId: healthCheckId
@@ -244,7 +244,7 @@ paths:
   /v1/layouts:
     post:
       tags:
-      - Layout
+      - RTVA
       summary: Real-Time Verification and Addition
       description: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
       operationId: LayoutAPIId
@@ -291,10 +291,10 @@ paths:
                 $ref: '#/components/schemas/RealTimeVerificationAndAdditionResponse'
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification and Addition
-  /v1/ping:
+  /cashedgerws/verifynow/ping:
     post:
       tags:
-      - Tenant 
+      - ping 
       summary: Returns tenant provider API.
       description: Secure verification on Users bank account.
       operationId: TenantProviderID
