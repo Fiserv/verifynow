@@ -930,9 +930,6 @@ components:
                 items:
                   type: object
                   properties:
-                    realTimeVerification:
-                      type: string
-                      description: realTimeVerification
                     instantVerification:
                       type: string
                       description: Instant verification.
