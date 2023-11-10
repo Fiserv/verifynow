@@ -103,7 +103,7 @@ paths:
             $ref: '#/components/schemas/AdminUserName'
             type: string
           required: true
-          example: ' '
+          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
@@ -111,7 +111,7 @@ paths:
             $ref: '#/components/schemas/AdminPassword'
             type: string
           required: true
-          example: ' '
+          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
@@ -119,7 +119,7 @@ paths:
             $ref: '#/components/schemas/HomeId'
             type: string
           required: true
-          example: ' '
+          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: Instant Verification 
@@ -157,6 +157,7 @@ paths:
             $ref: '#/components/schemas/AdminUserName'
             type: string
           required: true
+          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
@@ -164,6 +165,7 @@ paths:
             $ref: '#/components/schemas/AdminPassword'
             type: string
           required: true
+          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
@@ -171,6 +173,7 @@ paths:
             $ref: '#/components/schemas/HomeId'
             type: string
           required: true
+          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: Real-Time Verification
@@ -208,6 +211,7 @@ paths:
             $ref: '#/components/schemas/AdminUserName'
             type: string
           required: true
+          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
@@ -215,6 +219,7 @@ paths:
             $ref: '#/components/schemas/AdminPassword'
             type: string
           required: true
+          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
@@ -222,6 +227,7 @@ paths:
             $ref: '#/components/schemas/HomeId'
             type: string
           required: true
+          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: trialDepositVerification
@@ -258,6 +264,7 @@ paths:
             $ref: '#/components/schemas/AdminUserName'
             type: string
           required: true
+          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
@@ -265,6 +272,7 @@ paths:
             $ref: '#/components/schemas/AdminPassword'
             type: string
           required: true
+          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
@@ -272,6 +280,7 @@ paths:
             $ref: '#/components/schemas/HomeId'
             type: string
           required: true
+          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: Real-Time Verification and Addition
@@ -579,6 +588,7 @@ components:
             properties:
               requestId:
                 type: string
+                example: 'VerifyNow'
                 description: Unique ID to be passed in by the calling application.
               Profile:
                 type: array
@@ -587,18 +597,23 @@ components:
                   properties:
                     Firstname:
                       type: string
+                      example: 'KARAOne'
                       description: User’s first name. Required for all types of account verification.
                     Lastname:
                       type: string
+                      example: 'demoone'
                       description: User’s last name. Required for all types of account verification.
                     middleName:
                       type: string
+                      example: ' '
                       description: User’s middle name.
                     email:
                       type: string
+                      example: 'samstestone@mail.com'
                       description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
                     userId:
                       type: string
+                      example: 'demoone'
                       description: Unique identification number that is assigned to user by client.
                 description: Profile Details
               profileDetails:
@@ -608,12 +623,15 @@ components:
                   properties:
                     ssn:
                       type: string
+                      example: '987612300'
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
                       type: string
+                      example: '9384 POODLE LN'
                       description: User’s address street 1. Recommended for instant verification.
                     phoneNumber:
                       type: string
+                      example: '8087531231'
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
                 description: Add ProfileDetails
               accountOwnershipVerification:
@@ -687,6 +705,7 @@ components:
             properties:
               requestId:
                 type: string
+                example: 'VerifyNow'
                 description: Unique ID to be passed in by the calling application.
               Profile:
                 type: array
@@ -695,18 +714,23 @@ components:
                   properties:
                     Firstname:
                       type: string
+                      example: 'KARAOne'
                       description: User’s first name. Required for all types of account verification.
                     Lastname:
                       type: string
+                      example: 'demoone'
                       description: User’s last name. Required for all types of account verification.
                     middleName:
                       type: string
+                      example: ' '
                       description: User’s middle name.
                     email:
                       type: string
+                      example: 'samstestone@mail.com'
                       description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
                     userId:
                       type: string
+                      example: 'demoone'
                       description: Unique identification number that is assigned to user by client.
                 description: Profile Details
               profileDetails:
@@ -716,12 +740,15 @@ components:
                   properties:
                     ssn:
                       type: string
+                      example: '987612300'
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
                       type: string
+                      example: '9384 POODLE LN'
                       description: User’s address street 1. Recommended for instant verification.
                     phoneNumber:
                       type: string
+                      example: '8087531231'
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
                 description: Add ProfileDetails
               accountOwnershipVerification:
@@ -873,6 +900,7 @@ components:
             properties:
               requestId:
                 type: string
+                 example: 'VerifyNow'
                 description: Unique ID to be passed in by the calling application.
               Profile:
                 type: array
@@ -881,18 +909,23 @@ components:
                   properties:
                     Firstname:
                       type: string
+                      example: 'KARAOne'
                       description: User’s first name. Required for all types of account verification.
                     Lastname:
                       type: string
+                      example: 'demoone'
                       description: User’s last name. Required for all types of account verification.
                     middleName:
                       type: string
+                      example: ' '
                       description: User’s middle name.
                     email:
                       type: string
+                      example: 'samstestone@mail.com'
                       description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
                     userId:
                       type: string
+                      example: 'demoone'
                       description: Unique identification number that is assigned to user by client.
                 description: Profile Details
               profileDetails:
@@ -902,24 +935,15 @@ components:
                   properties:
                     ssn:
                       type: string
+                      example: '987612300'
                       description: User’s Social Security number. Recommended for Real Time Verification And Addition and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          statusCode:
-                            type: string
-                            description: Name
-                          statusDesc:
-                            type: string
-                            description: Name
-                          statusType:
-                            type: string
-                            description: Name
-                        description: status Details
+                      type: string
+                      example: '9384 POODLE LN'
+                      description: User’s address street 1. Recommended for instant verification.
                     phoneNumber:
                       type: string
+                      example: '8087531231'
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
                 description: Add ProfileDetails
               accountOwnershipVerification:
