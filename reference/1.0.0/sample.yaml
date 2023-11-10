@@ -52,6 +52,7 @@ paths:
           schema:
             $ref: '#/components/schemas/AdminUserName'
             type: string
+            example: '99993001xmladmin'
           required: true
           description: provide Adminusername as value
         - in: header
@@ -59,6 +60,7 @@ paths:
           schema:
             $ref: '#/components/schemas/AdminPassword'
             type: string
+            example: 'cashedge1'
           required: true
           description: provide AdminPassword as value
         - in: header
@@ -66,6 +68,7 @@ paths:
           schema:
             $ref: '#/components/schemas/HomeId'
             type: string
+            example: '99993001'
           required: true
           description: provide HomeId as value
       requestBody:
@@ -102,24 +105,24 @@ paths:
           schema:
             $ref: '#/components/schemas/AdminUserName'
             type: string
+            example: '99993001xmladmin'
           required: true
-          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
           schema:
             $ref: '#/components/schemas/AdminPassword'
             type: string
+            example: 'cashedge1'
           required: true
-          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
           schema:
             $ref: '#/components/schemas/HomeId'
             type: string
+            example: '99993001'
           required: true
-          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: Instant Verification 
@@ -156,24 +159,24 @@ paths:
           schema:
             $ref: '#/components/schemas/AdminUserName'
             type: string
+            example: '99993001xmladmin'
           required: true
-          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
           schema:
             $ref: '#/components/schemas/AdminPassword'
             type: string
+            example: 'cashedge1'
           required: true
-          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
           schema:
             $ref: '#/components/schemas/HomeId'
             type: string
+            example: '99993001'
           required: true
-          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: Real-Time Verification
@@ -210,24 +213,24 @@ paths:
           schema:
             $ref: '#/components/schemas/AdminUserName'
             type: string
+            example: '99993001xmladmin'
           required: true
-          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
           schema:
             $ref: '#/components/schemas/AdminPassword'
             type: string
+            example: 'cashedge1'
           required: true
-          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
           schema:
             $ref: '#/components/schemas/HomeId'
             type: string
+            example: '99993001'
           required: true
-          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: trialDepositVerification
@@ -263,24 +266,24 @@ paths:
           schema:
             $ref: '#/components/schemas/AdminUserName'
             type: string
+            example: '99993001xmladmin'
           required: true
-          example: '99993001xmladmin'
           description: provide Adminusername as value
         - in: header
           name: AdminPassword
           schema:
             $ref: '#/components/schemas/AdminPassword'
             type: string
+            example: 'cashedge1'
           required: true
-          example: 'cashedge1'
           description: provide AdminPassword as value
         - in: header
           name: HomeId
           schema:
             $ref: '#/components/schemas/HomeId'
             type: string
+            example: '99993001'
           required: true
-          example: '99993001'
           description: provide HomeId as value
       requestBody:
         description: Real-Time Verification and Addition
@@ -316,6 +319,7 @@ paths:
           schema:
             $ref: '#/components/schemas/AdminUserName'
             type: string
+            example: '99993001xmladmin'
           required: true
           description: provide Adminusername as value
         - in: header
@@ -323,6 +327,7 @@ paths:
           schema:
             $ref: '#/components/schemas/AdminPassword'
             type: string
+            example: 'cashedge1'
           required: true
           description: provide AdminPassword as value
         - in: header
@@ -330,6 +335,7 @@ paths:
           schema:
             $ref: '#/components/schemas/HomeId'
             type: string
+            example: '99993001'
           required: true
           description: provide HomeId as value
       requestBody:
@@ -559,24 +565,31 @@ components:
       properties:
         requestId:
           type: string
+          example: 'verifynow'
           description: The client request ID echoed in the response. 
         token:
           type: string
+          example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'
           description: Unique token generated for each request for verification.
         profileId:
           type: string
+          example: '128933531'
           description: Unique ID assigned to the profile created in the system.
         profileStatus:
           type: string
+          example: 'Active'
           description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked. 
         statusCode:
           type: string
+          example: 'VNASM115'
           description: Alphanumeric code for representing a Success or Failure condition.
         statusDesc:
           type: string
+          example: 'User Already Exists'
           description: Textual description for the status code.
         statusType:
           type: string
+          example: 'SUCCESS'
           description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response. 
     RealTimeVerificationRequest:
       type: object
@@ -639,6 +652,24 @@ components:
                 items:
                   type: object
                   properties:
+                    accountDetails:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          creditAccountNumber:
+                            type: boolean
+                            example: '8087531231'
+                            description: Account Number.
+                          accountType:
+                            type: string
+                            example: 'Savings'
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
+                          routingNumber:
+                            type: boolean
+                            example: '122199983'
+                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
+                      description: User accountDetails
                     realTimeVerification:
                       type: string
                       description: realTimeVerification
@@ -663,9 +694,11 @@ components:
             properties:
               requestId:
                 type: string
+                example: 'verifynow'
                 description: The client request ID echoed in the response.
               Token:
                 type: string
+                example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'
                 description: Unique token generated for each request for verification.
               profileInfo:
                 type: array
@@ -674,9 +707,11 @@ components:
                   properties:
                     profileId:
                       type: string
+                      example: '128933531'
                       description: Unique ID assigned to the profile created in the system.
                     profileStatus:
                       type: string
+                      example: 'Active'
                       description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.
                 description: profileInfo Details
               status:
@@ -686,12 +721,15 @@ components:
                   properties:
                     statusCode:
                       type: string
+                      example: 'VNASM115'
                       description: Alphanumeric code for representing a Success or Failure condition.
                     statusDesc:
                       type: string
+                      example: 'User Already Exists'
                       description: Textual description for the status code.
                     statusType:
                       type: string
+                      example: 'SUCCESS'
                       description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
                 description: status Details
           description: VerifyNowResponse Details
@@ -756,6 +794,24 @@ components:
                 items:
                   type: object
                   properties:
+                    accountDetails:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          creditAccountNumber:
+                            type: boolean
+                            example: '8087531231'
+                            description: Account Number.
+                          accountType:
+                            type: string
+                            example: 'savings'
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
+                          routingNumber:
+                            type: boolean
+                            example: '122199983'
+                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
+                      description: User accountDetails
                     realTimeVerification:
                       type: string
                       description: realTimeVerification
@@ -780,9 +836,11 @@ components:
             properties:
               requestId:
                 type: string
+                example: 'verifynow'
                 description: The client request ID echoed in the response.
               Token:
                 type: string
+                example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'
                 description: Unique token generated for each request for verification.
               profileInfo:
                 type: array
@@ -791,9 +849,11 @@ components:
                   properties:
                     profileId:
                       type: string
+                      example: '128933531'
                       description: Name
                     profileStatus:
                       type: string
+                      example: 'Active'
                       description: Name
                 description: profileInfo Details
               status:
@@ -803,12 +863,15 @@ components:
                   properties:
                     statusCode:
                       type: string
+                      example: 'VNASM115'
                       description: Name
                     statusDesc:
                       type: string
+                      example: 'User Already Exists'
                       description: Name
                     statusType:
                       type: string
+                      example: 'SUCCESS'
                       description: Name
                 description: status Details
           description: VerifyNowResponse Details
@@ -817,78 +880,100 @@ components:
       properties:
         requestId:
           type: string
+          example: 'verifynow'
           description: Unique ID to be passed in by the calling application. 
         Token:
           type: string
+          example: 'VOL02##Zmq_AN:96by0eV1FH@#~DNfer06_M9vu:0To402pA@#~E5foRP_9g:r2P2fKFb@#~YaEX_jC:iUH2zpA8@#~T71SK:xccNW5Duubgr5@#~'
           description: Unique token generated for each request for verification.
     OutcomeResponse:
       type: object
       properties:
         requestId:
           type: string
+          example: 'verifynow'
           description: The client request ID echoed in the response. 
         accountGroup:
           type: string
+          example: 'Cash'
           description: Account group can have a value such as Cash, Investment, Credit, Card, etc.
         accountId:
           type: string
+          example: '1672680059'
           description: Unique ID assigned to the account created in the Fiserv VerifyNow system.
         accountStatus:
           type: string
+          example: 'In-progress'
           description: Current status of the account. Possible account statuses are Approved, Denied, In-Progress, Suspended, Inactive, and Inconclusive.
         accountType:
           type: string
+          example: 'Savings'
           description: Account type based on Group. For Group Cash are Checking, Savings, MMA Checking, MMA Savings For Group Investment are Brokerages.
         verificationType:
           type: string
+          example: 'Instant EWS'
           description: Type of verification are Instant EWS, Real Time, Trial Deposit, Real Time Verification and Addition, Partner Approved (configurable value related to the migration case).
         verificationStatus:
           type: string
+          example: 'Inconclusive'
           description: "Current verification status. Possible values for Instant EWS: Passed, Denied, and Inconclusive. For Real Time: Passed, In-progress, and Inconclusive. For Trial Deposit: Transfer Initiated, Transfer Complete, Transfer Failed, Amount Verification Completed, Amount Verification Failed, Transfer Expired."
         verification Attempts:
           type: string
+          example: '1'
           description: Number of attempts made to verify the account. This is applicable to Real Time and Trial Deposit.
         dateOfAttempt:
           type: string
+          example: ' '
           description: Date of last verification attempt made in "MM-DD-YYYY" format.
         verification SourceResponse:
           type: string
+          example: ' '
           description: Reserved for future use.
         matchType:
           type: string
+          example: ' '
           description: Type of match for fuzzy logic, such as nickname, partial account number, etc.
         statusCode:
           type: string
+          example: 'VNASM101'
           description: Alphanumeric code for representing a Success or Failure condition.
         statusDesc:
           type: string
+          example: 'Account Approved'
           description: Textual description for the status code.
         statusType:
           type: string
+          example: 'SUCCESS'
           description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
     PingRequest:
       type: object
       properties:
         AdminUserName:
           type: string
+          example: '99993001xmladmin'
           description: "99993001xmladmin"
         HomeId:
           type: string
+          example: '99993001'
           description: "99993001"
         AdminPassword:
           type: string
+          example: 'cashedge1'
           description: "cashedge1"
     PingResponse:
       type: object
       properties:
         statusCode:
           type: string
+          example: 'VNASM104'
           description: Alphanumeric code for representing a Success or Failure condition.
         statusDesc:
           type: string
+          example: 'Account Verification is In-progress'
           description: Textual description for the status code.
         statusType:
           type: string
+          example: 'SUCCESS'
           description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
     RealTimeVerificationAndAdditionRequest:
       type: object
