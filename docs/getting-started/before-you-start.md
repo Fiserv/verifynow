@@ -56,7 +56,7 @@ Perform the following steps to create a workspace on Fiserv Developer Studio:
     <!-- theme: info -->
     > #### Note
     >
-    > Currently, only one workspace can be created for Verify Now.<br> To know our core products [click here]<!--(?path=docs/products.md "Products").-->
+    > Currently, only one workspace can be created for Verify Now.<!--<br> To know our core products [click here]--><!--(?path=docs/products.md "Products").-->
     
     ![image](https://user-images.githubusercontent.com/81968767/220959037-4fb7f53e-4655-4086-a0a2-8994ee505cb0.png)
 

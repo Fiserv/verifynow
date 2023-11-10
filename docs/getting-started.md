@@ -63,7 +63,7 @@ Perform the following steps to create a workspace on Fiserv Developer Studio:
     <!-- theme: info -->
     > #### Note
     >
-    > Currently, only one workspace can be created for Verify Now.<br> To know our core products [click here]<!--(?path=docs/products.md "Products").-->
+    > Currently, only one workspace can be created for Verify Now.<!--<br> To know our core products [click here]--><!--(?path=docs/products.md "Products").-->
     
     ![image](https://user-images.githubusercontent.com/81968767/220959037-4fb7f53e-4655-4086-a0a2-8994ee505cb0.png)
 
@@ -179,7 +179,7 @@ Request URL is formed by appending Host URL and API path.
 
 
 To get Host URL, go to API key section of your Workspace. The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
-Refer the following example to construct a request URL for [**Instant Verification**]<!--(../api/?type=post&path=/acctservice/acctmgmt/accounts)--> API:
+Refer the following example to construct a request URL for [**Instant Verification**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1)API:
 
 ![image](../assets/images/Verifynow_InstantAPI.png)
 
@@ -290,7 +290,7 @@ The following example shows the sample response payload for **Instant Verificati
 </VerifyNowResponse>
 ```
 
-To view the API documentation of **Instant Verification** API in API Explorer, [click here]<!--(../api/?type=post&path=/partyservice/parties/parties/secured/list).-->
+To view the API documentation of **Instant Verification** API in API Explorer, [click here](../api/?type=post&path=/cashedgerws/verifynow/verify/v1).
 
 
 
