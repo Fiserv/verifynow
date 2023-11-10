@@ -900,7 +900,7 @@ components:
             properties:
               requestId:
                 type: string
-                 example: 'VerifyNow'
+                example: 'VerifyNow'
                 description: Unique ID to be passed in by the calling application.
               Profile:
                 type: array
