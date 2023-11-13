@@ -146,7 +146,7 @@ paths:
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Instant Verification
-  /v1/docs:
+  /cashedgerws/verifynow/rtva/v1:
     post:
       tags:
       - RTV
@@ -200,7 +200,7 @@ paths:
       x-codegen-request-body-name: Body
       x-group-name: Verify Now Service
       x-proxy-name: Real-Time Verification
-  /live:
+  /cashedgerws/verifynow/td/v1:
     post:
       tags:
       - Trial Deposit
@@ -253,7 +253,7 @@ paths:
                 $ref: '#/components/schemas/trialDepositVerificationResponse'
       x-group-name: Verify Now Service
       x-proxy-name: Trial deposit verification
-  /v1/layouts:
+  /cashedgerws/verifynow/rtva/v1:
     post:
       tags:
       - RTVA
