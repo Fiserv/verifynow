@@ -253,7 +253,7 @@ paths:
                 $ref: '#/components/schemas/trialDepositVerificationResponse'
       x-group-name: Verify Now Service
       x-proxy-name: Trial deposit verification
-  /cashedgerws/verifynow/rtva/v1:
+  cashedgerws/verifynow/rtva/v1:
     post:
       tags:
       - RTVA
