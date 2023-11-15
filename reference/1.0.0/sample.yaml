@@ -39,59 +39,7 @@ servers:
 - url: https://qa-ft.onefiserv.net
   description: ""
 paths:
-  /cashedgerws/verifynow/outcome/v1:
-    post:
-      tags:
-      - OutCome
-      summary: Returns tenant provider API.
-      description: Summarize ande provides information about the number of times verification is attempted.
-      operationId: TenantProviderID
-      parameters:
-        - in: header
-          name: AdminUserName
-          schema:
-            $ref: '#/components/schemas/AdminUserName'
-            type: string
-            example: '99993001xmladmin'
-          required: true
-          description: provide Adminusername as value
-        - in: header
-          name: AdminPassword
-          schema:
-            $ref: '#/components/schemas/AdminPassword'
-            type: string
-            example: 'cashedge1'
-          required: true
-          description: provide AdminPassword as value
-        - in: header
-          name: HomeId
-          schema:
-            $ref: '#/components/schemas/HomeId'
-            type: string
-            example: '99993001'
-          required: true
-          description: provide HomeId as value
-      requestBody:
-        description: Outcome
-        content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/OutcomeRequest'
-      responses:
-        "200":
-          description: "Created"
-          content: 
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/OutcomeResponse'
-        default:
-          description: default decription will display
-          content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/OutcomeResponse'
-      x-group-name: Verification Status
-      x-proxy-name: Outcome
+  
   /cashedgerws/verifynow/verify/v1:
     post:
       tags:
@@ -144,15 +92,15 @@ paths:
               schema:
                 $ref: '#/components/schemas/SpecsFilterResponse'
       x-codegen-request-body-name: Body
-      x-group-name: Verify Now Service
+      x-group-name: VerifyNow service (widget flow)
       x-proxy-name: Instant Verification
-  /cashedgerws/verifynow/rtv/v1:
+  /cashedgerws/verifynow/outcome/v1:
     post:
       tags:
-      - RTV
-      summary: Real-Time Verification
-      description: This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. If login is successful, Verify Now compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time. 
-      operationId: DocsAPIId
+      - OutCome
+      summary: Returns tenant provider API.
+      description: Summarize ande provides information about the number of times verification is attempted.
+      operationId: TenantProviderID
       parameters:
         - in: header
           name: AdminUserName
@@ -179,133 +127,26 @@ paths:
           required: true
           description: provide HomeId as value
       requestBody:
-        description: Real-Time Verification
+        description: Outcome
         content:
           application/xml:
             schema:
-              $ref: '#/components/schemas/RealTimeVerificationRequest'
+              $ref: '#/components/schemas/OutcomeRequest'
       responses:
         "200":
           description: "Created"
           content: 
             application/xml:
               schema:
-                $ref: '#/components/schemas/RealTimeVerificationResponse'
+                $ref: '#/components/schemas/OutcomeResponse'
         default:
           description: default decription will display
           content:
             application/xml:
               schema:
-                $ref: '#/components/schemas/RealTimeVerificationResponse'
-      x-codegen-request-body-name: Body
-      x-group-name: Verify Now Service
-      x-proxy-name: Real-Time Verification
-  /cashedgerws/verifynow/td/v1:
-    post:
-      tags:
-      - Trial Deposit
-      summary: Trial deposit verification
-      description: Works by verifying a customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts. (Note that the amount of the debit is equal to the sum of the two deposits.)
-      operationId: healthCheckId
-      parameters:
-        - in: header
-          name: AdminUserName
-          schema:
-            $ref: '#/components/schemas/AdminUserName'
-            type: string
-            example: '99993001xmladmin'
-          required: true
-          description: provide Adminusername as value
-        - in: header
-          name: AdminPassword
-          schema:
-            $ref: '#/components/schemas/AdminPassword'
-            type: string
-            example: 'cashedge1'
-          required: true
-          description: provide AdminPassword as value
-        - in: header
-          name: HomeId
-          schema:
-            $ref: '#/components/schemas/HomeId'
-            type: string
-            example: '99993001'
-          required: true
-          description: provide HomeId as value
-      requestBody:
-        description: trialDepositVerification
-        content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/trialDepositVerificationRequest'
-      responses:
-        "200":
-          description: "Created"
-          content: 
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/trialDepositVerificationResponse'
-        default:
-          description: default decription will display
-          content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/trialDepositVerificationResponse'
-      x-group-name: Verify Now Service
-      x-proxy-name: Trial deposit verification
-  /cashedgerws/verifynow/rtva/v1:
-    post:
-      tags:
-      - RTVA
-      summary: Real-Time Verification and Addition
-      description: In RTVA, the client does not provide any account details of its consumer rather would provide only the profile details. Fiserv tries to do a lookup in its Aggregation data services if any matching account is found for account provided. If any account(s) is found, all such accounts will be provided to the client for authentication. Here on, the client has to provide proper details to have the account authenticated and added. The only difference between RTV and RTVA is client doesn’t provide any account information in the RTVA request and provides the account details in the RTV request.
-      operationId: LayoutAPIId
-      parameters:
-        - in: header
-          name: AdminUserName
-          schema:
-            $ref: '#/components/schemas/AdminUserName'
-            type: string
-            example: '99993001xmladmin'
-          required: true
-          description: provide Adminusername as value
-        - in: header
-          name: AdminPassword
-          schema:
-            $ref: '#/components/schemas/AdminPassword'
-            type: string
-            example: 'cashedge1'
-          required: true
-          description: provide AdminPassword as value
-        - in: header
-          name: HomeId
-          schema:
-            $ref: '#/components/schemas/HomeId'
-            type: string
-            example: '99993001'
-          required: true
-          description: provide HomeId as value
-      requestBody:
-        description: Real-Time Verification and Addition
-        content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/RealTimeVerificationAndAdditionRequest'
-      responses:
-        "200":
-          description: "created"
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/RealTimeVerificationAndAdditionResponse'
-        default:
-          description: default decription will display
-          content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/RealTimeVerificationAndAdditionResponse'
-      x-group-name: Verify Now Service
-      x-proxy-name: Real-Time Verification and Addition
+                $ref: '#/components/schemas/OutcomeResponse'
+      x-group-name: VerifyNow service (widget flow)
+      x-proxy-name: Status/Outcome
   /cashedgerws/verifynow/ping:
     post:
       tags:
@@ -357,7 +198,7 @@ paths:
             application/xml:
               schema:
                 $ref: '#/components/schemas/PingResponse'
-      x-group-name: Security Service
+      x-group-name: VerifyNow service (widget flow)
       x-proxy-name: Ping
 components:
   schemas:
