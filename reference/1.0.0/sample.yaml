@@ -93,7 +93,7 @@ paths:
                 $ref: '#/components/schemas/SpecsFilterResponse'
       x-codegen-request-body-name: Body
       x-group-name: VerifyNow service (widget flow)
-      x-proxy-name: Instant Verification
+      x-proxy-name: VerifyNow
   /cashedgerws/verifynow/outcome/v1:
     post:
       tags:
