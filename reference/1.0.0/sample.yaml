@@ -38,6 +38,10 @@ info:
 servers:
 - url: https://qa-ft.onefiserv.net
   description: ""
+isoLangs:
+  "en":
+    "name":"English",
+    "nativeName":"English"
 paths:
   
   /cashedgerws/verifynow/verify/v1:
@@ -72,8 +76,6 @@ paths:
             example: '99993001'
           required: true
           description: provide HomeId as value
-        - in: header
-          Accept-language: en-US
       requestBody:
         description: Instant Verification 
         content:
