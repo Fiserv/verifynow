@@ -72,9 +72,10 @@ paths:
             example: '99993001'
           required: true
           description: provide HomeId as value
+        - in: header
+          Accept-language: en-US
       requestBody:
         description: Instant Verification 
-        Accept-Language: en-US
         content:
           application/xml:
             schema:
@@ -82,14 +83,12 @@ paths:
       responses:
         "200":
           description: Created
-          Accept-Language: en-US
           content:
             application/xml:
               schema:
                 $ref: '#/components/schemas/SpecsFilterResponse'
         default:
           description: default decription will display
-          Accept-Language: en-US
           content:
             application/xml:
               schema:
@@ -131,7 +130,6 @@ paths:
           description: provide HomeId as value
       requestBody:
         description: Outcome
-        Accept-Language: en-US
         content:
           application/xml:
             schema:
@@ -139,14 +137,12 @@ paths:
       responses:
         "200":
           description: "Created"
-          Accept-Language: en-US
           content: 
             application/xml:
               schema:
                 $ref: '#/components/schemas/OutcomeResponse'
         default:
           description: default decription will display
-          Accept-Language: en-US
           content:
             application/xml:
               schema:
@@ -187,7 +183,6 @@ paths:
           description: provide HomeId as value
       requestBody:
         description: trialDepositVerification
-        Accept-Language: en-US
         content:
           application/xml:
             schema:
@@ -195,14 +190,12 @@ paths:
       responses:
         "200":
           description: "Created"
-          Accept-Language: en-US
           content: 
             application/xml:
               schema:
                 $ref: '#/components/schemas/PingResponse'
         default:
           description: default decription will display
-          Accept-Language: en-US
           content:
             application/xml:
               schema:
