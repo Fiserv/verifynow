@@ -75,20 +75,20 @@ paths:
       requestBody:
         description: Instant Verification 
         content:
-          application/xml:
+          application/json:
             schema:
               $ref: '#/components/schemas/SpecsFilterRequest'
       responses:
         "200":
           description: Created
           content:
-            application/xml:
+            application/json:
               schema:
                 $ref: '#/components/schemas/SpecsFilterResponse'
         default:
           description: default decription will display
           content:
-            application/xml:
+            application/json:
               schema:
                 $ref: '#/components/schemas/SpecsFilterResponse'
       x-codegen-request-body-name: Body
@@ -129,20 +129,20 @@ paths:
       requestBody:
         description: Outcome
         content:
-          application/xml:
+          application/json:
             schema:
               $ref: '#/components/schemas/OutcomeRequest'
       responses:
         "200":
           description: "Created"
           content: 
-            application/xml:
+            application/json:
               schema:
                 $ref: '#/components/schemas/OutcomeResponse'
         default:
           description: default decription will display
           content:
-            application/xml:
+            application/json:
               schema:
                 $ref: '#/components/schemas/OutcomeResponse'
       x-group-name: VerifyNow service (widget flow)
@@ -182,20 +182,20 @@ paths:
       requestBody:
         description: trialDepositVerification
         content:
-          application/xml:
+          application/json:
             schema:
               $ref: '#/components/schemas/PingRequest'
       responses:
         "200":
           description: "Created"
           content: 
-            application/xml:
+            application/json:
               schema:
                 $ref: '#/components/schemas/PingResponse'
         default:
           description: default decription will display
           content:
-            application/xml:
+            application/json:
               schema:
                 $ref: '#/components/schemas/PingResponse'
       x-group-name: VerifyNow service (widget flow)
