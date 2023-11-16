@@ -39,9 +39,9 @@ servers:
 - url: https://qa-ft.onefiserv.net
   description: ""
 isoLangs:
-  "en":
-    "name":"English",
-    "nativeName":"English"
+  en:
+    name: English
+    nativeName: English
 paths:
   
   /cashedgerws/verifynow/verify/v1:
