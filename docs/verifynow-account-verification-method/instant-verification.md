@@ -1,10 +1,9 @@
-## Instant Verification
+## Instant (Risk Database) Verification
 
 This method provides instant bank account ownership verification using the Early Warning Services (EWS) account services and/or other available databases.
 
-
-
 VerifyNow performs instant account verification using the Customer Information/MICR Match component of a check printer’s database. This service matches the user’s name and the account information with information in the database.
+
 >**Note**<br/><br/>
  The instant account verification service only verifies DDA accounts. Savings, money market, and brokerage accounts are ineligible for account verification via this service.
 
@@ -12,17 +11,21 @@ VerifyNow performs instant account verification using the Customer Information/M
  
 >**Note**<br/><br/> The instant account verification service only verifies accounts with RTNs listed in the MICR Table.
 
-Instant verification is performed using the provided customer information and account details and the Early Warning Services (EWS) AOA database. EWS houses data contributed by various financial institutions that it uses to authenticate account ownership claims. EWS data is limited by the number of financial institutions that contribute to the product. EWS requires that clients contribute to the product to be allowed to use it.
+Instant verification is performed using the provided customer information and account details and the Early Warning Services (EWS) AOA database. EWS houses data contributed by various financial institutions with data elements including account holder names, address, tax ID, and additional elements leveraged that it uses to authenticate account ownership claims. EWS data is limited by the number of financial institutions that contribute to the product. EWS requires that clients contribute to the product to be allowed to use it.
 
 <center>
 
 ![Images](../../assets/images/instant-verification-process-flow.png)
+
+<b>Instant Verification Process Flow</b>
 
 </center>
 
 <center>
 
 ![Images](../../assets/images/instant-verification-sequence.png)
+
+<b>Instant Verification Sequence</b>
 
 </center>
 
@@ -52,8 +55,5 @@ Instant verification is performed using the provided customer information and ac
     b. If account ownership verification is inconclusive, Real-time verification or Trial Deposit verification can be initiated.
 
 ## See Also
-[Real Time Verification](?path=docs/verify-accounts-using-verifynow/real-time-verification.md)<br/>
-[Trial Deposit Verification](?path=docs/verify-accounts-using-verifynow/trial-deposit-verification.md)<br/>
-[Exit Points](?path=docs/exit-points.md)<br/>
-[Account Verification Status](?path=docs/account-verification-status.md)<br/>
-[Risk Controls](?path=docs/risk-controls.md)<br/>
+[Real Time Verification](?path=docs/verifynow-account-verification-method/real-time-verification.md)<br/>
+[Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md)<br/>

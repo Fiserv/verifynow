@@ -1,4 +1,4 @@
-## Real Time Verification
+## Real-Time (using FI login) Verification
 
 This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. VerifyNow performs real-time account verification by comparing data input by the user with data collected from the web site of the financial institution that services the account. The user is verified as the account owner if the two sets of data match.
 
@@ -8,11 +8,14 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 ![Images](../../assets/images/rtv-process-flow.png)
 
+<b>REAL TIME VERIFICATION PROCESS FLOW</b>
 </center>
 
 <center>
 
 ![Images](../../assets/images/rtv-sequence.png)
+
+<b>REAL TIME VERIFICATION SEQUENCE</b>
 
 </center>
 
@@ -30,7 +33,7 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 </center>
 
-4.	If the user selects the Real-time verification method (“Verify your bank account instantly”), VerifyNow initiates Real-time verification.  (If the user selects the Trial Deposit verification method (“Verify with bank deposits”), VerifyNow initiates Trial Deposit verification. Please see [Trial Deposit Verification](?path=docs/verify-accounts-using-verifynow/trial-deposit-verification.md) for more information.
+4.	If the user selects the Real-time verification method (“Verify your bank account instantly”), VerifyNow initiates Real-time verification.  (If the user selects the Trial Deposit verification method (“Verify with bank deposits”), VerifyNow initiates Trial Deposit verification. Please see [Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md) for more information.)
 
 
 5.	The user is asked to provide their username and password for the online banking portal where the user accesses their account.
@@ -64,7 +67,4 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 
 ## See Also
-[Trial Deposit Verification](?path=docs/verify-accounts-using-verifynow/trial-deposit-verification.md)<br/>
-[Exit Points](?path=docs/exit-points.md)<br/>
-[Account Verification Status](?path=docs/account-verification-status.md)<br/>
-[Risk Controls](?path=docs/risk-controls.md)<br/>
+[Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md)<br/>
