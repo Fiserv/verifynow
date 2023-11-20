@@ -31,13 +31,15 @@
 - sections:
   - title: Getting Started
     link: docs/getting-started.md
-  - title: VerifyNow Functions
-    link: docs/verifynow-functions.md  
-  - title: VerifyNow Integration Guide
-    link: docs/verifynow-integration-guide.md    
+  - title: VerifyNow - Account Verification Methods
+    link: docs/verifynow-account-verification-method.md
     sections:
-    - title: CSS Integration
-      link: docs/css-integration.md
+    - title: Instant (Risk Database) Verification
+      link: docs/verifynow-account-verification-method/instant-verification.md
+    - title: Real-time (using FI login) Verification
+      link: docs/verifynow-account-verification-method/real-time-verification.md
+    - title: Trial Deposit Verification
+      link: docs/verifynow-account-verification-method/trial-deposit-verification.md
   - title: VerifyNow Webservice API
     link: docs/verifynow-webserviceapi.md
   - title: Account Verification Methods
@@ -55,13 +57,7 @@
   - title: Real-Time Verification and Addition (RTVA)
     link: docs/realtime-verification-additions.md
   - title: Verify Accounts Using VerifyNow
-    sections:
-    - title: Instant Verification
-      link: docs/verify-accounts-using-verifynow/instant-verification.md
-    - title: Real-Time Verification
-      link: docs/verify-accounts-using-verifynow/real-time-verification.md
-    - title: Trial Deposit Verification
-      link: docs/verify-accounts-using-verifynow/trial-deposit-verification.md
+    
   - title: Exit Points
     link: docs/exit-points.md
   - title: Account Verification Status
