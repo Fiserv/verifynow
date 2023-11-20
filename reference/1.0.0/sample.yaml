@@ -92,6 +92,14 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SpecsFilterResponse'
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden
+        "500":
+          description: " Internal Server Error,"
         default:
           description: default decription will display
           content:
