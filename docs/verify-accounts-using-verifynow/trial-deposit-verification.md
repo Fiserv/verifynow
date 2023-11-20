@@ -28,7 +28,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-![Images](../../assets/images/td-sequence1.png)
+![Images](../../assets/images/Td-sequence1.png)
 
 </center>
 
