@@ -15,7 +15,7 @@ Below shown figures explain the overview of the verification and addition proces
 
 <center>
 
- ![image](../assets/images/addbankaccount.png)
+ ![image](../assets/images/addbankaccountflowchart.png)
 
  &nbsp;
 
@@ -24,7 +24,7 @@ Below shown figures explain the overview of the verification and addition proces
 
 <center>
 
- ![image](../assets/images/RTVA.png)
+ ![image](../assets/images/rtvaflowchart.png)
 
  &nbsp;
 
