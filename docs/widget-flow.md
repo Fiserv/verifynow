@@ -1,11 +1,10 @@
 
-# VerifyNow Integration Guide
-
-## VerifyNow Widget Integration
+# Widget Flow
 
 The VerifyNow widget works like the VerifyNow APIs, but it reduces the complexity and therefore requires lesser resources involved in implementation. 
 
 VerifyNow integration requires clients to perform three steps as outlined below for Widget based Integration.
+
 
 1.	Invoke the Fiserv VerifyNow REST web service’s Verify operation to receive a unique token.
 
@@ -17,7 +16,7 @@ VerifyNow integration requires clients to perform three steps as outlined below 
 ### How to Integrate VerifyNow Widget?
 
 ## Verify
-The client application invokes the VerifyNow web service’s Verify operation with the expected elements for profile and account information. The client application receives a token and the status of the request from the VerifyNow system. The token will not be passed to the client application if there is any failure in processing the data received, such as failure in data validation and/or business-related validation. For more information, refer to the [VerifyNow Webservice API](?path=docs/verifynow-webserviceapi.md) Specification.
+The client application invokes the VerifyNow web service’s Verify operation with the expected elements for profile and account information. The client application receives a token and the status of the request from the VerifyNow system. The token will not be passed to the client application if there is any failure in processing the data received, such as failure in data validation and/or business-related validation. For more information, see [API Flow](?path=docs/api-flow.md).
 
 ## Widget Integration
 The client is required to comply with the following integration points to use the Fiserv widget in their application’s user interface.
@@ -37,10 +36,10 @@ The Fiserv Client Manager will provide the value of FI_HOME_ID to the client at 
 The client’s application user interface is expected to have the following hidden variables with the appropriate values for the expected functional flow. Samples are included after the variable descriptions.
 <div class="card-body">
 <ul>
-<li>pidString – Used for authentication and to refer to which user-specific account needs to be considered for verification. The value for this should be the token received from the Verify operation.</li>
-<li>verifyOption – Used to hold the value that identifies whether the verification call is new or for re-verification (user and account combination) for the account. Possible values for this variable could be “‘REVERIFY”’ or any other string. If the value is “REVERIFY”, the VerifyNow system will consider this to be a re-verification; otherwise, it will be considered a new verification call.</li>
-<li>klURL – Used keep the customer’s session alive in the client application.</li>
-<li>cssURL – Used to pass the client-hosted cssURL. This is required only when the client hosts the CSS.</li>
+<li><i>pidString</i> – Used for authentication and to refer to which user-specific account needs to be considered for verification. The value for this should be the token received from the Verify operation.</li>
+<li><i>verifyOption</i> – Used to hold the value that identifies whether the verification call is new or for re-verification (user and account combination) for the account. Possible values for this variable could be “‘REVERIFY”’ or any other string. If the value is “REVERIFY”, the VerifyNow system will consider this to be a re-verification; otherwise, it will be considered a new verification call.</li>
+<li><i>klURL</i> – Used keep the customer’s session alive in the client application.</li>
+<li><i>cssURL</i> – Used to pass the client-hosted cssURL. This is required only when the client hosts the CSS.</li>
 </ul>
 </div>
 
@@ -78,10 +77,13 @@ alert("UI Control is handed over to Client");
 ```
 ## Outcome
 
-The client’s application receives the outcome of the verification through the Outcome operation with the token associated for the specific verification. The Outcome operation provides the detail, including verification types and their respective statuses along with the combined decision. Refer to the  [VerifyNow Webservice API](?path=docs/verifynow-webserviceapi.md) Specification for more information.
+The client’s application receives the outcome of the verification through the Outcome operation with the token associated for the specific verification. The Outcome operation provides the detail, including verification types and their respective statuses along with the combined decision. Refer to the  [API Flow](?path=docs/api-flow.md) for more information.
 
 ## See Also
-
+[Automated Account Addition](?path=docs/automated-account-additions.md)</br>
+[Add Account Manually](?path=docs/add-account-manually.md)</br>
+[User workflow](?path=docs/user-workflow.md)</br>
+[Account Verification status/Exit points](?path=docs/account-verification-status.md)</br>
 [CSS Integration](?path=docs/css-integration.md)
 
 
