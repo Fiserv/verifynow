@@ -65,6 +65,5 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 9.	VerifyNow passes control back to the client system, along with the verification decision.
 10.	If the user is not approved, VerifyNow checks if the Trial Deposit verification method is available, and if available, gives the user the option to use Trial Deposit verification.
 
-
 ## See Also
 [Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md)<br/>

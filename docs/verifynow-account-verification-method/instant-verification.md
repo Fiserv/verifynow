@@ -55,5 +55,5 @@ Instant verification is performed using the provided customer information and ac
     b. If account ownership verification is inconclusive, Real-time verification or Trial Deposit verification can be initiated.
 
 ## See Also
-[Real Time Verification](?path=docs/verifynow-account-verification-method/real-time-verification.md)<br/>
+[Real-Time (using FI login) Verification](?path=docs/verifynow-account-verification-method/real-time-verification.md)<br/>
 [Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md)<br/>
