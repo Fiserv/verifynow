@@ -74,7 +74,8 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-<img width="350" height="350" src="../assets/images/verify-instantly.png">
+<img width="300" height="300" src="../assets/images/verify-instantly.png">
+
 &nbsp;
 
 </center>
@@ -85,7 +86,8 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-<img width="350" height="350" src="../assets/images/fiserv-login.png">
+<img width="300" height="300" src="../assets/images/fiserv-login.png">
+
 &nbsp;
 
 </center>
@@ -94,7 +96,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/MFA.png)
+<img width="300" height="150" src="../assets/images/MFA.png">
 
 &nbsp;
 
@@ -106,7 +108,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/consent-page.png)
+<img width="300" height="150" src="../assets/images/consent-page.png">
 
 &nbsp;
 
@@ -118,7 +120,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/window-autoclose-page.png)
+<img width="300" height="150" src="../assets/images/window-autoclose-page.png">
 
 &nbsp;
 
@@ -128,7 +130,8 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/selecting-account-page.png)
+
+<img width="300" height="150" src="../assets/images/selecting-account-page.png">
 
 &nbsp;
 
@@ -152,7 +155,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/non-oauth-enabled.png)
+<img width="300" height="150" src="../assets/images/non-oauth-enabled.png">
 
 &nbsp;
 
@@ -173,8 +176,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/add-account-manually.png)
-
+<img width="300" height="250" src="../assets/images/add-account-manually.png">
 &nbsp;
 
 </center>
@@ -190,8 +192,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/choose-bank-account.png)
-
+<img width="300" height="150" src="../assets/images/choose-bank-account.png">
 &nbsp;
 
 </center>

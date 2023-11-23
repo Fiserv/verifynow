@@ -36,7 +36,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 </center>
 
-Step-by-Step Instruction for Trial Deposit Verification
+### Step-by-Step Instruction for Trial Deposit Verification
 
 1.	The client system collects account information from the user prior to initiating the widget.                       
 2.	The client system passes the information collected from the user to VerifyNow.
@@ -45,7 +45,7 @@ Step-by-Step Instruction for Trial Deposit Verification
 
 <center>
 
-![Images](../../assets/images/50-50-page.png)
+<img width="300" src="../../assets/images/50-50-page.png">
 
 </center>
 
@@ -56,12 +56,15 @@ Step-by-Step Instruction for Trial Deposit Verification
 
 <center>
 
-![Images](../../assets/images/verify-with-bank-deposit.png)
+<img width="300" src="../../assets/images/verify-with-bank-deposit.png">
 
 </center>
+
+ &nbsp;
+
 <center>
 
-![Images](../../assets/images/two-deposit-on-way.png)
+<img width="300" src="../../assets/images/two-deposit-on-way.png">
 
 </center>
 
@@ -69,8 +72,7 @@ Step-by-Step Instruction for Trial Deposit Verification
 
 <center>
 
-![Images](../../assets/images/verify-deposit-amount.png)
-
+<img width="300" src="../../assets/images/verify-deposit-amount.png">
 </center>
 
 9.	Trial Deposit verification is completed.

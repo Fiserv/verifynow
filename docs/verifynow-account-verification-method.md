@@ -1,13 +1,13 @@
 ## VerifyNow - Account Verification Methods
 
 The Account Ownership verification service verifies account ownership by checking whether an account provided by a user exists, whether the user owns the account, and whether the account is active and in good standing.
+
 Account ownership verification is performed using the below three verification methods.
 &nbsp;
 
 <center>
 
-![image](../assets/images/verifynow-acc-verification-method.png)
-*Responsive UI Screens*
+<img width="400" height="200" src="../assets/images/verifynow-acc-verification-method.png">
 
 </center>
 &nbsp;
