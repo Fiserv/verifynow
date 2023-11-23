@@ -1,6 +1,6 @@
 ## Real-Time (using FI login) Verification
 
-This method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. VerifyNow performs real-time account verification by comparing data input by the user with data collected from the web site of the financial institution that services the account. The user is verified as the account owner if the two sets of data match.
+Real-Time (using FI login) Verification  method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. VerifyNow performs real-time account verification by comparing data input by the user with data collected from the web site of the financial institution that services the account. The user is verified as the account owner if the two sets of data match.
 
 If login is successful, VerifyNow compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
 
@@ -41,7 +41,7 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 <center>
 
-![Images](../../assets/images/verify-instantly.png)
+<img width="400" height="300" src="../../assets/images/verify-instantly.png">
 
 </center>
 
@@ -57,7 +57,7 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 <center>
 
-![Images](../../assets/images/process-image.png)
+<img width="400" height="150" src="../../assets/images/process-image.png">
 
 </center>
 

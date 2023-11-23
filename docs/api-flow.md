@@ -3,7 +3,7 @@
 The Verify Account API verifies the users bank account instantly. For verifying the user bank account, VerifyNow uses EWS 4.0 Instant Account Verification API. After a response is received from EWS, the Verify Account API runs the internal Fiserv account verification rules and returns the account verification details in the response to the calling application. This is a purely REST API implementation and one-step process.
 
 <table border="1">
-<tr>
+<tr style="background-color:#bfbfbf">
 <th>Verification Method</th>
 <th>Description</th>
 <th>User Interaction and Ease</th>

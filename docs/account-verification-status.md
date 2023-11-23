@@ -5,7 +5,7 @@
 The below table explains the different statuses of the account verification and their respective description for each status.
 
 <table border="1">
-<tr>
+<tr style="background-color:#bfbfbf">
 <th>Status</th>
 <th>Description</th>
 </tr>
@@ -34,7 +34,7 @@ The below information lists the exit points, once each of the verification metho
 Control is passed to the client system at the following points: 
 
 <table border="1">
-<tr>
+<tr style="background-color:#bfbfbf">
 <th>Verification Method</th>
 <th>Verification Outcome</th>
 <th>Verification Type</th>
