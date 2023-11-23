@@ -20,8 +20,7 @@ The following flow is applicable when:
 
 <center>
 
-![image](../assets/images/RTVA-enabled.png)
-
+<img src="../assets/images/RTVA-enabled.png">
 &nbsp;
 
 </center>
@@ -75,8 +74,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/verify-instantly.png)
-
+<img width="350" height="350" src="../assets/images/verify-instantly.png">
 &nbsp;
 
 </center>
@@ -87,8 +85,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![image](../assets/images/fiserv-login.png)
-
+<img width="350" height="350" src="../assets/images/fiserv-login.png">
 &nbsp;
 
 </center>
