@@ -1,6 +1,9 @@
 # User workflow
 
-<!-- type: tab -->
+<!-- 
+type: tab 
+titles: New User,Returning User
+-->
 ## New User
 
 The workflow for creating a new user is as follows:
