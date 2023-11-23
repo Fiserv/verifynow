@@ -64,10 +64,10 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <div class="card-container">
         <div style="margin: 5px">
-            <img src="../assets/images/bank-list.png">
+            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-list.png">
         </div>
         <div style="margin: 5px">
-            <img src="../assets/images/bank-search.png">
+            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-search.png">
         </div>
     </div>
 
