@@ -16,37 +16,12 @@ You can test our APIs in the Sandbox environment using third-party API testing t
 ### Prerequisites
 To make an API call, you need:
 - An active user account on Fiserv Dev Studio
-- An access token
 
 
 **Creating an account on Dev Studio**
 
 
 To create an account on Fiserv Developer Studio, refer to the [Register on Fiserv Developer Studio](?path=docs/getting-started/before-you-start.md#register-on-fiserv-developer-studio) section. 
-After successful registration, you will be able to create a workspace. You can obtain the following credentials from the workspace:
-
-* Product name  
-* Org ID   
-* API key name
-* API key type
-* API key
-* API secret
-* Host URL
-  
-These credentials are important to send in API requests. **API key** and **API secret** values are used to generate access token, whereas **Org ID** value is required to be passed as header parameter under the Header<!--EFXHeader](?path=docs/api-ref-EFX-header.md)--> parameter.
-
-
-**Generating an Access Token**
-   
-An access token is used to authenticate your API build and allows you to use the Fiserv APIs securely. **API key** and **API secret** values obtained from Workspace are required to generate an access token. 
-  
-To generate an access token, refer to the [Generating Access Token](?path=docs/getting-started/before-you-start.md#generating-access-token) section.
-
-
-<!-- theme: info -->
-> #### Note
->
-> Once generated, the access token is valid for approximately 15 minutes. You can reuse the access token until it expires.
 
 
 ### Example
@@ -59,64 +34,11 @@ Postman is a client that lets you test RESTful APIs. If you are familiar with Po
 <!-- theme: info -->  
 > #### Recommendation
 >
-> Keep the API documentation accessible to refer to the default request-payload for the request message. You may also download the Postman collection and refer to sample API requests from the **Resources**<!--**[Resources](?path=/docs/resources/resources.md)**--> section.
-
-<!--
-#### Resources
-
-* **API Specifications**
-
-  [![downoad-icon-BH]][BH]  
-
-* **Postman Collection**
-
-  [![downoad-icon-PRM]][PRM]      [![downoad-icon-SIG]][SIG]     [![downoad-icon-FN]][FN]   
+> Keep the API documentation accessible to refer to the default request-payload for the request message. 
 
 
-[downoad-icon-PRM]: https://github.com/Fiserv/banking-hub/assets/81968767/934da291-c743-41cb-9325-16cf2c8d7bda
-[PRM]: https://github.com/Fiserv/banking-hub/files/12247349/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip
-
-
-[downoad-icon-SIG]: https://github.com/Fiserv/banking-hub/assets/81968767/b4c09878-6e73-4e9e-9171-74bcd3e4f8b6
-[SIG]: https://github.com/Fiserv/banking-hub/files/11710490/Banking.Hub.-.Signature.-.Trial.Plan.Postman.Collection.zip
-
-
-[downoad-icon-BH]: https://github.com/Fiserv/banking-hub/assets/81968767/4c31d642-7574-413e-b02e-32f7ad1ae504
-[BH]: https://github.com/Fiserv/banking-hub/files/11222397/esf-service-swagger-release-11.0.0.2023.1.zip
-
-[downoad-icon-FN]: https://github.com/Fiserv/banking-hub/assets/81968767/76dd0525-220e-4c1e-90c8-b612eed002db
-[FN]: https://github.com/Fiserv/banking-hub/files/12358606/Banking.Hub.-.Finxact.-.Trial.Plan.Postman.Collection.zip
-
--->
-
-<!--
-FN: https://github.com/Fiserv/banking-hub/assets/81968767/28cc543b-7bd6-4f57-b282-725b15d289f3
-SIG: https://github.com/Fiserv/banking-hub/assets/81968767/b4c09878-6e73-4e9e-9171-74bcd3e4f8b6
-PRM: https://github.com/Fiserv/banking-hub/assets/81968767/934da291-c743-41cb-9325-16cf2c8d7bda
-
-Postman PRM old: https://github.com/Fiserv/banking-hub/files/11728540/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip
-
-* [Download Banking Hub API Specifications](https://github.com/Fiserv/banking-hub/files/11222397/esf-service-swagger-release-11.0.0.2023.1.zip)
-* [Download Postman Collection - Premier Core](https://github.com/Fiserv/banking-hub/files/11449420/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip "Click to Download")
-
--->
 
 #### Prerequisite to run Postman collection
-
-The attached Postman collection use variables to store and reuse few values such as Hostname, Username and Password. To update the variable values, perform the below steps in Postman.
-1.	From the **Collections** tab, select the root folder of Banking Hub Postman collection 
-2.	Select the **Variables** tab
-3.	Insert the variable values in the **Current value** column for the following variables:
-    * **authToken_UserName**: _API key value_
-    * **authToken_Password**: _API secret value_
-    * **OrgId**: _Org Id value_
-    
-      <!-- theme: info -->
-      > #### Note
-      > 
-      > You can obtain the _API key_, _API secret_ and _Org Id_ values from the Credentials tab of My workspaces. 
-
-    <kbd>![Postman-collection-steps](../../assets/images/verifynow_postman.png) </kbd>
 
 
 To  test an API using Postman application: 
@@ -129,23 +51,19 @@ To  test an API using Postman application:
     >
     > API method of all Fiserv APIs is either set to POST or PUT for all operations.
 
-5.	Insert the request URL 
-6.	Under the **Authentication** tab, select the **Type** value as **Bearer Token** and insert access token in the **Token** box
-
-    ![image](https://user-images.githubusercontent.com/81968767/220967588-52eec24d-4b13-4d26-ba28-a9ad90943e26.png)
-    
-6.	Add Header as new parameters under the **Headers** section and insert the <Header> value. <!--in JSON format--> 
-7.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **XML** 
+4.	Insert the request URL     
+5.	Add Header as new parameters under the **Headers** section and insert the <Header> value. <!--in JSON format--> 
+6.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **JSON** 
   
-    <kbd><img src="../../assets/images/verifynow_bodytab.png" width="70%" /></kbd><br>
+    <kbd><img src="../../assets/images/Jsonselection_body.png" width="70%" /></kbd><br>
     
     <!-- theme: info -->
     > #### Note
     >
     > Default request-payload can be copied from the API ExJSONplorer document and you may modify certain fields as mentioned in the documentation.
   
-8.	Modify the field values in XML code that you want to test 
-9.	Click **Send**. API response is generated in the Response section
+8.	Modify the field values in JSON code that you want to test 
+9.	Click **Send**. API response is generated in the Response section.
 
   
 <!--<kbd>
