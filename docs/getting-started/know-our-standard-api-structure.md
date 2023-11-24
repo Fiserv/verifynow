@@ -8,7 +8,6 @@ All API requests must contain the following components:
 
 *	[API Method](#api-method)
 * [Request URL](#request-url)
-* [Access Token](#access-token)
 *	[Request Header](#request-header)
 *	[Request Body](#request-body)
 
@@ -27,29 +26,23 @@ Request URL is formed by appending Host URL and API path.
 > **Request URL = Host URL + API path**
 
 
-To get Host URL, go to API key section of your Workspace. The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
-Refer the following example to construct a request URL for [**Instant Verification**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1)API:
+The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
+Refer the following example to construct a request URL for [**verify now**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1)API:
 
-![image](../../assets/images/Verifynow_InstantAPI.png)
+![image](../../assets/images/verifynowservice.png)
 
 
 If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
 
-![image](../../assets/images/verifynow_hostandrequest_url.png)
+![image](../assets/images/verifynow_hostandrequest_url.png)
 
 
-### Access Token
-
-An access token is used to authenticate your API build and allows you to use the Fiserv APIs securely. Verify Now API uses bearer access token, and API key and API secret are required to generate an access token. A generated access token is valid for approximately 15 minutes.
-To generate an access token, refer to the [Generating Access Token](?path=docs/getting-started/before-you-start.md#generating-access-token) section.
 
 
 ### Request Header
   
   
 Header parameters are common for all API requests of Verify Now APIs. Header parameters are sent as  header parameter.
-
-For more information on Header and to view the list of all header parameters<!--,<a href="?path=docs/api-ref-EFX-header.md" title="Click to view the list of EFX header parameters"> click here</a>.-->
 
 **Sample Header Example**
 ```
@@ -68,7 +61,7 @@ For more information on Header and to view the list of all header parameters<!--
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/xml"
+								"value": "application/json"
 							}
 						]
 
@@ -80,64 +73,65 @@ The request body of an API changes based on the type of transaction being proces
 
 **Request Payload** 
 
-The following example shows the sample request payload for **Instant Verification** API request.
+The following example shows the sample request payload for **verify now** API request.
 
 ```
-<VerifyNowRequest>
-    <requestId>string</requestId>
-    <profile>
-        <email>string</email>
-        <firstName>string</firstName>
-        <lastName>string</lastName>
-        <middleName/>
-        <userId>string</userId>
-    </profile>
-    <profileDetails>
-        <ssn>string</ssn>
-        <address>
-            <addressLine1>string</addressLine1>
-            <city>string</city>
-            <state>string</state>
-            <zipCode>string</zipCode>
-        </address>
-        <phoneNumber>string</phoneNumber>
-    </profileDetails>
-    <accountOwnershipVerification>
-        <instantVerification>
-            <enable>string</enable>
-        </instantVerification>
-        <trialDepositVerification>
-            <enable>string</enable>
-        </trialDepositVerification>
-    </accountOwnershipVerification>
-</VerifyNowRequest>
+{
+  "VerifyNowRequest": {
+    "requestId": "string",
+    "profile": {
+      "email": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "userId": "string"
+    },
+    "profileDetails": {
+      "ssn": "string",
+      "address": {
+        "addressLine1": "string",
+        "city": "string",
+        "state": "string",
+        "zipCode": "string"
+      },
+      "phoneNumber": "string"
+    },
+    "accountOwnershipVerification": {
+      "instantVerification": {
+        "enable": "string"
+      },
+      "trialDepositVerification": {
+        "enable": "string"
+      }
+    }
+  }
+}
 ```
 
 
 ## Response Message
 
-Upon a successful API request, a response payload is received. The response payload contains the status and the returned details of the requested API in XML. The default response format is XML. 
+Upon a successful API request, a response payload is received. The response payload contains the status and the returned details of the requested API in JSON. The default response format is JSON. 
 
 
 ### Response Payload
 
-The following example shows the sample response payload for **Instant Verification** API request.
+The following example shows the sample response payload for **verify now** API request.
 
 ```
-<VerifyNowResponse>
-    <requestId>string</requestId>
-    <token>string</token>
-    <profileInfo>
-        <profileId>string</profileId>
-        <profileStatus>string</profileStatus>
-    </profileInfo>
-    <status>
-        <statusCode>string</statusCode>
-        <statusDesc>string</statusDesc>
-        <statusType>string</statusType>
-    </status>
-</VerifyNowResponse>
+{
+    "requestId" : "string",
+    "token" : "string",
+    "profileInfo" : {
+        "profileId" : "string",
+        "profileStatus" : "string"
+    },
+    "status" : {
+        "statusCode" : "string",
+        "statusDesc" : "string",
+        "statusType" : "string"
+}
+}
 ```
 
-To view the API documentation of **Instant Verification** API in API Explorer, [click here](../api/?type=post&path=/cashedgerws/verifynow/verify/v1).
+To view the API documentation of **verify now** API in API Explorer, [click here](../api/?type=post&path=/cashedgerws/verifynow/verify/v1).
 

@@ -13,7 +13,7 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 >
 > The current user journey enables developers to access to a range of  APIs on Verify Now. 
 
-Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs using the <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Third-party API Testing Tools</a> of your choice.   However, registration is not required to learn about our APIs and reference documentation.
+Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs using the <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Third-party API Testing Tools</a> of your choice.   However, registration is not required to learn about our APIs and reference documentations.
 <!--
 
 [![Video Thumbnail]][Video]  
@@ -29,7 +29,7 @@ Before you start integration, it is important to register on the Fiserv Develope
 
 
 ## Register on Fiserv Developer Studio
-This section describes the process to create an account and workspace on Fiserv Developer Studio to obtain credentials for sandbox testing.
+This section describes the process to create an account on Fiserv Developer Studio to obtain credentials for sandbox testing.
 
 ### Creating an Account
 
@@ -37,109 +37,10 @@ Perform the following steps to create an account on Fiserv Developer Studio:
 1.	From the top-right corner of the screen, click **Create account**
 2.	Populate the required fields and click **Next**
 3.	Follow the instructions on the screen to set up your account
-4.	Sign in to your Fiserv Developer Studio account once it is activated
+4.	Sign in to your Fiserv Developer Studio account once it is activated.
 
 
-### Creating a Verify Now Workspace
 
-Workspaces are dedicated spaces for developers to obtain API key, API secret and product related details.
-
-Perform the following steps to create a workspace on Fiserv Developer Studio:
-
-1.	Sign in to your Fiserv Developer Studio account
-2.	From the top-right corner of the screen, click **Workspaces**. My Workspace page displays
-
-
-    <!-- theme: info -->
-    > #### Note
-    >
-    > All previously created workspaces are listed on the **My workspaces** page. 
-    
-3.	To create a new workspace, click the **Add a new workspace** button or click the **Create a new workspace** card. Create a workspace dialog box displays
-4.	Enter workspace name and description
-5.	From the **Product** drop-down list, select **Verify Now** and click **Create**. A new workspace is created and three tabs of your workspace, namely Summary, Credentials and Settings are visible
-
-
-    <!-- theme: info -->
-    > #### Note
-    >
-    > Currently, only one workspace can be created for Verify Now.<!--<br> To know our core products [click here]--><!--(?path=docs/products.md "Products").-->
-    
-    ![image](https://user-images.githubusercontent.com/81968767/220959037-4fb7f53e-4655-4086-a0a2-8994ee505cb0.png)
-
-Every workspace has following three sections:
-
-* **Summary**: Displays workspace details and list of activities performed on the workspace
-* **Credentials**: Lists all active API keys. From this section, you can view or download the following details of an API key:
-    * Product name: _Name of the product, for example, Verify Now    
-    * Org ID: _Organization ID is required to send in all API requests under the <a href="?path=docs/getting-started/know-our-standard-api-structure.md#request-body" >Request Header</a>_    
-    * API key name: _Name of the API key_
-    * API key type: _Type of API key, for example, Trial_
-    * API key: _Alphanumeric value of the API key. API key is used as username while generating the access token_
-    * API secret: _Alphanumeric value of the API secret. API secret is used as password while generating the access token_
-    * Host URL: _Host URL path to send API requests_
-      
-      ![image](../assets/images/verifyNow_ViewAPIKey.png)
-
-* **Settings**: Used to modify or delete the workspace
-
-<kbd>
-    <img src="https://user-images.githubusercontent.com/85101648/221875469-81044247-b844-47be-bd8b-7363fa302d40.gif" />
-</kbd>
-              
-
-## Generating Access Token
-
-An access token is used to authenticate your API build and allows you to use the Fiserv APIs securely. **API key** and **API secret** values obtained from the Workspace are required to generate an access token. 
-
-Use the API mentioned below to generate an access token using Postman.
-
-### URL
-
-``POST https://cert.api.fiservapps.com/fts-apim/oauth2/v2 ``
-
-
-### Headers
-
-|     Header Name      |     Description                                          |     Required      |
-|---------------------|----------------------------------------------------------|---------------|
-|     ``Authorization`` |    <p>Base64 encoded string representing your username and password values, appended to the text Basic as follows: </p> <p> <code> Basic <Base64 encoded username and password> </code></p> <p> **Important:** In Postman, use the **Authorization** tab to enter Username and Password values and set authentication type to **Basic Auth**. Use your **API key** as username and **API secret** as password. </p>                      |     Required    |
-
-![image](https://user-images.githubusercontent.com/81968767/220961162-0931a990-f69a-4be7-a6bb-ab847f9464b2.png)
-
-
-### Request Body
-
-From the Body tab, select the **x-www-form-urlencoded** radio button and enter the following key-value pair:
-
-``grant_type = client_credentials``
-
-![image](https://user-images.githubusercontent.com/81968767/220961197-8e76ec1f-b291-4dfd-8287-c4a83b4ecf40.png)
-
-### Response
-
-|     Field Name      |     Description                                          |     Type      |
-|---------------------|----------------------------------------------------------|---------------|
-|   ``access_token``    |     Generated access token   value                       |     string    |
-|``expires_in``       | <p>Time in milliseconds until the generated token is valid.</p> <p>**Note:** Once generated, the access token is valid for approximately 15 minutes. You can reuse the access token until it expires. </p> | number        |
-|    ``token_type``   |     Type of access token                                 |     string    |
-
-**Sample Response**
-```
-{
-    "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjEiLCJwaS5hdG0iOiJhYXVxIn0.eyJzY29wZSI6IiIsImNsaWVudF9pZCI6ImdxNHpvZDB6Wng3NkVPTUtKQUlQUlJUZHJHOENWNGdJIiwiaXNzIjoiaHR0cHM6Ly9mZGMtZmVkc3NvLWNhdC5maXJzdGRhdGEuY29",
-    "expires_in": "899000",
-    "token_type": "Bearer"
-}
-```
-
-
-<kbd>
-    <img src="https://user-images.githubusercontent.com/85101648/221878635-c859cc8d-98a3-47a3-8e57-2299af44b26e.gif" />
-</kbd>
-
-<br>
-<br>
 
 <a href="#tab-know_our_standard_api_structure" >Next - Know Our Standard API Structure</a>
 
@@ -159,7 +60,6 @@ All API requests must contain the following components:
 
 *	[API Method](#api-method)
 * [Request URL](#request-url)
-* [Access Token](#access-token)
 *	[Request Header](#request-header)
 *	[Request Body](#request-body)
 
@@ -178,10 +78,10 @@ Request URL is formed by appending Host URL and API path.
 > **Request URL = Host URL + API path**
 
 
-To get Host URL, go to API key section of your Workspace. The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
-Refer the following example to construct a request URL for [**Instant Verification**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1)API:
+The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
+Refer the following example to construct a request URL for [**verify now**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1)API:
 
-![image](../assets/images/Verifynow_InstantAPI.png)
+![image](../assets/images/verifynowservice.png)
 
 
 If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
@@ -189,18 +89,12 @@ If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/
 ![image](../assets/images/verifynow_hostandrequest_url.png)
 
 
-### Access Token
-
-An access token is used to authenticate your API build and allows you to use the Fiserv APIs securely. Verify Now API uses bearer access token, and API key and API secret are required to generate an access token. A generated access token is valid for approximately 15 minutes.
-To generate an access token, refer to the [Generating Access Token](?path=docs/getting-started/before-you-start.md#generating-access-token) section.
 
 
 ### Request Header
   
   
 Header parameters are common for all API requests of Verify Now APIs. Header parameters are sent as  header parameter.
-
-For more information on Header and to view the list of all header parameters<!--,<a href="?path=docs/api-ref-EFX-header.md" title="Click to view the list of EFX header parameters"> click here</a>.-->
 
 **Sample Header Example**
 ```
@@ -219,7 +113,7 @@ For more information on Header and to view the list of all header parameters<!--
 							},
 							{
 								"key": "Content-Type",
-								"value": "application/xml"
+								"value": "application/json"
 							}
 						]
 
@@ -231,66 +125,67 @@ The request body of an API changes based on the type of transaction being proces
 
 **Request Payload** 
 
-The following example shows the sample request payload for **Instant Verification** API request.
+The following example shows the sample request payload for **verify now** API request.
 
 ```
-<VerifyNowRequest>
-    <requestId>string</requestId>
-    <profile>
-        <email>string</email>
-        <firstName>string</firstName>
-        <lastName>string</lastName>
-        <middleName/>
-        <userId>string</userId>
-    </profile>
-    <profileDetails>
-        <ssn>string</ssn>
-        <address>
-            <addressLine1>string</addressLine1>
-            <city>string</city>
-            <state>string</state>
-            <zipCode>string</zipCode>
-        </address>
-        <phoneNumber>string</phoneNumber>
-    </profileDetails>
-    <accountOwnershipVerification>
-        <instantVerification>
-            <enable>string</enable>
-        </instantVerification>
-        <trialDepositVerification>
-            <enable>string</enable>
-        </trialDepositVerification>
-    </accountOwnershipVerification>
-</VerifyNowRequest>
+{
+  "VerifyNowRequest": {
+    "requestId": "string",
+    "profile": {
+      "email": "string",
+      "firstName": "string",
+      "lastName": "string",
+      "userId": "string"
+    },
+    "profileDetails": {
+      "ssn": "string",
+      "address": {
+        "addressLine1": "string",
+        "city": "string",
+        "state": "string",
+        "zipCode": "string"
+      },
+      "phoneNumber": "string"
+    },
+    "accountOwnershipVerification": {
+      "instantVerification": {
+        "enable": "string"
+      },
+      "trialDepositVerification": {
+        "enable": "string"
+      }
+    }
+  }
+}
 ```
 
 
 ## Response Message
 
-Upon a successful API request, a response payload is received. The response payload contains the status and the returned details of the requested API in XML. The default response format is XML. 
+Upon a successful API request, a response payload is received. The response payload contains the status and the returned details of the requested API in JSON. The default response format is JSON. 
 
 
 ### Response Payload
 
-The following example shows the sample response payload for **Instant Verification** API request.
+The following example shows the sample response payload for **verify now** API request.
 
 ```
-<VerifyNowResponse>
-    <requestId>string</requestId>
-    <token>string</token>
-    <profileInfo>
-        <profileId>string</profileId>
-        <profileStatus>string</profileStatus>
-    </profileInfo>
-    <status>
-        <statusCode>string</statusCode>
-        <statusDesc>string</statusDesc>
-        <statusType>string</statusType>
-    </status>
-</VerifyNowResponse>
+{
+    "requestId" : "string",
+    "token" : "string",
+    "profileInfo" : {
+        "profileId" : "string",
+        "profileStatus" : "string"
+    },
+    "status" : {
+        "statusCode" : "string",
+        "statusDesc" : "string",
+        "statusType" : "string"
+}
+}
 ```
 
-To view the API documentation of **Instant Verification** API in API Explorer, [click here](../api/?type=post&path=/cashedgerws/verifynow/verify/v1).
+To view the API documentation of **verify now** API in API Explorer, [click here](../api/?type=post&path=/cashedgerws/verifynow/verify/v1).
 
 
 
@@ -320,37 +215,12 @@ You can test our APIs in the Sandbox environment using third-party API testing t
 ### Prerequisites
 To make an API call, you need:
 - An active user account on Fiserv Dev Studio
-- An access token
 
 
 **Creating an account on Dev Studio**
 
 
 To create an account on Fiserv Developer Studio, refer to the [Register on Fiserv Developer Studio](?path=docs/getting-started/before-you-start.md#register-on-fiserv-developer-studio) section. 
-After successful registration, you will be able to create a workspace. You can obtain the following credentials from the workspace:
-
-* Product name  
-* Org ID   
-* API key name
-* API key type
-* API key
-* API secret
-* Host URL
-  
-These credentials are important to send in API requests. **API key** and **API secret** values are used to generate access token, whereas **Org ID** value is required to be passed as header parameter under the Header<!--EFXHeader](?path=docs/api-ref-EFX-header.md)--> parameter.
-
-
-**Generating an Access Token**
-   
-An access token is used to authenticate your API build and allows you to use the Fiserv APIs securely. **API key** and **API secret** values obtained from Workspace are required to generate an access token. 
-  
-To generate an access token, refer to the [Generating Access Token](?path=docs/getting-started/before-you-start.md#generating-access-token) section.
-
-
-<!-- theme: info -->
-> #### Note
->
-> Once generated, the access token is valid for approximately 15 minutes. You can reuse the access token until it expires.
 
 
 ### Example
@@ -363,64 +233,11 @@ Postman is a client that lets you test RESTful APIs. If you are familiar with Po
 <!-- theme: info -->  
 > #### Recommendation
 >
-> Keep the API documentation accessible to refer to the default request-payload for the request message. You may also download the Postman collection and refer to sample API requests from the **Resources**<!--**[Resources](?path=/docs/resources/resources.md)**--> section.
-
-<!--
-#### Resources
-
-* **API Specifications**
-
-  [![downoad-icon-BH]][BH]  
-
-* **Postman Collection**
-
-  [![downoad-icon-PRM]][PRM]      [![downoad-icon-SIG]][SIG]     [![downoad-icon-FN]][FN]   
+> Keep the API documentation accessible to refer to the default request-payload for the request message. 
 
 
-[downoad-icon-PRM]: https://github.com/Fiserv/banking-hub/assets/81968767/934da291-c743-41cb-9325-16cf2c8d7bda
-[PRM]: https://github.com/Fiserv/banking-hub/files/12247349/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip
-
-
-[downoad-icon-SIG]: https://github.com/Fiserv/banking-hub/assets/81968767/b4c09878-6e73-4e9e-9171-74bcd3e4f8b6
-[SIG]: https://github.com/Fiserv/banking-hub/files/11710490/Banking.Hub.-.Signature.-.Trial.Plan.Postman.Collection.zip
-
-
-[downoad-icon-BH]: https://github.com/Fiserv/banking-hub/assets/81968767/4c31d642-7574-413e-b02e-32f7ad1ae504
-[BH]: https://github.com/Fiserv/banking-hub/files/11222397/esf-service-swagger-release-11.0.0.2023.1.zip
-
-[downoad-icon-FN]: https://github.com/Fiserv/banking-hub/assets/81968767/76dd0525-220e-4c1e-90c8-b612eed002db
-[FN]: https://github.com/Fiserv/banking-hub/files/12358606/Banking.Hub.-.Finxact.-.Trial.Plan.Postman.Collection.zip
-
--->
-
-<!--
-FN: https://github.com/Fiserv/banking-hub/assets/81968767/28cc543b-7bd6-4f57-b282-725b15d289f3
-SIG: https://github.com/Fiserv/banking-hub/assets/81968767/b4c09878-6e73-4e9e-9171-74bcd3e4f8b6
-PRM: https://github.com/Fiserv/banking-hub/assets/81968767/934da291-c743-41cb-9325-16cf2c8d7bda
-
-Postman PRM old: https://github.com/Fiserv/banking-hub/files/11728540/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip
-
-* [Download Banking Hub API Specifications](https://github.com/Fiserv/banking-hub/files/11222397/esf-service-swagger-release-11.0.0.2023.1.zip)
-* [Download Postman Collection - Premier Core](https://github.com/Fiserv/banking-hub/files/11449420/Banking.Hub.-.Premier.-.Trial.Plan.Postman.Collection.zip "Click to Download")
-
--->
 
 #### Prerequisite to run Postman collection
-
-The attached Postman collection use variables to store and reuse few values such as Hostname, Username and Password. To update the variable values, perform the below steps in Postman.
-1.	From the **Collections** tab, select the root folder of Banking Hub Postman collection 
-2.	Select the **Variables** tab
-3.	Insert the variable values in the **Current value** column for the following variables:
-    * **authToken_UserName**: _API key value_
-    * **authToken_Password**: _API secret value_
-    * **OrgId**: _Org Id value_
-    
-      <!-- theme: info -->
-      > #### Note
-      > 
-      > You can obtain the _API key_, _API secret_ and _Org Id_ values from the Credentials tab of My workspaces. 
-
-    <kbd>![Postman-collection-steps](../assets/images/verifynow_postman.png) </kbd>
 
 
 To  test an API using Postman application: 
@@ -433,22 +250,18 @@ To  test an API using Postman application:
     >
     > API method of all Fiserv APIs is either set to POST or PUT for all operations.
 
-5.	Insert the request URL 
-6.	Under the **Authentication** tab, select the **Type** value as **Bearer Token** and insert access token in the **Token** box
-
-    ![image](https://user-images.githubusercontent.com/81968767/220967588-52eec24d-4b13-4d26-ba28-a9ad90943e26.png)
-    
-6.	Add Header as new parameters under the **Headers** section and insert the <Header> value. <!--in JSON format--> 
-7.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **XML** 
+4.	Insert the request URL     
+5.	Add Header as new parameters under the **Headers** section and insert the <Header> value. <!--in JSON format--> 
+6.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **JSON** 
   
-    <kbd><img src="../assets/images/verifynow_bodytab.png" width="70%" /></kbd><br>
+    <kbd><img src="../assets/images/Jsonselection_body.png" width="70%" /></kbd><br>
     
     <!-- theme: info -->
     > #### Note
     >
     > Default request-payload can be copied from the API ExJSONplorer document and you may modify certain fields as mentioned in the documentation.
   
-8.	Modify the field values in XML code that you want to test 
+8.	Modify the field values in JSON code that you want to test 
 9.	Click **Send**. API response is generated in the Response section
 
   
