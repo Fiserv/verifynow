@@ -21,6 +21,7 @@ The following flow is applicable when:
 <center>
 
 <img src="../assets/images/RTVA-enabled.png">
+
 &nbsp;
 
 </center>
