@@ -21,6 +21,7 @@ The following flow is applicable when:
 <center>
 
 <img src="../assets/images/RTVA-enabled.png">
+
 &nbsp;
 
 </center>
@@ -68,7 +69,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
         <div style="margin: 5px">
             <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-search.png">
         </div>
-    </div>
+</div>
 
 2.	Once the respective financial institution is selected, the user will be navigated to the Oath authentication screen.
 
