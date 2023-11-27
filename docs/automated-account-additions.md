@@ -194,6 +194,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 <center>
 
 <img width="300" height="150" src="../assets/images/choose-bank-account.png">
+
 &nbsp;
 
 </center>
