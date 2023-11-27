@@ -73,6 +73,7 @@ Shown below is an example of how Trial Deposit Verification works.
 <center>
 
 <img width="300" src="../../assets/images/verify-deposit-amount.png">
+
 </center>
 
 9.	Trial Deposit verification is completed.

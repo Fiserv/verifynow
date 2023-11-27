@@ -46,6 +46,7 @@ Instant verification is performed using the provided customer information and ac
 
 <img width="400" height="150" src="../../assets/images/process-image.png">
 
+
 </center>
 
 4.  Instant verification is completed.
