@@ -45,7 +45,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-<img width="300" src="../../assets/images/50-50-page.png"/>
+![Images](../../assets/images/50-50-page.png =300x)
 
 </center>
 
@@ -56,7 +56,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-<img width="300" src="../../assets/images/verify-with-bank-deposit.png"/>
+![Images](../../assets/images/verify-with-bank-deposit.png =300x)
 
 </center>
 
@@ -64,7 +64,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-<img width="300" src="../../assets/images/two-deposit-on-way.png"/>
+![Images](../../assets/images/two-deposit-on-way.png =300x)
 
 </center>
 
@@ -72,7 +72,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-<img width="300" src="../../assets/images/verify-deposit-amount.png"/>
+![Images](../../assets/images/verify-deposit-amount.png =300x)
 
 </center>
 
