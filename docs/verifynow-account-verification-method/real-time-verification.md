@@ -8,14 +8,14 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 ![Images](../../assets/images/rtv-process-flow.png)
 
-<b>REAL TIME VERIFICATION PROCESS FLOW</b>
+<b>Real Time Verification Process Flow</b>
 </center>
 
 <center>
 
 ![Images](../../assets/images/rtv-sequence.png)
 
-<b>REAL TIME VERIFICATION SEQUENCE</b>
+<b>Real Time Verification Sequence Flow</b>
 
 </center>
 
@@ -33,7 +33,7 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 </center>
 
-4.	If the user selects the Real-time verification method (“Verify your bank account instantly”), VerifyNow initiates Real-time verification.  (If the user selects the Trial Deposit verification method (“Verify with bank deposits”), VerifyNow initiates Trial Deposit verification. Please see [Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md) for more information.)
+4.	If the user selects the Real-time verification method (“Verify your bank account instantly”), VerifyNow initiates Real-time verification.  (If the user selects the Trial Deposit verification method (“Verify with bank deposits”), VerifyNow initiates Trial Deposit verification). Please see [Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md) for more information.
 
 
 5.	The user is asked to provide their username and password for the online banking portal where the user accesses their account.
