@@ -44,8 +44,7 @@ Instant verification is performed using the provided customer information and ac
 
 <center>
 
-<img width="400" height="150" src="../../assets/images/process-image.png">
-
+![Images](../../assets/images/process-image.png =400x150)
 
 </center>
 

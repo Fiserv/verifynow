@@ -41,7 +41,7 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 <center>
 
-<img width="400" height="300" src="../../assets/images/verify-instantly.png">
+![Images](../../assets/images/verify-instantly.png =400x300)
 
 </center>
 
@@ -57,7 +57,7 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 <center>
 
-<img width="400" height="150" src="../../assets/images/process-image.png">
+![Images](../../assets/images/process-image.png =400x150)
 
 </center>
 
