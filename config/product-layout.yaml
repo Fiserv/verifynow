@@ -57,24 +57,10 @@ featuredFeatures:
         link: docs/verifynow-account-verification-method/instant-verification.md
     relatedAPIs:
       - relatedAPI: null
-        title: Add Party
-        description: Creates a new Party or customer record. Party refers to a person or
-          organization, who has a relationship with the financial institution.
+        title: Verify NOW
+        description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account.
         type: post
-        path: /partyservice/parties/parties
-      - relatedAPI: null
-        title: Get Party
-        description: Retrieves the information related to a Party or customer using the
-          unique identifier of a Party (PartyId).
-        type: post
-        path: /partyservice/parties/parties/secured
-      - relatedAPI: null
-        title: Update Party
-        description: Modifies the existing information of a Party, such as personal
-          details, relationship details, secret data, default language and
-          tax-related details.
-        type: put
-        path: /partyservice/parties/parties
+        path: /cashedgerws/verifynow/verify/v1
   - title: Seamless Integration or Standalone Solution
     groupName: Manage Account
     description: VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions. VerfiyNow is integrated with your enterprise application by way of an API. The host system triggers the VerifyNow service whenever account verification is needed in the workflow. VerifyNow also offers offline solutions to fit your specific needs.
