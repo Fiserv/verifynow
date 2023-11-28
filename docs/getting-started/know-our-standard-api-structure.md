@@ -27,12 +27,12 @@ Request URL is formed by appending Host URL and API path.
 
 
 The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
-Refer the following example to construct a request URL for [**verify now**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1)API:
+Refer the following example to construct a request URL for [**verify now**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1) API:
 
 ![image](../../assets/images/verifynowservice.png)
 
 
-If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
+If host URL of the product is https://qa-ft.onefiserv.net, then request URL will be:
 
 ![image](../../assets/images/verifynow_hostandrequest_url.png)
 
@@ -42,7 +42,7 @@ If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/
 ### Request Header
   
   
-Header parameters are common for all API requests of Verify Now APIs. Header parameters are sent as  header parameter.
+Header parameters are common for all API requests of Verify Now APIs.
 
 **Sample Header Example**
 ```
@@ -69,7 +69,7 @@ Header parameters are common for all API requests of Verify Now APIs. Header par
 
 ### Request Body
 
-The request body of an API changes based on the type of transaction being processed. Request body contains the detailed information that is required to perform a particular transaction.
+The request body of an API changes based on the type of request being processed. Request body contains the detailed information that is required to perform a particular type of request.
 
 **Request Payload** 
 
