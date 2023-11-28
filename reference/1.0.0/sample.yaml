@@ -45,7 +45,7 @@ paths:
       tags:
       - Instant
       summary: Instant Verification
-      description: This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
+      description: This method provides instant bank account ownership verification using the Early Warning Services (EWS) account services and/or other available databases.
       operationId: APISpecProviderId
       parameters:
         - in: header
@@ -111,7 +111,7 @@ paths:
       tags:
       - OutCome
       summary: Returns tenant provider API.
-      description: Summarize ande provides information about the number of times verification is attempted.
+      description: Summarize and provides information about the number of times verification is attempted.
       operationId: TenantProviderID
       parameters:
         - in: header
