@@ -7,7 +7,7 @@ Account ownership verification is performed using the below three verification m
 
 <center>
 
-<img width="400" height="200" src="../assets/images/verifynow-acc-verification-method.png"/>
+![Images](../assets/images/verifynow-acc-verification-method.png =400x200)
 
 </center>
 
