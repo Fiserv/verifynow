@@ -44,7 +44,7 @@ Instant verification is performed using the provided customer information and ac
 
 <center>
 
-![Images](../../assets/images/process-image.png =400x150)
+<img width="400" height="150" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/process-image.png">
 
 </center>
 
