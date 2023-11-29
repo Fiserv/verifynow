@@ -13,7 +13,7 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 >
 > The current user journey enables developers to access to a range of APIs on Verify Now. 
 
-Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Using  hird-party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentations.
+Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Using  Third-party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentations.
 <!--
 
 [![Video Thumbnail]][Video]  
@@ -244,7 +244,7 @@ To  test an API using Postman application:
 
 1. Open a web or desktop application of Postman.
 2.	Create a new HTTP request.
-3.	Set the API method to POST or PUT, as mentioned in the API document which you want to test 
+3.	Set the API method to POST or PUT, as mentioned in the API document which you want to test. 
     <!-- theme: info -->
     > #### Note
     >

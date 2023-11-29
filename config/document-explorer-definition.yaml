@@ -31,7 +31,7 @@
 - sections:
   - title: Getting Started
     link: docs/getting-started.md
-  - title: VerifyNow - Account Verification Methods
+  - title: VN - Account Verification Methods
     link: docs/verifynow-account-verification-method.md
     sections:
     - title: Instant (Risk Database) Verification
@@ -40,7 +40,7 @@
       link: docs/verifynow-account-verification-method/real-time-verification.md
     - title: Trial Deposit Verification
       link: docs/verifynow-account-verification-method/trial-deposit-verification.md
-  - title: VerifyNow Integration Guide
+  - title: VN Integration Guide
     sections:
     - title: Widget Flow
       link: docs/widget-flow.md
