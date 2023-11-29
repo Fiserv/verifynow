@@ -20,7 +20,7 @@ The following flow is applicable when:
 
 <center>
 
-![Images](../assets/images/RTVA-enabled.png)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/RTVA-enabled.png">
 
 &nbsp;
 
