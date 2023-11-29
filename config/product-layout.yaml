@@ -63,14 +63,14 @@ featuredFeatures:
         path: /cashedgerws/verifynow/verify/v1
   - title: Seamless Integration or Standalone Solution
     groupName: Manage Account
-    description: VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions. VerfiyNow is integrated with your enterprise application by way of an API. The host system triggers the VerifyNow service whenever account verification is needed in the workflow. VerifyNow also offers offline solutions to fit your specific needs.
+    description: VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions. VerifyNow is integrated with your enterprise application by way of an API. The host system triggers the VerifyNow service whenever account verification is needed in the workflow. VerifyNow also offers offline solutions to fit your specific needs.
     featured: true
     relatedDocs:
      - link: null
        title: Account Verification
   - title: EWS / ALLData Aggregation System 
     groupName: Responsive Web Design
-    description: Fiserv provides access to Early Warning Services(EWS), a third-party solution. EWS houses data contributed by various financial institutions and uses this data to authenticate account ownership. AllData Aggregation via REST API provides multiple ways for you to access consumer-permissioned data by providing actionable insight that can be used to develop solutions for retail, wealth management, consumer lending  and financial services.
+    description: Fiserv provides access to Early Warning Services (EWS), a third-party solution. EWS houses data contributed by various financial institutions and uses this data to authenticate account ownership. AllData Aggregation via REST API provides multiple ways for you to access consumer-permissioned data by providing actionable insight that can be used to develop solutions for retail, wealth management, consumer lending  and financial services.
     featured: true
     relatedDocs:
      - link: null
