@@ -155,7 +155,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-<img width="300" height="150" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/non-oauth-enabled.png">
+![image](../assets/images/non-oauth-enabled.png)
 &nbsp;
 
 </center>
