@@ -14,11 +14,9 @@ The workflow for creating a new user is as follows:
     <div class="card-body">
         <ul>
             <li>Data validation check:  If the data is valid, the process can continue to the next step. If the data is invalid, VerifyNow sends an SSO error back to the client system.</li>
-            <li>User identity check: If the user is new, the process can continue to the next step. If the user is an existing user, VerifyNow checks the state to which the user must be returned. <a href="#tab-returning_user" >Returning User</a></li>
+            <li>User identity check: If the user is new, the process can continue to the next step. If the user is an existing user, VerifyNow checks the state to which the user must be returned. See, <a href="#tab-returning_user" >Returning User</a></li>
         </ul>
-    </div>
-&nbsp;
-
+    </div> &nbsp;
 3.	If the user is new, VerifyNow creates a new user. If the user is an existing user, VerifyNow triggers the existing user workflow.
 
 <center>
