@@ -45,7 +45,7 @@ paths:
       tags:
       - Instant
       summary: Instant Verification
-      description: This method provides instant bank account ownership verification using the Early Warning Services (EWS) Account Ownership database.
+      description: This method provides instant bank account ownership verification using the Early Warning Services (EWS) account services and/or other available databases.
       operationId: APISpecProviderId
       parameters:
         - in: header
@@ -104,14 +104,14 @@ paths:
               schema:
                 $ref: '#/components/schemas/VerifynowInternalErrorResponse'
       x-codegen-request-body-name: Body
-      x-group-name: VerifyNow service (widget flow)
+      x-group-name: VN service (widget flow)
       x-proxy-name: VerifyNow
   /cashedgerws/verifynow/outcome/v1:
     post:
       tags:
       - OutCome
       summary: Returns tenant provider API.
-      description: Summarize ande provides information about the number of times verification is attempted.
+      description: Summarize and provides information about the number of times verification is attempted.
       operationId: TenantProviderID
       parameters:
         - in: header
@@ -169,7 +169,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/OutcomeInternalErrorResponse'
-      x-group-name: VerifyNow service (widget flow)
+      x-group-name: VN service (widget flow)
       x-proxy-name: Status/Outcome
   /cashedgerws/verifynow/ping:
     post:
@@ -234,7 +234,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PingInternalErrorResponse'
-      x-group-name: VerifyNow service (widget flow)
+      x-group-name: VN service (widget flow)
       x-proxy-name: Ping
 components:
   schemas:

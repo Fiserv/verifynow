@@ -44,49 +44,49 @@ Control is passed to the client system at the following points:
 <td>Instant (Risk Database) Verification</td>
 <td>Approved</td>
 <td>Account Ownership</td>
-<td>Account Ownership was verified successfully, using Instant (Risk Database) Verification. The user can proceed </td>
+<td>If the Account Ownership was verified successfully using Instant (Risk Database) Verification, then the user can proceed. </td>
 </tr>
 <tr>
 <td>Instant (Risk Database) Verification</td>
 <td>Declined</td>
 <td>Account Ownership</td>
-<td>Account Ownership was not verified successfully, using Instant (Risk Database) Verification. The user cannot proceed, but can attempt ownership verification using another verification method.</td>
+<td>If the Account Ownership was not verified successfully using Instant (Risk Database) Verification, then the user cannot proceed, but can attempt ownership verification using another verification method.</td>
 </tr>
 <tr>
 <td>Instant (Risk Database) Verification</td>
 <td>Inconclusive</td>
 <td>Account Ownership</td>
-<td>Account Ownership could not be verified conclusively, using Instant (Risk Database) Verification. The user cannot proceed, but can attempt ownership verification using another verification method </td>
+<td>If the Account Ownership could not be verified conclusively using Instant (Risk Database) Verification, then the user cannot proceed, but can attempt ownership verification using another verification method.</td>
 </tr>
 <tr>
 <td>Real-Time (using FI login) Verification</td>
 <td>Approved</td>
 <td>Account Ownership</td>
-<td>Account Ownership was verified successfully, using Real-Time (using FI login) Verification. The user can proceed.</td>
+<td>If the Account Ownership was verified successfully using Real-Time (using FI login) Verification, then the user can proceed.</td>
 </tr>
 <tr>
 <td>Real-Time (using FI login) Verification</td>
 <td>Inconclusive / Failed</td>
 <td>Account Ownership</td>
-<td>Account Ownership was not verified successfully, using Real-Time (using FI login) Verification. The user cannot proceed, but can attempt ownership verification using another verification method.</td>
+<td>If the Account Ownership was not verified successfully using Real-Time (using FI login) Verification, then the user cannot proceed, but can attempt ownership verification using another verification method.</td>
 </tr>
 <tr>
 <td>Trial Deposit Verification</td>
 <td>Approved</td>
 <td>Account Ownership</td>
-<td>Account Ownership was verified successfully, using Trial Deposit Verification. The user can proceed.</td>
+<td>If the Account Ownership was verified successfully using Trial Deposit Verification, then the user can proceed..</td>
 </tr>
 <tr>
 <td>Trial Deposit Verification</td>
 <td>Declined</td>
 <td>Account Ownership</td>
-<td>Account Ownership was not verified successfully, using Trial Deposit Verification. The user cannot proceed, but can attempt ownership verification using another verification method.</td>
+<td>If the Account Ownership was not verified successfully using Trial Deposit Verification, then the user cannot proceed, but can attempt ownership verification using another verification method.</td>
 </tr>
 <tr>
 <td>Trial Deposit Verification</td>
 <td>Inconclusive</td>
 <td>Account Ownership</td>
-<td>Account Ownership could not be verified conclusively, using Trial Deposit Verification. The user cannot proceed, but can attempt ownership verification using another verification method </td>
+<td>If the Account Ownership could not be verified conclusively using Trial Deposit Verification, then the user cannot proceed, but can attempt ownership verification using another verification method.</td>
 </tr>
 </table>
 

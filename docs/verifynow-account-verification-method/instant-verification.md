@@ -2,7 +2,7 @@
 
 This method provides instant bank account ownership verification using the Early Warning Services (EWS) account services and/or other available databases.
 
-VerifyNow performs instant account verification using the Customer Information/MICR Match component of a check printer’s database. This service matches the user’s name and the account information with information in the database.
+VerifyNow performs instant account verification using the Customer Information/Magnetic Ink Character Recognition (MICR) Match component of a check printer’s database. This service matches the user’s name and the account information with information in the database.
 
 >**Note**<br/><br/>
  The instant account verification service only verifies DDA accounts. Savings, money market, and brokerage accounts are ineligible for account verification via this service.

@@ -15,7 +15,7 @@ You can test our APIs in the Sandbox environment using third-party API testing t
 
 ### Prerequisites
 To make an API call, you need:
-- An active user account on Fiserv Dev Studio
+- An active user account on Fiserv Dev Studio.
 
 
 **Creating an account on Dev Studio**
@@ -44,26 +44,26 @@ Postman is a client that lets you test RESTful APIs. If you are familiar with Po
 To  test an API using Postman application: 
 
 1. Open a web or desktop application of Postman.
-2.	Create a new HTTP request
-3.	Set the API method to POST or PUT, as mentioned in the API document which you want to test 
+2.	Create a new HTTP request.
+3.	Set the API method to POST or PUT, as mentioned in the API document which you want to test. 
     <!-- theme: info -->
     > #### Note
     >
     > API method of all Fiserv APIs is either set to POST or PUT for all operations.
 
-4.	Insert the request URL     
-5.	Add Header as new parameters under the **Headers** section and insert the <Header> value. <!--in JSON format--> 
-6.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **JSON** 
+4.	Insert the request URL.     
+5.	Add Header as new parameters under the **Headers** section and insert the value in JSON format.
+6.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **JSON**. 
   
     <kbd><img src="../../assets/images/Jsonselection_body.png" width="70%" /></kbd><br>
     
     <!-- theme: info -->
     > #### Note
     >
-    > Default request-payload can be copied from the API ExJSONplorer document and you may modify certain fields as mentioned in the documentation.
+    > Default request-payload can be copied from the API Explorer document and you may modify certain fields as mentioned in the documentation.
   
-8.	Modify the field values in JSON code that you want to test 
-9.	Click **Send**. API response is generated in the Response section.
+7.	Modify the field values in JSON code that you want to test. 
+8.	Click **Send**. API response is generated in the Response section.
 
   
 <!--<kbd>
@@ -78,18 +78,18 @@ Enter Host Url.
 
 #### STEP 2:
 
-Enter Header values 
+Enter Header values. 
 
 ![image](../../assets/images/verifynow_HeaderDetails.png)
 
 #### STEP 3:
 
-Request Payload
+Request Payload.
 
 ![image](../../assets/images/Verifynow_Request.png)
 
 #### STEP 4:
 
-Response Payload
+Response Payload.
 
 ![image](../../assets/images/Verifynow_Repsonse.png)

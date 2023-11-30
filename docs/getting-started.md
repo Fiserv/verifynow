@@ -11,9 +11,9 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 
 > #### Note 
 >
-> The current user journey enables developers to access to a range of  APIs on Verify Now. 
+> The current user journey enables developers to access to a range of APIs on Verify Now. 
 
-Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs using the <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Third-party API Testing Tools</a> of your choice.   However, registration is not required to learn about our APIs and reference documentations.
+Before you start integration, it is important to register on the Fiserv Developer Studio to test the Verify Now APIs in the Sandbox environment. You may choose to test APIs <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Using  Third-party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentations.
 <!--
 
 [![Video Thumbnail]][Video]  
@@ -34,9 +34,9 @@ This section describes the process to create an account on Fiserv Developer Stud
 ### Creating an Account
 
 Perform the following steps to create an account on Fiserv Developer Studio:
-1.	From the top-right corner of the screen, click **Create account**
-2.	Populate the required fields and click **Next**
-3.	Follow the instructions on the screen to set up your account
+1.	From the top-right corner of the screen, click **Create account**.
+2.	Populate the required fields and click **Next**.
+3.	Follow the instructions on the screen to set up your account.
 4.	Sign in to your Fiserv Developer Studio account once it is activated.
 
 
@@ -79,12 +79,12 @@ Request URL is formed by appending Host URL and API path.
 
 
 The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
-Refer the following example to construct a request URL for [**verify now**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1)API:
+Refer the following example to construct a request URL for [**verify now**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1) API:
 
 ![image](../assets/images/verifynowservice.png)
 
 
-If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1, then request URL will be:
+If host URL of the product is https://qa-ft.onefiserv.net, then request URL will be:
 
 ![image](../assets/images/verifynow_hostandrequest_url.png)
 
@@ -94,7 +94,7 @@ If host URL of the product is https://qa-ft.onefiserv.net/cashedgerws/verifynow/
 ### Request Header
   
   
-Header parameters are common for all API requests of Verify Now APIs. Header parameters are sent as  header parameter.
+Header parameters are common for all API requests of Verify Now APIs. 
 
 **Sample Header Example**
 ```
@@ -121,7 +121,7 @@ Header parameters are common for all API requests of Verify Now APIs. Header par
 
 ### Request Body
 
-The request body of an API changes based on the type of transaction being processed. Request body contains the detailed information that is required to perform a particular transaction.
+The request body of an API changes based on the type of request being processed. Request body contains the detailed information that is required to perform a particular type of request.
 
 **Request Payload** 
 
@@ -214,7 +214,7 @@ You can test our APIs in the Sandbox environment using third-party API testing t
 
 ### Prerequisites
 To make an API call, you need:
-- An active user account on Fiserv Dev Studio
+- An active user account on Fiserv Dev Studio.
 
 
 **Creating an account on Dev Studio**
@@ -243,26 +243,26 @@ Postman is a client that lets you test RESTful APIs. If you are familiar with Po
 To  test an API using Postman application: 
 
 1. Open a web or desktop application of Postman.
-2.	Create a new HTTP request
-3.	Set the API method to POST or PUT, as mentioned in the API document which you want to test 
+2.	Create a new HTTP request.
+3.	Set the API method to POST or PUT, as mentioned in the API document which you want to test. 
     <!-- theme: info -->
     > #### Note
     >
     > API method of all Fiserv APIs is either set to POST or PUT for all operations.
 
-4.	Insert the request URL     
-5.	Add Header as new parameters under the **Headers** section and insert the <Header> value. <!--in JSON format--> 
-6.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **JSON** 
+4.	Insert the request URL.     
+5.	Add Header as new parameters under the **Headers** section and insert the value in JSON format.
+6.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **JSON**. 
   
     <kbd><img src="../assets/images/Jsonselection_body.png" width="70%" /></kbd><br>
     
     <!-- theme: info -->
     > #### Note
     >
-    > Default request-payload can be copied from the API ExJSONplorer document and you may modify certain fields as mentioned in the documentation.
+    > Default request-payload can be copied from the API Explorer document and you may modify certain fields as mentioned in the documentation.
   
-8.	Modify the field values in JSON code that you want to test 
-9.	Click **Send**. API response is generated in the Response section
+7.	Modify the field values in JSON code that you want to test. 
+8.	Click **Send**. API response is generated in the Response section.
 
   
 <!--kbd>
@@ -277,19 +277,19 @@ Enter Host Url.
 
 #### STEP 2:
 
-Enter Header values 
+Enter Header values. 
 
 ![image](../assets/images/verifynow_HeaderDetails.png)
 
 #### STEP 3:
 
-Request Payload
+Request Payload.
 
 ![image](../assets/images/Verifynow_Request.png)
 
 #### STEP 4:
 
-Response Payload
+Response Payload.
 
 ![image](../assets/images/Verifynow_Repsonse.png)
   
