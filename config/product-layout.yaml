@@ -32,11 +32,11 @@ header:
   getStarted: /docs/getting-started.md
 benefits:
   - title: Payment Account Verification
-    description: Getting users quickly authenticated is easy when Fiserv helps verify the account provided is owned by the same person trying to initiate the ACH Transfer.
+    description: Easy user authentication in verifying the accounts when the account holder initiates the ACH Transfer.
   - title: Real-Time Access
-    description: VerifyNow includes Early Warning Services® to enable instant verification. This increases verification success and happens completely behind the scenes.
+    description: VerifyNow includes EWS® to enable instant verification and increases successful verifications.
   - title: Credit Decisions and Verification
-    description: Data from third-party partnerships and from our extensive footprint in bank, merchant and card processing improves accuracy and helps reduce fraud.
+    description: Data from third-party partnerships improves accuracy and helps reduce fraud.
 featuredFeatures:
   - title: Identity Verification 
     groupName: 
@@ -47,7 +47,7 @@ featuredFeatures:
        title:
   - title: Account Ownership Verification
     groupName: Account Verification
-    description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account. This process offers a safe and secure way to verify account ownership.
+    description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account.
     featured: true
     tags: ["tag1", "tag2"]
     relatedDocs:
@@ -63,14 +63,14 @@ featuredFeatures:
         path: /cashedgerws/verifynow/verify/v1
   - title: Seamless Integration or Standalone Solution
     groupName: Manage Account
-    description: VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions. VerifyNow is integrated with your enterprise application by way of an API. The host system triggers the VerifyNow service whenever account verification is needed in the workflow. VerifyNow also offers offline solutions to fit your specific needs.
+    description: VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions. VerifyNow is integrated with your enterprise application by way of an API. VerifyNow also offers offline solutions to fit your specific needs.
     featured: true
     relatedDocs:
      - link: null
        title: Account Verification
   - title: EWS / ALLData Aggregation System 
     groupName: Responsive Web Design
-    description: Fiserv provides access to Early Warning Services (EWS), a third-party solution. EWS houses data contributed by various financial institutions and uses this data to authenticate account ownership. AllData Aggregation via REST API provides multiple ways for you to access consumer-permissioned data by providing actionable insight that can be used to develop solutions for retail, wealth management, consumer lending  and financial services.
+    description: EWS houses data contributed by various financial institutions and uses this data to authenticate account ownership. AllData Aggregation via REST API provides multiple ways for you to access consumer-permissioned data by providing actionable insight that can be used to develop solutions.
     featured: true
     relatedDocs:
      - link: null
