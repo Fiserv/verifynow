@@ -15,8 +15,11 @@ You can test our APIs in the Sandbox environment using third-party API testing t
 
 ### Prerequisites
 To make an API call, you need:
-- An active user account on Fiserv Dev Studio.
-
+<div class="card-body">
+<ul>
+<li> An active user account on Fiserv Dev Studio.</li>
+</ul>
+</div>
 
 **Creating an account on Dev Studio**
 
@@ -65,31 +68,151 @@ To  test an API using Postman application:
 7.	Modify the field values in JSON code that you want to test. 
 8.	Click **Send**. API response is generated in the Response section.
 
-  
-<!--<kbd>
-  <img src="https://user-images.githubusercontent.com/81968767/145146913-16d54888-1e48-46b7-99f5-64827a78e21f.gif" />
-</kbd>-->
-
-#### STEP 1:
+<div class="collapsible-container">
+<div>
+   <input type="checkbox" class="collapsible-checkbox" id="section5">
+    <label class="label-expand" for="section5">Step 1</label>
+    <div class="content-expand">
+    <p>Enter Host Url.</p>
+    <img src="../../assets/images/Verifynow_Url.png">
+    </div>
+    </div>
+    </br>
+    <div>
+    <input type="checkbox" class="collapsible-checkbox" id="section6">
+    <label class="label-expand" for="section6">Step 2</label>
+    <div class="content-expand">
+    <p>Enter Header values.</p>
+    <img src="../../assets/images/verifynow_HeaderDetails.png">
+    </div>
+    </div>
+    </br>
+    <div>
+    <input type="checkbox" class="collapsible-checkbox" id="section7">
+    <label class="label-expand" for="section7">Step 3</label>
+    <div class="content-expand">
+    <p>Request Payload.</p>
+    <img src="../../assets/images/Verifynow_Request.png">
+    </div>
+    </div>
+    </br>
+    <div>
+    <input type="checkbox" class="collapsible-checkbox" id="section8">
+    <label class="label-expand" for="section8">Step 4</label>
+    <div class="content-expand">
+    <p>Response Payload.</p>
+    <img src="../../assets/images/Verifynow_Repsonse.png">
+    </div>
+    </div>
+    </br>
+    </div>
+    
+<!--#### STEP 1:
 
 Enter Host Url.
 
-![image](../../assets/images/Verifynow_Url.png)
+![image](../assets/images/Verifynow_Url.png)
 
 #### STEP 2:
 
 Enter Header values. 
 
-![image](../../assets/images/verifynow_HeaderDetails.png)
+![image](../assets/images/verifynow_HeaderDetails.png)
 
 #### STEP 3:
 
 Request Payload.
 
-![image](../../assets/images/Verifynow_Request.png)
+![image](../assets/images/Verifynow_Request.png)
 
 #### STEP 4:
 
 Response Payload.
 
-![image](../../assets/images/Verifynow_Repsonse.png)
+![image](../assets/images/Verifynow_Repsonse.png)-->
+
+<style>
+
+    .collapsible-container {
+        width: 100%;
+    }
+
+
+    .collapsible-checkbox {
+        display: none;
+    }
+
+    .label-expand {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        display: block;
+    }
+
+    .collapsible-checkbox:checked+.label-expand {
+        background-color: #555;
+    }
+
+    .content-expand {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    .collapsible-checkbox:checked+.label-expand+.content-expand {
+        display: block;
+    }
+
+    .block-quote {
+        padding: 1em;
+        color: #6a737d;
+        border-left: 0.375em solid #40a9ff;
+        background: #e6f7ff;
+        border-radius: 3px;
+    }
+
+    .content-left {
+        width: 50%
+    }
+
+    .image-otp {
+        width: 40%
+    }
+
+    .content-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .image-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+    }
+    
+    .card-body {
+        margin: 20px;
+    }
+    .card-body ul {
+        list-style: none;
+        padding-left: 20px;
+    }
+    .card-body ul li::before {
+        content: "\2022";
+        font-size: 1em;
+        color: #f60;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+    }
+</style>
