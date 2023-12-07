@@ -44,7 +44,10 @@ When a user tries to add an account for the FI via RTVA, they provide credential
 
 The name that comes in SSO will be compared against the name scraped by Aggregation. Risk rules for name matching determine if the account information should be displayed to the user.
 
-### Automated Account Addition Flow for Oath Users
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section1">
+    <label class="label-expand" for="section1">Automated Account Addition Flow for Oath Users</label>
+    <div class="content-expand">
 
 &nbsp;
 
@@ -145,7 +148,13 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
     </ul>
     </div>
 
-### Automated Account Addition Flow for Non-Oath Users
+</div>
+</div>
+</br>
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section2">
+    <label class="label-expand" for="section2">Automated Account Addition Flow for Non-Oath Users</label>
+    <div class="content-expand">
 
 &nbsp;
 
@@ -201,6 +210,9 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
     a.	Selecting “Add your account manually” will take the user to the add account manually flow.
 
+</div>
+</div>
+
 ### See Also
 
 [Add Account Manually](?path=docs/add-account-manually.md)</br>
@@ -232,4 +244,73 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
             display: flex;
             flex-direction: column;
         }
+    .collapsible-container {
+        width: 100%;
+    }
+
+    .collapsible-checkbox {
+        display: none;
+    }
+
+    .label-expand {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        display: block;
+    }
+
+    .collapsible-checkbox:checked+.label-expand {
+        background-color: #555;
+    }
+
+    .content-expand {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    .collapsible-checkbox:checked+.label-expand+.content-expand {
+        display: block;
+    }
+
+    .block-quote {
+        padding: 1em;
+        color: #6a737d;
+        border-left: 0.375em solid #40a9ff;
+        background: #e6f7ff;
+        border-radius: 3px;
+    }
+
+    .content-left {
+        width: 50%
+    }
+
+    .image-otp {
+        width: 40%
+    }
+
+    .content-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .image-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+    }
+    
+    .card-body {
+        margin: 20px;
+    }
 </style>
