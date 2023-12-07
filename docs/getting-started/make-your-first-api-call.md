@@ -58,7 +58,7 @@ To  test an API using Postman application:
 5.	Add Header as new parameters under the **Headers** section and insert the value in JSON format.
 6.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **JSON**. 
   
-    <kbd><img src="../../assets/images/Jsonselection_body.png" width="70%" /></kbd><br>
+    <kbd><img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/Jsonselection_body.png" width="70%" /></kbd><br>
     
     <!-- theme: info -->
     > #### Note
@@ -74,7 +74,7 @@ To  test an API using Postman application:
     <label class="label-expand" for="section5">Step 1</label>
     <div class="content-expand">
     <p>Enter Host Url.</p>
-    <img src="../../assets/images/Verifynow_Url.png">
+    <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/Verifynow_Url.png">
     </div>
     </div>
     </br>
@@ -83,7 +83,7 @@ To  test an API using Postman application:
     <label class="label-expand" for="section6">Step 2</label>
     <div class="content-expand">
     <p>Enter Header values.</p>
-    <img src="../../assets/images/verifynow_HeaderDetails.png">
+    <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verifynow_HeaderDetails.png">
     </div>
     </div>
     </br>
@@ -92,7 +92,7 @@ To  test an API using Postman application:
     <label class="label-expand" for="section7">Step 3</label>
     <div class="content-expand">
     <p>Request Payload.</p>
-    <img src="../../assets/images/Verifynow_Request.png">
+    <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/Verifynow_Request.png">
     </div>
     </div>
     </br>
@@ -101,7 +101,7 @@ To  test an API using Postman application:
     <label class="label-expand" for="section8">Step 4</label>
     <div class="content-expand">
     <p>Response Payload.</p>
-    <img src="../../assets/images/Verifynow_Repsonse.png">
+    <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/Verifynow_Repsonse.png">
     </div>
     </div>
     </br>
@@ -214,5 +214,8 @@ Response Payload.
         display: inline-block;
         width: 1em;
         margin-left: -1em;
+    }
+    .markdown-body pre{
+     background-color:#f1f1f1;
     }
 </style>

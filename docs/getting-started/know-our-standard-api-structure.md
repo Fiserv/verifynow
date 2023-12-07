@@ -32,9 +32,9 @@ For every API request, a response message is obtained that contains a response p
     <p>Request URL is formed by appending Host URL and API path.</p>
     <h3>Request URL = Host URL + API path</h3>
     <p>The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio.Refer the following example to construct a request URL for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">verify now API:</a></p>
-     <img src="../../assets/images/verifynowservice.png"/>
+     <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verifynowservice.png"/>
      <p>If host URL of the product is https://qa-ft.onefiserv.net, then request URL will be:</p>
-     <img src="../../assets/images/verifynow_hostandrequest_url.png">
+     <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verifynow_hostandrequest_url.png">
     </div>
     </div>
     </br>
@@ -123,7 +123,7 @@ Request URL is formed by appending Host URL and API path.
 
 
 <!-- theme: info -->
-> <!--**Request URL = Host URL + API path**-->
+<!--**Request URL = Host URL + API path**-->
 
 
 <!--The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
@@ -320,6 +320,9 @@ To view the API documentation of **verify now** API in API Explorer, [click here
         display: inline-block;
         width: 1em;
         margin-left: -1em;
+    }
+    .markdown-body pre{
+     background-color:#f1f1f1;
     }
 </style>
 
