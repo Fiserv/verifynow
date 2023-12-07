@@ -33,25 +33,26 @@ The workflow for creating a new user is as follows:
 
 For returning users (i.e., users who begin the verification process, leave, and then return to complete the process), the following scenarios would apply:
 
-### Partners Using RTVA, RTV, Instant, and Trial Deposit
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section1">
+    <label class="label-expand" for="section1">Partners Using RTVA, RTV, Instant, and Trial Deposit</label>
+    <div class="content-expand">
+        When an account is present in SSO and in Compass:
 
-When an account is present in SSO and in Compass:
-
-   <div class="card-body" style="padding-left:40px;">
+<div class="card-body" style="padding-left:40px;">
             <ul>
                 <li>If verification status is In Progress, the user is returned to the last page visited.</li>
                 <li>If verification status is Approved, the user is returned to re-verify the account.</li>
             </ul>
         </div>
-When an account is present in SSO but absent in Compass:
+        When an account is present in SSO but absent in Compass:
 
 <div class="card-body" style="padding-left:40px;">
             <ul>
                 <li>If verification status is Not Applicable, the user is returned to the beginning of Account Verification.</li>
             </ul>
         </div>
-
-When an account is absent in SSO and but present in Compass:
+        When an account is absent in SSO and but present in Compass:
 
 <div class="card-body" style="padding-left:40px;">
             <ul>
@@ -67,10 +68,14 @@ When an account is absent in SSO and in Compass:
                 <li>If verification status is Not Applicable, the user is returned to the RTVA page to re-start the process.</li>
             </ul>
         </div>
-
-### Partners Using RTV, Instant, and Trial Deposit
-
-When an account is present in SSO and in Compass:
+    </div>
+    </div>
+</br>
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section2">
+    <label class="label-expand" for="section2">Partners Using RTV, Instant, and Trial Deposit</label>
+    <div class="content-expand">
+    When an account is present in SSO and in Compass:
 
 <div class="card-body" style="padding-left:40px;">
             <ul>
@@ -103,10 +108,16 @@ When an account is absent in SSO and in Compass:
                 <li>If verification status is Not Applicable, the user is returned to the Manual Account Addition page to re-start the process.</li>
             </ul>
         </div>
+        
+</div>
+</div>
+</br>
 
-### Partners Using Instant and Trial Deposit
-
-When an account is present in SSO and in Compass:
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section3">
+    <label class="label-expand" for="section3">Partners Using Instant and Trial Deposit</label>
+    <div class="content-expand">
+    When an account is present in SSO and in Compass:
 
 <div class="card-body" style="padding-left:40px;">
             <ul>
@@ -139,6 +150,10 @@ When an account is absent in SSO and in Compass:
                 <li>If verification status is Not Applicable, the user is returned to the Manual Account Addition page to re-start the process.</li>
             </ul>
         </div>
+
+        
+</div>
+</div>
 
 <!-- type: tab-end -->
 
@@ -160,5 +175,74 @@ When an account is absent in SSO and in Compass:
         display: inline-block;
         width: 1em;
         margin-left: -1em;
+    }
+    .collapsible-container {
+        width: 100%;
+    }
+
+    .collapsible-checkbox {
+        display: none;
+    }
+
+    .label-expand {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        display: block;
+    }
+
+    .collapsible-checkbox:checked+.label-expand {
+        background-color: #555;
+    }
+
+    .content-expand {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    .collapsible-checkbox:checked+.label-expand+.content-expand {
+        display: block;
+    }
+
+    .block-quote {
+        padding: 1em;
+        color: #6a737d;
+        border-left: 0.375em solid #40a9ff;
+        background: #e6f7ff;
+        border-radius: 3px;
+    }
+
+    .content-left {
+        width: 50%
+    }
+
+    .image-otp {
+        width: 40%
+    }
+
+    .content-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .image-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+    }
+    
+    .card-body {
+        margin: 20px;
     }
 </style>
