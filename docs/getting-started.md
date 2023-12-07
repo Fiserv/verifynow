@@ -84,9 +84,9 @@ For every API request, a response message is obtained that contains a response p
     <p>Request URL is formed by appending Host URL and API path.</p>
     <h3>Request URL = Host URL + API path</h3>
     <p>The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio.Refer the following example to construct a request URL for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">verify now API:</a></p>
-     <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verifynowservice.png"/>
+     <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynowservice.png"/>
      <p>If host URL of the product is https://qa-ft.onefiserv.net, then request URL will be:</p>
-     <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verifynow_hostandrequest_url.png">
+     <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow_hostandrequest_url.png">
     </div>
     </div>
     </br>
@@ -174,10 +174,10 @@ For security reasons, all API methods are set to POST or PUT, irrespective of th
 Request URL is formed by appending Host URL and API path. 
 
 
-<!-- theme: info -->
-<!-- **Request URL = Host URL + API path**-->
+ theme: info 
+ **Request URL = Host URL + API path**
 
-<!-- 
+
 The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
 Refer the following example to construct a request URL for [**verify now**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1) API:
 
@@ -257,7 +257,8 @@ The following example shows the sample request payload for **verify now** API re
     }
   }
 }
-``` -->
+```
+ -->
 
 
 ## Response Message
@@ -357,7 +358,7 @@ To  test an API using Postman application:
 5.	Add Header as new parameters under the **Headers** section and insert the value in JSON format.
 6.	Insert the request-payload under the **Body** tab. Make sure that the **raw** radio button is activated and the text format is set to **JSON**. 
   
-    <kbd><img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/Jsonselection_body.png" width="70%" /></kbd><br>
+    <kbd><img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Jsonselection_body.png" width="70%" /></kbd><br>
     
     <!-- theme: info -->
     > #### Note
@@ -373,7 +374,7 @@ To  test an API using Postman application:
     <label class="label-expand" for="section5">Step 1</label>
     <div class="content-expand">
     <p>Enter Host Url.</p>
-    <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/Verifynow_Url.png">
+    <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Verifynow_Url.png">
     </div>
     </div>
     </br>
@@ -382,7 +383,7 @@ To  test an API using Postman application:
     <label class="label-expand" for="section6">Step 2</label>
     <div class="content-expand">
     <p>Enter Header values.</p>
-    <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verifynow_HeaderDetails.png">
+    <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow_HeaderDetails.png">
     </div>
     </div>
     </br>
@@ -391,7 +392,7 @@ To  test an API using Postman application:
     <label class="label-expand" for="section7">Step 3</label>
     <div class="content-expand">
     <p>Request Payload.</p>
-    <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/Verifynow_Request.png">
+    <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Verifynow_Request.png">
     </div>
     </div>
     </br>
@@ -400,7 +401,7 @@ To  test an API using Postman application:
     <label class="label-expand" for="section8">Step 4</label>
     <div class="content-expand">
     <p>Response Payload.</p>
-    <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/Verifynow_Repsonse.png">
+    <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Verifynow_Repsonse.png">
     </div>
     </div>
     </br>
