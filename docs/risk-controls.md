@@ -141,7 +141,7 @@ D. Clients can submit a written request to Fiserv ePayments Customer Support to 
     }
 
     .content-left {
-        width: 50%
+        width: 100%
     }
 
     .image-otp {
