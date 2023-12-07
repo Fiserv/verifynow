@@ -174,10 +174,10 @@ For security reasons, all API methods are set to POST or PUT, irrespective of th
 Request URL is formed by appending Host URL and API path. 
 
 
-<!-- theme: info -->
-<!-- **Request URL = Host URL + API path**-->
+theme: info 
+**Request URL = Host URL + API path**
 
-<!-- 
+ 
 The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio. 
 Refer the following example to construct a request URL for [**verify now**](../api/?type=post&path=/cashedgerws/verifynow/verify/v1) API:
 
@@ -257,7 +257,8 @@ The following example shows the sample request payload for **verify now** API re
     }
   }
 }
-``` -->
+```
+ -->
 
 
 ## Response Message
