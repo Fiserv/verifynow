@@ -15,11 +15,21 @@ VerifyNow integration requires clients to perform three steps as outlined below 
 
 ### How to Integrate VerifyNow Widget?
 
-## Verify
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section1">
+    <label class="label-expand" for="section1">Verify</label>
+    <div class="content-expand">
+
 The client application invokes the VerifyNow web service’s Verify operation with the expected elements for profile and account information. The client application receives a token and the status of the request from the VerifyNow system. The token will not be passed to the client application if there is any failure in processing the data received, such as failure in data validation and/or business-related validation. For more information, see [API Flow](?path=docs/api-flow.md).
 
-## Widget Integration
-The client is required to comply with the following integration points to use the Fiserv widget in their application’s user interface.
+</div>
+</div>
+</br>
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section2">
+    <label class="label-expand" for="section2">Widget Integration</label>
+    <div class="content-expand">
+    The client is required to comply with the following integration points to use the Fiserv widget in their application’s user interface.
 
 ### JavaScript
 
@@ -56,16 +66,28 @@ The client’s application user interface is expected to have the following hidd
 <input type="hidden" name="cssURL" id="cssURL" value="<<clientHostedCSS>>"/>
 
 ```
+</div>
+</div>
+</br>
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section3">
+    <label class="label-expand" for="section3">Widget Placement</label>
+    <div class="content-expand">
 
-## Widget Placement
 
 The client’s application is required to provide the expected space in their user interface to place the VerifyNow widget. This needs to happen through use of the `<div>` tag with the predefined ID (<b>vn_space</b>) associated with it. A sample could appear as:
 
 ```
 <div id="vn_space" style="align:center; margin:5px; width:100%" align="center"> </div>
 ```
+</div>
+</div>
+</br>
 
-## Control Handover to Client Application
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section4">
+    <label class="label-expand" for="section4">Control Handover to Client Application</label>
+    <div class="content-expand">
 
 Application control will be transferred back to the client’s application from the VerifyNow system through a JavaScript API call hosted by the client application. Clients can incorporate their business flow inside of it. 
 ```
@@ -75,9 +97,20 @@ alert("UI Control is handed over to Client");
 
 }
 ```
-## Outcome
+</div>
+</div>
+</br>
+
+<div>
+    <input type="checkbox" class="collapsible-checkbox" id="section5">
+    <label class="label-expand" for="section5">Outcome</label>
+    <div class="content-expand">
 
 The client’s application receives the outcome of the verification through the Outcome operation with the token associated for the specific verification. The Outcome operation provides the detail, including verification types and their respective statuses along with the combined decision. Refer to the  [API Flow](?path=docs/api-flow.md) for more information.
+
+</div>
+</div>
+</br>
 
 ## See Also
 [Automated Account Addition](?path=docs/automated-account-additions.md)</br>
@@ -100,6 +133,75 @@ The client’s application receives the outcome of the verification through the 
         display: inline-block;
         width: 1em;
         margin-left: -1em;
+    }
+    .collapsible-container {
+        width: 100%;
+    }
+
+    .collapsible-checkbox {
+        display: none;
+    }
+
+    .label-expand {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        display: block;
+    }
+
+    .collapsible-checkbox:checked+.label-expand {
+        background-color: #555;
+    }
+
+    .content-expand {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
+    .collapsible-checkbox:checked+.label-expand+.content-expand {
+        display: block;
+    }
+
+    .block-quote {
+        padding: 1em;
+        color: #6a737d;
+        border-left: 0.375em solid #40a9ff;
+        background: #e6f7ff;
+        border-radius: 3px;
+    }
+
+    .content-left {
+        width: 50%
+    }
+
+    .image-otp {
+        width: 40%
+    }
+
+    .content-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .image-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+    }
+    
+    .card-body {
+        margin: 20px;
     }
 </style>
 
