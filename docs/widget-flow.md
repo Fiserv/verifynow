@@ -31,7 +31,7 @@ The client application invokes the VerifyNow web service’s Verify operation wi
     <div class="content-expand">
     The client is required to comply with the following integration points to use the Fiserv widget in their application’s user interface.
 
-### JavaScript
+<h3>JavaScript</h3>
 
 The client’s application user interface to support the widget is required to include the following script hosted by the VerifyNow system. The widget takes care of all user interface level processing and data validation. Processing control will be given back to the client’s application by a JavaScript API call.
 
@@ -41,7 +41,7 @@ The client’s application user interface to support the widget is required to i
 
 The Fiserv Client Manager will provide the value of FI_HOME_ID to the client at the time of onboarding.
 
-### Hidden Variables
+<h3>Hidden Variables</h3>
 
 The client’s application user interface is expected to have the following hidden variables with the appropriate values for the expected functional flow. Samples are included after the variable descriptions.
 <div class="card-body">
@@ -53,7 +53,8 @@ The client’s application user interface is expected to have the following hidd
 </ul>
 </div>
 
-### Samples
+<h3>Samples</h3>
+
 ```
 <input type="hidden" name="pidString" id="pidString" value="CE02#4#TNiA3Qj"/>
 
