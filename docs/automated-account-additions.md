@@ -207,8 +207,12 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 </center>
 
 4.	Clicking the Add button will complete the verification flow.
-
-    a.	Selecting “Add your account manually” will take the user to the add account manually flow.
+    
+    <div class="card-body">
+    <ul>
+    <li>Selecting “Add your account manually” will take the user to the add account manually flow. </li>
+    </ul>
+    </div>
 
 </div>
 </div>
