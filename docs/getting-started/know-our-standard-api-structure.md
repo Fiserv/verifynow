@@ -214,7 +214,37 @@ The following example shows the sample request payload for **verify now** API re
 Upon a successful API request, a response payload is received. The response payload contains the status and the returned details of the requested API in JSON. The default response format is JSON. 
 
 
-### Response Payload
+
+<div class="collapsible-container">
+<div>
+   <input type="checkbox" class="collapsible-checkbox" id="section5">
+    <label class="label-expand" for="section5">Response Payload</label>
+    <div class="content-expand">
+    <p>The following example shows the sample response payload for <b>verify now</b> API request.</p>
+    <pre>
+    <code>
+    {
+    "requestId" : "string",
+    "token" : "string",
+    "profileInfo" : {
+        "profileId" : "string",
+        "profileStatus" : "string"
+    },
+    "status" : {
+        "statusCode" : "string",
+        "statusDesc" : "string",
+        "statusType" : "string"
+}
+}
+    </code>
+    </pre>
+    <p>To view the API documentation of <b>verify now</b> API in API Explorer, <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">click here</a></p>
+    </div>
+    </div>
+    </div>
+     </br>
+
+<!-- ### Response Payload
 
 The following example shows the sample response payload for **verify now** API request.
 
@@ -234,7 +264,7 @@ The following example shows the sample response payload for **verify now** API r
 }
 ```
 
-To view the API documentation of **verify now** API in API Explorer, [click here](../api/?type=post&path=/cashedgerws/verifynow/verify/v1).
+To view the API documentation of **verify now** API in API Explorer, [click here](../api/?type=post&path=/cashedgerws/verifynow/verify/v1).-->
 
 
 <style>
