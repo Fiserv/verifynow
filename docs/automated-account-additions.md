@@ -53,11 +53,11 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <!-- theme: info -->
  
->**Note** <br/><br/>The following steps are applicable to Financial Institutions that is Oath Enabled.
+<p class="block-quote">Note: The following steps are applicable to Financial Institutions that is Oath Enabled.</p>
 
 <center>
 
-![image](../assets/images/oauth-enabled.png)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/oauth-enabled.png">
 
 &nbsp;
 
@@ -78,7 +78,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![Images](../assets/images/verify-instantly.png =300x300)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verify-instantly.png" width="300" height="300">
 
 &nbsp;
 
@@ -90,7 +90,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![Images](../assets/images/fiserv-login.png =300x300)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/fiserv-login.png" width="300" height="300">
 
 &nbsp;
 
@@ -100,7 +100,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![Images](../assets/images/MFA.png =300x150)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/MFA.png" width="300" height="150">
 
 &nbsp;
 
@@ -112,7 +112,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![Images](../assets/images/consent-page.png =300x150)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/consent-page.png" width="300" height="150">
 
 &nbsp;
 
@@ -124,7 +124,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![Images](../assets/images/window-autoclose-page.png =300x150)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/window-autoclose-page.png " width="300" height="150">
 
 &nbsp;
 
@@ -134,7 +134,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![Images](../assets/images/selecting-account-page.png =300x150)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/selecting-account-page.png " width="300" height="150">
 
 &nbsp;
 
@@ -159,12 +159,12 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 &nbsp;
 
 <!-- theme: info -->
- 
->**Note** <br/><br/>The following steps are applicable to Financial Institutions that are not Oath Enabled.
+
+<p class="block-quote">Note: The following steps are applicable to Financial Institutions that are not Oath Enabled.</p>
 
 <center>
 
-![image](../assets/images/non-oauth-enabled.png)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/non-oauth-enabled.png ">
 &nbsp;
 
 </center>
@@ -184,7 +184,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![Images](../assets/images/add-account-manually.png =300x250)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/add-account-manually.png " width="300" height="250">
 &nbsp;
 
 </center>
@@ -200,7 +200,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <center>
 
-![Images](../assets/images/choose-bank-account.png =300x150)
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/choose-bank-account.png " width="300" height="150">
 
 &nbsp;
 
