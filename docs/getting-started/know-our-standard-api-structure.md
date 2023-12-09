@@ -1,6 +1,6 @@
 # Know Our Standard API Structure 
 
-This section describes a standard structure of request and response message of Verify Now RESTful APIs. 
+This section describes a standard structure of request and response message of VerifyNow RESTful APIs. 
 
 ## Request Message
 
@@ -31,7 +31,7 @@ For every API request, a response message is obtained that contains a response p
     <div class="content-expand">
     <p>Request URL is formed by appending Host URL and API path.</p>
     <h4>Request URL = Host URL + API path</h4>
-    <p>The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio.Refer the following example to construct a request URL for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">verify now API:</a></p>
+    <p>The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio.Refer the following example to construct a request URL for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">VerifyNow</a> API:</p>
      <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynowservice.png"/>
      <p>If host URL of the product is https://qa-ft.onefiserv.net, then request URL will be:</p>
      <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow_hostandrequest_url.png">
@@ -42,7 +42,7 @@ For every API request, a response message is obtained that contains a response p
     <input type="checkbox" class="collapsible-checkbox" id="section3">
     <label class="label-expand" for="section3">Request Header</label>
     <div class="content-expand">
-    <p>Header parameters are common for all API requests of Verify Now APIs.</p>
+    <p>Header parameters are common for all API requests of VerifyNow APIs.</p>
     <h4>Sample Header Example</h4>
  <pre>
  <code> 
@@ -75,7 +75,7 @@ For every API request, a response message is obtained that contains a response p
     <div class="content-expand">
     <p>The request body of an API changes based on the type of request being processed. Request body contains the detailed information that is required to perform a particular type of request.</p>
     <h4>Request Payload</h4>
-    <p>The following example shows the sample request payload for <b>verify now</b> API request.</p>
+    <p>The following example shows the sample request payload for <b>VerifyNow</b> API request.</p>
     <pre>
    <code>
     {
@@ -220,7 +220,7 @@ Upon a successful API request, a response payload is received. The response payl
    <input type="checkbox" class="collapsible-checkbox" id="section5">
     <label class="label-expand" for="section5">Response Payload</label>
     <div class="content-expand">
-    <p>The following example shows the sample response payload for <b>verify now</b> API request.</p>
+    <p>The following example shows the sample response payload for <b>VerifyNow</b> API request.</p>
     <pre>
     <code>
     {
@@ -238,7 +238,7 @@ Upon a successful API request, a response payload is received. The response payl
 }
     </code>
     </pre>
-    <p>To view the API documentation of <b>verify now</b> API in API Explorer, <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">click here</a></p>
+    <p>To view the API documentation of <b>VerifyNow</b> API in API Explorer, <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">click here</a></p>
     </div>
     </div>
     </div>
