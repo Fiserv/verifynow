@@ -84,7 +84,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 </center>
 
-3.	Click Authenticate.
+3.	Click Authenticate. </br>
 
 4.	Enter the login credentials to sign-in.
 
@@ -106,7 +106,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 </center>
 
-6.	Once the details are added, click Submit.
+6.	Once the details are added, click Submit. </br>
 
 7.	Select the account in the Consent Page. 
 
@@ -118,7 +118,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 </center>
 
-8.	Click Authorize.
+8.	Click Authorize. </br>
 
 9.	Pop-up screen appears as shown below.
 
