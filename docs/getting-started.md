@@ -292,8 +292,9 @@ Upon a successful API request, a response payload is received. The response payl
     <p>To view the API documentation of <b>VerifyNow</b> API in API Explorer, <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">click here</a></p>
     </div>
     </div>
+    </br>
     </div>
-     </br>
+     
 
 <!-- ### Response Payload
 
@@ -569,7 +570,7 @@ Response Payload.
         margin-left: -1em;
     }
     .markdown-body pre{
-     background-color: #454545;
+     background-color: #FFFFF7;
     }
 </style>
 

@@ -234,6 +234,6 @@ Response Payload.
         margin-left: -1em;
     }
     .markdown-body pre{
-     background-color: #454545;
+     background-color: #FFFFF7;
     }
 </style>
