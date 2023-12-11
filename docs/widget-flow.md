@@ -72,14 +72,17 @@ The client’s application user interface is expected to have the following hidd
 </br>
 
 <div>
-    <input type="checkbox" class="collapsible-checkbox" id="section3">
-    <label class="label-expand" for="section3">Widget Placement</label>
+    <input type="checkbox" class="collapsible-checkbox" id="section6">
+    <label class="label-expand" for="section6">Widget Placement</label>
     <div class="content-expand">
+The client’s application is required to provide the expected space in their user interface to place the VerifyNow widget. This needs to happen through use of the `<b>div</b>` tag with the predefined ID (<b>vn_space</b>) associated with it. A sample could appear as:
 
-<P> test</p>
-
+```
+<div id="vn_space" style="align:center; margin:5px; width:100%" align="center"> </div>
+```
 </div>
 </div>
+
 </br>
 
 <div>
