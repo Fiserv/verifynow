@@ -46,14 +46,14 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <div>
     <input type="checkbox" class="collapsible-checkbox" id="section1">
-    <label class="label-expand" for="section1">Automated Account Addition Flow for Oath Users</label>
+    <label class="label-expand" for="section1">Automated Account Addition Flow for OAuth Users</label>
     <div class="content-expand">
 
 &nbsp;
 
 <!-- theme: info -->
  
-<p class="block-quote">Note: The following steps are applicable to Financial Institutions that is Oath Enabled.</p>
+<p class="block-quote">Note: The following steps are applicable to Financial Institutions that is OAuth Enabled.</p>
 
 <center>
 
@@ -74,7 +74,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
         </div>
 </div>
 
-2.	Once the respective financial institution is selected, the user will be navigated to the Oath authentication screen.
+2.	Once the respective financial institution is selected, the user will be navigated to the OAuth authentication screen.
 
 <center>
 
@@ -153,14 +153,14 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 </br>
 <div>
     <input type="checkbox" class="collapsible-checkbox" id="section2">
-    <label class="label-expand" for="section2">Automated Account Addition Flow for Non-Oath Users</label>
+    <label class="label-expand" for="section2">Automated Account Addition Flow for Non-OAuth Users</label>
     <div class="content-expand">
 
 &nbsp;
 
 <!-- theme: info -->
 
-<p class="block-quote">Note: The following steps are applicable to Financial Institutions that are not Oath Enabled.</p>
+<p class="block-quote">Note: The following steps are applicable to Financial Institutions that are not OAuth Enabled.</p>
 
 <center>
 
