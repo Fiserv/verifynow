@@ -231,7 +231,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
     }
     .card-body ul li::before {
         content: "\2022";
-        font-size: 1.5em;
+        font-size: 1.1em;
         color: #f60;
         display: inline-block;
         width: 1em;
