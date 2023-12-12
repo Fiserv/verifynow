@@ -570,7 +570,7 @@ Response Payload.
         margin-left: -1em;
     }
     .markdown-body pre{
-     background-color: #FFFFF7;
+     background-color: #FFFFFF;
     }
 </style>
 
