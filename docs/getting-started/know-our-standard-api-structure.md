@@ -353,7 +353,7 @@ To view the API documentation of **verify now** API in API Explorer, [click here
         margin-left: -1em;
     }
     .markdown-body pre{
-     background-color: #FFFFF7;
+     background-color: #FFFFFF;
     }
 </style>
 
