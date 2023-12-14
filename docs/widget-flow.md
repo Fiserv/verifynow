@@ -20,7 +20,7 @@ VerifyNow integration requires clients to perform three steps as outlined below 
     <label class="label-expand" for="section1">Verify</label>
     <div class="content-expand">
 
-The client application invokes the VerifyNow web service’s Verify operation with the expected elements for profile and account information. The client application receives a token and the status of the request from the VerifyNow system. The token will not be passed to the client application if there is any failure in processing the data received, such as failure in data validation and/or business-related validation. For more information, see [API Flow](?path=docs/api-flow.md).
+The client application invokes the VerifyNow web service’s Verify operation with the expected elements for profile and account information. The client application receives a token and the status of the request from the VerifyNow system. The token will not be passed to the client application if there is any failure in processing the data received, such as failure in data validation and/or business-related validation. For more information, see <a href="../docs/?path=docs/api-flow.md">API Flow</a>.
 </br>
 
 </div>
@@ -109,7 +109,7 @@ alert("UI Control is handed over to Client");
     <label class="label-expand" for="section5">Outcome</label>
     <div class="content-expand">
 
-The client’s application receives the outcome of the verification through the Outcome operation with the token associated for the specific verification. The Outcome operation provides the detail, including verification types and their respective statuses along with the combined decision. Refer to the [API Flow](?path=docs/api-flow.md).
+The client’s application receives the outcome of the verification through the Outcome operation with the token associated for the specific verification. The Outcome operation provides the detail, including verification types and their respective statuses along with the combined decision. Refer to the <a href="../docs/?path=docs/api-flow.md">API Flow</a>.
 
 </div>
 </div>
