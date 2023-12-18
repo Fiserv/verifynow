@@ -61,7 +61,7 @@ featuredFeatures:
         description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account.
         type: post
         path: /cashedgerws/verifynow/verify/v1
-  - title: Seamless Integration or Standalone Solution
+  - title: Seamless Integration/Standalone Solution
     groupName: Manage Account
     description: VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions and is integrated with your enterprise application by way of an API.
     featured: true
