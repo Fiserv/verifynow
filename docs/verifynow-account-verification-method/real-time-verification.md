@@ -65,5 +65,51 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 9.	VerifyNow passes control back to the client system, along with the verification decision.
 10.	If the user is not approved, VerifyNow checks if the Trial Deposit verification method is available, and if available, gives the user the option to use Trial Deposit verification.
 
-## See Also
-[Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md)<br/>
+<li>Click the <button class="confirm-button">Next</button> button to see other verification methods.</li></br>
+
+<div class="debit-card-button-container">
+<div class="debit-card-left-button">
+<a href="?path=docs/verifynow-account-verification-method.md">Back</a>
+</div>
+<div class="debit-card-right-button"><a href="?path=docs/verifynow-account-verification-method/trial-deposit-verification.md">Next</a></div>
+</div>
+
+<style>
+    .debit-card-button-container {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        font-family: sans-serif;
+        margin: 0px 15px;
+    }
+    .debit-card-left-button a,
+    .debit-card-right-button a{
+        position: absolute;
+        display: inline;
+        border: 0px;
+        background: rgb(255, 102, 0);
+        color: rgb(255, 255, 255);
+        padding: 8px 22px;
+        cursor: pointer;
+        border-radius: 4px;                                
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .debit-card-left-button a{ 
+        left: 0;
+    }
+    .debit-card-right-button a{
+        right: 0;
+    }
+    .debit-card-left-button a:hover,
+    .debit-card-right-button a:hover {
+        color: #f60;
+        background-color: white;
+        border: 2px solid #f60;
+    }
+    .confirm-button {
+        padding: 2px;
+        font-weight: bold;
+    }
+</style>

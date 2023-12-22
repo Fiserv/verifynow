@@ -2,7 +2,7 @@
 
 This method verifies customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts.  
 
->**Note**<br/><br/> The amount of the debit is equal to the sum of the two deposits.
+> :memo: _**Note:** The amount of the debit is equal to the sum of the two deposits._
 
 Shown below is an example of how Trial Deposit Verification works.
 
@@ -19,7 +19,7 @@ Shown below is an example of how Trial Deposit Verification works.
 </center>
 
 
->**Note** <br/><br/> Trial deposit verification involves a minimum of two interactions from the client to the Fiserv VerifyNow system.
+> :memo: _**Note:** Trial deposit verification involves a minimum of two interactions from the client to the Fiserv VerifyNow system._
 
 <center>
 
@@ -80,5 +80,53 @@ Shown below is an example of how Trial Deposit Verification works.
 9.	Trial Deposit verification is completed.
 10.	VerifyNow passes control back to the client system, along with the verification outcome.
 11.	If the user does not return in time to complete trial deposit verification, the user is shown the trial deposit expired message and control is passed back to the client system.
+
+<li>Click the <button class="confirm-button">Back</button> button to see other verification methods.</li></br>
+
+<div class="debit-card-button-container">
+<div class="debit-card-left-button">
+<a href="?path=docs/verifynow-account-verification-method.md">Back</a>
+</div>
+</div>
+
+<style>
+    .debit-card-button-container {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        font-family: sans-serif;
+        margin: 0px 15px;
+    }
+    .debit-card-left-button a,
+    .debit-card-right-button a{
+        position: absolute;
+        display: inline;
+        border: 0px;
+        background: rgb(255, 102, 0);
+        color: rgb(255, 255, 255);
+        padding: 8px 22px;
+        cursor: pointer;
+        border-radius: 4px;                                
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .debit-card-left-button a{ 
+        left: 0;
+    }
+    .debit-card-right-button a{
+        right: 0;
+    }
+    .debit-card-left-button a:hover,
+    .debit-card-right-button a:hover {
+        color: #f60;
+        background-color: white;
+        border: 2px solid #f60;
+    }
+    .confirm-button {
+        padding: 2px;
+        font-weight: bold;
+    }
+</style>
 
 
