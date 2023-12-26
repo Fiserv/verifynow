@@ -16,13 +16,13 @@ Account ownership verification is performed using the below three verification m
 
 <!-- theme: info -->
  
->**Note** <br/>The client has the flexibility to specify at the home level and at the user level which account verification methods should be enabled. The specific verification method to be used for a user is passed by the client system in the verification request.
+> :memo: _**Note:** <br/>The client has the flexibility to specify at the home level and at the user level which account verification methods should be enabled. The specific verification method to be used for a user is passed by the client system in the verification request._
 
 
 
 <!-- theme: info -->
 
->**Note** <br/>A validation check is performed on the client request to confirm that it specifies the verification method to be used.
+> :memo: _**Note:** <br/>A validation check is performed on the client request to confirm that it specifies the verification method to be used._
 
 ## See Also
 
