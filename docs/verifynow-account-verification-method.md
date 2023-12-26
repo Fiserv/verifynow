@@ -7,7 +7,7 @@ Account ownership verification is performed using the below three verification m
 
 <center>
 
-<img src="../assets/images/verifynow-acc-verification-method.png" height=200; width=400;>
+<img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow-acc-verification-method.png" height=200; width=400;>
 
 </center>
 
@@ -34,7 +34,7 @@ Account ownership verification is performed using the below three verification m
                 <div class="card-debit">
                 <div class="content-debit">
                     <div class="img-debit">
-                        <img src="../assets/images/Instant_Verification_card.png">
+                        <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Instant_Verification_card.png">
                     </div>
                     <div class="details">
                         <div class="name">Instant Verification</div>
@@ -47,7 +47,7 @@ Account ownership verification is performed using the below three verification m
                 <div class="card-debit">
                     <div class="content-debit">
                         <div class="img-debit">
-                            <img src="../assets/images/Real_Time_Verification_card.png">
+                            <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Real_Time_Verification_card.png">
                         </div>
                         <div class="details">
                             <div class="name">Real-Time Verification</div>
@@ -60,7 +60,7 @@ Account ownership verification is performed using the below three verification m
                     <div class="card-debit">
                         <div class="content-debit">
                             <div class="img-debit">
-                                <img src="../assets/images/Trial_Deposit_card.png">
+                                <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop//assets/images/Trial_Deposit_card.png">
                             </div>
                             <div class="details">
                                 <div class="name">Trail Deposit Verification</div>
