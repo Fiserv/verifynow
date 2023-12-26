@@ -33,13 +33,6 @@
     link: docs/getting-started.md
   - title: VN - Account Verification Methods
     link: docs/verifynow-account-verification-method.md
-    sections:
-    - title: Instant (Risk Database) Verification
-      link: docs/verifynow-account-verification-method/instant-verification.md
-    - title: Real-time (using FI login) Verification
-      link: docs/verifynow-account-verification-method/real-time-verification.md
-    - title: Trial Deposit Verification
-      link: docs/verifynow-account-verification-method/trial-deposit-verification.md
   - title: VN Integration Guide
     sections:
     - title: Widget Flow
