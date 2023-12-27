@@ -63,7 +63,7 @@ Account ownership verification is performed using the below three verification m
                                 <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop//assets/images/Trial_Deposit_card.png">
                             </div>
                             <div class="details">
-                                <div class="name">Trail Deposit Verification</div>
+                                <div class="name">Trial Deposit Verification</div>
                             </div>
                             <div class="media-icons">
                                 <a href="?path=docs/verifynow-account-verification-method/trial-deposit-verification.md">Click View</a>
