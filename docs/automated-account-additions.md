@@ -37,7 +37,7 @@ The following flow is applicable when:
 
 <!-- theme: info -->
  
-> :memo: _**Note:** Even when RTVA is enabled, users can choose to add any account manually._
+> :memo: _**Note:** <br/>Even when RTVA is enabled, users can choose to add any account manually._
 
 
 When a user tries to add an account for the FI via RTVA, they provide credentials for logging into the external FI. The user is put through Multi-Factor Authentication (MFA). Then account-related information is successfully scraped, and the name is passed through risk rules for matching logic to determine whether the accounts should be displayed to the user or not. If the information fails the check, the user is sent to add the account manually (see [Add Account Manually](?path=docs/add-account-manually.md)).
@@ -53,7 +53,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <!-- theme: info -->
  
-<p class="block-quote">Note: The following steps are applicable to Financial Institutions that is OAuth Enabled.</p>
+<p class="block-quote">Note: <br/>The following steps are applicable to Financial Institutions that is OAuth Enabled.</p>
 
 <center>
 
@@ -160,7 +160,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <!-- theme: info -->
 
-<p class="block-quote">Note: The following steps are applicable to Financial Institutions that are not OAuth Enabled.</p>
+<p class="block-quote">Note: <br/>The following steps are applicable to Financial Institutions that are not OAuth Enabled.</p>
 
 <center>
 

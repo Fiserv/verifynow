@@ -4,11 +4,11 @@ This method provides instant bank account ownership verification using the Early
 
 VerifyNow performs instant account verification using the Customer Information/Magnetic Ink Character Recognition (MICR) Match component of a check printer’s database. This service matches the user’s name and the account information with information in the database.
 
- > :memo: _**Note:** The instant account verification service only verifies DDA accounts. Savings, money market, and brokerage accounts are ineligible for account verification via this service._
+ > :memo: _**Note:** <br/>The instant account verification service only verifies DDA accounts. Savings, money market, and brokerage accounts are ineligible for account verification via this service._
 
  &nbsp;
  
-> :memo: _**Note:** The instant account verification service only verifies accounts with RTNs listed in the MICR Table._
+> :memo: _**Note:** <br/>The instant account verification service only verifies accounts with RTNs listed in the MICR Table._
 
 Instant verification is performed using the provided customer information and account details and the Early Warning Services (EWS) AOA database. EWS houses data contributed by various financial institutions with data elements including account holder names, address, tax ID, and additional elements leveraged that it uses to authenticate account ownership claims. EWS data is limited by the number of financial institutions that contribute to the product. EWS requires that clients contribute to the product to be allowed to use it.
 

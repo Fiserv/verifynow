@@ -2,7 +2,7 @@
 
 This method verifies customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts.  
 
-> :memo: _**Note:** The amount of the debit is equal to the sum of the two deposits._
+> :memo: _**Note:** <br/>The amount of the debit is equal to the sum of the two deposits._
 
 Shown below is an example of how Trial Deposit Verification works.
 
@@ -19,7 +19,7 @@ Shown below is an example of how Trial Deposit Verification works.
 </center>
 
 
-> :memo: _**Note:** Trial deposit verification involves a minimum of two interactions from the client to the Fiserv VerifyNow system._
+> :memo: _**Note:** <br/>Trial deposit verification involves a minimum of two interactions from the client to the Fiserv VerifyNow system._
 
 <center>
 

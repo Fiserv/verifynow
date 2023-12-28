@@ -9,7 +9,7 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 
 <!-- theme: info -->
 
-> :memo: _**Note:**  The current user journey enables developers to access to a range of APIs on VerifyNow._
+> :memo: _**Note:**  <br/>The current user journey enables developers to access to a range of APIs on VerifyNow._
 
   
 Before you start integration, it is important to register on the Fiserv Developer Studio to test the VerifyNow APIs in the Sandbox environment. You may choose to test APIs <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Using  Third-party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentations.
@@ -376,12 +376,12 @@ Postman is a client that lets you test RESTful APIs. If you are familiar with Po
     <p>1. Open a web or desktop application of Postman.</p>
     <p>2.	Create a new HTTP request.</p>
     <p>3.	Set the API method to POST or PUT, as mentioned in the API document which you want to test. </p>
-    <p class="block-quote">Note: API method of all Fiserv APIs is either set to POST or PUT for all operations.</p>
+    <p class="block-quote">Note: <br/>API method of all Fiserv APIs is either set to POST or PUT for all operations.</p>
     <p>4.	Insert the request URL. </p>
     <p>5.	Add Header as new parameters under the <b>Headers</b> section and insert the value in JSON format.</p>
     <p>6.	Insert the request-payload under the <b>Body</b> tab. Make sure that the <b>raw</b> radio button is activated and the text format is set to <b>JSON</b>.</p>
     <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Jsonselection_body.png"/><br>
-    <p class="block-quote">Note: Default request-payload can be copied from the API Explorer document and you may modify certain fields as mentioned in the documentation.</p>
+    <p class="block-quote">Note: <br/>Default request-payload can be copied from the API Explorer document and you may modify certain fields as mentioned in the documentation.</p>
     <p>7.	Modify the field values in JSON code that you want to test.</p>
     <p>8. Click <b>Send</b>. API response is generated in the Response section.</p>
     </div>
