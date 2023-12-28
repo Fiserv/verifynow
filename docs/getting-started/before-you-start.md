@@ -2,7 +2,7 @@
 
 <!-- theme: info -->
 
-> :memo: _**Note:** The current user journey enables developers to access to a range of APIs on VerifyNow._ 
+> :memo: _**Note:** <br/>The current user journey enables developers to access to a range of APIs on VerifyNow._ 
 
 Before you start integration, it is important to register on the Fiserv Developer Studio to test the VerifyNow APIs in the Sandbox environment. You may choose to test APIs  <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Using Third-party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentations.
 <!--
