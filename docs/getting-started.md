@@ -337,9 +337,8 @@ You can test our APIs in the Sandbox environment using third-party API testing t
 
 
 <!-- theme: info -->
-> #### Tip
->
-> We recommend you to refer to the <a href="?path=docs/getting-started/know-our-standard-api-structure.md#know-our-standard-api-structure" title="Click to open">Know Our Standard API Structure</a> section to understand the API structure prior to testing the APIs in any third-party tool.
+
+> _**Tip**  <br> We recommend you to refer to the <a href="?path=docs/getting-started/know-our-standard-api-structure.md#know-our-standard-api-structure" title="Click to open">Know Our Standard API Structure</a> section to understand the API structure prior to testing the APIs in any third-party tool._
 
 
 ### Prerequisites
@@ -364,9 +363,8 @@ The following example illustrates the process to test an API using Postman appli
 Postman is a client that lets you test RESTful APIs. If you are familiar with Postman, refer to the following steps to test Fiserv APIs in the sandbox environment. 
   
 <!-- theme: info -->  
-> #### Recommendation
->
-> Keep the API documentation accessible to refer to the default request-payload for the request message. 
+
+> _**Recommendation**  <br> Keep the API documentation accessible to refer to the default request-payload for the request message._
 
 
 <div class="collapsible-container">
