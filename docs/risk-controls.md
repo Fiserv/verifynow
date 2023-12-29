@@ -100,6 +100,7 @@ D. Clients can submit a written request to Fiserv ePayments Customer Support to 
     .collapsible-container {
         width: 100%;
     }
+
     .collapsible-checkbox {
         display: none;
     }
@@ -115,6 +116,21 @@ D. Clients can submit a written request to Fiserv ePayments Customer Support to 
         outline: none;
         font-size: 15px;
         display: block;
+        position: relative;
+    }
+   .label-expand::after{
+        content: '+';
+        font-size: 22px;
+        font-weight: bold;
+        position: absolute;
+        right: 12px;
+        top: 8px;
+    }
+    input:checked + label::after {
+        content: '-';
+        font-size: 22px;
+        right: 14px;
+        top: 8px;
     }
 
     .collapsible-checkbox:checked+.label-expand {
