@@ -177,6 +177,32 @@ The client’s application receives the outcome of the verification through the 
                     </div>
                 </div>
              </div>
+             <div class="card-debit">
+                <div class="content-debit">
+                    <div class="img-debit">
+                        <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/edit-debit.png">
+                    </div>
+                    <div class="details">
+                        <div class="name">CSS Integration</div>
+                    </div>
+                    <div class="media-icons">
+                        <a href="?path=docs/css-integration.md">Click View</a>
+                    </div>
+                </div>
+             </div>
+             <div class="card-debit" style= "visibility: hidden">
+                <div class="content-debit">
+                    <div class="img-debit" >
+                        <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/edit-debit.png">
+                    </div>
+                    <div class="details">
+                        <div class="name">CSS Integration</div>
+                    </div>
+                    <div class="media-icons">
+                        <a href="?path=docs/css-integration.md">Click View</a>
+                    </div>
+                </div>
+             </div>
             </div>
         </div>
         <div class="button-debit">
@@ -303,6 +329,7 @@ The client’s application receives the outcome of the verification through the 
         overflow: hidden;
         padding: 80px 0;
         z-index: 999;
+        background: #ffffff;
     }
     .debit-container .main-card-debit {
         display: flex;
@@ -311,13 +338,13 @@ The client’s application receives the outcome of the verification through the 
         transition: 1s;
     }
     #two:checked~.main-card-debit {
-        margin-left: -115%;
+        margin-left: -100%;
     }
     .debit-container .main-card-debit .cards-debit {
-        width: calc(100% / 1 - 30px);
-        display: inherit;
+        width: calc(100% / 2 - 10px);
+        display: flex;
         flex-wrap: wrap;
-        margin: 0px 50px;
+        margin: 0px 20px;
         justify-content: space-evenly;
     }
     .main-card-debit .cards-debit .card-debit {
@@ -332,7 +359,7 @@ The client’s application receives the outcome of the verification through the 
         transform: translateY(-15px);
     }
     .cards-debit .card-debit .content-debit {
-        width: 100%;
+        width: 95%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -448,5 +475,6 @@ The client’s application receives the outcome of the verification through the 
     }
 
 </style>
+
 
 
