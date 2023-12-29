@@ -53,7 +53,7 @@ Instant verification is performed using the provided customer information and ac
 
     b. If account ownership verification is inconclusive, Real-time verification or Trial Deposit verification can be initiated.
 
-<li>Click the <button class="confirm-button">Next</button> button to see other verification methods.</li></br>
+<li>Click the Next button to see other verification methods.</li></br>
 
 <div class="debit-card-button-container">
 <div class="debit-card-left-button">
