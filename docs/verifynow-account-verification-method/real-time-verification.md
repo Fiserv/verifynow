@@ -100,7 +100,7 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
         left: 0;
     }
     .debit-card-right-button a{
-        right: 0;
+        right: 10%;
     }
     .debit-card-left-button a:hover,
     .debit-card-right-button a:hover {
