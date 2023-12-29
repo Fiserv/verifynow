@@ -54,7 +54,7 @@ featuredFeatures:
       - relatedDoc: null
         title: Verify Accounts Using VerifyNow
         description: Verify Accounts Using VerifyNow
-        link: docs/verifynow-account-verification-method/instant-verification.md
+        link: docs/verifynow-account-verification-method.md
     relatedAPIs:
       - relatedAPI: null
         title: Verify NOW
