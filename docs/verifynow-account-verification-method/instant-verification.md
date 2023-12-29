@@ -88,7 +88,7 @@ Instant verification is performed using the provided customer information and ac
         left: 0;
     }
     .debit-card-right-button a{
-        right: 0;
+        right: 10%;
     }
     .debit-card-left-button a:hover,
     .debit-card-right-button a:hover {

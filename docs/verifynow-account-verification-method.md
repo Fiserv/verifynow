@@ -24,7 +24,7 @@ Account ownership verification is performed using the below three verification m
  
 > :memo: _**Note:** <br/>A validation check is performed on the client request to confirm that it specifies the verification method to be used._
 
-<div>Following topics cover additional information that allows a user to know about different types of Account Verification Methods.
+<div>Click the below images to know more about Account Verification Methods.
     <div class="account-body">
     <div class="debit-container">
         <input type="radio" name="dot" id="one">
@@ -97,7 +97,7 @@ Account ownership verification is performed using the below three verification m
         z-index: 777;
         content: '';
         position: absolute;
-        background: #f1f1f1;
+        background: #FFFFFF;
         width: 100%;
         height: 100%;
     }
