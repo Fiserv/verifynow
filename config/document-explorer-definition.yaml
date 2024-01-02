@@ -37,20 +37,9 @@
     sections:
     - title: Widget Flow
       link: docs/widget-flow.md
-      sections:
-      - title: Automated Account Addition
-        link: docs/automated-account-additions.md
-      - title: Add Account Manually
-        link: docs/add-account-manually.md
-      - title: User workflow
-        link: docs/user-workflow.md
-      - title: Account Verification status/Exit points
-        link: docs/account-verification-status.md
-      - title: CSS Integration
-        link: docs/css-integration.md
     - title: API flow
       link: docs/api-flow.md
     - title: Risk Controls
-      link: docs/risk-controls.md                
+      link: docs/risk-controls.md             
 
     
