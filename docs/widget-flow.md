@@ -139,7 +139,7 @@ The client’s application receives the outcome of the verification through the 
                 <div class="card-debit">
                     <div class="content-debit">
                         <div class="img-debit">
-                            <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/verify.png">
+                            <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/add-acc-manually.png">
                         </div>
                         <div class="details">
                             <div class="name">Add Account Manually</div>
@@ -152,7 +152,7 @@ The client’s application receives the outcome of the verification through the 
                     <div class="card-debit">
                         <div class="content-debit">
                             <div class="img-debit">
-                                <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/Delete-debit.png">
+                                <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/user-workflow.png">
                             </div>
                             <div class="details">
                                 <div class="name">User workflow</div>
@@ -167,7 +167,7 @@ The client’s application receives the outcome of the verification through the 
                 <div class="card-debit">
                 <div class="content-debit">
                     <div class="img-debit">
-                        <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/edit-debit.png">
+                        <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/acc-verification-status.png">
                     </div>
                     <div class="details">
                         <div class="name">Account Verification status/Exit points</div>
@@ -180,7 +180,7 @@ The client’s application receives the outcome of the verification through the 
              <div class="card-debit">
                 <div class="content-debit">
                     <div class="img-debit">
-                        <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/edit-debit.png">
+                        <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/css-integration.png">
                     </div>
                     <div class="details">
                         <div class="name">CSS Integration</div>
@@ -361,6 +361,7 @@ The client’s application receives the outcome of the verification through the 
         flex-wrap: wrap;
         margin: 0px 20px;
         justify-content: space-evenly;
+        position: relative;
     }
     .main-card-debit .cards-debit .card-debit {
         width: calc(100% / 3 - 10px);
@@ -405,6 +406,14 @@ The client’s application receives the outcome of the verification through the 
         margin-top: 10px;
         display: flex;
     }
+    .media-icons{
+        bottom: 8px;
+    position: absolute;
+    }
+    .details{
+height: 140px;
+    }
+    
     .media-icons a {
         text-align: center;
         line-height: 33px;
