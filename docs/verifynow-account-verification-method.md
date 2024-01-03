@@ -34,7 +34,7 @@ Account ownership verification is performed using the below three verification m
                 <div class="card-debit">
                 <div class="content-debit">
                     <div class="img-debit">
-                        <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Instant_Verification_card.png">
+                        <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/instant_verification.png">
                     </div>
                     <div class="details">
                         <div class="name">Instant Verification</div>
@@ -47,7 +47,7 @@ Account ownership verification is performed using the below three verification m
                 <div class="card-debit">
                     <div class="content-debit">
                         <div class="img-debit">
-                            <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Real_Time_Verification_card.png">
+                            <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/real-time-verification.png">
                         </div>
                         <div class="details">
                             <div class="name">Real-Time Verification</div>
@@ -60,7 +60,7 @@ Account ownership verification is performed using the below three verification m
                     <div class="card-debit">
                         <div class="content-debit">
                             <div class="img-debit">
-                                <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop//assets/images/Trial_Deposit_card.png">
+                                <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop//assets/images/Trial-deposit.png">
                             </div>
                             <div class="details">
                                 <div class="name">Trial Deposit Verification</div>
@@ -170,6 +170,7 @@ Account ownership verification is performed using the below three verification m
         margin-top: 10px;
         display: flex;
     }
+    
     .media-icons a {
         text-align: center;
         line-height: 33px;
