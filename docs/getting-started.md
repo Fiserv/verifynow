@@ -380,6 +380,7 @@ Postman is a client that lets you test RESTful APIs. If you are familiar with Po
     <p>4.	Insert the request URL. </p>
     <p>5.	Add Header as new parameters under the <b>Headers</b> section and insert the value in JSON format.</p>
     <p>6.	Insert the request-payload under the <b>Body</b> tab. Make sure that the <b>raw</b> radio button is activated and the text format is set to <b>JSON</b>.</p>
+    <br/>
     <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/Jsonselection_body.png"/><br/>
     <p class="block-quote">Note: <br/>Default request-payload can be copied from the API Explorer document and you may modify certain fields as mentioned in the documentation.</p>
     <p>7.	Modify the field values in JSON code that you want to test.</p>
