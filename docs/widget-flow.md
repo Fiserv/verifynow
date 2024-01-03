@@ -115,8 +115,6 @@ The client’s application receives the outcome of the verification through the 
 </div>
 </br>
 
-## See Also
-
 <div class="debit-body">
     <div class="debit-container">
         <input type="radio" name="dot" id="one">
@@ -126,7 +124,7 @@ The client’s application receives the outcome of the verification through the 
                 <div class="card-debit">
                 <div class="content-debit">
                     <div class="img-debit">
-                        <img src="https://raw.githubusercontent.com/Fiserv/transfer-now/develop/assets/images/add-debit.png" alt="add-debit">
+                        <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/AutomatedAcctAddition.png" alt="automated-acct-addition">
                     </div>
                     <div class="details">
                         <div class="name">Automated Account Addition</div>
