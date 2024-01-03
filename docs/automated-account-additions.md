@@ -248,7 +248,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
             display: flex;
             flex-direction: column;
         }
-    .collapsible-container {
+   .collapsible-container {
         width: 100%;
     }
 
@@ -267,6 +267,21 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
         outline: none;
         font-size: 15px;
         display: block;
+        position: relative;
+    }
+   .label-expand::after{
+        content: '+';
+        font-size: 22px;
+        font-weight: bold;
+        position: absolute;
+        right: 12px;
+        top: 8px;
+    }
+    input:checked + label::after {
+        content: '-';
+        font-size: 22px;
+        right: 14px;
+        top: 8px;
     }
 
     .collapsible-checkbox:checked+.label-expand {
@@ -283,6 +298,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
     .collapsible-checkbox:checked+.label-expand+.content-expand {
         display: block;
     }
+
 
     .block-quote {
         padding: 1em;
