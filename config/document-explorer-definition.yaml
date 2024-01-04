@@ -31,9 +31,9 @@
 - sections:
   - title: Getting Started
     link: docs/getting-started.md
-  - title: VN - Account Verification Methods
+  - title: VerifyNow - Account Verification Methods
     link: docs/verifynow-account-verification-method.md
-  - title: VN Integration Guide
+  - title: VerifyNow Integration Guide
     sections:
     - title: Widget Flow
       link: docs/widget-flow.md

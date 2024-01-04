@@ -12,7 +12,7 @@ titles: Before You Start, Know Our Standard API Structure, Make Your First API C
 > :memo: _**Note:**  <br/>The current user journey enables developers to access to a range of APIs on VerifyNow._
 
   
-Before you start integration, it is important to register on the Fiserv Developer Studio to test the VerifyNow APIs in the Sandbox environment. You may choose to test APIs <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Using  Third-party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentations.
+Before you start integration, it is important to register on the Fiserv Developer Studio to test the VerifyNow APIs in the Sandbox environment. You may choose to test APIs <a href="?path=docs/getting-started/make-your-first-api-call.md#using-third-party-api-testing-tools" >Using  Third-Party API Testing Tools</a> of your choice. However, registration is not required to learn about our APIs and reference documentations.
 <!--
 
 [![Video Thumbnail]][Video]  
@@ -41,7 +41,7 @@ Perform the following steps to create an account on Fiserv Developer Studio:
 
 
 
-<a href="#tab-know_our_standard_api_structure" >Next - Know Our Standard API Structure</a>
+Next -<a href="#tab-know_our_standard_api_structure" > Know Our Standard API Structure</a>
 
 
 
@@ -82,7 +82,7 @@ For every API request, a response message is obtained that contains a response p
     <div class="content-expand">
     <p>Request URL is formed by appending Host URL and API path.</p>
     <h4>Request URL = Host URL + API path</h4>
-    <p>The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio.Refer the following example to construct a request URL for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">VerifyNow</a> API:</p>
+    <p>The API path along with the method (POST or PUT) is listed under the <a href="../api/?type=post&path=/cashedgerws/verifynow/ping">API Explorer</a> section of that API on Fiserv Developer Studio. Refer the following example to construct a request URL for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">VerifyNow</a> API:</p>
      <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynowservice.png"/>
      <p>If host URL of the product is https://qa-ft.onefiserv.net, then request URL will be:</p>
      <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow_hostandrequest_url.png">
@@ -126,7 +126,7 @@ For every API request, a response message is obtained that contains a response p
     <div class="content-expand">
     <p>The request body of an API changes based on the type of request being processed. Request body contains the detailed information that is required to perform a particular type of request.</p>
     <h4>Request Payload</h4>
-    <p>The following example shows the sample request payload for <b>VerifyNow</b> API request.</p>
+    <p>The following example shows the sample request payload for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">VerifyNow</a> API request.</p>
     <pre>
     <code>
     {
@@ -288,7 +288,7 @@ Upon a successful API request, a response payload is received. The response payl
 }
     </code>
     </pre>
-    <p>To view the API documentation of <b>VerifyNow</b> API in API Explorer, <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">click here</a></p>
+    <p>To view the API documentation of VerifyNow API in API Explorer, <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">click here</a></p>
     </div>
     </div>
     </br>
@@ -319,7 +319,7 @@ To view the API documentation of **verify now** API in API Explorer, [click here
 
 
 
- [Next - Make Your First API Call](#tab-make_your_first_api_call) 
+ Next - [Make Your First API Call](#tab-make_your_first_api_call) 
 
 
 
@@ -376,7 +376,7 @@ Postman is a client that lets you test RESTful APIs. If you are familiar with Po
     <p>1. Open a web or desktop application of Postman.</p>
     <p>2.	Create a new HTTP request.</p>
     <p>3.	Set the API method to POST or PUT, as mentioned in the API document which you want to test. </p>
-    <p class="block-quote">Note: <br/>API method of all Fiserv APIs is either set to POST or PUT for all operations.</p>
+    <p class="block-quote">📝 <em><strong>Note:</strong> <br/>API method of all Fiserv APIs is either set to POST or PUT for all operations.</em></p>
     <p>4.	Insert the request URL. </p>
     <p>5.	Add Header as new parameters under the <b>Headers</b> section and insert the value in JSON format.</p>
     <p>6.	Insert the request-payload under the <b>Body</b> tab. Make sure that the <b>raw</b> radio button is activated and the text format is set to <b>JSON</b>.</p>
