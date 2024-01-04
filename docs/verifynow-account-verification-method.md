@@ -37,7 +37,7 @@ Account ownership verification is performed using the below three verification m
                         <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/instant_verification.png">
                     </div>
                     <div class="details">
-                        <div class="name">Instant Verification</div>
+                        <div class="name">Instant  (Risk Database)  Verification</div>
                     </div>
                     <div class="media-icons">
                         <a href="?path=docs/verifynow-account-verification-method/instant-verification.md">Click View</a>
@@ -50,7 +50,7 @@ Account ownership verification is performed using the below three verification m
                             <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/real-time-verification.png">
                         </div>
                         <div class="details">
-                            <div class="name">Real-Time Verification</div>
+                            <div class="name">Real-Time  (using FI login)  Verification</div>
                         </div>
                         <div class="media-icons">
                             <a href="?path=docs/verifynow-account-verification-method/real-time-verification.md">Click View</a>
@@ -126,6 +126,7 @@ Account ownership verification is performed using the below three verification m
         flex-wrap: wrap;
         margin: 0 20px;
         justify-content: space-between;
+        position: relative;
     }
     .main-card-debit .cards-debit .card-debit {
         width: calc(100% / 3 - 10px);
@@ -169,6 +170,14 @@ Account ownership verification is performed using the below three verification m
     .card-debit .content-debit .media-icons {
         margin-top: 10px;
         display: flex;
+    }
+    .media-icons{
+        bottom: 8px;
+        padding-bottom:10px;
+    position: absolute;
+    }
+    .details{
+height: 150px;
     }
     
     .media-icons a {

@@ -28,7 +28,7 @@
 # the delivery of this work
 ################################################################################
 header:
-  productionDescription: The VerifyNow™ product acts as a platform for account verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help financial institutions reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.
+  productionDescription: The VerifyNow™ product acts as a platform for account verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help financial institutions (FI)s reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.
   getStarted: /docs/getting-started.md
 benefits:
   - title: Payment Account Verification

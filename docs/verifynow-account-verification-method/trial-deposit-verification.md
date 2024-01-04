@@ -81,7 +81,7 @@ Shown below is an example of how Trial Deposit Verification works.
 10.	VerifyNow passes control back to the client system, along with the verification outcome.
 11.	If the user does not return in time to complete trial deposit verification, the user is shown the trial deposit expired message and control is passed back to the client system.
 
-<li>Click the Back button to see other verification methods.</li></br>
+Click the Back button to see other verification methods.</br>
 
 <div class="debit-card-button-container">
 <div class="debit-card-left-button">

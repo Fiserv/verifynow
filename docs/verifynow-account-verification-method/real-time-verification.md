@@ -45,7 +45,7 @@ If login is successful, VerifyNow compares the applicant’s name and account nu
 
 </center>
 
-6.	If multi-factor authentication (MFA) is required, the user is asked to provide additional information.
+6.	If Multi-Factor Authentication (MFA) is required, the user is asked to provide additional information.
 
 <center>
 
