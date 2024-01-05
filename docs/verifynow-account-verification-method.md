@@ -7,7 +7,7 @@ Account ownership verification is performed using the below three verification m
 
 <center>
 
-<img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow-acc-verification-method.png" height=200; width=400;>
+<img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow-acc-verification-method.png" height=400; width=400;>
 
 </center>
 
