@@ -10,7 +10,7 @@ VerifyNow performs instant account verification using the Customer Information/M
  
 > :memo: _**Note:** <br/>The instant account verification service only verifies accounts with Routing Transit Number  (RTN)s listed in the MICR Table._
 
-Instant verification is performed using the provided customer information and account details and the Early Warning Services (EWS) Account Ownership Authentication(AOA) database. EWS houses data contributed by various financial institutions with data elements including account holder names, address, tax ID, and additional elements leveraged that it uses to authenticate account ownership claims. EWS data is limited by the number of financial institutions that contribute to the product. EWS requires that clients contribute to the product to be allowed to use it.
+Instant verification is performed using the provided customer information and account details and the Early Warning Services (EWS) Account Ownership Authentication (AOA) database. EWS houses data contributed by various financial institutions with data elements including account holder names, address, tax ID, and additional elements leveraged that it uses to authenticate account ownership claims. EWS data is limited by the number of financial institutions that contribute to the product. EWS requires that clients contribute to the product to be allowed to use it.
 
 <center>
 
@@ -53,7 +53,7 @@ Instant verification is performed using the provided customer information and ac
 
     b. If account ownership verification is inconclusive, Real-time verification or Trial Deposit verification can be initiated.
 
-Click the Next button to see other verification methods.</br>
+
 
 <div class="debit-card-button-container">
 <div class="debit-card-left-button">
