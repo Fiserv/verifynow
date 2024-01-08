@@ -53,7 +53,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <!-- theme: info -->
  
-<p class="block-quote">Note: <br/>The following steps are applicable to Financial Institutions that is OAuth Enabled.</p>
+<p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that is OAuth Enabled.<p/>
 
 <center>
 
@@ -160,7 +160,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <!-- theme: info -->
 
-<p class="block-quote">Note: <br/>The following steps are applicable to Financial Institutions that are not OAuth Enabled.</p>
+<p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that are not OAuth Enabled.</p>
 
 <center>
 

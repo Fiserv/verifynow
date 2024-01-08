@@ -137,7 +137,7 @@ The client’s application receives the outcome of the verification through the 
                 <div class="card-debit">
                     <div class="content-debit">
                         <div class="img-debit">
-                            <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/add-acc-manually.png">
+                            <img height="116px" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/add-acc-manually.png">
                         </div>
                         <div class="details">
                             <div class="name">Add Account Manually</div>
