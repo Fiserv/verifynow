@@ -4,7 +4,7 @@ For eligible FIs, VerifyNow allows user to add accounts without providing inform
 
 <center>
 
-![image](../assets/images/automated-account-flow.png)
+![image](../assets/images/automated_account_addition.png)
 
 &nbsp;
 

@@ -261,4 +261,13 @@ When an account is absent in SSO and in Compass:
     .card-body {
         margin: 20px;
     }
+    [data-tab-id="new_user"] {
+        width: 292px !important;
+        text-align: center;
+    }
+
+    [data-tab-id="returning_user"] {
+        padding-left: 45px;
+    }
+
 </style>
