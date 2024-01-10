@@ -176,7 +176,7 @@ paths:
       tags:
       - ping 
       summary: Returns tenant provider API.
-      description: Secure verification on Users bank account.
+      description: Healthcheck for verifynow service.
       operationId: TenantProviderID
       parameters:
         - in: header
