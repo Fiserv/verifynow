@@ -31,7 +31,7 @@
     "featured": true,
     "logoURL": "REPLACE ME",
     "description": "The VerifyNow™ product acts as a platform for account verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help Financial Institutions (FI)s reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.",
-    "longDescription":"REPLACE ME",
+    "longDescription":"The VerifyNow™ product acts as a platform for account verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help Financial Institutions (FI)s reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.",
     "apiSpecification": "/v1/apis/VerifyNow",
     "layout": "/v1/layouts/VerifyNow",
     "documentation": "/v1/docs/VerifyNow",
