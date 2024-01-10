@@ -40,6 +40,11 @@
     - title: API flow
       link: docs/api-flow.md
     - title: Risk Controls
-      link: docs/risk-controls.md             
+      link: docs/risk-controls.md
+- sections:
+   - title: Release notes
+     sections:
+     - title: March 2024
+       link: docs/release-notes/march.md              
 
     
