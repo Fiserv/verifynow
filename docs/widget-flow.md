@@ -137,7 +137,7 @@ The client’s application receives the outcome of the verification through the 
                 <div class="card-debit">
                     <div class="content-debit">
                         <div class="img-debit">
-                            <img height="116px" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/add-acc-manually.png">
+                            <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/add-acc-manually.png">
                         </div>
                         <div class="details">
                             <div class="name">Add Account Manually</div>
@@ -386,7 +386,7 @@ The client’s application receives the outcome of the verification through the 
         margin-bottom: 14px;
     }
     .card-debit .content-debit .img-debit img {
-        height: 100%;
+        height: 90%;
         width: 100%;
         border: 3px solid #f1f1f1;
         border-radius: 15%;
