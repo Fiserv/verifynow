@@ -31,7 +31,7 @@ For every API request, a response message is obtained that contains a response p
     <div class="content-expand">
     <p>Request URL is formed by appending Host URL and API path.</p>
     <h4>Request URL = Host URL + API path</h4>
-    <p>The API path along with the method (POST or PUT) is listed under the API Explorer section of that API on Fiserv Developer Studio.Refer the following example to construct a request URL for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">VerifyNow</a> API:</p>
+    <p>The API path along with the method (POST or PUT) is listed under the <a href="../api/?type=post&path=/cashedgerws/verifynow/ping">API Explorer</a> section of that API on Fiserv Developer Studio. Refer the following example to construct a request URL for <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">VerifyNow</a> API:</p>
      <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynowservice.png"/>
      <p>If host URL of the product is https://qa-ft.onefiserv.net, then request URL will be:</p>
      <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow_hostandrequest_url.png">
@@ -238,7 +238,7 @@ Upon a successful API request, a response payload is received. The response payl
 }
     </code>
     </pre>
-    <p>To view the API documentation of <b>VerifyNow</b> API in API Explorer, <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">click here</a></p>
+    <p>To view the API documentation of VerifyNow API in API Explorer, <a href="../api/?type=post&path=/cashedgerws/verifynow/verify/v1">click here</a></p>
     </div>
     </div>
     </br>
