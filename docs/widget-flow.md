@@ -386,7 +386,7 @@ The client’s application receives the outcome of the verification through the 
         margin-bottom: 14px;
     }
     .card-debit .content-debit .img-debit img {
-        height: 90%;
+        height: 100%;
         width: 100%;
         border: 3px solid #f1f1f1;
         border-radius: 15%;
