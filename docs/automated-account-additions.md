@@ -53,11 +53,11 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <!-- theme: info -->
  
-<p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that is OAuth Enabled.<p/>
+<p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that is OAuth Enabled.</em></p>
 
 <center>
 
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/oauth-enabled.png">
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/oauth-enabled.png"/>
 
 &nbsp;
 
@@ -151,6 +151,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 </div>
 </div>
 </br>
+
 <div>
     <input type="checkbox" class="collapsible-checkbox" id="section2">
     <label class="label-expand" for="section2">Automated Account Addition Flow for Non-OAuth Users</label>
@@ -160,7 +161,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 
 <!-- theme: info -->
 
-<p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that are not OAuth Enabled.</p>
+<p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that are not OAuth Enabled.</em></p>
 
 <center>
 
