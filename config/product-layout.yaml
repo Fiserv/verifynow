@@ -28,15 +28,15 @@
 # the delivery of this work
 ################################################################################
 header:
-  productionDescription: The VerifyNow™ product acts as a platform for account verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help Financial Institutions (FI)s reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.
+  productionDescription: The VerifyNow™ product acts as a single integration for account verification before money movement. VerifyNow from Fiserv leverages proprietary and third-party data sources and account verification tools to help Financial Institutions (FIs), Government Agencies, Insurance Companies, Corporations, FinTech and other industries reduce fraud exposure in connection with funding new accounts, transferring funds, payment initiation, disbursements, and other use cases while meeting customer expectations through faster, real-time approvals.
   getStarted: /docs/getting-started.md
 benefits:
-  - title: Payment Account Verification
-    description: Easy user authentication in verifying the accounts when the account holder initiates the ACH Transfer.
+  - title: Account Ownership Verification
+    description: Verify the authorized user and ownership of an account to reduce fraud prior to money movement.
+  - title: Account Status Verification
+    description: Verify the account is open/valid and associated risk indicators to reduce returns as a standalone verification or in conjunction with Account Ownership Verification.
   - title: Real-Time Access
-    description: VerifyNow includes EWS® to enable instant verification and increases successful verifications.
-  - title: Credit Decisions and Verification
-    description: Data from third-party partnerships improves accuracy and helps reduce fraud.
+    description: VerifyNow includes multiple methods to enable instant verification with or without the user in-session, expanding account coverage,  increasing successful verifications, which increases user adoption and reduces risk for your organization.
 featuredFeatures:
   - title: Identity Verification 
     groupName: 
