@@ -105,13 +105,13 @@ paths:
                 $ref: '#/components/schemas/VerifynowInternalErrorResponse'
       x-codegen-request-body-name: Body
       x-group-name: VN service (widget flow)
-      x-proxy-name: VerifyNow
+      x-proxy-name: VerifyNow Initiate Widget
   /cashedgerws/verifynow/outcome/v1:
     post:
       tags:
       - OutCome
       summary: Returns tenant provider API.
-      description: Summarize and provides information about the number of times verification is attempted.
+      description: Provides the outcome of the account verification widget interaction.
       operationId: TenantProviderID
       parameters:
         - in: header
@@ -170,13 +170,13 @@ paths:
               schema:
                 $ref: '#/components/schemas/OutcomeInternalErrorResponse'
       x-group-name: VN service (widget flow)
-      x-proxy-name: Status/Outcome
+      x-proxy-name: Widget Outcome
   /cashedgerws/verifynow/ping:
     post:
       tags:
       - ping 
       summary: Returns tenant provider API.
-      description: Healthcheck for verifynow service.
+      description: Healthcheck for VerifyNow service.
       operationId: TenantProviderID
       parameters:
         - in: header

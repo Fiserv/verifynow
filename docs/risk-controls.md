@@ -3,7 +3,7 @@
 
 Clients can set reuse limits to mitigate the risk associated with reusing accounts. Prior to processing an account verification request, VerifyNow determines whether the new account violates any of the risk controls and returns a failure message if they do.
 
-A. Clients can configure the following reuse limits: 
+A. Clients can configure account reuse limits. 
 
 <div class="collapsible-container">
 <div>
