@@ -213,19 +213,19 @@ paths:
         "200":
           description: "Created"
           content: 
-            application/json:
+            application/xml:
               schema:
                 $ref: '#/components/schemas/PingResponse'
         "400":
           description: Bad Request
           content:
-            application/json:
+            application/xml:
               schema:
                 $ref: '#/components/schemas/PingBadRequestResponse'
         "404":
           description: Not Found
           content:
-            application/json:
+            application/xml:
               schema:
                 $ref: '#/components/schemas/PingNotFoundResponse'
         "500":
