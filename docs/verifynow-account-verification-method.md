@@ -37,7 +37,7 @@ Account ownership verification is performed using the below three verification m
                         <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/instant_verification.png">
                     </div>
                     <div class="details">
-                        <div class="name">Instant  (Risk Database)  Verification</div>
+                        <div class="name">Instant  (Database)  Verification</div>
                     </div>
                     <div class="media-icons">
                         <a href="?path=docs/verifynow-account-verification-method/instant-verification.md">Click View</a>
