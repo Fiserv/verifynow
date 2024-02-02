@@ -45,7 +45,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/50-50-page.png">
+<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/50-50-page-new.png">
 
 
 </center>
@@ -57,7 +57,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verify-with-bank-deposit.png">
+<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verify-with-bank-deposit-new.png">
 
 </center>
 
@@ -65,7 +65,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/two-deposit-on-way.png">
+<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/two-deposit-on-way-new.png">
 
 </center>
 
@@ -73,7 +73,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <center>
 
-<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verify-deposit-amount.png">
+<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verify-deposit-amount-new.png">
 
 </center>
 
