@@ -206,7 +206,7 @@ paths:
       requestBody:
         description: trialDepositVerification
         content:
-          application/json:
+          application/xml:
             schema:
               $ref: '#/components/schemas/PingRequest'
       responses:
