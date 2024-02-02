@@ -18,14 +18,6 @@ The following flow is applicable when:
 <ul>
 <li>Client has enabled RTVA via the DGF</li>
 
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/RTVA-enabled.png">
-
-&nbsp;
-
-</center>
-
 <li>Account and Routing Number are NOT passed in the API invoking the widget</li>
 
 <li>RTVA is not FALSE in the API.</li>
@@ -54,14 +46,6 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 <!-- theme: info -->
  
 <p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that is OAuth Enabled.</em></p>
-
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/oauth-enabled.png"/>
-
-&nbsp;
-
-</center>
 
 1.	Click the appropriate icon, or type in the search box to choose the Financial Institution.
 
@@ -162,13 +146,6 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
 <!-- theme: info -->
 
 <p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that are not OAuth Enabled.</em></p>
-
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/non-oauth-enabled.png ">
-&nbsp;
-
-</center>
 
 1.	Click the appropriate icon, or type in the search box to choose the Financial Institution.    
 
