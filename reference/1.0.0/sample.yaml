@@ -957,13 +957,9 @@ components:
     PingResponse:
       type: object
       properties:
-        statusCode:
-          type: string
-          example: 'VNASM104'
-          description: Alphanumeric code for representing a Success or Failure condition.
         statusDesc:
           type: string
-          example: 'Account Verification is In-progress'
+          example: 'VerifyNow Service is Up and Running'
           description: Textual description for the status code.
         statusType:
           type: string
