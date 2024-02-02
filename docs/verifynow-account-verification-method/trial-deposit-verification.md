@@ -1,6 +1,6 @@
 ## Trial Deposit Verification
 
-This method verifies customer’s access to an external bank account. Two small trial deposits and one trial debit are made to the external bank account and the customer is required to verify the two deposit amounts.  
+This method verifies customer’s access to an external bank account. Two small trial deposits and one trial debit (ACH Micro-Entries) are made to the external bank account and the customer is required to verify the two deposit amounts.  
 
 > :memo: _**Note:** <br/>The amount of the debit is equal to the sum of the two deposits._
 
