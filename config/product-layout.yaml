@@ -31,12 +31,12 @@ header:
   productionDescription: The VerifyNow™ product acts as a single integration for account verification before money movement. VerifyNow from Fiserv leverages proprietary and third-party data sources and account verification tools to help Financial Institutions (FIs), Government Agencies, Insurance Companies, Corporations, FinTech and other industries reduce fraud exposure in connection with funding new accounts, transferring funds, payment initiation, disbursements, and other use cases while meeting customer expectations through faster, real-time approvals.
   getStarted: /docs/getting-started.md
 benefits:
-  - title: Account Ownership Verification
+  - title: Account User Verification
     description: Verify the authorized user and ownership of an account to reduce fraud prior to money movement.
   - title: Account Status Verification
-    description: Verify the account is open/valid and associated risk indicators to reduce returns as a standalone verification or in conjunction with Account Ownership Verification.
+    description: Verify the account status, and associated risk factors to minimize returns, either on its own or alongside ownership verification.
   - title: Real-Time Access
-    description: VerifyNow includes multiple methods to enable instant verification with or without the user in-session, expanding account coverage,  increasing successful verifications, which increases user adoption and reduces risk for your organization.
+    description: VerifyNow offers multiple methods to enable instant verification, irrespective of the user sessions, to broaden account coverage, boost successful verifications, and minimize organisational risk.
 featuredFeatures:
   - title: Identity Verification 
     groupName: 
