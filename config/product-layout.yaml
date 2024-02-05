@@ -68,7 +68,7 @@ featuredFeatures:
     relatedDocs:
      - link: null
        title: Account Verification
-  - title: Diverse Data and Verification Methods 
+  - title: Diverse Data and Verification Methods
     groupName: Responsive Web Design
     description: VerifyNow offers both passive and interactive account ownership, and status verification methods leveraging multiple data sources, including Fiserv proprietary data and Early Warning Services (EWS) contributed by FIs. Also integrated with the Fiserv AllData Aggregation service to provide account ownership through user-permissioned data.
     featured: true
