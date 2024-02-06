@@ -11,7 +11,6 @@ For clients that require access to the data collected from the financial institu
 ![image](../../assets/images/automated_account_addition.png)
 
 &nbsp;
-
 </center>
 
 The step-by-step instructions for user and account verification flow with Real-Time Verification and Addition (OAuth enabled) are shown in [Automated Account Addition](?path=docs/automated-account-addition.md) and Real-Time Verification (Non-OAuth enabled) in [Add Account Manually](?path=docs/add-account-manually.md).
