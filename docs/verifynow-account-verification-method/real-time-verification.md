@@ -4,14 +4,13 @@ VerifyNow is pre-integrated to AllData Aggregation to provide real-time bank acc
 
 VerifyNow performs real-time account verification by comparing the user's first and last name and/or business name (and account number if applicable) with data collected from the financial institution that services the account. Ownership verification is completed using a robust proprietary, real-time name and account number matching service.
 
-For clients that require access to the data collected from the financial institution for internal decisioning, analysis, or additional services, clients may choose to integrate to AllData Aggregation directly in conjunction with VerifyNow for passive Instant Verification.
+For clients that require access to the data collected from the financial institution for internal decisioning, analysis, or additional services, clients may choose to integrate to [AllData® Aggregation](/product/AllDataAggregation?branch=develop) directly in conjunction with VerifyNow for passive [Instant Verification](?path=docs/verifynow-account-verification-method/instant-verification.md).
 
 <center>
 
 ![image](../../assets/images/automated_account_addition.png)
 
 &nbsp;
-
 </center>
 
 The step-by-step instructions for user and account verification flow with Real-Time Verification and Addition (OAuth enabled) are shown in [Automated Account Addition](?path=docs/automated-account-addition.md) and Real-Time Verification (Non-OAuth enabled) in [Add Account Manually](?path=docs/add-account-manually.md).
