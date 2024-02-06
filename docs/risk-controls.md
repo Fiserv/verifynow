@@ -11,6 +11,8 @@ C. A unique combination of routing number, account number, and account type iden
 
 D. Clients can submit a written request to Fiserv ePayments Customer Support to change reuse limits.
 
+Back office tools such as Compass, XXXXXXXXX are used to control and minimize risks.
+
 ## See Also
 [VerifyNow - Account Verification Methods](?path=docs/verifynow-account-verification-method.md)<br/>
 
