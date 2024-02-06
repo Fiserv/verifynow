@@ -28,7 +28,7 @@
 # the delivery of this work
 ################################################################################
 header:
-  productionDescription: The VerifyNow™ product acts as a single integration for account verification before money movement. VerifyNow from Fiserv leverages proprietary and third-party data sources and account verification tools to help Financial Institutions (FIs), Government Agencies, Insurance Companies, Corporations, FinTech and other industries reduce fraud exposure in connection with funding new accounts, transferring funds, payment initiation, disbursements, and other use cases while meeting customer expectations through faster, real-time approvals.
+  productionDescription: The VerifyNow product acts as a single integration for account verification before money movement. VerifyNow from Fiserv leverages proprietary and third-party data sources and account verification tools to help Financial Institutions (FIs), Government Agencies, Insurance Companies, Corporations, FinTech and other industries reduce fraud exposure in connection with funding new accounts, transferring funds, payment initiation, disbursements, and other use cases while meeting customer expectations through faster, real-time approvals.
   getStarted: /docs/getting-started.md
 benefits:
   - title: Account User Verification
@@ -47,7 +47,7 @@ featuredFeatures:
        title:
   - title: Account Ownership Verification
     groupName: Account Verification
-    description: VerifyNow performs real-time account verification by comparing data input to the system with data from the financial institution that services the account. It can verify account status with as little as routing and account numbers, and account ownership with as little as first and last names or business name.
+    description:  VerifyNow performs real-time account verification by comparing data input to the system with data from the FIs that services the account. It can verify account status and ownership, with as little as routing and account numbers, and first and last names or business names.
     featured: true
     tags: ["tag1", "tag2"]
     relatedDocs:
@@ -68,13 +68,13 @@ featuredFeatures:
     relatedDocs:
      - link: null
        title: Account Verification
-  - title: Multiple Data Sources and Verification Methods 
-    groupName: Responsive Web Design
-    description: VerifyNow offers both passive and interactive verification methods leveraging multiple data sources, including Fiserv proprietary data and Early Warning Services (EWS) leveraging data contributed by Financial Institutions (FIs) to perform account ownership and status. Additionally, VerifyNow is integrated with the Fiserv AllData Aggregation service to provide account ownership through user-permissioned data.
+  - title: Diverse Data and Verification Methods
+    groupName: Featured Offerings
+    description: VerifyNow offers both passive and interactive account ownership, and status verification methods leveraging multiple data sources, including Fiserv proprietary data and Early Warning Services (EWS) contributed by FIs. Also integrated with the Fiserv AllData Aggregation service to provide account ownership through user-permissioned data.
     featured: true
     relatedDocs:
      - link: null
-       title: Responsive Web Design
+       title: Featured Offerings
   - title: Privacy Built-In
     groupName: Industry-Leading Security
     description: Customer data is never shared or sold to third parties. User credentials are never saved; only data that must be stored for regulatory compliance is retained.
