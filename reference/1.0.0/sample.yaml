@@ -39,7 +39,6 @@ servers:
 - url: https://qa-ft.onefiserv.net
   description: ""
 paths:
-  
   /cashedgerws/verifynow/verify/v1:
     post:
       tags:
