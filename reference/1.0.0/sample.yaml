@@ -231,7 +231,7 @@ paths:
         "500":
           description: " Internal Server Error "
           content:
-            application/json:
+            application/xml:
               schema:
                 $ref: '#/components/schemas/PingInternalErrorResponse'
       x-group-name: VerifyNow APIs (widget flow)
