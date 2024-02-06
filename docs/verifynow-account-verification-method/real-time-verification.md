@@ -1,69 +1,38 @@
 ## Real-Time (using FI login) Verification
 
-Real-Time (using FI login) Verification  method provides real-time bank account ownership verification for customers who have online banking accounts. The applicant’s username and password for the banking website are required for verification. VerifyNow performs real-time account verification by comparing data input by the user with data collected from the web site of the financial institution that services the account. The user is verified as the account owner if the two sets of data match.
+VerifyNow is pre-integrated to AllData Aggregation to provide real-time bank account ownership verification for users with online/mobile banking accounts. The user verifies their account in seconds by authenticating with their Financial Institution and consenting to share data for account verification via the log-in flow.
 
-If login is successful, VerifyNow compares the applicant’s name and account numbers from the external financial institution and what was provided by the client to verify account ownership in real time.
+VerifyNow performs real-time account verification by comparing the user's first and last name and/or business name (and account number if applicable) with data collected from the financial institution that services the account. Ownership verification is completed using a robust proprietary, real-time name and account number matching service.
+
+For clients that require access to the data collected from the financial institution for internal decisioning, analysis, or additional services, clients may choose to integrate to AllData Aggregation directly in conjunction with VerifyNow for passive Instant Verification.
 
 <center>
 
-![Images](../../assets/images/rtv-process-flow.png)
+![image](../../assets/images/automated_account_addition.png)
 
-<b>Real Time Verification Process Flow</b>
+&nbsp;
+
+</center>
+
+The step-by-step instructions for user and account verification flow with Real-Time Verification and Addition (OAuth enabled) are shown in [Automated Account Addition](?path=docs/automated-account-addition.md) and Real-Time Verification (Non-OAuth enabled) in [Add Account Manually](?path=docs/add-account-manually.md).
+
+Below sequence diagrams represent Real-Time Verification and Addition (RTVA) and Real-Time Verification flows.
+
+<center>
+
+![Images](../../assets/images/non-widget-flow.png)
+
+<b>Real-Time Verification and Addition Sequence (Non-Widget Flow)</b>
+
 </center>
 
 <center>
 
 ![Images](../../assets/images/rtv-sequence.png)
 
-<b>Real Time Verification Sequence Flow</b>
+<b>Real Time Verification (Widget Flow)</b>
 
 </center>
-
-### Step-by-Step Instruction for Real-Time Verification
-
-1.	The client system collects account information from the user prior to initiating the widget. The client system passes the information collected from the user to VerifyNow.
-                         
-2.	Instant Verification will be attempted first when enabled. The following Step occurs when Instant results are inconclusive, or Instant is not enabled. 
-
-3.	VerifyNow offers the user the option to select the Real-time verification method or the Trial Deposit verification method.
-
-<center>
-
-![Images](../../assets/images/50-50-page.png)
-
-</center>
-
-4.	If the user selects the Real-time verification method (“Verify your bank account instantly”), VerifyNow initiates Real-time verification.  (If the user selects the Trial Deposit verification method (“Verify with bank deposits”), VerifyNow initiates Trial Deposit verification). Please see [Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md) for more information.
-
-
-5.	The user is asked to provide their username and password for the online banking portal where the user accesses their account.
-
-
-<center>
-
-![Images](../../assets/images/verify-instantly.png =400x300)
-
-</center>
-
-6.	If Multi-Factor Authentication (MFA) is required, the user is asked to provide additional information.
-
-<center>
-
-![Images](../../assets/images/add-account-instant.png)
-
-</center>
-
-7.	If the user is verified, VerifyNow displays the Real-time verification in-progress screen to the user.
-
-<center>
-
-![Images](../../assets/images/process-image.png =400x150)
-
-</center>
-
-8.	Real-time verification is completed.
-9.	VerifyNow passes control back to the client system, along with the verification decision.
-10.	If the user is not approved, VerifyNow checks if the Trial Deposit verification method is available, and if available, gives the user the option to use Trial Deposit verification.
 
 
 
