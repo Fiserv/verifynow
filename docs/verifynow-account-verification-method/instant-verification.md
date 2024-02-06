@@ -6,7 +6,6 @@ This method provides instant bank account ownership verification using Early War
 
  &nbsp;
 
-
 Instant verification is performed using the provided customer information,  account details and the Early Warning Services (EWS) Account Ownership Authentication (AOA) database. EWS houses data contributed by various financial institutions with data elements including account holder names, address, tax ID, and additional elements leveraged that it uses to authenticate account ownership claims. EWS data is limited by the number of financial institutions that contribute to the product. EWS requires that clients contribute to the product to be allowed to use it.
 
 <center>
