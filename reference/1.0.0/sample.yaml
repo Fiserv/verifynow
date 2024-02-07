@@ -235,6 +235,72 @@ paths:
                 $ref: '#/components/schemas/PingInternalErrorResponse'
       x-group-name: VerifyNow APIs
       x-proxy-name: Ping - Widget Flow
+  /cashedgerws/verifynow/verify/v2:
+    post:
+      tags:
+      - Instant
+      summary: Instant Verification
+      description: It provides instant bank account ownership and status verification via a single REST API using Fiserv proprietary data and the Early Warning Services (EWS) account services. 
+      operationId: APISpecProviderId
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993002'
+          required: true
+          description: provide HomeId as value
+      requestBody:
+        description: Instant Verification 
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SpecsFilterRequest'
+      responses:
+        "200":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SpecsFilterResponse'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowBadRequestResponse'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowNotFoundResponse'
+        "500":
+          description: " Internal Server Error "
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowInternalErrorResponse'
+      x-codegen-request-body-name: Body
+      x-group-name: VN service (widget flow)
+      x-proxy-name: Instant Verification API-Only 
 components:
   schemas:
     LiveProbeResponse:
