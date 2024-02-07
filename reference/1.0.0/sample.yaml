@@ -104,7 +104,7 @@ paths:
                 $ref: '#/components/schemas/VerifynowInternalErrorResponse'
       x-codegen-request-body-name: Body
       x-group-name: VerifyNow APIs
-      x-proxy-name: VerifyNow Initiate Widget
+      x-proxy-name: VerifyNow Initiate Widget - Widget Flow
   /cashedgerws/verifynow/outcome/v1:
     post:
       tags:
@@ -169,7 +169,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OutcomeInternalErrorResponse'
       x-group-name: VerifyNow APIs
-      x-proxy-name: Widget Outcome
+      x-proxy-name: Widget Outcome - Widget Flow
   /cashedgerws/verifynow/ping:
     post:
       tags:
@@ -234,7 +234,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/PingInternalErrorResponse'
       x-group-name: VerifyNow APIs
-      x-proxy-name: Ping
+      x-proxy-name: Ping - Widget Flow
 components:
   schemas:
     LiveProbeResponse:
