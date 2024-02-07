@@ -795,7 +795,7 @@ components:
                           creditAccountNumber:
                             type: boolean
                             example: '8087531231'
-                            description: Account Number.
+                            description: Account Number
                           accountType:
                             type: string
                             example: 'savings'
