@@ -41,7 +41,6 @@ The following flow is applicable when:
 
 5.	The user is asked to provide their username and password for the online banking portal where the user accesses their account.
 
-
 <center>
 
 ![Images](../assets/images/verify-instantly.png =400x300)
@@ -73,6 +72,7 @@ The following flow is applicable when:
 [User workflow](?path=docs/user-workflow.md)</br>
 [Account Verification status/Exit points](?path=docs/account-verification-status.md)</br>
 [CSS Integration](?path=docs/css-integration.md)
+
  <style>
     .card-body ul {
         list-style: none;

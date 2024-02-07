@@ -10,7 +10,6 @@ For eligible FIs, VerifyNow allows user to add accounts without providing inform
 
 </center>
 
-
 #### When the Automated Account Flow is Triggered
 
 The following flow is applicable when:
@@ -23,7 +22,6 @@ The following flow is applicable when:
 <li>RTVA is not FALSE in the API.</li>
 </ul>
 </div>
-
 
 &nbsp;
 

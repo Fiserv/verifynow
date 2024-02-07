@@ -31,12 +31,12 @@ header:
   productionDescription: The VerifyNow product acts as a single integration for account verification before money movement. VerifyNow from Fiserv leverages proprietary and third-party data sources and account verification tools to help Financial Institutions (FIs), Government Agencies, Insurance Companies, Corporations, FinTech and other industries reduce fraud exposure in connection with funding new accounts, transferring funds, payment initiation, disbursements, and other use cases while meeting customer expectations through faster, real-time approvals.
   getStarted: /docs/getting-started.md
 benefits:
-  - title: Account User Verification
+  - title: Account User
     description: Verify the authorized user and ownership of an account to reduce fraud prior to money movement.
-  - title: Account Status Verification
-    description: Verify the account status, and associated risk factors to minimize returns, either on its own or alongside ownership verification.
+  - title: Account Status
+    description: Verify the account status, and associated risk factors to minimize returns.
   - title: Real-Time Access
-    description: VerifyNow offers multiple methods to enable instant verification, irrespective of the user sessions, to broaden account coverage, boost successful verifications, and minimize organisational risk.
+    description: VerifyNow offers various instant verification methods with expanded account coverage, higher success rates, and reduced organisational risk.
 featuredFeatures:
   - title: Identity Verification 
     groupName: 
@@ -47,7 +47,7 @@ featuredFeatures:
        title:
   - title: Account Ownership Verification
     groupName: Account Verification
-    description:  VerifyNow performs real-time account verification by comparing data input to the system with data from the FIs that services the account. It can verify account status and ownership, with as little as routing and account numbers, and first and last names or business names.
+    description:  VerifyNow performs real-time account verification by comparing data from FIs that services the account. It can verify account status via routing and account numbers, and account ownership via first and last names or business name.
     featured: true
     tags: ["tag1", "tag2"]
     relatedDocs:
@@ -57,20 +57,20 @@ featuredFeatures:
         link: docs/verifynow-account-verification-method.md
     relatedAPIs:
       - relatedAPI: null
-        title: Verify NOW
+        title: VerifyNow
         description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account.
         type: post
         path: /cashedgerws/verifynow/verify/v1
   - title: Seamless Integration
     groupName: Manage Account
-    description:  VerifyNow is also available as a standalone solution that you may integrate with your existing online funding and/or money transfer solutions and is integrated with your enterprise application by way of an easy to integrate widget and/or REST API.
+    description: VerifyNow is also available as a standalone solution that you may integrate with existing online funding and/or money transfer solutions and with enterprise application by way of an easy to integrate widget and/or REST API.
     featured: true
     relatedDocs:
      - link: null
        title: Account Verification
   - title: Diverse Data and Verification Methods
     groupName: Featured Offerings
-    description: VerifyNow offers both passive and interactive account ownership, and status verification methods leveraging multiple data sources, including Fiserv proprietary data and Early Warning Services (EWS) contributed by FIs. Also integrated with the Fiserv AllData Aggregation service to provide account ownership through user-permissioned data.
+    description:  VerifyNow offers both passive and interactive account ownership, and status verification methods leveraging multiple data sources, including Fiserv proprietary data, AllData Aggregation service and Early Warning Services (EWS) contributed by FIs.
     featured: true
     relatedDocs:
      - link: null
