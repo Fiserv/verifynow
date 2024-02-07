@@ -42,7 +42,7 @@ paths:
   /cashedgerws/verifynow/verify/v1:
     post:
       tags:
-      - Instant
+      - 1.Instant
       summary: Instant Verification
       description: This method provides instant bank account ownership verification using the Early Warning Services (EWS) account services and/or other available databases.
       operationId: APISpecProviderId
@@ -108,7 +108,7 @@ paths:
   /cashedgerws/verifynow/outcome/v1:
     post:
       tags:
-      - OutCome
+      - 2.OutCome
       summary: Returns tenant provider API.
       description: Provides the outcome of the account verification widget interaction.
       operationId: TenantProviderID
@@ -173,7 +173,7 @@ paths:
   /cashedgerws/verifynow/ping:
     post:
       tags:
-      - ping 
+      - 3.ping 
       summary: Returns tenant provider API.
       description: Healthcheck for VerifyNow service.
       operationId: TenantProviderID
