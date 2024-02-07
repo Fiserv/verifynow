@@ -54,7 +54,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
             <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-list.png">
         </div>
         <div style="margin: 5px">
-            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-search.png" height="315" width="600">
+            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-search.png" height="410" width="600">
         </div>
 </div>
 
@@ -154,7 +154,7 @@ The name that comes in SSO will be compared against the name scraped by Aggregat
             <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-list.png">
         </div>
         <div style="margin: 5px">
-            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-search.png" height="290" width="600">
+            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-search.png" height="387" width="600">
         </div>
     </div>
 
