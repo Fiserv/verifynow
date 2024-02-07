@@ -228,7 +228,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/PingNotFoundResponse'
         "500":
-          description: " Internal Server Error "
+          description: "Internal Server Error"
           content:
             application/xml:
               schema:
