@@ -235,7 +235,7 @@ paths:
                 $ref: '#/components/schemas/PingInternalErrorResponse'
       x-group-name: VerifyNow APIs
       x-proxy-name: Ping - Widget Flow
-  /cashedgerws/verifynow/verify/v1:
+  /cashedgerws/verifynow/verify/v2:
     post:
       tags:
       - Instant
