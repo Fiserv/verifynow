@@ -63,7 +63,7 @@ featuredFeatures:
         path: /cashedgerws/verifynow/verify/v1
   - title: Seamless Integration
     groupName: Manage Account
-    description:  VerifyNow is also available as a standalone solution that you may integrate with existing online funding and/or money transfer solutions and with enterprise application by way of an easy to integrate widget and/or REST API.
+    description: VerifyNow is also available as a standalone solution that you may integrate with existing online funding and/or money transfer solutions and with enterprise application by way of an easy to integrate widget and/or REST API.
     featured: true
     relatedDocs:
      - link: null
