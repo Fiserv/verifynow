@@ -57,7 +57,7 @@ featuredFeatures:
         link: docs/verifynow-account-verification-method.md
     relatedAPIs:
       - relatedAPI: null
-        title: Verify NOW
+        title: VerifyNow
         description: VerifyNow performs real-time account verification by comparing data input into the system by a user with data collected from the website of financial institutions that service the account.
         type: post
         path: /cashedgerws/verifynow/verify/v1
