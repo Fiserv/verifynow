@@ -717,7 +717,7 @@ components:
                         type: object
                         properties:
                           creditAccountNumber:
-                            type: boolean
+                            type: String
                             example: '8087531231'
                             description: Account Number.
                           accountType:
@@ -725,7 +725,7 @@ components:
                             example: 'Savings'
                             description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
                           routingNumber:
-                            type: boolean
+                            type: String
                             example: '122199983'
                             description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
                       description: User accountDetails
@@ -859,7 +859,7 @@ components:
                         type: object
                         properties:
                           creditAccountNumber:
-                            type: boolean
+                            type: String
                             example: '8087531231'
                             description: Account Number
                           accountType:
@@ -867,7 +867,7 @@ components:
                             example: 'savings'
                             description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
                           routingNumber:
-                            type: boolean
+                            type: String
                             example: '122199983'
                             description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
                       description: User accountDetails
