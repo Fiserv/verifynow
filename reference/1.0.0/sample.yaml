@@ -176,7 +176,7 @@ paths:
       - 3.ping 
       summary: Returns tenant provider API.
       description: Healthcheck for VerifyNow service.
-      operationId: TenantProviderID
+      operationId: APIPingProviderId
       parameters:
         - in: header
           name: AdminUserName
@@ -241,7 +241,7 @@ paths:
       - Instant
       summary: Instant Verification
       description: It provides instant bank account ownership and status verification via a single REST API using Fiserv proprietary data and the Early Warning Services (EWS) account services. 
-      operationId: APISpecProviderId
+      operationId: APIInstantProviderId
       parameters:
         - in: header
           name: AdminUserName
