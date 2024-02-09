@@ -1,18 +1,16 @@
 ## Instant (Database) Verification
 
-This method provides instant bank account ownership verification using Early Warning Services (EWS) and/or Fiserv proprietary data.
+This method provides instant bank account ownership or account status verification using the Fiserv proprietary data from FI systems of record / Early Warning Services (EWS) - account services. Clients can use either widget flow or light weight API flow (<a href="../api/?type=post&path=/cashedgerws/verifynow/ping">Refer to API Flow</a>) for Instant Verification.
 
  > :memo: _**Note:** <br/>The instant account verification service only verifies Demand Deposit Account (DDA) accounts. Savings, money market, and brokerage accounts are ineligible for account verification via this service._
 
  &nbsp;
 
-Instant verification is performed using the provided customer information,  account details and the Early Warning Services (EWS) Account Ownership Authentication (AOA) database. EWS houses data contributed by various financial institutions with data elements including account holder names, address, tax ID, and additional elements leveraged that it uses to authenticate account ownership claims. EWS data is limited by the number of financial institutions that contribute to the product. EWS requires that clients contribute to the product to be allowed to use it.
+
 
 <center>
 
-![Images](../../assets/images/instant-verification-process-flow.png)
-
-<b>Instant Verification Process Flow</b>
+<b>Instant Verification Process Flow (Widget flow)</b>
 
 </center>
 
@@ -24,31 +22,23 @@ Instant verification is performed using the provided customer information,  acco
 
 </center>
 
-### Step-by-Step Instruction for Instant Verification
-1. The client system collects account information from the user prior to initiating the widget. A sample screen is shown below:
 
 <center>
 
-![Images](../../assets/images/add-account.png)
+![Images](../../assets/images/add-account-flow.png)
 
 </center>
 
-2. The client system passes the information collected from the user to VerifyNow.
 
-3. VerifyNow displays the Instant verification in-progress screen to the user as required.
 
 <center>
 
-<img width="400" height="150" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/process-image.png">
+<img width="400" height="150" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/process-image-flow.png">
 
 </center>
 
-4.  Instant verification is completed.
 
-    a. If approved or denied, VerifyNow passes control back to the client system, along with the verification decision.
-
-    b. If account ownership verification is inconclusive, Real-time verification or Trial Deposit verification can be initiated.
-
+&nbsp;
 
 <div class="debit-card-button-container">
 <div class="debit-card-left-button">
