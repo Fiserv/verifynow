@@ -1,23 +1,32 @@
 
 # Widget Flow
 
-The VerifyNow widget works like the VerifyNow APIs, but it reduces the complexity and therefore requires lesser resources involved in implementation. 
+The VerifyNow widget works like the VerifyNow APIs, reduces complexity for clients by providing pre built screen that can be easily integrated to client applications. These screens can be configured by client to customize color schemes and branding as per their needs. 
 
-VerifyNow integration requires clients to perform three steps as outlined below for Widget based Integration.
+VerifyNow offers two methods to add and verify account ownership.
 
 
-1.	Invoke the Fiserv VerifyNow REST web service’s Verify operation to receive a unique token.
+<div class="card-body">
+<ul>
+<li>Add account via Online banking - When a user wants to add an account without having account information (e.g., routing numbers, account numbers), they can use Real-Time Verification and Addition (RTVA).</li>
 
-2.	Render the Fiserv widget as part of the client’s application user interface by using the unique token.
+<li>Add account manually - When a user wants to add an account with account information, they will go through the manual account verification process, which involves Instant, Real-Time, and Trial Deposit verifications.</li>
+</ul>
+</div>
 
-3.	Invoke the Fiserv VerifyNow web service’s Outcome operation to receive the verification decision after the widget gives control back to the client.
+<center>
 
+![image](../assets/images/add-account-manually-flowchart.png)
+
+&nbsp;
+
+</center>
 
 ### How to Integrate VerifyNow Widget?
 
 <div>
     <input type="checkbox" class="collapsible-checkbox" id="section1">
-    <label class="label-expand" for="section1">Verify</label>
+    <label class="label-expand" for="section1">	Invoke VerifyNow API – Verify operation to receive a unique token</label>
     <div class="content-expand">
 
 The client application invokes the VerifyNow web service’s Verify operation with the expected elements for profile and account information. The client application receives a token and the status of the request from the VerifyNow system. The token will not be passed to the client application if there is any failure in processing the data received, such as failure in data validation and/or business-related validation. For more information, see <a href="../docs/?path=docs/api-flow.md">API Flow</a>.
@@ -28,10 +37,10 @@ The client application invokes the VerifyNow web service’s Verify operation wi
 </br>
 <div>
     <input type="checkbox" class="collapsible-checkbox" id="section2">
-    <label class="label-expand" for="section2">Widget Integration</label>
+    <label class="label-expand" for="section2">	Render the Fiserv widget as part of the client’s application user interface by using the unique token</label>
     <div class="content-expand">
     The client is required to comply with the following integration points to use the Fiserv widget in their application’s user interface.
-
+<h2>a. Widget Integration</h2>
 <h3>JavaScript</h3>
 
 The client’s application user interface to support the widget is required to include the following script hosted by the VerifyNow system. The widget takes care of all user interface level processing and data validation. Processing control will be given back to the client’s application by a JavaScript API call.
@@ -68,28 +77,19 @@ The client’s application user interface is expected to have the following hidd
 <input type="hidden" name="cssURL" id="cssURL" value="<<clientHostedCSS>>"/>
 
 ```
-</div>
-</div>
-</br>
 
-<div>
-    <input type="checkbox" class="collapsible-checkbox" id="section6">
-    <label class="label-expand" for="section6">Widget Placement</label>
-    <div class="content-expand">
+</br>
+<h2>b. Widget Placement</h2>
+
 The client’s application is required to provide the expected space in their user interface to place the VerifyNow widget. This needs to happen through use of the `<b>div</b>` tag with the predefined ID (<b>vn_space</b>) associated with it. A sample could appear as:
 
 ```
 <div id="vn_space" style="align:center; margin:5px; width:100%" align="center"> </div>
 ```
-</div>
-</div>
 
 </br>
 
-<div>
-    <input type="checkbox" class="collapsible-checkbox" id="section4">
-    <label class="label-expand" for="section4">Control Handover to Client Application</label>
-    <div class="content-expand">
+<h2>c. Control Handover to Client Application</h2>
 
 Application control will be transferred back to the client’s application from the VerifyNow system through a JavaScript API call hosted by the client application. Clients can incorporate their business flow inside of it. 
 
@@ -106,7 +106,7 @@ alert("UI Control is handed over to Client");
 
 <div>
     <input type="checkbox" class="collapsible-checkbox" id="section5">
-    <label class="label-expand" for="section5">Outcome</label>
+    <label class="label-expand" for="section5">	Invoke the Fiserv VerifyNow web service’s Outcome operation  to receive decision</label>
     <div class="content-expand">
 
 The client’s application receives the outcome of the verification through the Outcome operation with the token associated for the specific verification. The Outcome operation provides the detail, including verification types and their respective statuses along with the combined decision. Refer to the <a href="../docs/?path=docs/api-flow.md">API Flow</a>.
