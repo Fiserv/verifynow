@@ -33,7 +33,7 @@ This method provides instant bank account ownership or account status verificati
 
 <center>
 
-<img width="400" height="150" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/process-image-flow.png">
+<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/process-image-flow.png">
 
 </center>
 
