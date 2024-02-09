@@ -2,27 +2,30 @@
 
 The Account Ownership verification service verifies account ownership by checking whether an account provided by a user exists, whether the user owns the account, and whether the account is active and in good standing.
 
-Account ownership verification is performed using the below three verification methods.
-&nbsp;
+Account ownership verification is performed using the below three verification methods.  The client has the flexibility to specify at the home level and at the user level which account verification methods should be enabled. The specific verification method to be used for a user is passed by the client system in the verification request.
 
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifynow-acc-verification-method.png" height=400; width=400;>
-
-</center>
-
-&nbsp;
-
-
-<!-- theme: info -->
- 
-> :memo: _**Note:** <br/>The client has the flexibility to specify at the home level and at the user level which account verification methods should be enabled. The specific verification method to be used for a user is passed by the client system in the verification request._
-
-&nbsp;
-
-<!-- theme: info -->
- 
-> :memo: _**Note:** <br/>A validation check is performed on the client request to confirm that it specifies the verification method to be used._
+<table border="1">
+<tr style="background-color:#bfbfbf">
+<th>Verification Method</th>
+<th>Description</th>
+<th>User Interaction and Ease</th>
+</tr>
+<tr>
+<td>Instant</td>
+<td>Matches customer’s name and bank account information with information in a database.</td>
+<td><b>No Interaction, High Ease</b> – User simply provides bank account information; does not need to take any other action.</td>
+</tr>
+<tr>
+<td>Real-time</td>
+<td>Matches customer’s name and bank account information (if provided) with harvested data from a financial institution’s website.</td>
+<td><b>Minimum Interaction, High Ease</b> – User provides their respective financial institution(s) online account credentials and provides answers to questions for further authentication if required.</td>
+</tr>
+<tr>
+<td>Trial Deposit</td>
+<td>Posts micro deposits to a customer’s bank account. Deposit amount is verified by the customer.</td>
+<td><b>Medium Interaction, Medium Ease</b> – User must initiate the trial deposit process and must return to verify the deposit amounts.</td>
+</tr>
+</table>
 
 <div>Click the below images to know more about Account Verification Methods.
     <div class="account-body">
