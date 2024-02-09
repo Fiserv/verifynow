@@ -88,7 +88,6 @@ The client’s application is required to provide the expected space in their us
 ```
 
 </br>
-
 <h2>c. Control Handover to Client Application</h2>
 
 Application control will be transferred back to the client’s application from the VerifyNow system through a JavaScript API call hosted by the client application. Clients can incorporate their business flow inside of it. 
