@@ -7,6 +7,7 @@ This method provides instant bank account ownership or account status verificati
  &nbsp;
 
 
+
 <center>
 
 <b>Instant Verification Process Flow (Widget flow)</b>
