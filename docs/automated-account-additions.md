@@ -2,196 +2,67 @@
 
 For eligible FIs, VerifyNow allows user to add accounts without providing information such as routing or account numbers. Instead, they may use Real-Time Verification and Addition, as described below.
 
-<center>
+## Real-Time Verification and Addition (RTVA)
 
-![image](../assets/images/add-account-manually-flowchart.png)
-
-&nbsp;
-
-</center>
-
-#### When the Automated Account Flow is Triggered
-
-The following flow is applicable when:
-<div class="card-body">
-<ul>
-<li>Client has enabled RTVA via the DGF</li>
-
-<li>Account and Routing Number are NOT passed in the API invoking the widget</li>
-
-<li>RTVA is not FALSE in the API.</li>
-</ul>
-</div>
-
-&nbsp;
-
-<!-- theme: info -->
- 
-> :memo: _**Note:** <br/>Even when RTVA is enabled, users can choose to add any account manually._
-
-
-When a user tries to add an account for the FI via RTVA, they provide credentials for logging into the external FI. The user is put through Multi-Factor Authentication (MFA). Then account-related information is successfully scraped, and the name is passed through risk rules for matching logic to determine whether the accounts should be displayed to the user or not. If the information fails the check, the user is sent to add the account manually (see [Add Account Manually](?path=docs/add-account-manually.md)).
+When a user tries to add an account for the FI via RTVA, they provide credentials for logging into the external FI. The user is put through Multi-Factor Authentication (MFA). Then account-related information is successfully scraped and the name is passed through risk rules for matching logic to determine whether or not the accounts should be displayed to the user. If the information fails the check, the user is sent to add the account manually (see [Add Account Manually](?path=docs/add-account-manually.md)).
 
 The name that comes in SSO will be compared against the name scraped by Aggregation. Risk rules for name matching determine if the account information should be displayed to the user.
 
-<div>
-    <input type="checkbox" class="collapsible-checkbox" id="section1">
-    <label class="label-expand" for="section1">Automated Account Addition Flow for OAuth Users</label>
-    <div class="content-expand">
-
-&nbsp;
-
-<!-- theme: info -->
- 
-<p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that is OAuth Enabled.</em></p>
-
-1.	Click the appropriate icon, or type in the search box to choose the Financial Institution.
-
-<div class="card-container">
-        <div style="margin: 5px">
-            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-list.png">
-        </div>
-        <div style="margin: 5px">
-            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-search.png" height="410" width="600">
-        </div>
-</div>
-
-2.	Once the respective financial institution is selected, the user will be navigated to the OAuth authentication screen.
-
 <center>
 
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verify-instantly.png" width="300" height="300">
+![image](../assets/images/automated_account_addition.png)
 
 &nbsp;
 
 </center>
 
-3.	Click Authenticate. </br>
+## General Steps
 
-4.	Enter the login credentials to sign-in.
+Regardless of which verification method is used, the first few steps will be the same.
+
+<h5 style="color:#ff6600">Note:</h5>
+
+All forms of verification will not necessarily be available for all FIs. Users will have access to some or all verification methods, as applicable.
+
+1.	Click the appropriate icon, or type in the search box.
 
 <center>
 
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/fiserv-login.png" width="300" height="300">
+![image](../assets/images/search-box.png)
 
 &nbsp;
 
 </center>
-
-5.	Then the user is navigated to the multifactor authentication screen.
-
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/MFA.png" width="300" height="150">
-
-&nbsp;
-
-</center>
-
-6.	Once the details are added, click Submit. </br>
-
-7.	Select the account in the Consent Page. 
-
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/consent-page.png" width="300" height="150">
-
-&nbsp;
-
-</center>
-
-8.	Click Authorize. </br>
-
-9.	Pop-up screen appears as shown below.
-
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/window-autoclose-page.png " width="300" height="150">
-
-&nbsp;
-
-</center>
-
-10.	Once the user successfully authenticates with the financial institution, they will need to choose which account(s) to add.
-
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/selecting-account-page.png " width="300" height="150">
-
-&nbsp;
-
-</center>
-
-11.	Clicking the Add button will complete the verification flow.
-
-    <div class="card-body">
-    <ul>
-    <li>Selecting “Add your account manually” will take the user to the add account manually flow. </li>
-    </ul>
-    </div>
-
-</div>
-</div>
-</br>
-
-<div>
-    <input type="checkbox" class="collapsible-checkbox" id="section2">
-    <label class="label-expand" for="section2">Automated Account Addition Flow for Non-OAuth Users</label>
-    <div class="content-expand">
-
-&nbsp;
-
-<!-- theme: info -->
-
-<p class="block-quote">📝 <em><strong>Note:</strong> <br/>The following steps are applicable to Financial Institutions that are not OAuth Enabled.</em></p>
-
-1.	Click the appropriate icon, or type in the search box to choose the Financial Institution.    
-
-    <div class="card-container">
-        <div style="margin: 5px">
-            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-list.png">
-        </div>
-        <div style="margin: 5px">
-            <img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/bank-search.png" height="387" width="600">
-        </div>
-    </div>
 
 2.	Here, the user will have the option of adding from their online banking website or adding an account manually.
 
 <center>
 
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/add-account-manually.png " width="300" height="250">
+![image](../assets/images/add-account-manually1.png)
+
 &nbsp;
 
 </center>
 
-<div class="card-body">
-        <ul>
-            <li>To use Real-Time Verification and Addition, the user will enter the User ID and Password for their bank account and click the Submit button. </li>
-            <li>To add an account manually, the user will click the Add Account Manually button. </li>
-        </ul>
-</div>
-
-3.	Once the user successfully authenticates with the financial institution, they will need to choose which account(s) to add.
+To use Real-Time Verification and Addition, the user will enter the User ID and Password for their bank account and click the Submit button. Go to [Real-Time Verification and Addition](?path=docs/verifynow-account-verification-method/real-time-verification.md)
 
 <center>
 
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/choose-bank-account.png " width="300" height="150">
+![image](../assets/images/user-login-page.png)
 
 &nbsp;
 
 </center>
 
-4.	Clicking the Add button will complete the verification flow.
-    
-    <div class="card-body">
-    <ul>
-    <li>Selecting “Add your account manually” will take the user to the add account manually flow. </li>
-    </ul>
-    </div>
+User will need to choose to add an account fetched by Real Time Verification from external FI or user can choose to add an account manually if they are not able to find the account
 
-</div>
-</div>
+<center>
+
+![image](../assets/images/adding-external-account.png)
+
+&nbsp;
+
+</center>
 
 ### See Also
 
