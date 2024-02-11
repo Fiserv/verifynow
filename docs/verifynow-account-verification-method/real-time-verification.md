@@ -17,21 +17,13 @@ For clients that require access to the data collected from the financial institu
 
 The step-by-step instructions for user and account verification flow with Real-Time Verification and Addition (OAuth enabled) are shown in [Automated Account Addition](?path=docs/automated-account-addition.md) and Real-Time Verification (Non-OAuth enabled) in [Add Account Manually](?path=docs/add-account-manually.md).
 
-Below sequence diagrams represent Real-Time Verification and Addition (RTVA) and Real-Time Verification flows.
+Below sequence diagrams represent Real-Time Verification flows.
 
 <center>
 
-![Images](../../assets/images/non-widget-flow.png)
+![Images](../../assets/images/Real-Time-Flow.png)
 
-<b>Real-Time Verification and Addition Sequence (Non-Widget Flow)</b>
-
-</center>
-
-<center>
-
-![Images](../../assets/images/rtv-sequence.png)
-
-<b>Real Time Verification (Widget Flow)</b>
+<!-- <b>Real-Time Verification and Addition Sequence (Non-Widget Flow)</b> -->
 
 </center>
 
