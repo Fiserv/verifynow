@@ -288,56 +288,19 @@ components:
     SpecsFilterRequest:
       type: object
       properties:
-        requestId:
-          type: string
-          example: 'VerifyNow'
-          description: Unique ID to be passed in by the calling application. 
-        firstName:
-          type: string
-          example: 'KARAOne'
-          description: User’s first name. Required for all types of account verification.
-        lastName:
-          type: string
-          example: 'demoone'
-          description: User’s last name. Required for all types of account verification.
-        middleName:
-          type: string
-          example: ' '
-          description: User’s middle name 
-        userId:
-          type: string
-          example: 'demoone'
-          description: Unique identification number that is assigned to user by client.
-        email: 
-          type: string
-          example: 'samstestone@mail.com'
-          description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders. 
-        ssn:
-          type: string
-          example: '987612300'
-          description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services. 
-        addressLine1:
-          type: string
-          example: '9384 POODLE LN'
-          description: User’s address street 1. Recommended for instant verification. 
-        city:
-          type: string
-          example: 'KAILAU'
-          description: User’s city. Recommended for instant verification. 
-        state:
-          type: string
-          example: 'HI'
-          description: User’s state. Recommended for instant verification.
-        zipCode:
-          type: string
-          example: '96734'
-          description: User’s ZIP Code. Recommended for instant verification. 
-        phoneNumber:
-          type: string
-          example: '8087531231'
-          description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.  
-        enable: 
-          type: boolean
+        requestId: {type: string, description: "Unique ID to be passed in by the calling application.", example: 'VerifyNow' }
+        firstName: {type: string, description: "User’s first name. Required for all types of account verification.", example: 'KARAOne'}
+        lastName: { type: string, description: "User’s last name. Required for all types of account verification.", example: 'demoone'}
+        middleName: { type: string, description: "User’s middle name", example: ' '}
+        userId: { type: string, description: "Unique identification number that is assigned to user by client.", example: 'demoone'}
+        email: { type: string, description: "User’s email address. This is for primary email. Required for TD verification to provide status and reminders.", example: 'samstestone@mail.com'}
+        ssn: { type: string, description: "User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.", example: '987612300'}
+        addressL-ine1: { type: string, description: "User’s address street 1. Recommended for instant verification.", example: '9384 POODLE LN'}
+        city: { type: string, description: "User’s city. Recommended for instant verification.", example: 'KAILAU'}
+        state: { type: string, description: "User’s state. Recommended for instant verification.", example: 'HI'}
+        zipCode: { type: string, description: "User’s ZIP Code. Recommended for instant verification.", example: '96733'}
+        phoneNumber: { type: string, description: "User’s phone number. It can be home, cell, or work phone. This is used for primary phone.", example: '8087531231'}
+        enable: {type: boolean }
     AdminUserName:
       type: string
       properties:
@@ -404,34 +367,13 @@ components:
     SpecsFilterResponse:
       type: object
       properties:
-        requestId:
-          type: string
-          example: 'verifynow'
-          description: The client request ID echoed in the response. 
-        token:
-          type: string
-          example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'
-          description: Unique token generated for each request for verification.
-        profileId:
-          type: string
-          example: '128933531'
-          description: Unique ID assigned to the profile created in the system.
-        profileStatus:
-          type: string
-          example: 'Active'
-          description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked. 
-        statusCode:
-          type: string
-          example: 'VNASM115'
-          description: Alphanumeric code for representing a Success or Failure condition.
-        statusDesc:
-          type: string
-          example: 'User Already Exists'
-          description: Textual description for the status code.
-        statusType:
-          type: string
-          example: 'SUCCESS'
-          description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+        requestId: { type: string, description: "The client request ID echoed in the response.", example: 'verifynow'}
+        token: { type: string, description: "Unique token generated for each request for verification.", example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'}
+        profileId: { type: string, description: "Unique ID assigned to the profile created in the system.", example: '128933531'}
+        profileStatus: { type: string, description: "Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.", example: 'Active'}
+        statusCode: { type: string, description: "Alphanumeric code for representing a Success or Failure condition.", example: 'VNASM115'}
+        statusDesc: { type: string, description: "Textual description for the status code.", example: 'User Already Exists'}
+        statusType: { type: string, description: "This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.", example: 'SUCCESS'}
     VerifynowBadRequestResponse:
       type: object
       properties:
