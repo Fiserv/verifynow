@@ -842,7 +842,7 @@ components:
           description: Unique ID to be passed in by the calling application. 
         Token:
           type: string
-          example: 'VOL02##Zmq_AN:96by0eV1FH@#~DNfer06_M9vu:0To402pA@#~E5foRP_9g:r2P2fKFb@#~YaEX_jC:iUH2zpA8@#~T71SK:xccNW5Duubgr5@#~'
+          example: 'VOL02##Zmq_AN:96by0eV1FH@#~DNfer06_M9vu:0To402pA@#~E5foRP_9g:r2P2fKFb@#~YaEX_jC:iUH2zpA8@#~T71SK:xccNW5Duubgr6@#~'
           description: Unique token generated for each request for verification.
     OutcomeResponse:
       type: object
