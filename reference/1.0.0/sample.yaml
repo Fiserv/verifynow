@@ -1,5 +1,5 @@
 ---
-openapi: 3.0.2
+openapi: 3.0.1
 info:
   title: Dev Portal Tenant APIs.
   description: To onboard properly into the Fiserv Developer Studio as a tenant each
