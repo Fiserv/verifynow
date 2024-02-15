@@ -8,9 +8,9 @@ VerifyNow offers two methods to add and verify account ownership.
 
 <div class="card-body">
 <ul>
-<li>Add account via Online banking - When a user wants to add an account without having account information (e.g., routing numbers, account numbers), they can use Real-Time Verification and Addition (RTVA).</li>
+<li><a href="../docs/?path=docs/automated-account-additions.md">Automated Account Addition</a> - When a user wants to add an account without having account information (e.g., routing numbers, account numbers), they can use Real-Time Verification and Addition (RTVA).</li>
 
-<li>Add account manually - When a user wants to add an account with account information, they will go through the manual account verification process, which involves Instant, Real-Time, and Trial Deposit verifications.</li>
+<li><a href="../docs/?path=docs/add-account-manually.md">Add account manually</a> - When a user wants to add an account with account information, they will go through the manual account verification process, which involves Instant, Real-Time, and Trial Deposit verifications.</li>
 </ul>
 </div>
 
