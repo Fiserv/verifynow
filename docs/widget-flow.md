@@ -5,7 +5,6 @@ The VerifyNow widget works like the VerifyNow APIs, reduces complexity for clien
 
 VerifyNow offers two methods to add and verify account ownership.
 
-
 <div class="card-body">
 <ul>
 <li><a href="../docs/?path=docs/automated-account-additions.md">Automated Account Addition</a> - When a user wants to add an account without having account information (e.g., routing numbers, account numbers), they can use Real-Time Verification and Addition (RTVA).</li>
@@ -152,62 +151,7 @@ The client’s application receives the outcome of the verification through the 
                         </div>
                     </div>
                     </div>
-                    <div class="card-debit">
-                        <div class="content-debit">
-                            <div class="img-debit">
-                                <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/user-workflow.png">
-                            </div>
-                            <div class="details">
-                                <div class="name">User workflow</div>
-                            </div>
-                            <div class="media-icons">
-                                <a href="?path=docs/user-workflow.md">Click View</a>
-                            </div>
-                        </div>
-                        </div>
             </div>
-            <div class="cards-debit">
-                <div class="card-debit">
-                <div class="content-debit">
-                    <div class="img-debit">
-                        <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/acc-verification-status.png">
-                    </div>
-                    <div class="details">
-                        <div class="name">Account Verification status/Exit points</div>
-                    </div>
-                    <div class="media-icons">
-                        <a href="?path=docs/account-verification-status.md">Click View</a>
-                    </div>
-                </div>
-             </div>
-             <div class="card-debit">
-                <div class="content-debit">
-                    <div class="img-debit">
-                        <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/css-integration.png">
-                    </div>
-                    <div class="details">
-                        <div class="name">CSS Integration</div>
-                    </div>
-                    <div class="media-icons">
-                        <a href="?path=docs/css-integration.md">Click View</a>
-                    </div>
-                </div>
-             </div>
-             <div class="card-debit" style= "visibility: hidden">
-                <div class="content-debit">
-                    <div class="img-debit" >
-                        <img src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/edit-debit.png">
-                    </div>
-                    <div class="details">
-                        <div class="name">CSS Integration</div>
-                    </div>
-                    <div class="media-icons">
-                        <a href="?path=docs/css-integration.md">Click View</a>
-                    </div>
-                </div>
-             </div>
-            </div>
-        </div>
         <div class="button-debit">
             <label for="one" class="active one"></label>
             <label for="two" class="two"></label>
