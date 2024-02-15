@@ -44,7 +44,7 @@ All forms of verification will not necessarily be available for all FIs. Users w
 
 </center>
 
-To use Real-Time Verification and Addition, the user will enter the User ID and Password for their bank account and click the Submit button. Go to [Real-Time Verification and Addition](?path=docs/verifynow-account-verification-method/real-time-verification.md)
+To use Real-Time Verification and Addition, the user will enter the User ID and Password for their bank account and click the Submit button.
 
 <center>
 

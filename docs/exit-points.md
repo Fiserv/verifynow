@@ -5,11 +5,9 @@ This below information lists the exit points once each of the verification metho
 
 Control is passed to the client system at the following points: 
 
-
 <center>
 
  ![image](../assets/images/ExitPoints.png)
 
  &nbsp;
-
 </center>

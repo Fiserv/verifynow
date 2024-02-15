@@ -18,25 +18,26 @@ User has selected “Add Account Manually” within the Automated Add Account fl
 </ul>
 </div>
 
-### Step-by-Step Instruction for Add Account Manual Flow
+### Step-by-Step Instruction for Add Account Manually Flow
 
-1.	The client system collects account information from the user prior to initiating the widget. The client system passes the information collected from the user to VerifyNow.
+1.	<b>Instant (Database) Verification</b> </br>
+The client system collects account information from the user prior to initiating the widget. The client system passes the information collected from the user to VerifyNow.
+
 <center>
-
-<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/addexternal-account.png">
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/addexternal-account.png"/>
 
 </center>
                          
 2.	Instant Verification will be attempted first when enabled and Instant Verification in progress screen is displayed 
 <center>
 
-<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/inprogress-screen.png">
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/inprogress-screen.png"/>
 
 </center>
 
 3.	If Instant Verification is inconclusive, VerifyNow offers the user the option to select the Real-time verification method or the Trial Deposit verification method.
 
-4.	Real Time Verification
+4.	<b>Real Time Verification</b>
         <div class="card-body">
         <ul>
         <li>The user is asked to provide their username and password for the online banking portal where the user accesses their account or is given an option to manually verify using Trial Deposits</li>
@@ -57,7 +58,7 @@ User has selected “Add Account Manually” within the Automated Add Account fl
 
 <center>
 
-<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/checkingverification.png">
+<img width="500" height="180" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/checkingverification.png">
 
 </center>
 </br>   
@@ -68,13 +69,13 @@ User has selected “Add Account Manually” within the Automated Add Account fl
         <li>If the user is not approved, VerifyNow checks if the Trial Deposit verification method is available, and if available, gives the user the option to use Trial Deposit verification.</li>
         </ul>
         </div>
-5.Trial Deposit Verification
+5.<b>Trial Deposit Verification</b>
                 <div class="card-body">
                 <ul>
                 <li>To use Trial Deposit Verification, the user clicks the Send Me Two Deposits button.</li>
 <center>
 
-<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verifybankdeposit.png">
+<img width="540" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verify-with-bank-deposit-new.png">
 
 </center>
                 <li>The user clicks the Done button to complete the process.</li>
