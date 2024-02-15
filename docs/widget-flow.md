@@ -114,6 +114,12 @@ The client’s application receives the outcome of the verification through the 
 </div>
 </br>
 
+## See Also
+
+[User workflow](?path=docs/user-workflow.md)</br>
+[Account Verification status/Exit points](?path=docs/account-verification-status.md)</br>
+[CSS Integration](?path=docs/css-integration.md)
+
 <div class="debit-body">
     <div class="debit-container">
         <input type="radio" name="dot" id="one">
