@@ -7,7 +7,9 @@ This method verifies customer’s access to an external bank account. Two small 
 Shown below is an example of how Trial Deposit Verification works.
 
 1. On Monday, VerifyNow makes two trial deposits and a trial debit to the funding account via ACH. 
+
 2. On Tuesday, VerifyNow receives confirmation that the trial deposits/debit were made and then sends an e-mail message to the applicant, notifying them to look for the deposit amounts in the funding account and to return to the system to confirm the deposit amounts. 
+
 3. On Wednesday, the applicant returns to the system and enters the deposit amounts. If the amounts reported by the applicant match the VerifyNow deposits, the applicant’s account ownership is verified.
 
 
