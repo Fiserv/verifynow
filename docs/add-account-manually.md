@@ -4,7 +4,7 @@ The Add account manually flow uses a pre-defined waterfall of verification metho
 
 <center>
 
- <img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtv-processflow.png">
+ <img width="750" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtv-processflow.png">
 
 </center>
 
