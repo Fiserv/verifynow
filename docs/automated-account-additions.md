@@ -28,9 +28,8 @@ All forms of verification will not necessarily be available for all FIs. Users w
 
 <center>
 
-![image](../assets/images/search-box.png)
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaAddExternalAccount.png">
 
-&nbsp;
 
 </center>
 
@@ -38,7 +37,7 @@ All forms of verification will not necessarily be available for all FIs. Users w
 
 <center>
 
-![image](../assets/images/add-account-manually1.png)
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaVerifyinstantly.png">
 
 &nbsp;
 
@@ -48,9 +47,12 @@ To use Real-Time Verification and Addition, the user will enter the User ID and 
 
 <center>
 
-![image](../assets/images/user-login-page.png)
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaexternalaccountauthentication.png">
 
 &nbsp;
+
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaauthenticationinprogress.png">
+
 
 </center>
 
@@ -58,9 +60,11 @@ User will need to choose to add an account fetched by Real Time Verification fro
 
 <center>
 
-![image](../assets/images/adding-external-account.png)
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaVerifyinstantly.png">
 
 &nbsp;
+
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaAddexternalaccountsuccess.png">
 
 </center>
 
