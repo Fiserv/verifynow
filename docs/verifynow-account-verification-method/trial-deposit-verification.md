@@ -6,7 +6,6 @@ This method verifies customer’s access to an external bank account. Two small 
 
 Shown below is an example of how Trial Deposit Verification works.
 
-<b>Example:</b> 
 1. On Monday, VerifyNow makes two trial deposits and a trial debit to the funding account via ACH. 
 2. On Tuesday, VerifyNow receives confirmation that the trial deposits/debit were made and then sends an e-mail message to the applicant, notifying them to look for the deposit amounts in the funding account and to return to the system to confirm the deposit amounts. 
 3. On Wednesday, the applicant returns to the system and enters the deposit amounts. If the amounts reported by the applicant match the VerifyNow deposits, the applicant’s account ownership is verified.
@@ -29,32 +28,9 @@ Shown below is an example of how Trial Deposit Verification works.
 
 </center>
 
-<center>
-
-<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/50-50-page-new.png">
-
-
-</center>
-
-<center>
-
-<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verify-with-bank-deposit-new.png">
-
-</center>
-
- &nbsp;
-
-<center>
-
-<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/two-deposit-on-way-new.png">
-
-</center>
-
-<center>
-
-<img width="300" src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/verify-deposit-amount-new.png">
-
-</center>
+## See Also
+[Instant (Database) Verification](?path=docs/verifynow-account-verification-method/instant-verification.md)</br>
+[Real-Time (using FI login) Verification](?path=docs/verifynow-account-verification-method/real-time-verification.md)
 
 <div class="debit-card-button-container">
 <div class="debit-card-left-button">
