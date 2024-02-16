@@ -90,7 +90,6 @@ Control is passed to the client system at the following points:
 </tr>
 </table>
 
-
 ## See Also
 [Automated Account Addition](?path=docs/automated-account-additions.md)</br>
 [Add Account Manually](?path=docs/add-account-manually.md)</br>
