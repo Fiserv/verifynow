@@ -6,14 +6,6 @@ This method provides instant bank account ownership or account status verificati
 
  &nbsp;
 
-
-
-<center>
-
-<b>Instant Verification Process Flow (Widget flow)</b>
-
-</center>
-
 <center>
 
 ![Images](../../assets/images/instant-verification-sequence.png)
@@ -22,21 +14,9 @@ This method provides instant bank account ownership or account status verificati
 
 </center>
 
-
-<center>
-
-![Images](../../assets/images/add-account-flow.png)
-
-</center>
-
-
-
-<center>
-
-<img src="https://raw.githubusercontent.com/Fiserv/VerifyNow/develop/assets/images/process-image-flow.png">
-
-</center>
-
+<p>For more information about the account verification process flow, see 
+<a href="?path=docs/add-account-manually.md">Add Account Manually.</a>
+</p>
 
 &nbsp;
 
