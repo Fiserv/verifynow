@@ -30,6 +30,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 </center>
 
+
 ## See Also
 [Instant (Database) Verification](?path=docs/verifynow-account-verification-method/instant-verification.md)</br>
 [Real-Time (using FI login) Verification](?path=docs/verifynow-account-verification-method/real-time-verification.md)
