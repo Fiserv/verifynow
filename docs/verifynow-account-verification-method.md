@@ -4,11 +4,11 @@ The Account Ownership verification service verifies account ownership by checkin
 
 Account ownership verification is performed using the below three verification methods.  The client has the flexibility to specify at the home level and at the user level which account verification methods should be enabled. The specific verification method to be used for a user is passed by the client system in the verification request.
 
-<table border="1">
+<table border="1" style="font: 16px/24px "Univers for Fiserv";">
 <tr style="background-color:#bfbfbf">
-<th>Verification Method</th>
-<th>Description</th>
-<th>User Interaction and Ease</th>
+<th style="text-align:center">Verification Method</th>
+<th style="text-align:center">Description</th>
+<th style="text-align:center">User Interaction and Ease</th>
 </tr>
 <tr>
 <td>Instant</td>
@@ -26,7 +26,7 @@ Account ownership verification is performed using the below three verification m
 <td><b>Medium Interaction, Medium Ease</b> – User must initiate the trial deposit process and must return to verify the deposit amounts.</td>
 </tr>
 </table>
-
+&nbsp;
 <div>Click the below images to know more about Account Verification Methods.
     <div class="account-body">
     <div class="debit-container">
