@@ -27,7 +27,6 @@ The workflow for creating a new user is as follows:
 
 </center>
 
-
 <!-- type: tab -->
 
 ## Returning User
