@@ -12,7 +12,6 @@ VerifyNow offers two flows to add and verify account ownership that can be pre-d
 
 Below shown figures explain the overview of the verification and addition process.
 
-
 <center>
 
  ![image](../assets/images/addbankaccountflowchart.png)
