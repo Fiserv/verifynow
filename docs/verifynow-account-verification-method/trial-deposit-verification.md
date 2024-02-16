@@ -22,7 +22,6 @@ Shown below is an example of how Trial Deposit Verification works.
 <b>Trial Deposit Initiate Sequence</b>
 </center>
 
-
 <center>
 
 ![Images](../../assets/images/td-sequence2.png)
@@ -30,6 +29,7 @@ Shown below is an example of how Trial Deposit Verification works.
 <b>Trial Deposit Verification Sequence</b>
 
 </center>
+
 
 ## See Also
 [Instant (Database) Verification](?path=docs/verifynow-account-verification-method/instant-verification.md)</br>

@@ -4,6 +4,7 @@
 
 The below table explains the different statuses of the account verification and their respective description for each status.
 
+
 <table border="1">
 <tr style="background-color:#bfbfbf">
 <th>Status</th>
@@ -89,7 +90,6 @@ Control is passed to the client system at the following points:
 <td>If the Account Ownership could not be verified conclusively using Trial Deposit Verification, then the user cannot proceed, but can attempt ownership verification using another verification method.</td>
 </tr>
 </table>
-
 
 ## See Also
 [Automated Account Addition](?path=docs/automated-account-additions.md)</br>

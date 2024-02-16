@@ -21,6 +21,7 @@ VerifyNow offers two methods to add and verify account ownership.
 
 </center>
 
+
 ### How to Integrate VerifyNow Widget?
 
 <div>
