@@ -15,6 +15,7 @@ The Verify Account API verifies the users bank account instantly. For verifying 
 </tr>
 </table>
 
+
 The following sequence diagram shows the flow for the Verify Account API Integration.
 
 <center>
