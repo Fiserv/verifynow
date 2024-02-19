@@ -21,7 +21,7 @@ Below sequence diagrams represent Real-Time Verification flows.
 
 <center>
 
-![Images](../../assets/images/Real-Time-Flow.png)
+![Images](../../assets/images/VerifyNow.png)
 
 </center>
 
