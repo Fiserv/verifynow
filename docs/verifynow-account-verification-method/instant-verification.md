@@ -6,6 +6,7 @@ This method provides instant bank account ownership or account status verificati
 
  &nbsp;
 
+
 <center>
 
 ![Images](../../assets/images/instant-verification-sequence.png)
@@ -17,6 +18,14 @@ This method provides instant bank account ownership or account status verificati
 <p>For more information about the account verification process flow, see 
 <a href="?path=docs/add-account-manually.md">Add Account Manually.</a>
 </p>
+
+&nbsp;
+
+## See Also
+
+[Real-Time (using FI login) Verification](?path=docs/verifynow-account-verification-method/real-time-verification.md)</br>
+[Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md)</br>
+
 
 &nbsp;
 
