@@ -43,7 +43,7 @@ All forms of verification will not necessarily be available for all FIs. Users w
 
 </center>
 
-To use Real-Time Verification and Addition, the user will enter the User ID and Password for their bank account and click the Submit button.
+3.  To use Real-Time Verification and Addition, the user will enter the User ID and Password for their bank account and click the Submit button.
 
 <center>
 
@@ -56,7 +56,7 @@ To use Real-Time Verification and Addition, the user will enter the User ID and 
 
 </center>
 
-User will need to choose to add an account fetched by Real Time Verification from external FI or user can choose to add an account manually if they are not able to find the account
+4.  User will need to choose to add an account fetched by Real Time Verification from external FI or user can choose to add an account manually if they are not able to find the account
 
 <center>
 
