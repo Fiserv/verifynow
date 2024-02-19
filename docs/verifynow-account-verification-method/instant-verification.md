@@ -6,6 +6,7 @@ This method provides instant bank account ownership or account status verificati
 
  &nbsp;
 
+
 <center>
 
 ![Images](../../assets/images/instant-verification-sequence.png)
