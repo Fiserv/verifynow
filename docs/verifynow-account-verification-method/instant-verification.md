@@ -37,6 +37,10 @@ This method provides instant bank account ownership or account status verificati
 
 </center>
 
+## See Also
+
+[Real-Time (using FI login) Verification](?path=docs/verifynow-account-verification-method/real-time-verification.md)</br>
+[Trial Deposit Verification](?path=docs/verifynow-account-verification-method/trial-deposit-verification.md)</br>
 
 &nbsp;
 
