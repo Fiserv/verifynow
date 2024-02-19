@@ -8,20 +8,13 @@ If account details are not passed in the request, user will be requested to add 
 
 For clients that require access to the data collected from the financial institution for internal decisioning, analysis, or additional services, clients may choose to integrate to [AllData® Aggregation](/product/AllDataAggregation?branch=develop) directly in conjunction with VerifyNow for passive [Instant Verification](?path=docs/verifynow-account-verification-method/instant-verification.md).
 
-<center>
-
-![image](../../assets/images/automated_account_addition.png)
-
-&nbsp;
-</center>
-
-The step-by-step instructions for user and account verification flow with Real-Time Verification and Addition (OAuth enabled) are shown in [Automated Account Addition](?path=docs/automated-account-additions.md) and Real-Time Verification (Non-OAuth enabled) in [Add Account Manually](?path=docs/add-account-manually.md).
+The step-by-step instructions for user and account verification flow with Real-Time Verification and Addition (OAuth enabled) are shown in [Automated Account Addition](?path=docs/automated-account-additions.md) and Real-Time Verification in [Add Account Manually](?path=docs/add-account-manually.md).
 
 Below sequence diagrams represent Real-Time Verification flows.
 
 <center>
 
-![Images](../../assets/images/Real-Time-Flow.png)
+![Images](../../assets/images/VN%20diagram.png)
 
 </center>
 
