@@ -312,7 +312,7 @@ The client’s application receives the outcome of the verification through the 
         position: relative;
     }
     .main-card-debit .cards-debit .card-debit {
-        width: calc(100% / 3 - 10px);
+        width: calc(100% / 2 - 10px);
         background: white;
         border-radius: 10px;
         padding: 30px;
