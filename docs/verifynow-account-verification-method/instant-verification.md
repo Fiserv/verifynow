@@ -18,6 +18,8 @@ This method provides instant bank account ownership or account status verificati
 <a href="?path=docs/add-account-manually.md">Add Account Manually.</a>
 </p>
 
+&nbsp;
+
 ## See Also
 
 [Real-Time (using FI login) Verification](?path=docs/verifynow-account-verification-method/real-time-verification.md)</br>
