@@ -60,7 +60,7 @@ User will need to choose to add an account fetched by Real Time Verification fro
 
 <center>
 
-<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaVerifyinstantly.png">
+<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaselectinstitution.png">
 
 &nbsp;
 
