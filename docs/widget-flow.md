@@ -282,6 +282,7 @@ The client’s application receives the outcome of the verification through the 
         width: 100%;
         height: 100%;
     }
+    
     .markdown-body p{
         margin-bottom:19px
     } 
