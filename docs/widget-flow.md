@@ -278,10 +278,14 @@ The client’s application receives the outcome of the verification through the 
         z-index: 777;
         content: '';
         position: absolute;
-        background: #f1f1f1;
+        background: #ffffff;
         width: 100%;
         height: 100%;
     }
+    
+    .markdown-body p{
+        margin-bottom:19px
+    } 
     ::selection {
         background: #ff676d;
         color: white;
