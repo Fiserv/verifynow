@@ -10,9 +10,10 @@ For clients that require access to the data collected from the financial institu
 
 The step-by-step instructions for user and account verification flow with Real-Time Verification and Addition (OAuth enabled) are shown in [Automated Account Addition](?path=docs/automated-account-additions.md) and Real-Time Verification in [Add Account Manually](?path=docs/add-account-manually.md).
 
-Below sequence diagrams represent Real-Time Verification flows.
+
 
 <center>
+<b>Real Time Verification Sequence</b>
 
 ![Images](../../assets/images/VN%20diagram.png)
 
@@ -27,7 +28,7 @@ Below sequence diagrams represent Real-Time Verification flows.
 
 <div class="debit-card-button-container">
 <div class="debit-card-left-button">
-<a href="?path=docs/verifynow-account-verification-method/real-time-verification.md">Back</a>
+<a href="?path=docs/verifynow-account-verification-method/instant-verification.md">Back</a>
 </div>
 <div class="debit-card-right-button"><a href="?path=docs/verifynow-account-verification-method/trial-deposit-verification.md">Next</a></div>
 </div>

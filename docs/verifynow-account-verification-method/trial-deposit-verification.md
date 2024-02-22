@@ -37,7 +37,7 @@ Shown below is an example of how Trial Deposit Verification works.
 
 <div class="debit-card-button-container">
 <div class="debit-card-left-button">
-<a href="?path=docs/verifynow-account-verification-method.md">Back</a>
+<a href="?path=docs/verifynow-account-verification-method/real-time-verification.md">Back</a>
 </div>
 </div>
 
