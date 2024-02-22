@@ -51,7 +51,7 @@ All forms of verification will not necessarily be available for all FIs. Users w
 
 &nbsp;
 
-<img width="500" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaauthenticatioinprogress.png">
+<img width="500" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaauthenticationinprogress.png">
 
 
 </center>
