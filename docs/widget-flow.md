@@ -262,7 +262,7 @@ The client’s application receives the outcome of the verification through the 
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: sans-serif;
+    /* font-family: sans-serif;*/
     }
     .debit-body {
         display: flex;

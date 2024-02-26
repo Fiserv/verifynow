@@ -84,7 +84,7 @@ Account ownership verification is performed using the below three verification m
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: sans-serif;
+        /*font-family: sans-serif;*/
     }
     .account-body {
         display: flex;
