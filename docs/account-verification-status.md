@@ -5,7 +5,7 @@
 The below table explains the different statuses of the account verification and their respective description for each status.
 
 
-<table border="1">
+<table border="1" style="width: fit-content;">
 <tr style="background-color:#bfbfbf">
 <th>Status</th>
 <th>Description</th>
