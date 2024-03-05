@@ -98,7 +98,7 @@ paths:
           content: 
             application/json:
               schema:
-                $ref: '#/components/schemas/OutcomeResponse'
+                $ref: '#/components/schemas/OutcomeTokenVerificationResponse'
         "400":
           description: Bad Request
           content:
@@ -584,10 +584,10 @@ components:
                       description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
-    RealTimeVerificationResponse:
+    OutcomeTokenVerificationResponse:
       type: object
       properties:
-        VerifyNowResponse:
+        VerifyNowStatusResponse:
           type: array
           items:
             type: object
@@ -596,24 +596,66 @@ components:
                 type: string
                 example: 'verifynow'
                 description: The client request ID echoed in the response.
-              Token:
-                type: string
-                example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'
-                description: Unique token generated for each request for verification.
-              profileInfo:
+              accounts:
                 type: array
                 items:
                   type: object
                   properties:
-                    profileId:
-                      type: string
-                      example: '128933531'
-                      description: Unique ID assigned to the profile created in the system.
-                    profileStatus:
-                      type: string
-                      example: 'Active'
-                      description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.
-                description: profileInfo Details
+                    accountInfo:
+                      type: array
+                      items:
+                        type: object
+                        properties: 
+                          accountGroup:
+                            type: string
+                            example: 'Cash'
+                            description: Account group can have a value such as Cash, Investment, Credit, Card,etc.
+                          accountId:
+                            type: string
+                            example: '12345'
+                            description: Unique ID assigned to the account created in the Fiserv VerifyNow system.
+                          accountStatus:
+                            type: string
+                            example: '12345'
+                            description: "Current status of the account. Possible account statuses are: Approved, Denied, In-Progress, Suspended, Inactive, and Inconclusive"
+                          accountType:
+                            type: string
+                            example: 'savings'
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages."
+                          verificationInfoList:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                verificationInfo:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties: 
+                                      verificationType:
+                                        type: string
+                                        example: 'Instant EWS'
+                                        description: "Type of verification: Instant EWS, Real Time, Trial Deposit, Partner Approved (configurable value related to the migration case)"
+                                      verificationStatus:
+                                        type: string
+                                        example: 'Inconclusive'
+                                        description: "Current verification status. Possible values for Instant EWS: Passed, Denied, and Inconclusive.For Real Time: Passed,In-progress, and Inconclusive.For Trial Deposit: Transfer Initiated, Transfer Complete, Transfer Failed, Amount Verification Completed, Amount Verification Failed, Transfer Expired"
+                                      verificationAttempts:
+                                        type: string
+                                        example: '1'
+                                        description: Number of attempts made to verify the account. This is applicable to Real Time and Trial Deposit.
+                                      dateOfAttempt:
+                                        type: string
+                                        example: ' '
+                                        description: "Date of last verification attempt made in MM-DD-YYYY format"
+                                      verificationSourceResponse:
+                                        type: string
+                                        example: ' '
+                                        description: "Reserved for future use"
+                                      matchType:
+                                        type: string
+                                        example: ' '
+                                        description: Type of match for fuzzy logic, such as nickname, partial account number, etc.
               status:
                 type: array
                 items:
@@ -632,7 +674,7 @@ components:
                       example: 'SUCCESS'
                       description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
                 description: status Details
-          description: VerifyNowResponse Details
+          description: VerifyNowStatusResponse Details
     trialDepositVerificationRequest:
       type: object
       properties:
