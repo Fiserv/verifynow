@@ -30,7 +30,7 @@ User has selected “Add Account Manually” within the Automated Add Account fl
  </div>
 
 <center>
-<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/addexternal-account.png"/>
+<img width="550" height="350" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/addexternal-account.png"/>
 
 </center>
                          
@@ -41,7 +41,7 @@ User has selected “Add Account Manually” within the Automated Add Account fl
         </li></ul></div>
 <center>
 
-<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/inprogress-screen.png"/>
+<img width="550" height="350" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/inprogress-screen.png"/>
 
 </center>
 
@@ -60,7 +60,7 @@ If Instant Verification is inconclusive, VerifyNow offers the user the option to
 </br>
 <center>
 
-<img width="550" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/transferfund-externalaccount.png">
+<img width="550" height="350" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/transferfund-externalaccount.png">
 
 </center>
 </br>
@@ -89,7 +89,7 @@ If Instant Verification is inconclusive, VerifyNow offers the user the option to
                 <li>To use Trial Deposit Verification, the user clicks the Send Me Two Deposits button.</li>
 <center>
 
-<img width="540" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verify-with-bank-deposit-new.png">
+<img width="540" height="350" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/verify-with-bank-deposit-new.png">
 
 </center>
                 <li>The user clicks the Done button to complete the process.</li>
