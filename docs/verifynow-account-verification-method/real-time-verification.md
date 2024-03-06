@@ -8,7 +8,7 @@ If account details are not passed in the request, user will be requested to add 
 
 For clients that require access to the data collected from the financial institution for internal decisioning, analysis, or additional services, clients may choose to integrate to [AllData® Aggregation](/product/AllDataAggregation?branch=develop) directly in conjunction with VerifyNow for passive [Instant Verification](?path=docs/verifynow-account-verification-method/instant-verification.md).
 
-Refer to [Widget Flow](?path=docs/widget-flow.md) for Step by Step Instructions of Real Time Verification
+Refer to [Widget Flow](?path=docs/widget-flow.md) for Step by Step Instructions of Real Time Verification.
 
 
 
