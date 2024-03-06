@@ -914,14 +914,14 @@ components:
           items:
             type: object
             properties:
-        statusDesc:
-          type: string
-          example: 'VerifyNow Service is Up and Running'
-          description: Textual description for the status code.
-        statusType:
-          type: string
-          example: 'SUCCESS'
-          description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+              statusDesc:
+                type: string
+                example: 'VerifyNow Service is Up and Running'
+                description: Textual description for the status code.
+              statusType:
+                type: string
+                example: 'SUCCESS'
+                description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
     TenantProviderResponse:
       type: object
       properties:
