@@ -3,8 +3,20 @@
 The Add account manually flow uses a pre-defined waterfall of verification methods based on what verification methods are enabled for the client. The verification waterfall begins with Instant Verification followed by Real Time Verification (when the financial institution is eligible), then/or Trial Deposits.
 
 <center>
+        <b>Instant Verification Process Flow</b> 
+ <img width="750" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/instant-verification-flow.png">
 
- <img width="750" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtv-processflow.png">
+</center>
+&nbsp;
+<center>
+        <b>Real-time Verification Process Flow</b> 
+ <img width="750" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/realTime-verification-flow.png">
+
+</center>
+&nbsp;
+<center>
+        <b>Trial Deposit Verification Process Flow</b> 
+ <img width="750" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/trial-deposit-verification-flow.png">
 
 </center>
 
