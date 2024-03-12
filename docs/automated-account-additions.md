@@ -28,9 +28,8 @@ All forms of verification will not necessarily be available for all FIs. Users w
 
 <center>
 
-![image](../assets/images/search-box.png)
+<img width="500" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaaddexternalacct.png">
 
-&nbsp;
 
 </center>
 
@@ -38,7 +37,7 @@ All forms of verification will not necessarily be available for all FIs. Users w
 
 <center>
 
-![image](../assets/images/add-account-manually1.png)
+<img width="500" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaVerifyinstantly.png">
 
 &nbsp;
 
@@ -48,20 +47,34 @@ All forms of verification will not necessarily be available for all FIs. Users w
 
 <center>
 
-![image](../assets/images/user-login-page.png)
+<img width="500" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaexternalaccountauthentication.png">
 
 &nbsp;
+
+<img width="500" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaauthenticationinprogress.png">
+
 
 </center>
 
-4.  User will need to choose to add an account fetched by Real Time Verification from external FI or user can choose to add an account manually if they are not able to find the account
+4.  User will need to choose to add an account fetched by Real Time Verification and Addition from external FI or user can choose to add an account manually if they are not able to find the account.
+
+5.  Click Next.
+&nbsp;
 
 <center>
 
-![image](../assets/images/adding-external-account.png)
+<img width="500" height="300" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaselectinstitution.png">
 
 &nbsp;
+</center>
 
+6.  Account Verified Successfully screen is displayed.
+
+<center>
+
+<img width="500" height="250" src="https://raw.githubusercontent.com/Fiserv/verifynow/develop/assets/images/rtvaacctaddedsuccess.png">
+
+&nbsp;
 </center>
 
 ### See Also

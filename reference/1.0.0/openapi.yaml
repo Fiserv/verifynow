@@ -50,14 +50,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SpecsFilterRequest'
+              $ref: '#/components/schemas/TokenVerificationRequest'
       responses:
         "200":
           description: Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SpecsFilterResponse'
+                $ref: '#/components/schemas/TokenVerificationResponse'
         "400":
           description: Bad Request
           content:
@@ -159,7 +159,7 @@ paths:
                 $ref: '#/components/schemas/PingInternalErrorResponse'
       x-group-name: VerifyNow APIs
       x-proxy-name: Ping - Widget Flow
-  /cashedgerws/verifynow/verify/v2:
+  /cashedgerws/verifynow/verify/v3:
     post:
       tags:
       - Instant
@@ -171,14 +171,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/SpecsFilterRequest'
+              $ref: '#/components/schemas/NonWidgetVerificationRequest'
       responses:
         "200":
           description: Created
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/SpecsFilterResponse'
+                $ref: '#/components/schemas/NonWidgetVerificationResponse'
         "400":
           description: Bad Request
           content:
@@ -285,95 +285,6 @@ components:
                         description: Title
                   description: JourneyCard
             description: JourneyCards
-    SpecsFilterRequest:
-      type: object
-      properties:
-        requestId: {type: string, description: "Unique ID to be passed in by the calling application.", example: 'VerifyNow' }
-        firstName: {type: string, description: "User’s first name. Required for all types of account verification.", example: 'KARAOne'}
-        lastName: { type: string, description: "User’s last name. Required for all types of account verification.", example: 'demoone'}
-        middleName: { type: string, description: "User’s middle name", example: ' '}
-        userId: { type: string, description: "Unique identification number that is assigned to user by client.", example: 'demoone'}
-        email: { type: string, description: "User’s email address. This is for primary email. Required for TD verification to provide status and reminders.", example: 'samstestone@mail.com'}
-        ssn: { type: string, description: "User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.", example: '987612300'}
-        addressL-ine1: { type: string, description: "User’s address street 1. Recommended for instant verification.", example: '9384 POODLE LN'}
-        city: { type: string, description: "User’s city. Recommended for instant verification.", example: 'KAILAU'}
-        state: { type: string, description: "User’s state. Recommended for instant verification.", example: 'HI'}
-        zipCode: { type: string, description: "User’s ZIP Code. Recommended for instant verification.", example: '96733'}
-        phoneNumber: { type: string, description: "User’s phone number. It can be home, cell, or work phone. This is used for primary phone.", example: '8087531231'}
-        enable: {type: boolean }
-    AdminUserName:
-      type: string
-      properties:
-        AdminUserName:
-          type: string
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Subcategories
-          description: Categories
-    AdminPassword:
-      type: string
-      properties:
-        AdminPassword:
-          type: string
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Subcategories
-          description: Categories
-    HomeId:
-      type: string
-      properties:
-        HomeId:
-          type: string
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Subcategories
-          description: Categories
-    SpecsFilterResponse:
-      type: object
-      properties:
-        requestId: { type: string, description: "The client request ID echoed in the response.", example: 'verifynow'}
-        token: { type: string, description: "Unique token generated for each request for verification.", example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'}
-        profileId: { type: string, description: "Unique ID assigned to the profile created in the system.", example: '128933531'}
-        profileStatus: { type: string, description: "Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.", example: 'Active'}
-        statusCode: { type: string, description: "Alphanumeric code for representing a Success or Failure condition.", example: 'VNASM115'}
-        statusDesc: { type: string, description: "Textual description for the status code.", example: 'User Already Exists'}
-        statusType: { type: string, description: "This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.", example: 'SUCCESS'}
     VerifynowBadRequestResponse:
       type: object
       properties:
@@ -491,7 +402,7 @@ components:
         status:
           type: string
           example: '500' 
-    RealTimeVerificationRequest:
+    TokenVerificationRequest:
       type: object
       properties:
         VerifyNowRequest: 
@@ -539,66 +450,73 @@ components:
                       example: '987612300'
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
-                      type: string
-                      example: '9384 POODLE LN'
-                      description: User’s address street 1. Recommended for instant verification.
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          addressLine1:
+                            type: string
+                            example: '7958 SKIMMER RD'
+                            description: User’s address street 1. Recommended for instant verification.
+                          city:
+                            type: string
+                            example: 'SAN FRANCISCO'
+                            description: User’s city. Recommended for instant verification.
+                          state:
+                            type: string
+                            example: 'CA'
+                            description: User’s state. Recommended for instant verification.
+                          zipCode:
+                            type: string
+                            example: '56987'
+                            description: User’s zipCode. Recommended for instant verification.
                     phoneNumber:
                       type: string
                       example: '8087531231'
                       description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
+                    dateOfBirth:
+                      type: string
+                      example: '08-15-1996'
+                      description: "User’s date of birth in MM-DD-YYYY format. Recommended for instant verification and profile and account migration from VerifyNow to TransferNow, OpenNow, and FundNow services"
                 description: Add ProfileDetails
               accountOwnershipVerification:
                 type: array
                 items:
                   type: object
                   properties:
-                    accountDetails:
-                      type: array
-                      items:
-                        type: object
-                        properties:
-                          creditAccountNumber:
-                            type: string
-                            example: '8087531231'
-                            description: Account Number.
-                          accountType:
-                            type: string
-                            example: 'Savings'
-                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
-                          routingNumber:
-                            type: string
-                            example: '122199983'
-                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
-                      description: User accountDetails
                     realTimeVerification:
                       type: string
+                      example: 'enabled or disabled'
                       description: realTimeVerification
                     instantVerification:
                       type: string
+                      example: 'enabled or disabled'
                       description: Instant verification.
                     trialDepositVerification:
                       type: string
+                      example: 'enabled or disabled'
                       description: trialDepositVerification
                     realTimeVerificationAndAddition:
                       type: string
+                      example: 'enabled or disabled'
                       description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
-    RealTimeVerificationResponse:
+    TokenVerificationResponse:
       type: object
       properties:
-        VerifyNowResponse:
+        VerifyNowResponse: 
           type: array
           items:
             type: object
             properties:
               requestId:
                 type: string
-                example: 'verifynow'
-                description: The client request ID echoed in the response.
-              Token:
+                example: 'VOL02MEgzJndQRd'
+                description: Unique ID to be passed in by the calling application.
+              token:
                 type: string
-                example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'
+                example: 'VOL02##O0j_m2:u@#~t2HCtW_Ri:TG9uVsA68@#~Tn1o_wO:v1C8Rw6K@#~J21I5:SvV29G24DsYdB@#~'
                 description: Unique token generated for each request for verification.
               profileInfo:
                 type: array
@@ -607,13 +525,12 @@ components:
                   properties:
                     profileId:
                       type: string
-                      example: '128933531'
+                      example: '252601196'
                       description: Unique ID assigned to the profile created in the system.
                     profileStatus:
                       type: string
                       example: 'Active'
-                      description: Current status of the profile. Possible profile statuses are Active, Suspended, and Locked.
-                description: profileInfo Details
+                      description: "Current status of the profile. Possible profile statuses are: Active, Suspended, and Locked."
               status:
                 type: array
                 items:
@@ -632,8 +549,7 @@ components:
                       example: 'SUCCESS'
                       description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
                 description: status Details
-          description: VerifyNowResponse Details
-    trialDepositVerificationRequest:
+    NonWidgetVerificationRequest:
       type: object
       properties:
         VerifyNowRequest: 
@@ -650,6 +566,10 @@ components:
                 items:
                   type: object
                   properties:
+                    namePrefix:
+                      type: string
+                      example: 'Mr'
+                      description: User name prefix
                     Firstname:
                       type: string
                       example: 'KARAOne'
@@ -662,6 +582,10 @@ components:
                       type: string
                       example: ' '
                       description: User’s middle name.
+                    nameSuffix:
+                      type: string
+                      example: 'Jr'
+                      description: User name suffix
                     email:
                       type: string
                       example: 'samstestone@mail.com'
@@ -681,52 +605,98 @@ components:
                       example: '987612300'
                       description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
                     Address:
-                      type: string
-                      example: '9384 POODLE LN'
-                      description: User’s address street 1. Recommended for instant verification.
-                    phoneNumber:
-                      type: string
-                      example: '8087531231'
-                      description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
-                description: Add ProfileDetails
-              accountOwnershipVerification:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    accountDetails:
                       type: array
                       items:
                         type: object
                         properties:
-                          creditAccountNumber:
+                          addressLine1:
                             type: string
-                            example: '8087531231'
-                            description: Account Number
-                          accountType:
+                            example: '7958 SKIMMER RD'
+                            description: User’s address street 1. Recommended for instant verification.
+                          city:
                             type: string
-                            example: 'savings'
-                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
-                          routingNumber:
+                            example: 'SAN FRANCISCO'
+                            description: User’s city. Recommended for instant verification.
+                          state:
                             type: string
-                            example: '122199983'
-                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
-                      description: User accountDetails
-                    realTimeVerification:
+                            example: 'CA'
+                            description: User’s state. Recommended for instant verification.
+                          zipCode:
+                            type: string
+                            example: '56987'
+                            description: User’s zipCode. Recommended for instant verification.
+                          addressCode:
+                            type: string
+                            example: 'Home'
+                            description: Type of address.
+                    phoneNumber:
                       type: string
-                      description: realTimeVerification
-                    instantVerification:
+                      example: '8087531231'
+                      description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
+                    dateOfBirth:
                       type: string
-                      description: Instant verification.
-                    trialDepositVerification:
+                      example: '08-15-1996'
+                      description: "User’s date of birth in MM-DD-YYYY format. Recommended for instant verification and profile and account migration from VerifyNow to TransferNow, OpenNow, and FundNow services"
+                    idType:
                       type: string
-                      description: trialDepositVerification
-                    realTimeVerificationAndAddition:
+                      example: '1'
+                      description: "ID Type: 1 = Driver’s License 2 = State ID Required if IdNumber is sent."                
+                    idNumber:
                       type: string
-                      description: realTimeVerificationAndAddition
-                description: Add accountOwnershipVerification Details
+                      example: '516787'
+                      description: "Required if Id Type is sent"
+                    idAddress:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          addressLine1:
+                            type: string
+                            example: '7958 SKIMMER RD'
+                            description: User’s address street 1. Recommended for instant verification.
+                          city:
+                            type: string
+                            example: 'SAN FRANCISCO'
+                            description: User’s city. Recommended for instant verification.
+                          state:
+                            type: string
+                            example: 'CA'
+                            description: User’s state. Recommended for instant verification.
+                          zipCode:
+                            type: string
+                            example: '56987'
+                            description: User’s zipCode. Recommended for instant verification.
+                          issuedState:
+                            type: string
+                            example: 'CA'
+                            description: State that issued the user’s ID. Recommended for verification
+                          addressCode:
+                            type: string
+                            example: 'Home'
+                            description: Type of address.
+                    sponsorIdentifier:
+                      type: string
+                      example: '10270'
+                      description: Sponsor ID. Used for Resellers. .
+                    productIdentifier:
+                      type: string
+                      example: 'RXP'
+                      description: product ID. Used for Resellers. .
+                    ipAddress:
+                      type: string
+                      example: '123.45.76.88'
+                      description: User’s IP address. Recommended for identity verification  
+                description: Add ProfileDetails
+              identityVerification:
+                      type: string
+                      example: 'true'
+                      description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
+              idVerificationType:
+                      type: string
+                      example: 'Non_interactive'
+                      description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
           description: VerifyNowRequest Details
-    trialDepositVerificationResponse:
+    NonWidgetVerificationResponse:
       type: object
       properties:
         VerifyNowResponse:
@@ -734,13 +704,9 @@ components:
           items:
             type: object
             properties:
-              requestId:
+              token:
                 type: string
-                example: 'verifynow'
-                description: The client request ID echoed in the response.
-              Token:
-                type: string
-                example: 'VOL02##2fF_n2:o@#~xRiXZ7_YU:CYe2D8bSe@#~Tgr1_rm:AWsGTiBE@#~Yinmi:NQ0dg9dtGn4lx@#~'
+                example: 'undefined'
                 description: Unique token generated for each request for verification.
               profileInfo:
                 type: array
@@ -756,6 +722,54 @@ components:
                       example: 'Active'
                       description: Name
                 description: profileInfo Details
+              identityVerificationDecision:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    finalOutcome:
+                      type: string
+                      example: 'review'
+                      description: "Contains the Identity Verification decision for the given profile.Possible values: Approve, Review, Decline The calling application must look for this element’s value and make a business flow decision"
+                    finalDecision:
+                      type: string
+                      example: 'equive_fdn2'
+                      description: Contains the Identity Verification decision class name.
+                    dataSources:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          dataSource:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                dataSourceName:
+                                  type: string
+                                  example: 'Equifax_eId Verifier'
+                                  description: "Name of the data source. Currently only LexisNexis is supported. The value that must be passed to this field is: Lexis Nexis"
+                                dataSourceAttributes:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties:
+                                      dataSourceAttribute:
+                                        type: array
+                                        items:
+                                          type: object
+                                          properties:
+                                            attirbuteName:
+                                              type: string
+                                              example: 'equive_fdn2'
+                                              description: Data source attribute name
+                                            attirbuteValue:
+                                              type: string
+                                              example: 'equive_fdn2'
+                                              description: Data source attribute 
+                            description: DataSource Details                    
+                      description: DataSources Details                          
+                description: Identity Verification Decision Details
               status:
                 type: array
                 items:
@@ -789,62 +803,94 @@ components:
     OutcomeResponse:
       type: object
       properties:
-        requestId:
-          type: string
-          example: 'verifynow'
-          description: The client request ID echoed in the response. 
-        accountGroup:
-          type: string
-          example: 'Cash'
-          description: Account group can have a value such as Cash, Investment, Credit, Card, etc.
-        accountId:
-          type: string
-          example: '1672680059'
-          description: Unique ID assigned to the account created in the Fiserv VerifyNow system.
-        accountStatus:
-          type: string
-          example: 'In-progress'
-          description: Current status of the account. Possible account statuses are Approved, Denied, In-Progress, Suspended, Inactive, and Inconclusive.
-        accountType:
-          type: string
-          example: 'Savings'
-          description: Account type based on Group. For Group Cash are Checking, Savings, MMA Checking, MMA Savings For Group Investment are Brokerages.
-        verificationType:
-          type: string
-          example: 'Instant EWS'
-          description: Type of verification are Instant EWS, Real Time, Trial Deposit, Real Time Verification and Addition, Partner Approved (configurable value related to the migration case).
-        verificationStatus:
-          type: string
-          example: 'Inconclusive'
-          description: "Current verification status. Possible values for Instant EWS: Passed, Denied, and Inconclusive. For Real Time: Passed, In-progress, and Inconclusive. For Trial Deposit: Transfer Initiated, Transfer Complete, Transfer Failed, Amount Verification Completed, Amount Verification Failed, Transfer Expired."
-        verification Attempts:
-          type: string
-          example: '1'
-          description: Number of attempts made to verify the account. This is applicable to Real Time and Trial Deposit.
-        dateOfAttempt:
-          type: string
-          example: ' '
-          description: Date of last verification attempt made in "MM-DD-YYYY" format.
-        verification SourceResponse:
-          type: string
-          example: ' '
-          description: Reserved for future use.
-        matchType:
-          type: string
-          example: ' '
-          description: Type of match for fuzzy logic, such as nickname, partial account number, etc.
-        statusCode:
-          type: string
-          example: 'VNASM101'
-          description: Alphanumeric code for representing a Success or Failure condition.
-        statusDesc:
-          type: string
-          example: 'Account Approved'
-          description: Textual description for the status code.
-        statusType:
-          type: string
-          example: 'SUCCESS'
-          description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+        VerifyNowStatusResponse:
+          type: array
+          items:
+            type: object
+            properties:
+              requestId:
+                type: string
+                example: 'verifynow'
+                description: The client request ID echoed in the response.
+              accounts:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    accountInfo:
+                      type: array
+                      items:
+                        type: object
+                        properties: 
+                          accountGroup:
+                            type: string
+                            example: 'Cash'
+                            description: Account group can have a value such as Cash, Investment, Credit, Card,etc.
+                          accountId:
+                            type: string
+                            example: '12345'
+                            description: Unique ID assigned to the account created in the Fiserv VerifyNow system.
+                          accountStatus:
+                            type: string
+                            example: '12345'
+                            description: "Current status of the account. Possible account statuses are: Approved, Denied, In-Progress, Suspended, Inactive, and Inconclusive"
+                          accountType:
+                            type: string
+                            example: 'savings'
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages."
+                          verificationInfoList:
+                            type: array
+                            items:
+                              type: object
+                              properties:
+                                verificationInfo:
+                                  type: array
+                                  items:
+                                    type: object
+                                    properties: 
+                                      verificationType:
+                                        type: string
+                                        example: 'Instant EWS'
+                                        description: "Type of verification: Instant EWS, Real Time, Trial Deposit, Partner Approved (configurable value related to the migration case)"
+                                      verificationStatus:
+                                        type: string
+                                        example: 'Inconclusive'
+                                        description: "Current verification status. Possible values for Instant EWS: Passed, Denied, and Inconclusive.For Real Time: Passed,In-progress, and Inconclusive.For Trial Deposit: Transfer Initiated, Transfer Complete, Transfer Failed, Amount Verification Completed, Amount Verification Failed, Transfer Expired"
+                                      verificationAttempts:
+                                        type: string
+                                        example: '1'
+                                        description: Number of attempts made to verify the account. This is applicable to Real Time and Trial Deposit.
+                                      dateOfAttempt:
+                                        type: string
+                                        example: ' '
+                                        description: "Date of last verification attempt made in MM-DD-YYYY format"
+                                      verificationSourceResponse:
+                                        type: string
+                                        example: ' '
+                                        description: "Reserved for future use"
+                                      matchType:
+                                        type: string
+                                        example: ' '
+                                        description: Type of match for fuzzy logic, such as nickname, partial account number, etc.
+              status:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    statusCode:
+                      type: string
+                      example: 'VNASM115'
+                      description: Alphanumeric code for representing a Success or Failure condition.
+                    statusDesc:
+                      type: string
+                      example: 'User Already Exists'
+                      description: Textual description for the status code.
+                    statusType:
+                      type: string
+                      example: 'SUCCESS'
+                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+                description: status Details
+          description: VerifyNowStatusResponse Details
     PingRequest:
       type: object
       properties:
@@ -863,131 +909,19 @@ components:
     PingResponse:
       type: object
       properties:
-        statusDesc:
-          type: string
-          example: 'VerifyNow Service is Up and Running'
-          description: Textual description for the status code.
-        statusType:
-          type: string
-          example: 'SUCCESS'
-          description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
-    RealTimeVerificationAndAdditionRequest:
-      type: object
-      properties:
-        VerifyNowRequest: 
+        verifyNowPingResponse: 
           type: array
           items:
             type: object
             properties:
-              requestId:
+              statusDesc:
                 type: string
-                example: 'VerifyNow'
-                description: Unique ID to be passed in by the calling application.
-              Profile:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    Firstname:
-                      type: string
-                      example: 'KARAOne'
-                      description: User’s first name. Required for all types of account verification.
-                    Lastname:
-                      type: string
-                      example: 'demoone'
-                      description: User’s last name. Required for all types of account verification.
-                    middleName:
-                      type: string
-                      example: ' '
-                      description: User’s middle name.
-                    email:
-                      type: string
-                      example: 'samstestone@mail.com'
-                      description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
-                    userId:
-                      type: string
-                      example: 'demoone'
-                      description: Unique identification number that is assigned to user by client.
-                description: Profile Details
-              profileDetails:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    ssn:
-                      type: string
-                      example: '987612300'
-                      description: User’s Social Security number. Recommended for Real Time Verification And Addition and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
-                    Address:
-                      type: string
-                      example: '9384 POODLE LN'
-                      description: User’s address street 1. Recommended for instant verification.
-                    phoneNumber:
-                      type: string
-                      example: '8087531231'
-                      description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
-                description: Add ProfileDetails
-              accountOwnershipVerification:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    realTimeVerification:
-                      type: string
-                      description: realTimeVerification
-                    instantVerification:
-                      type: string
-                      description: Instant verification.
-                    trialDepositVerification:
-                      type: string
-                      description: trialDepositVerification
-                    realTimeVerificationAndAddition:
-                      type: string
-                      description: realTimeVerificationAndAddition
-                description: Add accountOwnershipVerification Details
-          description: VerifyNowRequest Details
-    RealTimeVerificationAndAdditionResponse:
-      type: object
-      properties:
-        VerifyNowResponse:
-          type: array
-          items:
-            type: object
-            properties:
-              requestId:
+                example: 'VerifyNow Service is Up and Running'
+                description: Textual description for the status code.
+              statusType:
                 type: string
-                description: The client request ID echoed in the response.
-              Token:
-                type: string
-                description: Unique token generated for each request for verification.
-              profileInfo:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    profileId:
-                      type: string
-                      description: Unique ID assigned to the profile created in the system.
-                    profileStatus:
-                      type: string
-                      description: "Current status of the profile. Possible profile statuses are: Active, Suspended, and Locked."
-                description: profileInfo Details
-              status:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    statusCode:
-                      type: string
-                      description: Alphanumeric code for representing a Success or Failure condition.
-                    statusDesc:
-                      type: string
-                      description: Textual description for the status code.
-                    statusType:
-                      type: string
-                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
-                description: status Details
-          description: VerifyNowResponse Details
+                example: 'SUCCESS'
+                description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
     TenantProviderResponse:
       type: object
       properties:
@@ -1102,19 +1036,3 @@ components:
     basic:
       type: http
       scheme: basic
-  examples:
-    SpecsFilterRequest:
-      value:
-        requestId: 1234
-        firstName: test
-        lastName: test1
-        middleName: sample
-        userId: 12345
-        email: test@fiserv.com
-        ssn: er45678
-        addressLine1: address
-        city: chennai
-        state: tamilnadu
-        zipCode: 600001
-        phoneNumber: 12345678
-        enable: true
