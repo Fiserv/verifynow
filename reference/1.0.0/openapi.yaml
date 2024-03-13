@@ -43,7 +43,7 @@ paths:
       tags:
       - 1.Instant
       summary: Instant Verification
-      description: This method provides instant bank account ownership verification using the Early Warning Services (EWS) account services and/or other available databases.
+      description: "This method returns SecureToken for the client application to invoke VerifyNow widget for all or any of the account verification methods – Instant, Real time verification with/without Account Addition and Trial deposit. The client has the flexibility to specify—at the home level and at the user level—which account verification methods should be enabled. The specific verification method to be used for a user is passed by the client system in the verification request. For example, a verification request might state: Instant – EWS = Y (true), RealTime = N (false), TrialDeposit = Y (true), where Y = trigger the verification method and N = do not trigger the verification method. A validation check is performed on the client request to confirm that it specifies the verification method to be used."
       operationId: APISpecProviderId
       requestBody:
         description: Instant Verification 
@@ -162,9 +162,9 @@ paths:
   /cashedgerws/verifynow/verify/v3:
     post:
       tags:
-      - Instant
+      - 4.Instant
       summary: Instant Verification
-      description: It provides instant bank account ownership and status verification via a single REST API using Fiserv proprietary data and the Early Warning Services (EWS) account services. 
+      description: The VerifyAccount API verifies the user’s profile and bank accounts with routing and account number combination matching. This is a REST API implementation. When a calling application invokes this API by passing user profile and bank account details, this API saves the details in the database and invokes EWS 4.0 / Fiserv proprietary databases for Instant Account Verification. After a response is received from EWS/Fiserv proprietary databases, this API runs the Fiserv internal Account Verification rules and provides user bank account verification outcome results in the response to the calling application.
       operationId: APIInstantProviderId
       requestBody:
         description: Instant Verification 
@@ -484,6 +484,23 @@ components:
                 items:
                   type: object
                   properties:
+                    accountDetails:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          creditAccountNumber:
+                            type: string
+                            example: '1000012110101000'
+                            description: Credit card account number.
+                          accountType:
+                            type: string
+                            example: 'checking'
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
+                          routingNumber:
+                            type: string
+                            example: '999999999'
+                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
                     realTimeVerification:
                       type: string
                       example: 'enabled or disabled'
@@ -518,6 +535,19 @@ components:
                 type: string
                 example: 'VOL02##O0j_m2:u@#~t2HCtW_Ri:TG9uVsA68@#~Tn1o_wO:v1C8Rw6K@#~J21I5:SvV29G24DsYdB@#~'
                 description: Unique token generated for each request for verification.
+              accountInfo:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    accountId:
+                      type: string
+                      example: '11660158'
+                      description: Unique ID assigned to the account created in the Fiserv VerifyNow system.
+                    accountStatus:
+                      type: string
+                      example: '11660158'
+                      description: "Current status of the account. Possible account statuses are: Approved, Denied, In-Progress, Suspended, Inactive, and Inconclusive"
               profileInfo:
                 type: array
                 items:
