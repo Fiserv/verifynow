@@ -582,7 +582,7 @@ components:
     NonWidgetVerificationRequest:
       type: object
       properties:
-        VerifyNowRequest: 
+        VerifyNowAccountRequest: 
           type: array
           items:
             type: object
@@ -709,7 +709,7 @@ components:
     NonWidgetVerificationResponse:
       type: object
       properties:
-        VerifyNowResponse:
+        VerifyNowAccountResponse:
           type: array
           items:
             type: object
@@ -791,7 +791,7 @@ components:
                       example: 'SUCCESS'
                       description: Name
                 description: status Details
-          description: VerifyNowResponse Details
+          description: VerifyNowAccountResponse Details
     OutcomeRequest:
       type: object
       properties:
