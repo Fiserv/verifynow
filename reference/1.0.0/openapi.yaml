@@ -53,7 +53,7 @@ paths:
               $ref: '#/components/schemas/TokenVerificationRequest'
       responses:
         "200":
-          description: Created
+          description: "Created"
           content:
             application/json:
               schema:
@@ -174,7 +174,7 @@ paths:
               $ref: '#/components/schemas/NonWidgetVerificationRequest'
       responses:
         "200":
-          description: Created
+          description: "Created"
           content:
             application/json:
               schema:
@@ -760,11 +760,11 @@ components:
                                   example: Instant EWS
                                   description: "Type of verification: Instant EWS, Real Time, Trial Deposit, Partner Approved (configurable value related to the migration case)."
                                 verificationStatus: 
-                                  type: array
+                                  type: string
                                   example: Inconclusive 
                                   description: "Current verification status. Possible values for Instant EWS: Passed, Denied, and Inconclusive"
                                 verificationAttempts:
-                                  type: array
+                                  type: string
                                   example: '1'
                                   description: Number of attempts made to verify the account. This is applicable to Real Time and Trial Deposit  
                       description: verificationInfoList Details                          
