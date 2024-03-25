@@ -45,6 +45,31 @@ paths:
       summary: Instant Verification
       description: "This method returns SecureToken for the client application to invoke VerifyNow widget for all or any of the account verification methods – Instant, Real time verification with/without Account Addition and Trial deposit. The client has the flexibility to specify—at the home level and at the user level—which account verification methods should be enabled. The specific verification method to be used for a user is passed by the client system in the verification request. For example, a verification request might state: Instant – EWS = Y (true), RealTime = N (false), TrialDeposit = Y (true), where Y = trigger the verification method and N = do not trigger the verification method. A validation check is performed on the client request to confirm that it specifies the verification method to be used."
       operationId: APISpecProviderId
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993001'
+          required: true
+          description: provide HomeId as value
       requestBody:
         description: Instant Verification 
         content:
@@ -86,6 +111,31 @@ paths:
       summary: Returns tenant provider API.
       description: Provides the outcome of the account verification widget interaction.
       operationId: TenantProviderID
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993001'
+          required: true
+          description: provide HomeId as value
       requestBody:
         description: Outcome
         content:
@@ -126,6 +176,31 @@ paths:
       summary: Returns tenant provider API.
       description: Healthcheck for VerifyNow service.
       operationId: APIPingProviderId
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993001'
+          required: true
+          description: provide HomeId as value
       requestBody:
         description: trialDepositVerification
         content:
@@ -166,6 +241,31 @@ paths:
       summary: Instant Verification
       description: The VerifyAccount API verifies the user’s profile and bank accounts with routing and account number combination matching. This is a REST API implementation. When a calling application invokes this API by passing user profile and bank account details, this API saves the details in the database and invokes EWS 4.0 / Fiserv proprietary databases for Instant Account Verification. After a response is received from EWS/Fiserv proprietary databases, this API runs the Fiserv internal Account Verification rules and provides user bank account verification outcome results in the response to the calling application.
       operationId: APIInstantProviderId
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993001'
+          required: true
+          description: provide HomeId as value
       requestBody:
         description: Instant Verification 
         content:
@@ -208,6 +308,69 @@ components:
         message:
           type: string
           description: Message
+    AdminUserName:
+      type: string
+      properties:
+        AdminUserName:
+          type: string
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: AdminUserName
+          description: AdminUserName
+    AdminPassword:
+      type: string
+      properties:
+        AdminPassword:
+          type: string
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: AdminPassword
+          description: AdminPassword
+    HomeId:
+      type: string
+      properties:
+        HomeId:
+          type: string
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: HomeId
+          description: HomeId
     PageLayoutResponse:
       type: array
       items:
@@ -503,19 +666,19 @@ components:
                             description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
                     realTimeVerification:
                       type: string
-                      example: 'enabled or disabled'
+                      example: 'true'
                       description: realTimeVerification
                     instantVerification:
                       type: string
-                      example: 'enabled or disabled'
+                      example: 'true'
                       description: Instant verification.
                     trialDepositVerification:
                       type: string
-                      example: 'enabled or disabled'
+                      example: 'true'
                       description: trialDepositVerification
                     realTimeVerificationAndAddition:
                       type: string
-                      example: 'enabled or disabled'
+                      example: 'true'
                       description: realTimeVerificationAndAddition
                 description: Add accountOwnershipVerification Details
           description: VerifyNowRequest Details
