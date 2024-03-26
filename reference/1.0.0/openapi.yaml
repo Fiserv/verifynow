@@ -753,7 +753,7 @@ components:
               requestId:
                 type: string
                 example: 'VerifyNow'
-                description: Unique ID to be passed in by the calling application.
+                description: UniqueID to be passed in by the calling application.
               Profile:
                 type: array
                 items:
