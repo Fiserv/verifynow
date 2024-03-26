@@ -748,7 +748,7 @@ components:
         VerifyNowAccountRequest: 
           type: array
           items:
-            type: object
+            type: 
             properties:
               requestId:
                 type: string
@@ -968,7 +968,6 @@ components:
         VerifyNowStatusResponse:
           type: array
           items:
-            type: object
             properties:
               requestId:
                 type: string
