@@ -1,0 +1,1172 @@
+################################################################################
+# Copyrights © 2021-2022 Fiserv, Inc. or its affiliates. 
+# Fiserv is a trademark of Fiserv, Inc., 
+# registered or used in the United States and foreign countries, 
+# and may or may not be registered in your country.  
+# All trademarks, service marks, 
+# and trade names referenced in this 
+# material are the property of their 
+# respective owners. This work, including its contents 
+# and programming, is confidential and its use 
+# is strictly limited. This work is furnished only 
+# for use by duly authorized licensees of Fiserv, Inc. 
+# or its affiliates, and their designated agents 
+# or employees responsible for installation or 
+# operation of the products. Any other use, 
+# duplication, or dissemination without the 
+# prior written consent of Fiserv, Inc. 
+# or its affiliates is strictly prohibited. 
+# Except as specified by the agreement under 
+# which the materials are furnished, Fiserv, Inc. 
+# and its affiliates do not accept any liabilities 
+# with respect to the information contained herein 
+# and are not responsible for any direct, indirect, 
+# special, consequential or exemplary damages 
+# resulting from the use of this information. 
+# No warranties, either express or implied, 
+# are granted or extended by this work or 
+# the delivery of this work
+################################################################################
+
+openapi: 3.0.2
+info:
+  title: Dev Portal Tenant APIs.
+  description: To onboard properly into the Fiserv Developer Studio as a tenant each
+    product must support these APIs so that we can retrieve product specific API specifications
+    and documentation.
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /cashedgerws/verifynow/verify/v1:
+    post:
+      tags:
+      - 1.Instant
+      summary: Instant Verification
+      description: "This method returns SecureToken for the client application to invoke VerifyNow widget for all or any of the account verification methods – Instant, Real time verification with/without Account Addition and Trial deposit. The client has the flexibility to specify—at the home level and at the user level—which account verification methods should be enabled. The specific verification method to be used for a user is passed by the client system in the verification request. For example, a verification request might state: Instant – EWS = Y (true), RealTime = N (false), TrialDeposit = Y (true), where Y = trigger the verification method and N = do not trigger the verification method. A validation check is performed on the client request to confirm that it specifies the verification method to be used."
+      operationId: APISpecProviderId
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993001'
+          required: true
+          description: provide HomeId as value
+      requestBody:
+        description: Instant Verification 
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TokenVerificationRequest'
+      responses:
+        "200":
+          description: "Created"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenVerificationResponse'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowBadRequestResponse'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowNotFoundResponse'
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowInternalErrorResponse'
+      x-codegen-request-body-name: Body
+      x-group-name: VerifyNow APIs
+      x-proxy-name: VerifyNow Initiate Widget - Widget Flow
+  /cashedgerws/verifynow/outcome/v1:
+    post:
+      tags:
+      - 2.OutCome
+      summary: Returns tenant provider API.
+      description: Provides the outcome of the account verification widget interaction.
+      operationId: TenantProviderID
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993001'
+          required: true
+          description: provide HomeId as value
+      requestBody:
+        description: Outcome
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OutcomeRequest'
+      responses:
+        "200":
+          description: "Created"
+          content: 
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OutcomeResponse'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OutcomeBadRequestResponse'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OutcomeNotFoundResponse'
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OutcomeInternalErrorResponse'
+      x-group-name: VerifyNow APIs
+      x-proxy-name: Widget Outcome - Widget Flow
+  /cashedgerws/verifynow/ping:
+    post:
+      tags:
+      - 3.ping 
+      summary: Returns tenant provider API.
+      description: Healthcheck for VerifyNow service.
+      operationId: APIPingProviderId
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993001'
+          required: true
+          description: provide HomeId as value
+      requestBody:
+        description: trialDepositVerification
+        content:
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/PingRequest'
+      responses:
+        "200":
+          description: "Created"
+          content: 
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/PingResponse'
+        "400":
+          description: Bad Request
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/PingBadRequestResponse'
+        "404":
+          description: Not Found
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/PingNotFoundResponse'
+        "500":
+          description: "Internal Server Error"
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/PingInternalErrorResponse'
+      x-group-name: VerifyNow APIs
+      x-proxy-name: Ping - Widget Flow
+  /cashedgerws/verifynow/verify/v3:
+    post:
+      tags:
+      - 4.Instant
+      summary: Instant Verification
+      description: The VerifyAccount API verifies the user’s profile and bank accounts with routing and account number combination matching. This is a REST API implementation. When a calling application invokes this API by passing user profile and bank account details, this API saves the details in the database and invokes EWS 4.0 / Fiserv proprietary databases for Instant Account Verification. After a response is received from EWS/Fiserv proprietary databases, this API runs the Fiserv internal Account Verification rules and provides user bank account verification outcome results in the response to the calling application.
+      operationId: APIInstantProviderId
+      parameters:
+        - in: header
+          name: AdminUserName
+          schema:
+            $ref: '#/components/schemas/AdminUserName'
+            type: string
+            example: '99993001xmladmin'
+          required: true
+          description: provide Adminusername as value
+        - in: header
+          name: AdminPassword
+          schema:
+            $ref: '#/components/schemas/AdminPassword'
+            type: string
+            example: 'cashedge1'
+          required: true
+          description: provide AdminPassword as value
+        - in: header
+          name: HomeId
+          schema:
+            $ref: '#/components/schemas/HomeId'
+            type: string
+            example: '99993001'
+          required: true
+          description: provide HomeId as value
+      requestBody:
+        description: Instant Verification 
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NonWidgetVerificationRequest'
+      responses:
+        "200":
+          description: "Created"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NonWidgetVerificationResponse'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowBadRequestResponse'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowNotFoundResponse'
+        "500":
+          description: " Internal Server Error "
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerifynowInternalErrorResponse'
+      x-codegen-request-body-name: Body
+      x-group-name: VerifyNow APIs
+      x-proxy-name: Instant Verification API - Non Widget flow
+components:
+  schemas:
+    LiveProbeResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Message
+    AdminUserName:
+      type: string
+      properties:
+        AdminUserName:
+          type: string
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: AdminUserName
+          description: AdminUserName
+    AdminPassword:
+      type: string
+      properties:
+        AdminPassword:
+          type: string
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: AdminPassword
+          description: AdminPassword
+    HomeId:
+      type: string
+      properties:
+        HomeId:
+          type: string
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                description: HomeId
+          description: HomeId
+    PageLayoutResponse:
+      type: array
+      items:
+        type: object
+        properties:
+          hero:
+            type: array
+            items:
+              type: object
+              properties:
+                descrption:
+                  type: string
+                  description: Descrption
+                image:
+                  type: string
+                  description: Image
+            description: Hero
+          journey Cards:
+            type: array
+            items:
+              type: object
+              properties:
+                journeyCard:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      contextualNavigationCards:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            contextualNavigationCard:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  description:
+                                    type: string
+                                    description: Description
+                                  link:
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        type:
+                                          type: string
+                                          description: Type
+                                        uri:
+                                          type: string
+                                          description: URI
+                                    description: Link
+                                  title:
+                                    type: string
+                                    description: Title
+                              description: ContextualNavigationCard
+                        description: ContextualNavigationCards
+                      description:
+                        type: string
+                        description: Description
+                      link:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            type:
+                              type: string
+                              description: Type
+                            uri:
+                              type: string
+                              description: URI
+                        description: Link
+                      title:
+                        type: string
+                        description: Title
+                  description: JourneyCard
+            description: JourneyCards
+    VerifynowBadRequestResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Bad Request' 
+        status:
+          type: string
+          example: '400'
+    VerifynowNotFoundResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Not Found' 
+        status:
+          type: string
+          example: '404'
+    VerifynowInternalErrorResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/verify/v1'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Internal Server Error' 
+        status:
+          type: string
+          example: '500'
+    OutcomeBadRequestResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/outcome/v1'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Bad Request' 
+        status:
+          type: string
+          example: '400'
+    OutcomeNotFoundResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/outcome/v1'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Not Found' 
+        status:
+          type: string
+          example: '404'
+    OutcomeInternalErrorResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/outcome/v1'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Internal Server Error' 
+        status:
+          type: string
+          example: '500'
+    PingBadRequestResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/ping'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Bad Request' 
+        status:
+          type: string
+          example: '400'
+    PingNotFoundResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/ping'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Not Found' 
+        status:
+          type: string
+          example: '404'
+    PingInternalErrorResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          example: 'https://qa-ft.onefiserv.net/cashedgerws/verifynow/ping'
+          description: Particular API url. 
+        title:
+          type: string
+          example: 'Internal Server Error' 
+        status:
+          type: string
+          example: '500' 
+    TokenVerificationRequest:
+      type: object
+      properties:
+        VerifyNowRequest: 
+          type: array
+          items:
+            properties:
+              requestId:
+                type: string
+                example: 'VerifyNow'
+                description: Unique ID to be passed in by the calling application.
+              Profile:
+                type: array
+                items:
+                  properties:
+                    Firstname:
+                      type: string
+                      example: 'KARAOne'
+                      description: User’s first name. Required for all types of account verification.
+                    Lastname:
+                      type: string
+                      example: 'demoone'
+                      description: User’s last name. Required for all types of account verification.
+                    middleName:
+                      type: string
+                      example: ' '
+                      description: User’s middle name.
+                    email:
+                      type: string
+                      example: 'samstestone@mail.com'
+                      description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
+                    userId:
+                      type: string
+                      example: 'demoone'
+                      description: Unique identification number that is assigned to user by client.
+                description: Profile Details
+              profileDetails:
+                type: array
+                items:
+                  properties:
+                    ssn:
+                      type: string
+                      example: '987612300'
+                      description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
+                    Address:
+                      type: array
+                      items:
+                        properties:
+                          addressLine1:
+                            type: string
+                            example: '7958 SKIMMER RD'
+                            description: User’s address street 1. Recommended for instant verification.
+                          city:
+                            type: string
+                            example: 'SAN FRANCISCO'
+                            description: User’s city. Recommended for instant verification.
+                          state:
+                            type: string
+                            example: 'CA'
+                            description: User’s state. Recommended for instant verification.
+                          zipCode:
+                            type: string
+                            example: '56987'
+                            description: User’s zipCode. Recommended for instant verification.
+                    phoneNumber:
+                      type: string
+                      example: '8087531231'
+                      description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
+                    dateOfBirth:
+                      type: string
+                      example: '08-15-1996'
+                      description: "User’s date of birth in MM-DD-YYYY format. Recommended for instant verification and profile and account migration from VerifyNow to TransferNow, OpenNow, and FundNow services"
+                description: Add ProfileDetails
+              accountOwnershipVerification:
+                type: array
+                items:
+                  properties:
+                    accountDetails:
+                      type: array
+                      items:
+                        properties:
+                          creditAccountNumber:
+                            type: string
+                            example: '1000012110101000'
+                            description: Credit card account number.
+                          accountType:
+                            type: string
+                            example: 'checking'
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
+                          routingNumber:
+                            type: string
+                            example: '999999999'
+                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
+                    realTimeVerification:
+                      type: string
+                      example: 'true'
+                      description: realTimeVerification
+                    instantVerification:
+                      type: string
+                      example: 'true'
+                      description: Instant verification.
+                    trialDepositVerification:
+                      type: string
+                      example: 'true'
+                      description: trialDepositVerification
+                    realTimeVerificationAndAddition:
+                      type: string
+                      example: 'true'
+                      description: realTimeVerificationAndAddition
+                description: Add accountOwnershipVerification Details
+          description: VerifyNowRequest Details
+    TokenVerificationResponse:
+      type: object
+      properties:
+        VerifyNowResponse: 
+          type: array
+          items:
+            properties:
+              requestId:
+                type: string
+                example: 'VOL02MEgzJndQRd'
+                description: Unique ID to be passed in by the calling application.
+              token:
+                type: string
+                example: 'VOL02##O0j_m2:u@#~t2HCtW_Ri:TG9uVsA68@#~Tn1o_wO:v1C8Rw6K@#~J21I5:SvV29G24DsYdB@#~'
+                description: Unique token generated for each request for verification.
+              accountInfo:
+                type: array
+                items:
+                  properties:
+                    accountId:
+                      type: string
+                      example: '11660158'
+                      description: Unique ID assigned to the account created in the Fiserv VerifyNow system.
+                    accountStatus:
+                      type: string
+                      example: '11660158'
+                      description: "Current status of the account. Possible account statuses are: Approved, Denied, In-Progress, Suspended, Inactive, and Inconclusive"
+              profileInfo:
+                type: array
+                items:
+                  properties:
+                    profileId:
+                      type: string
+                      example: '252601196'
+                      description: Unique ID assigned to the profile created in the system.
+                    profileStatus:
+                      type: string
+                      example: 'Active'
+                      description: "Current status of the profile. Possible profile statuses are: Active, Suspended, and Locked."
+              status:
+                type: array
+                items:
+                  properties:
+                    statusCode:
+                      type: string
+                      example: 'VNASM115'
+                      description: Alphanumeric code for representing a Success or Failure condition.
+                    statusDesc:
+                      type: string
+                      example: 'User Already Exists'
+                      description: Textual description for the status code.
+                    statusType:
+                      type: string
+                      example: 'SUCCESS'
+                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+                description: status Details
+    NonWidgetVerificationRequest:
+      type: object
+      properties:
+        VerifyNowAccountRequest: 
+          type: array
+          items:
+            properties:
+              requestId:
+                type: string
+                example: 'VerifyNow'
+                description: UniqueID to be passed in by the calling application.
+              Profile:
+                type: array
+                items:
+                  properties:
+                    namePrefix:
+                      type: string
+                      example: 'Mr'
+                      description: User name prefix
+                    Firstname:
+                      type: string
+                      example: 'KARAOne'
+                      description: User’s first name. Required for all types of account verification.
+                    Lastname:
+                      type: string
+                      example: 'demoone'
+                      description: User’s last name. Required for all types of account verification.
+                    middleName:
+                      type: string
+                      example: ' '
+                      description: User’s middle name.
+                    nameSuffix:
+                      type: string
+                      example: 'Jr'
+                      description: User name suffix
+                    email:
+                      type: string
+                      example: 'samstestone@mail.com'
+                      description: User’s email address. This is for primary email. Required for TD verification to provide status and reminders.
+                    userId:
+                      type: string
+                      example: 'demoone'
+                      description: Unique identification number that is assigned to user by client.
+                description: Profile Details
+              profileDetails:
+                type: array
+                items:
+                  properties:
+                    ssn:
+                      type: string
+                      example: '987612300'
+                      description: User’s Social Security number. Recommended for instant verification and profile and account migration from Verify Now to TransferNow, OpenNow, and FundNow services.
+                    Address:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          addressLine1:
+                            type: string
+                            example: '7958 SKIMMER RD'
+                            description: User’s address street 1. Recommended for instant verification.
+                          city:
+                            type: string
+                            example: 'SAN FRANCISCO'
+                            description: User’s city. Recommended for instant verification.
+                          state:
+                            type: string
+                            example: 'CA'
+                            description: User’s state. Recommended for instant verification.
+                          zipCode:
+                            type: string
+                            example: '56987'
+                            description: User’s zipCode. Recommended for instant verification.
+                          addressCode:
+                            type: string
+                            example: 'Home'
+                            description: Type of address.
+                    phoneNumber:
+                      type: string
+                      example: '8087531231'
+                      description: User’s phone number. It can be home, cell, or work phone. This is used for primary phone.
+                    dateOfBirth:
+                      type: string
+                      example: '08-15-1996'
+                      description: "User’s date of birth in MM-DD-YYYY format. Recommended for instant verification and profile and account migration from VerifyNow to TransferNow, OpenNow, and FundNow services"
+              accountOwnershipVerification:
+                type: array
+                items:
+                  properties:
+                    accountDetails:
+                      type: array
+                      items:
+                        properties:
+                          creditAccountNumber:
+                            type: string
+                            example: '1000012110101000'
+                            description: Credit card account number.
+                          accountType:
+                            type: string
+                            example: 'checking'
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages. Required for all types of account verification."
+                          routingNumber:
+                            type: string
+                            example: '999999999'
+                            description: Routing transit number or ABA Number. Required for all types of account verification when the account group is Cash.
+                    realTimeVerificationAndAddition:
+                      type: string
+                      example: 'true'
+                      description: realTimeVerificationAndAddition
+                    instantVerification:
+                      type: string
+                      example: 'true'
+                      description: Instant verification.
+                    realTimeVerification:
+                      type: string
+                      example: 'true'
+                      description: realTimeVerification
+                    trialDepositVerification:
+                      type: string
+                      example: 'true'
+                      description: trialDepositVerification
+                description: Add accountOwnershipVerification Details
+    NonWidgetVerificationResponse:
+      type: object
+      properties:
+        VerifyNowAccountResponse:
+          type: array
+          items:
+            properties:
+              requestId:
+                type: string
+                example: 'verifynow'
+                description: Unique ID to be passed in by the calling application. 
+              profileInfo:
+                type: array
+                items:
+                  properties:
+                    profileId:
+                      type: string
+                      example: '128933531'
+                      description: Name
+                    profileStatus:
+                      type: string
+                      example: 'Active'
+                      description: Name
+                description: profileInfo Details
+              accountInfo:
+                type: array
+                items:
+                  properties:
+                    accountId:
+                      type: string
+                      example: 'review'
+                      description: "Contains the Identity Verification decision for the given profile.Possible values: Approve, Review, Decline The calling application must look for this element’s value and make a business flow decision"
+                    accountStatus:
+                      type: string
+                      example: 'equive_fdn2'
+                      description: Contains the Identity Verification decision class name.
+                    verificationInfoList:
+                      type: array
+                      items:
+                        properties:
+                          verificationInfo:
+                            type: array
+                            items:
+                              properties:
+                                verificationType:
+                                  type: string
+                                  example: Instant EWS
+                                  description: "Type of verification: Instant EWS, Real Time, Trial Deposit, Partner Approved (configurable value related to the migration case)."
+                                verificationStatus: 
+                                  type: string
+                                  example: Inconclusive 
+                                  description: "Current verification status. Possible values for Instant EWS: Passed, Denied, and Inconclusive"
+                                verificationAttempts:
+                                  type: string
+                                  example: '1'
+                                  description: Number of attempts made to verify the account. This is applicable to Real Time and Trial Deposit  
+                      description: verificationInfoList Details                          
+                description: Account Info Details
+              status:
+                type: array
+                items:
+                  properties:
+                    statusCode:
+                      type: string
+                      example: 'VNASM115'
+                      description: Name
+                    statusDesc:
+                      type: string
+                      example: 'User Already Exists'
+                      description: Name
+                    statusType:
+                      type: string
+                      example: 'SUCCESS'
+                      description: Name
+                description: status Details
+          description: VerifyNowAccountResponse Details
+    OutcomeRequest:
+      type: object
+      properties:
+        requestId:
+          type: string
+          example: 'verifynow'
+          description: Unique ID to be passed in by the calling application. 
+        Token:
+          type: string
+          example: 'VOL02##Zmq_AN:96by0eV1FH@#~DNfer06_M9vu:0To402pA@#~E5foRP_9g:r2P2fKFb@#~YaEX_jC:iUH2zpA8@#~T71SK:xccNW5Duubgr6@#~'
+          description: Unique token generated for each request for verification.
+    OutcomeResponse:
+      type: object
+      properties:
+        VerifyNowStatusResponse:
+          type: array
+          items:
+            properties:
+              requestId:
+                type: string
+                example: 'verifynow'
+                description: The client request ID echoed in the response.
+              accounts:
+                type: array
+                items:
+                  properties:
+                    accountInfo:
+                      type: array
+                      items:
+                        properties: 
+                          accountGroup:
+                            type: string
+                            example: 'Cash'
+                            description: Account group can have a value such as Cash, Investment, Credit, Card,etc.
+                          accountId:
+                            type: string
+                            example: '12345'
+                            description: Unique ID assigned to the account created in the Fiserv VerifyNow system.
+                          accountStatus:
+                            type: string
+                            example: '12345'
+                            description: "Current status of the account. Possible account statuses are: Approved, Denied, In-Progress, Suspended, Inactive, and Inconclusive"
+                          accountType:
+                            type: string
+                            example: 'savings'
+                            description: "Account type based on Group. For Group Cash: Checking, Savings, MMA Checking, MMA Savings For Group Investment: Brokerages."
+                          verificationInfoList:
+                            type: array
+                            items:
+                              properties:
+                                verificationInfo:
+                                  type: array
+                                  items:
+                                    properties: 
+                                      verificationType:
+                                        type: string
+                                        example: 'Instant EWS'
+                                        description: "Type of verification: Instant EWS, Real Time, Trial Deposit, Partner Approved (configurable value related to the migration case)"
+                                      verificationStatus:
+                                        type: string
+                                        example: 'Inconclusive'
+                                        description: "Current verification status. Possible values for Instant EWS: Passed, Denied, and Inconclusive.For Real Time: Passed,In-progress, and Inconclusive.For Trial Deposit: Transfer Initiated, Transfer Complete, Transfer Failed, Amount Verification Completed, Amount Verification Failed, Transfer Expired"
+                                      verificationAttempts:
+                                        type: string
+                                        example: '1'
+                                        description: Number of attempts made to verify the account. This is applicable to Real Time and Trial Deposit.
+                                      dateOfAttempt:
+                                        type: string
+                                        example: ' '
+                                        description: "Date of last verification attempt made in MM-DD-YYYY format"
+                                      verificationSourceResponse:
+                                        type: string
+                                        example: ' '
+                                        description: "Reserved for future use"
+                                      matchType:
+                                        type: string
+                                        example: ' '
+                                        description: Type of match for fuzzy logic, such as nickname, partial account number, etc.
+              status:
+                type: array
+                items:
+                  properties:
+                    statusCode:
+                      type: string
+                      example: 'VNASM115'
+                      description: Alphanumeric code for representing a Success or Failure condition.
+                    statusDesc:
+                      type: string
+                      example: 'User Already Exists'
+                      description: Textual description for the status code.
+                    statusType:
+                      type: string
+                      example: 'SUCCESS'
+                      description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+                description: status Details
+          description: VerifyNowStatusResponse Details
+    PingRequest:
+      type: object
+      properties:
+        AdminUserName:
+          type: string
+          example: '99993001xmladmin'
+          description: "99993001xmladmin"
+        HomeId:
+          type: string
+          example: '99993001'
+          description: "99993001"
+        AdminPassword:
+          type: string
+          example: 'cashedge1'
+          description: "cashedge1"
+    PingResponse:
+      type: object
+      properties:
+        verifyNowPingResponse: 
+          type: array
+          items:
+            properties:
+              statusDesc:
+                type: string
+                example: 'VerifyNow Service is Up and Running'
+                description: Textual description for the status code.
+              statusType:
+                type: string
+                example: 'SUCCESS'
+                description: This tag indicates whether the request processed successfully or not. Possible values are Success or FAILURE. This element must be looked at first before parsing the response.
+    TenantProviderResponse:
+      type: object
+      properties:
+        brand:
+          type: string
+          description: Brand
+        brandDescription:
+          type: string
+          description: BrandDescription
+        brandLogoURL:
+          type: string
+          description: BrandLogoURL
+        categories:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name
+              subcategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                      description: Name
+                    value:
+                      type: string
+                      description: Value
+                description: Subcategories
+              value:
+                type: string
+                description: Value
+          description: Categories
+        name:
+          type: string
+          description: Name
+        product:
+          type: object
+          properties:
+            apiSpecification:
+              type: string
+              description: APISpecification 
+            description:
+              type: string
+              description: Description
+            documentation:
+              type: string
+              description: Documentation
+            featured:
+              type: boolean
+              description: Featured
+            layout:
+              type: string
+              description: Layout
+            logoURL:
+              type: string
+              description: LogoURL
+          description: Product
+        solution:
+          type: string
+          description: Solution
+        title:
+          type: string
+          description: Title
+  responses:
+    apiSpecResponseWrapper:
+      description: OpenAPI Spec for the APIs. 
+      content: {}
+    docsResponseWrapper:
+      description: Markdown files.
+      content: {}
+    liveResponse:
+      description: Health check.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/LiveProbeResponse'
+        text/yaml:
+          schema:
+            $ref: '#/components/schemas/LiveProbeResponse'
+        text/plain:
+          schema:
+            $ref: '#/components/schemas/LiveProbeResponse'
+    productPage:
+      description: This text will appear as description of your response body. 
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PageLayoutResponse'
+        text/yaml:
+          schema:
+            $ref: '#/components/schemas/PageLayoutResponse'
+        text/plain:
+          schema:
+            $ref: '#/components/schemas/PageLayoutResponse'
+    tenant:
+      description: This text will appear as description of your response body. 
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TenantProviderResponse'
+        text/yaml:
+          schema:
+            $ref: '#/components/schemas/TenantProviderResponse'
+        text/plain:
+          schema:
+            $ref: '#/components/schemas/TenantProviderResponse'
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic

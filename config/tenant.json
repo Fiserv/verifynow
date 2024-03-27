@@ -1,9 +1,9 @@
 {
-  "title": "Developer Studio",
-  "name": "DeveloperPortal",
+  "title": "VerifyNow™",
+  "name": "VerifyNow",
   "brand": "Fiserv",
   "brandLogoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Fiserv_Logo.jpg",
-  "solution": ["financial-institutions"],
+  "solution": ["financial-institutions", "fintech"],
   "brandDescription": "Fiserv, Inc. is a global provider of payments and financial services technology solutions. The Company provides account processing and digital banking solutions, card issuer processing and network services, payments, e-commerce, merchant acquiring and processing, and the Clover cloud-based point-of-sale solution. The Company operates through three segments: Merchant Acceptance (Acceptance), Financial Technology (Fintech) and Payments and Network (Payments).",
   "categories": [
     {
@@ -17,29 +17,31 @@
       ]
     }
   ],
+  "getStartedFilePath": "/docs/getting-started.md",
   
   "apiVersions": [
       {
         "version": "1.0.0",
         "versionType": "major",
         "releaseNotesPath": "/release-notes/release-notes-1.0.0.md",
-        "apiSpecFileNames": ["api-1.0.0"]
+        "apiSpecFileNames": ["openapi"]
       }
   ],
   "product": {
     "featured": true,
-    "logoURL": "https://raw.githubusercontent.com/Fiserv/Developer-Portal-Tenant-API/develop/assets/images/Portal_Logo.png",
-    "description": "To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "longDescription":"To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "apiSpecification": "/v1/apis",
-    "layout": "/v1/layouts",
-    "documentation": "/v1/docs",
-    "documenttree": "/v1/docs",
-    "documenttreeV2": "/v2/docs",
+    "logoURL": "REPLACE ME",
+    "description": "The VerifyNow product acts as a platform for account verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help Financial Institutions (FI)s reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.",
+    "longDescription":"The VerifyNow product acts as a platform for account verification before providing access or allowing money to move. VerifyNow from Fiserv leverages proprietary and third-party account verification tools to help Financial Institutions (FI)s reduce fraud exposure in connection with funding new accounts and transferring funds directly to or from your online banking site safely and meet customer expectations through faster, real-time approvals.",
+    "apiSpecification": "/v1/apis/VerifyNow",
+    "layout": "/v1/layouts/VerifyNow",
+    "documentation": "/v1/docs/VerifyNow",
+    "documenttree": "/v1/docs/VerifyNow",
+    "documenttreeV2": "/v2/docs/VerifyNow",
+    "sandbox": "/v1/sandboxrun/VerifyNow",
     "feature":[
       {
         "name": "sandBox",
-        "value": false
+        "value": true
       },
       {
         "name": "plugins",
@@ -51,8 +53,25 @@
       },
       {
         "name": "editParameterAPIExplorer",
-        "value": false
+        "value": true
       }
   ]
-  }
+  },
+  "supportConfig": [{ 
+    "bug": {
+      "label": "bug,VerifyNow",
+      "template": "bug.md",
+      "assignees": "tzusheng.hsu@fiserv.com"
+    },  
+    "feedback": {
+      "label": "feedback,VerifyNow",
+      "template": "feedback.md",
+      "assignees": "tzusheng.hsu@fiserv.com"
+    },
+    "enhancement": {
+      "label": "enhancement,VerifyNow",
+      "template": "feature.md",
+      "assignees": "tzusheng.hsu@fiserv.com"
+    }
+  }]
 }
