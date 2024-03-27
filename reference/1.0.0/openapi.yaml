@@ -571,7 +571,6 @@ components:
         VerifyNowRequest: 
           type: array
           items:
-            type: object
             properties:
               requestId:
                 type: string
@@ -580,7 +579,6 @@ components:
               Profile:
                 type: array
                 items:
-                  type: object
                   properties:
                     Firstname:
                       type: string
@@ -606,7 +604,6 @@ components:
               profileDetails:
                 type: array
                 items:
-                  type: object
                   properties:
                     ssn:
                       type: string
@@ -615,7 +612,6 @@ components:
                     Address:
                       type: array
                       items:
-                        type: object
                         properties:
                           addressLine1:
                             type: string
@@ -645,12 +641,10 @@ components:
               accountOwnershipVerification:
                 type: array
                 items:
-                  type: object
                   properties:
                     accountDetails:
                       type: array
                       items:
-                        type: object
                         properties:
                           creditAccountNumber:
                             type: string
@@ -688,7 +682,6 @@ components:
         VerifyNowResponse: 
           type: array
           items:
-            type: object
             properties:
               requestId:
                 type: string
@@ -701,7 +694,6 @@ components:
               accountInfo:
                 type: array
                 items:
-                  type: object
                   properties:
                     accountId:
                       type: string
@@ -714,7 +706,6 @@ components:
               profileInfo:
                 type: array
                 items:
-                  type: object
                   properties:
                     profileId:
                       type: string
@@ -727,7 +718,6 @@ components:
               status:
                 type: array
                 items:
-                  type: object
                   properties:
                     statusCode:
                       type: string
@@ -756,7 +746,6 @@ components:
               Profile:
                 type: array
                 items:
-                  type: object
                   properties:
                     namePrefix:
                       type: string
@@ -790,7 +779,6 @@ components:
               profileDetails:
                 type: array
                 items:
-                  type: object
                   properties:
                     ssn:
                       type: string
@@ -832,12 +820,10 @@ components:
               accountOwnershipVerification:
                 type: array
                 items:
-                  type: object
                   properties:
                     accountDetails:
                       type: array
                       items:
-                        type: object
                         properties:
                           creditAccountNumber:
                             type: string
@@ -882,7 +868,6 @@ components:
               profileInfo:
                 type: array
                 items:
-                  type: object
                   properties:
                     profileId:
                       type: string
@@ -896,7 +881,6 @@ components:
               accountInfo:
                 type: array
                 items:
-                  type: object
                   properties:
                     accountId:
                       type: string
@@ -909,12 +893,10 @@ components:
                     verificationInfoList:
                       type: array
                       items:
-                        type: object
                         properties:
                           verificationInfo:
                             type: array
                             items:
-                              type: object
                               properties:
                                 verificationType:
                                   type: string
@@ -933,7 +915,6 @@ components:
               status:
                 type: array
                 items:
-                  type: object
                   properties:
                     statusCode:
                       type: string
@@ -974,12 +955,10 @@ components:
               accounts:
                 type: array
                 items:
-                  type: object
                   properties:
                     accountInfo:
                       type: array
                       items:
-                        type: object
                         properties: 
                           accountGroup:
                             type: string
@@ -1000,12 +979,10 @@ components:
                           verificationInfoList:
                             type: array
                             items:
-                              type: object
                               properties:
                                 verificationInfo:
                                   type: array
                                   items:
-                                    type: object
                                     properties: 
                                       verificationType:
                                         type: string
@@ -1034,7 +1011,6 @@ components:
               status:
                 type: array
                 items:
-                  type: object
                   properties:
                     statusCode:
                       type: string
@@ -1071,7 +1047,6 @@ components:
         verifyNowPingResponse: 
           type: array
           items:
-            type: object
             properties:
               statusDesc:
                 type: string
